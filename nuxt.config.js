@@ -8,9 +8,6 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Código fuente de la página web de Innovacion Docente | UTPL' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
@@ -34,5 +31,9 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  css: [
+    '@/assets/bootstrap/bootstrap-reboot.scss',
+    '@/assets/bootstrap/bootstrap-grid.scss'
+  ]
 }
