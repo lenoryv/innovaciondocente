@@ -14,6 +14,20 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  /**
+   * manifest
+   */
+  manifest: {
+    name: 'Innovacion Docente UTPL',
+    lang: 'es',
+    short_name: 'innovaciondocente',
+    start_url: '/',
+    display: 'standalone',
+    orientation: "portrait",
+    background_color: "#f0f",
+    theme_color: "#f0f",
+    description: "Pagina web de innovacion docente.",
+  },
   /*
   ** Build configuration
   */
@@ -21,7 +35,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -35,5 +49,8 @@ module.exports = {
   css: [
     '@/assets/bootstrap/bootstrap-reboot.scss',
     '@/assets/bootstrap/bootstrap-grid.scss'
+  ],
+  modules: [
+    ['@nuxtjs/pwa', { icon: false }]
   ]
 }
