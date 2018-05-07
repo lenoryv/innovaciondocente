@@ -11,9 +11,21 @@ module.exports = {
     ]
   },
   /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#3B8070' },
+ ** Customize the progress bar color
+ */
+  loading: {
+    color: 'blue',
+    height: '5px'
+  },
+  loadingIndicator: {
+    name: 'three-bounce',
+    color: 'white',
+    background: "blue"
+  },
+  /**
+   * mode 'spa' or 'universal'
+   */
+  mode: 'universal',
   /**
    * manifest
    */
