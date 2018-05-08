@@ -3,6 +3,9 @@
   <h1>
     @{{ name }}
   </h1>
+  <div>
+    <router-link :to="{ name: 'about'}">about</router-link>
+  </div>
 </div>
 </template>
 
