@@ -75,6 +75,6 @@ module.exports = {
     '@/assets/bootstrap/bootstrap-grid.scss'
   ],
   modules: [
-    ['@nuxtjs/pwa', { icon: false }]
+    '@nuxtjs/pwa'
   ]
 }
