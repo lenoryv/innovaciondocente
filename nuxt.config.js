@@ -26,13 +26,13 @@ module.exports = {
  ** Customize the progress bar color
  */
   loading: {
-    color: 'blue',
-    height: '5px'
+    color: '#e9ecef',
+    height: '3px'
   },
   loadingIndicator: {
     name: 'three-bounce',
     color: 'white',
-    background: "blue"
+    background: "#0D47A1"
   },
   /**
    * mode 'spa' or 'universal'
@@ -44,12 +44,12 @@ module.exports = {
   manifest: {
     name: 'Innovacion Docente UTPL',
     lang: 'es',
-    short_name: 'innovaciondocente',
+    short_name: 'Innovacion Docente',
     start_url: '/',
     display: 'standalone',
     orientation: "portrait",
-    background_color: "#f0f",
-    theme_color: "#f0f",
+    background_color: "#0D47A1",
+    theme_color: "#0D47A1",
     description: "Pagina web de innovacion docente.",
   },
   /*
@@ -72,7 +72,8 @@ module.exports = {
   },
   css: [
     '@/assets/bootstrap/bootstrap-reboot.scss',
-    '@/assets/bootstrap/bootstrap-grid.scss'
+    '@/assets/bootstrap/bootstrap-grid.scss',
+    '@/assets/router-transition.scss'
   ],
   modules: [
     '@nuxtjs/pwa'
