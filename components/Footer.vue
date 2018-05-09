@@ -1,7 +1,7 @@
 <template>
 <footer class="container">
-    <ul>
-        <li class="mr"><a href="https://www.utpl.edu.ec/">UTPL</a></li>
+    <ul class="mb">
+        <li class="mr">© 2018 <a href="https://www.utpl.edu.ec/">UTPL</a></li>
         <li class="mr">San Cayetano Alto</li>
         <li>Loja - Ecuador</li>
     </ul>
@@ -10,6 +10,7 @@
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
         </svg>
+        
     </a>
     <ul>
         <li class="mr">Contactos</li>
@@ -24,7 +25,7 @@
 footer {
   display: flex;
   border-top: 1px #e1e4e8 solid;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   padding-top: 40px;
   padding-bottom: 8px;
   margin-top: 40px;
@@ -66,5 +67,16 @@ svg:not(:root) {
   display: inline-block;
   vertical-align: text-top;
   fill: currentColor;
+}
+@media (max-width: 768px) {
+  footer {
+    display: block;
+  }
+  .heart {
+    display: none;
+  }
+  footer > .mb {
+    padding-bottom: 15px;
+  }
 }
 </style>
