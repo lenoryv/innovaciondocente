@@ -1,0 +1,97 @@
+[
+    {
+        "year": 2018,
+        "months": [
+            {
+                "month": "Mayo",
+                "cursos": [
+                    {
+                        "id": 1,
+                        "nombre": "Formulación, dirección, seguimiento y gestión de proyectos",
+                        "instructor": "Mgtr. Fernando Jaramillo (Consultor externo)",
+                        "fecha": "Martes, Mayo 29, 2018",
+                        "duracion": "4 días",
+                        "horario": "8:30 a 12:30",
+                        "modulo": "Investigación, Vinculación y Gestión de Proyectos",
+                        "lugar": "Auditorios – Edificio",
+                        "dirigido": "Docentes que vayan a trabajar con proyectos de vinculción y necesitan afianzar conocimiento en el manejo del marco lógico.",
+                        "finalidad": "Capacitar en gestión de proyectos para tener la capacidad de utilizar metodologías eficientes de elaboración de proyectos que ayuden a mejorar las posibilidades de encontrar financiamiento.",
+                        "horario": "8:30 a 12:30",
+                        "descarga": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Curso%20SPSS%20Avanzado%202016.pdf",
+                        "fin_postulacion": "Postula hasta el 21 de mayo de 2018",
+                        "url_postulacion": "https://www.e-encuesta.com/r/SOi5SZmJglEiKyLJBgNb1Q/Formulacion_direccion_gestion_proyectos",
+                        "poster": "pedagogia.png"
+                    },
+                    {
+                        "id": 2,
+                        "nombre": "Ética y Deontología Profesional",
+                        "fecha": "Lunes, Mayo 21, 2018",
+                        "finalidad": "Capacitar en gestión de proyectos para tener la capacidad de utilizar metodologías eficientes de elaboración de proyectos que ayuden a mejorar las posibilidades de encontrar financiamiento.",
+                        "poster": "pedagogia.png"
+                    },
+                    {
+                        "id": 3,
+                        "nombre": "Ciencia 2.1: La caja de herramientas del profesor investigador, aplicaciones web y recursos - Online",
+                        "fecha": "Lunes, Mayo 21, 2018",
+                        "finalidad": "Valoren el potencial de aproximación de las rúbricas a una evaluación auténtica y para viabilizar la evaluación como una oportunidad para aprender y mejorar la eficacia del proceso de aprendizaje.",
+                        "poster": "pedagogia.png"
+                    },
+                    {
+                        "id": 4,
+                        "nombre": "MOOC: Fundamentos de Diseño Instruccional (DI)",
+                        "fecha": "Lunes,Mayo 14, 2018",
+                        "finalidad": "Aplicar el diseño Instruccional en la pacificación del proceso enseñanza – aprendizaje.",
+                        "poster": "educacion_distancia.png"
+                    }
+                ]
+            },
+            {
+                "month": "Abril",
+                "cursos": [
+                    {
+                        "id": 5,
+                        "nombre": "Taller de ideación ágil: Innovar en la docencia y en la divulgación científica UTPL.",
+                        "fecha": "Lunes, Abril 23, 2018",
+                        "finalidad": "Este curso tiene como objetivo socializar diferentes estrategias digitales en divulgación científica.",
+                        "poster": "investigacion.png"
+                    },
+                    {
+                        "id": 6,
+                        "nombre": "Innovación e investigación para la enseñanza como soporte a la Educación - Docentes área Administrativa y área Socio-humanística",
+                        "fecha": "Martes, Abril 24, 2018",
+                        "finalidad": "Introducir a docentes investigadores en el concepto de la innovación e investigación, así como también en la creación de proyectos, publicaciones científicas, metodologías de búsqueda de información en fuentes acorde a las áreas o líneas de investigación",
+                        "poster": "bombilla.jpg"
+                    },
+                    {
+                        "id": 7,
+                        "nombre": "Excel Intermedio y Avanzado",
+                        "fecha": "Lunes, Abril 23, 2018",
+                        "finalidad": "El uso de Excel se hace imprescindible en el día a día de todos los sectores y es sin duda una de las herramientas más útiles a nivel laboral como durante los estudios e investigaciones.",
+                        "poster": "investigacion.png"
+                    },
+                    {
+                        "id": 8,
+                        "nombre": "Elaboración de rúbricas. Aplicación para evaluar aprendizajes complejos en educación universitaria – Docentes Loja",
+                        "fecha": "Lunes, Abril 16, 2018",
+                        "finalidad": "Valoren el potencial de aproximación de las rúbricas a una evaluación auténtica y para viabilizar la evaluación como una oportunidad para aprender y mejorar la eficacia del proceso de aprendizaje.",
+                        "poster": "pedagogia.png"
+                    },
+                    {
+                        "id": 9,
+                        "nombre": "Elaboración de rúbricas. Aplicación para evaluar aprendizajes complejos en educación universitaria – Docentes Tutores Cuenca",
+                        "fecha": "Miércoles, Abril 11, 2018",
+                        "finalidad": "Valoren el potencial de aproximación de las rúbricas a una evaluación auténtica y para viabilizar la evaluación como una oportunidad para aprender y mejorar la eficacia del proceso de aprendizaje.",
+                        "poster": "pedagogia.png"
+                    },
+                    {
+                        "id": 10,
+                        "nombre": "Asesoría en Educación a Distancia - Online",
+                        "fecha": "Lunes,Abril 16, 2018",
+                        "finalidad": "Analizar los elementos básicos de un sistema de Educación a Distancia, en particular del sistema de EaD de la UTPL.",
+                        "poster": "educacion_distancia.png"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,19 +1,18 @@
 <template>
 <nav id="navbar">
   <nuxt-link style="font-weight: Bold" :to="{name: 'index'}">UTPL</nuxt-link>
-  <nuxt-link :to="{name: 'index'}">Link1</nuxt-link>
   <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
+    <button class="dropbtn">Formación Docente</button>
     <div class="dropdown-content">
-      <nuxt-link :to="{name: 'index'}">Link1</nuxt-link>
-      <nuxt-link :to="{name: 'index'}">Link2</nuxt-link>
-      <nuxt-link :to="{name: 'index'}">Link3</nuxt-link>
+      <nuxt-link :to="{path: '/programa-formacion'}">Programa de Formación</nuxt-link>
+      <nuxt-link :to="{path: '/cafe-cientifico'}">Café Científico</nuxt-link>
+      <nuxt-link :to="{path: '/jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+      <nuxt-link :to="{name: 'tipsexpertos'}">Nuestros cursos</nuxt-link>
+      <nuxt-link :to="{name: 'programaformacion'}">Recomendaciones de expertos</nuxt-link>
     </div>
   </div> 
   <nuxt-link :to="{name: 'about'}">About</nuxt-link>
-  <a style="font-size:15px;" class="icon" @click="toggleMenu">&#9776;</a>
+  <a  href="javascript:void(0);" style="font-size:15px;" class="icon" @click="toggleMenu">&#9776;</a>
 </nav>
 </template>
 
@@ -31,26 +30,27 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  width: 100%;
   overflow: hidden;
-  background-color: #0d47a1;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+  background-color: #002171;
 }
 
 nav a {
   float: left;
   display: block;
-  color: #e9ecef;
+  color: #ffffff;
   text-align: center;
-  padding: 10px;
+  padding: 12px 14px;
   text-decoration: none;
-  min-width: 100px;
-  font-size: 14px;
+  font-size: 13px;
+}
+
+.nuxt-link-active {
+  background-color: #0d47a1;
+  color: #ffffff;
 }
 
 nav .icon {
   display: none;
-  color: #e9ecef !important;
 }
 
 .dropdown {
@@ -59,14 +59,13 @@ nav .icon {
 }
 
 .dropdown .dropbtn {
-  font-size: 14px;
+  font-size: 13px;
   border: none;
   outline: none;
-  color: #e9ecef;
-  padding: 10px;
+  color: #ffffff;
+  padding: 12px 14px;
   background-color: inherit;
   font-family: inherit;
-  min-width: 100px;
   margin: 0;
 }
 
@@ -74,15 +73,15 @@ nav .icon {
   display: none;
   position: absolute;
   background-color: #0d47a1;
-  min-width: 100px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
   float: none;
-  color: #e9ecef;
-  padding: 10px;
+  color: #ffffff;
+  padding: 12px 14px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -90,11 +89,13 @@ nav .icon {
 
 nav a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #1565c0;
+  background-color: #0d47a1;
+  color: #ffffff;
 }
 
 .dropdown-content a:hover {
-  background-color: #1565c0;
+  background-color: #ffffff;
+  color: #0d47a1;
 }
 
 .dropdown:hover .dropdown-content {
@@ -115,13 +116,11 @@ nav a:hover,
 @media screen and (max-width: 600px) {
   nav.responsive {
     position: relative;
-    padding-left: 20px;
   }
   nav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
-    text-align: center;
   }
   nav.responsive a {
     float: none;
