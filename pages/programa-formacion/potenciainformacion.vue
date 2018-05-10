@@ -11,6 +11,7 @@
               <div class="embed-container">
                 <iframe :src="curso.vid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               </div>
+              <hr>
           </div>
       </div>
   </div>

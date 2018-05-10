@@ -20,7 +20,7 @@
                           <li><nuxt-link :to="{name: ''}">Mayo</nuxt-link></li>
                       </ul>
                   </li>
-                  <li><nuxt-link :to="{name: ''}">Valida tu formación</nuxt-link></li>
+                  <li><nuxt-link :to="{name: 'programa-formacion-validar-formacion'}">Valida tu formación</nuxt-link></li>
                   <li><nuxt-link :to="{name: 'programa-formacion-potenciainformacion'}">Potencia tu formación</nuxt-link></li>
               </ul>
           </div>
