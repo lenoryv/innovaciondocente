@@ -4,9 +4,9 @@
   <div class="dropdown">
     <button class="dropbtn">Formación Docente</button>
     <div class="dropdown-content">
-      <nuxt-link :to="{name: 'programa-formacion'}">Programa de Formación</nuxt-link>
-      <nuxt-link :to="{name: 'cafe-cientifico'}">Café Científico</nuxt-link>
-      <nuxt-link :to="{name: 'jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+      <nuxt-link :to="{path: '/programa-formacion'}">Programa de Formación</nuxt-link>
+      <nuxt-link :to="{path: '/cafe-cientifico'}">Café Científico</nuxt-link>
+      <nuxt-link :to="{path: '/jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
       <nuxt-link :to="{name: 'tipsexpertos'}">Nuestros cursos</nuxt-link>
       <nuxt-link :to="{name: 'programaformacion'}">Recomendaciones de expertos</nuxt-link>
     </div>
