@@ -3,13 +3,13 @@
   <nuxt-link style="font-weight: Bold" :to="{name: 'index'}">UTPL</nuxt-link>
   <nuxt-link :to="{name: 'index'}">Link1</nuxt-link>
   <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
+    <button class="dropbtn">Formación Docente</button>
     <div class="dropdown-content">
-      <nuxt-link :to="{name: 'index'}">Link1</nuxt-link>
-      <nuxt-link :to="{name: 'index'}">Link2</nuxt-link>
-      <nuxt-link :to="{name: 'index'}">Link3</nuxt-link>
+      <nuxt-link :to="{name: 'programa-formacion'}">Programa de Formación</nuxt-link>
+      <nuxt-link :to="{name: 'cafe-cientifico'}">Café Científico</nuxt-link>
+      <nuxt-link :to="{name: 'jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+      <nuxt-link :to="{name: 'tipsexpertos'}">Nuestros cursos</nuxt-link>
+      <nuxt-link :to="{name: 'programaformacion'}">Recomendaciones de expertos</nuxt-link>
     </div>
   </div> 
   <nuxt-link :to="{name: 'about'}">About</nuxt-link>
