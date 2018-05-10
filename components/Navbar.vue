@@ -1,98 +1,143 @@
 <template>
-<nav class="navbar">
-  <ul>
-    <li><nuxt-link :to="{name: 'index'}">UTPL</nuxt-link></li>
-    <li class="dropdown">
-      <nuxt-link class="dropbtn" :to="{name: 'about'}">about</nuxt-link>
-      <div class="dropdown-content">
-        <nuxt-link :to="{name: 'about'}">about1</nuxt-link>
-        <nuxt-link :to="{name: 'about'}">about2</nuxt-link>
-        <nuxt-link :to="{name: 'about'}">about3456</nuxt-link>
-      </div>
-    </li>
-    <li class="dropdown">
-      <nuxt-link class="dropbtn" :to="{name: 'about'}">Quienes-somos</nuxt-link>
-      <div class="dropdown-content">
-        <nuxt-link :to="{name: 'about'}">link largo 123456</nuxt-link>
-        <nuxt-link :to="{name: 'about'}">about2</nuxt-link>
-        <nuxt-link :to="{name: 'about'}">3</nuxt-link>
-      </div>
-    </li>
-  </ul>
+<nav id="navbar">
+  <nuxt-link style="font-weight: Bold" :to="{name: 'index'}">UTPL</nuxt-link>
+  <nuxt-link :to="{name: 'index'}">Link1</nuxt-link>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <nuxt-link :to="{name: 'index'}">Link1</nuxt-link>
+      <nuxt-link :to="{name: 'index'}">Link2</nuxt-link>
+      <nuxt-link :to="{name: 'index'}">Link3</nuxt-link>
+    </div>
+  </div> 
+  <nuxt-link :to="{name: 'about'}">About</nuxt-link>
+  <a style="font-size:15px;" class="icon" @click="toggleMenu">&#9776;</a>
 </nav>
 </template>
 
+<script>
+export default {
+  methods: {
+    toggleMenu: () => {
+      var x = document.getElementById("navbar");
+      if (x.className === "") x.className += "responsive";
+      else x.className = "";
+    }
+  }
+};
+</script>
+
 <style lang="scss" scoped>
-.navbar {
+nav {
   width: 100%;
+  overflow: hidden;
   background-color: #0d47a1;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
-  margin: 0px;
 }
-.navbar > ul {
-  margin: 0px;
-  padding: 0px;
-}
-.navbar > ul li {
-  display: inline-block;
-}
-.navbar > ul li a {
-  text-decoration: none;
+
+nav a {
+  float: left;
+  display: block;
   color: #e9ecef;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
   min-width: 100px;
-  display: inline-block;
-  text-align: center;
-  padding: 10px 10px;
-  font-weight: bold;
-  position: relative;
+  font-size: 14px;
 }
-.navbar > ul li a::before {
-  background: #e9ecef;
-  bottom: 0px;
-  height: 3px;
-  content: "";
-  left: 0;
-  position: absolute;
-  width: 0%;
-  transition: 0.5s;
+
+nav .icon {
+  display: none;
+  color: #e9ecef !important;
 }
-.navbar > ul li a:hover::before {
-  width: 100%;
+
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
-/*.nuxt-link-exact-active {
-  color: #fff !important;
-  width: 100%;
-}*/
-/*dropdown*/
-.navbar > ul li a,
-.dropbtn {
+
+.dropdown .dropbtn {
+  font-size: 14px;
+  border: none;
+  outline: none;
   color: #e9ecef;
-  text-align: center;
-  text-decoration: none;
+  padding: 10px;
+  background-color: inherit;
+  font-family: inherit;
+  min-width: 100px;
+  margin: 0;
 }
 
-.navbar > ul li.dropdown {
-  display: inline-block;
-}
-
-.navbar > ul li .dropdown-content {
+.dropdown-content {
   display: none;
   position: absolute;
   background-color: #0d47a1;
-  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.7);
+  min-width: 100px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
-.navbar > ul li .dropdown-content a {
+.dropdown-content a {
+  float: none;
+  color: #e9ecef;
+  padding: 10px;
+  text-decoration: none;
   display: block;
+  text-align: left;
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #1565c0;
 }
 
 .dropdown-content a:hover {
-  color: #e9ecef !important;
-  background-color: #0d47a1;
+  background-color: #1565c0;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+@media screen and (max-width: 600px) {
+  nav a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+  nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav.responsive {
+    position: relative;
+    padding-left: 20px;
+  }
+  nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+  }
+  nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  nav.responsive .dropdown {
+    float: none;
+  }
+  nav.responsive .dropdown-content {
+    position: relative;
+  }
+  nav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
 }
 </style>

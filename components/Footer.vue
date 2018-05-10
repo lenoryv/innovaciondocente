@@ -27,7 +27,7 @@ footer {
   border-top: 1px #e1e4e8 solid;
   font-size: 0.7rem;
   padding-top: 40px;
-  padding-bottom: 8px;
+  padding-bottom: 40px;
   margin-top: 40px;
   position: relative;
   justify-content: space-between !important;
