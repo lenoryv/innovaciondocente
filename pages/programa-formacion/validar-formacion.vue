@@ -10,7 +10,7 @@
 <style lang="scss" scoped>
 .embed-container {
     position: relative;
-    padding-bottom: 75%;
+    padding-bottom: 100%;
     height: 0;
     overflow: hidden;
 }
