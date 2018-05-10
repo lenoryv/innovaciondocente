@@ -11,15 +11,7 @@
               <!--Sidebar-->
               <ul>
                   <li><nuxt-link :to="{path: '/programa-formacion/calendario-anual'}">Calendario Anual</nuxt-link></li>
-                  <li>
-                      <ul>
-                          <li><nuxt-link :to="{name: ''}">Enero</nuxt-link></li>
-                          <li><nuxt-link :to="{name: ''}">Febrero</nuxt-link></li>
-                          <li><nuxt-link :to="{name: ''}">Marzo</nuxt-link></li>
-                          <li><nuxt-link :to="{name: ''}">Abril</nuxt-link></li>
-                          <li><nuxt-link :to="{name: ''}">Mayo</nuxt-link></li>
-                      </ul>
-                  </li>
+                  <li><nuxt-link :to="{path: '/programa-formacion'}">Cursos</nuxt-link></li>
                   <li><nuxt-link :to="{path: '/programa-formacion/validar-formacion'}">Valida tu formación</nuxt-link></li>
                   <li><nuxt-link :to="{path: '/programa-formacion/potencia-informacion'}">Potencia tu formación</nuxt-link></li>
               </ul>

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import cursos from "@/static/data/cursos.json";
+import cursos from "@/static/data/potencia-informacion.json";
 
 export default {
   asyncData ({ params }) {
