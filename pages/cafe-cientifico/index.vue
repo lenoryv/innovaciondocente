@@ -1,7 +1,7 @@
 <template>
   <div class="container">
       <h1>{{evento.tema}}</h1>
-      <img src="/banner-cafe-cientifico.png" alt="banner-cafe-cientifico">
+      <img src="/img/banner-cafe-cientifico.png" alt="banner-cafe-cientifico">
       <button>leer mas></button>
       <h2>Invitados</h2>
       <hr>

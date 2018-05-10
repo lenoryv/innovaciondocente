@@ -1,7 +1,7 @@
 <template>
   <div class="container">
       <h1>Programa de Formación Docente</h1>
-      <img src="/banner-formacion-docente.jpg" alt="banner-formacion-docente">
+      <img src="/img/banner-formacion-docente.jpg" alt="banner-formacion-docente">
       <p>
           “El Programa de Formación  Docente de la universidad está orientado de forma prioritaria a facilitar y apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias profesionales y apoyar el desarrollo de dichas competencias desde la formación del profesorado y desde el enfoque de nuestra universidad.” 
       </p>
