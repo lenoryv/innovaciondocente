@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Académia e investigación",
+        "modulos": [
+            {
+                "name": "Enseñanza y aprendizaje",
+                "itinerario": [
+                    "Curriculo",
+                    "Didáctica (Enseñanza y aprendizaje significativo)",
+                    "Evaluación y calidad educativa",
+                    "Innovación docente en la enseñanza universitaria (TICs, REAs, etc)"
+                ]
+            },
+            {
+                "name": "Investigación, vinculación y gestión de proyectos",
+                "itinerario": [
+                    "Innovación y emprendimiento",
+                    "Divulgación y visibilidad de la investigación y vinculación",
+                    "Técnicas y herramientas para la Investigación Básica y Aplicada",
+                    "Gestión de proyectos de investigación y vinculación"
+                ]
+            },
+            {
+                "name": "Modalidad Abierta y a Distancia",
+                "itinerario": [
+                    "Modelo MAD UTPL",
+                    "Diseño instrucional",
+                    "TICs aplicadas a la Educación a Distancia"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Identidad y Excelencia",
+        "modulos": [
+            {
+                "name": "Comunicación, difusión y atención en servicios",
+                "itinerario": [
+                    "Inducción institucional para la promoción UTPL (obligatorio semestral)",
+                    "Comunicación y relacionamiento con público"
+                ]
+            },
+            {
+                "name": "Cultura organizacional (Identidad, valores y competencias)",
+                "itinerario": [
+                    "Identidad institucional y valores (obligatorio anual)",
+                    "Cátedra Fernando Rielo"
+                ]
+            },
+            {
+                "name": "Liderazgo, gestión universitaria y calidad",
+                "itinerario": [
+                    "Modelo de gestión UTPL (obligatorio anual)",
+                    "Liderazgo, gestión estratégica y Calidad",
+                    "Herramientas básicas de gestión, control y calidad",
+                    "Competencias técnico administrativas"
+                ]
+            }
+        ]
+    }
+]

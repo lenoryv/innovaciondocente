@@ -10,7 +10,7 @@
           <div class="col-md-3">
               <!--Sidebar-->
               <ul>
-                  <li><nuxt-link :to="{name: ''}">Calendario Anual</nuxt-link></li>
+                  <li><nuxt-link :to="{path: '/programa-formacion/calendario-anual'}">Calendario Anual</nuxt-link></li>
                   <li>
                       <ul>
                           <li><nuxt-link :to="{name: ''}">Enero</nuxt-link></li>
@@ -21,7 +21,7 @@
                       </ul>
                   </li>
                   <li><nuxt-link :to="{path: '/programa-formacion/validar-formacion'}">Valida tu formación</nuxt-link></li>
-                  <li><nuxt-link :to="{path: '/programa-formacion/potenciainformacion'}">Potencia tu formación</nuxt-link></li>
+                  <li><nuxt-link :to="{path: '/programa-formacion/potencia-informacion'}">Potencia tu formación</nuxt-link></li>
               </ul>
           </div>
           <div class="col-md-9">
