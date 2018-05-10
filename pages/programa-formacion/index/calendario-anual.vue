@@ -19,7 +19,7 @@
             </ul>
         </li>
     </ul>
-    <p><a href="">Mira el calendario anual del Programa de Formación Docente 2018</a></p>
+    <p><nuxt-link :to="{path:'/programa-formacion/2018'}">Mira el calendario anual del Programa de Formación Docente 2018</nuxt-link></p>
   </div>
 </template>
 
