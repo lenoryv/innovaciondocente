@@ -7,3 +7,12 @@ More information about the usage of this directory in the documentation:
 https://nuxtjs.org/guide/routing#middleware
 
 **This directory is not required, you can delete it if you don't want to use it.**
+
+
+Este directorio contiene su Middleware de aplicaciones.
+El middleware le permite definir la función personalizada que se ejecutará antes de representar una página o un grupo de páginas (diseños).
+
+Más información sobre el uso de este directorio en la documentación:
+https://nuxtjs.org/guide/routing#middleware
+
+**Este directorio no es obligatorio, puede eliminarlo si no desea usarlo.**
