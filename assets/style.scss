@@ -1,3 +1,6 @@
+
+@import 'assets/variables';
+
 img {
     width: 100%;
 }
@@ -9,15 +12,15 @@ img {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: $color-white; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: $color-blue-light; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: $color-blue-dark; 
 }

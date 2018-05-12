@@ -1,0 +1,24 @@
+
+@import 'assets/functions';
+
+/*Color valiables*/
+/*NOTE: Don't use this*/
+$color-blue: #17376b;
+$color-blue-dark: #0e2549;
+$color-blue-light: #0c3c8a;
+
+$color-white: #fbfcfc;
+$color-black: #0f0f0f;
+
+$color-yellow: #feea00;
+
+$color-red: #aa0f0f;
+
+
+/*variables for usage*/
+$color-primary: $color-white;
+$color-secondary: set-secondary-color($color-primary, $color-white, $color-black);
+$color-active: $color-blue;
+$color-warning: $color-yellow;
+$color-danger: $color-red;
+$color-background: $color-secondary;

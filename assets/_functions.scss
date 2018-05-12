@@ -1,0 +1,7 @@
+@function set-secondary-color($color, $primary, $inverse) {
+    @if (lightness($color) > 50) {
+        @return $inverse;
+    } @else {
+        @return $primary;
+    }
+}
