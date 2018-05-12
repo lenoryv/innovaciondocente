@@ -3,7 +3,7 @@
   <ul>
     <li><nuxt-link :to="{name: 'index'}">UTPL</nuxt-link></li>
     <li class="dropdown">
-      <nuxt-link class="dropbtn" :to="{name: ''}">Formación Docente</nuxt-link>
+      <nuxt-link class="dropbtn" :to="{path: '/programa-formacion'}">Formación Docente</nuxt-link>
       <div class="dropdown-content">
         <nuxt-link :to="{path: '/programa-formacion'}">Programa de Formación</nuxt-link>
         <nuxt-link :to="{path: '/cafe-cientifico'}">Café Científico</nuxt-link>
@@ -24,7 +24,7 @@
 
 nav {
   width: 100%;
-  background-color: $color-blue;
+  background-color: $color-primary;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
   margin: 0px;
 }
@@ -37,7 +37,7 @@ nav > ul li {
 }
 nav > ul li a {
   text-decoration: none;
-  color: $color-white;
+  color: $color-font-primary;
   min-width: 100px;
   display: inline-block;
   text-align: center;
@@ -46,7 +46,7 @@ nav > ul li a {
   position: relative;
 }
 nav > ul li a::before {
-  background: $color-white;
+  background: $color-font-primary;
   bottom: 0px;
   height: 3px;
   content: "";
@@ -64,7 +64,7 @@ nav > ul li a:hover::before {
 /*dropdown*/
 nav > ul li a,
 .dropbtn {
-  color: $color-white;
+  color: $color-font-primary;
   text-align: center;
   text-decoration: none;
 }
@@ -76,7 +76,7 @@ nav > ul li.dropdown {
 nav > ul li .dropdown-content {
   display: none;
   position: absolute;
-  background-color: $color-blue;
+  background-color: $color-primary;
   box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.7);
   z-index: 1;
 }

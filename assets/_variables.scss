@@ -1,24 +1,31 @@
 
-@import 'assets/functions';
-
 /*Color valiables*/
 /*NOTE: Don't use this*/
-$color-blue: #17376b;
-$color-blue-dark: #0e2549;
-$color-blue-light: #0c3c8a;
+$col-blue: #17376b;
+$col-blue-dark: #0e2549;
+$col-blue-light: #0c3c8a;
 
-$color-white: #fbfcfc;
-$color-black: #0f0f0f;
+$col-white: #fbfcfc;
+$col-black: #0f0f0f;
 
-$color-yellow: #feea00;
+$col-yellow: #feea00;
 
-$color-red: #aa0f0f;
+$col-red: #aa0f0f;
+
+$col-green: #119211;
 
 
 /*variables for usage*/
-$color-primary: $color-white;
-$color-secondary: set-secondary-color($color-primary, $color-white, $color-black);
-$color-active: $color-blue;
-$color-warning: $color-yellow;
-$color-danger: $color-red;
-$color-background: $color-secondary;
+$color-primary: $col-blue;
+$color-primary-light: $col-blue-light;
+$color-primary-dark: $col-blue-dark;
+
+$color-secondary: $col-white;
+$color-active: $col-blue;
+$color-warning: $col-yellow;
+$color-danger: $col-red;
+
+$color-font-primary: $col-white;
+$color-font-background: $col-black;
+
+$color-background: $col-white;
