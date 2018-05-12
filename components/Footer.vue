@@ -22,9 +22,10 @@
 
 
 <style lang="scss" scoped>
+@import "assets/variables";
 footer {
   display: flex;
-  border-top: 1px #e1e4e8 solid;
+  border-top: 1px $color-font-background solid;
   font-size: 0.7rem;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -47,10 +48,10 @@ ul {
 }
 
 .footer-heart {
-  color: #c6cbd1;
+  color: $color-font-background;
 }
 .footer-heart:hover {
-  color: #c00b23;
+  color: $color-danger;
 }
 a {
   text-decoration: none;

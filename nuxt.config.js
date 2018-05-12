@@ -71,7 +71,6 @@ module.exports = {
     }
   },
   css: [
-    '@/assets/bootstrap/bootstrap-reboot.scss',
     '@/assets/bootstrap/bootstrap-grid.scss',
     '@/assets/router-transition.scss',
     '@/assets/style.scss'

@@ -1,0 +1,31 @@
+
+/*Color valiables*/
+/*NOTE: Don't use this*/
+$col-blue: #17376b;
+$col-blue-dark: #0e2549;
+$col-blue-light: #0c3c8a;
+
+$col-white: #fbfcfc;
+$col-black: #0f0f0f;
+
+$col-yellow: #feea00;
+
+$col-red: #aa0f0f;
+
+$col-green: #119211;
+
+
+/*variables for usage*/
+$color-primary: $col-blue;
+$color-primary-light: $col-blue-light;
+$color-primary-dark: $col-blue-dark;
+
+$color-secondary: $col-white;
+$color-active: $col-blue;
+$color-warning: $col-yellow;
+$color-danger: $col-red;
+
+$color-font-primary: $col-white;
+$color-font-background: $col-black;
+
+$color-background: $col-white;
