@@ -22,6 +22,15 @@
 <style lang="scss" scoped >
 @import "assets/variables";
 
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+
 nav {
   width: 100%;
   background-color: $color-primary;
