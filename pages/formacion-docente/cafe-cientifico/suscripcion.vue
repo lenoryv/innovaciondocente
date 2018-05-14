@@ -1,43 +1,44 @@
 <template>
 <div class="container">
-    <h1>Suscribete a nuestro Café científico</h1>
-    <form>
-        <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-        </div>
-        <div class="form-group">
-            <label for="apellido">Apellido</label>
-            <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-        </div>
-        <div class="form-group">
-            <label for="titulacion">Titulación</label>
-            <input type="text" class="form-control" id="titulacion" placeholder="Titulación">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Email ">
-        </div>
-        <div class="form-group">
-            <label for="telefono">Teléfono Celular</label>
-            <input type="text" class="form-control" id="telefono" placeholder="Teléfono Celular">
-        </div>
-        <div class="form-group">
-            <label for="ciudad">Ciudad</label>
-            <select class="form-control" id="ciudad">
-                <option>-Seleccionar-</option>
-                <option>Loja</option>
-                <option>Cuenca</option>
-                <option>Guayaquil</option>
-                <option>Quito</option>
-            </select>
-        </div>
-        <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="whatsapp">
-            <label class="form-check-label" for="whatsapp">¿Desearías que la información de los eventos de formación e innovación docente te lleguen por medio de WhatsApp?</label>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
+  <h1>Suscribete a nuestro Café científico</h1>
+  <form>
+      <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+      </div>
+      <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+      </div>
+      <div class="form-group">
+          <label for="titulacion">Titulación</label>
+          <input type="text" class="form-control" id="titulacion" placeholder="Titulación">
+      </div>
+      <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email ">
+      </div>
+      <div class="form-group">
+          <label for="telefono">Teléfono Celular</label>
+          <input type="text" class="form-control" id="telefono" placeholder="Teléfono Celular">
+      </div>
+      <div class="form-group">
+          <label for="ciudad">Ciudad</label>
+          <select class="form-control" id="ciudad">
+              <option>-Seleccionar-</option>
+              <option>Loja</option>
+              <option>Cuenca</option>
+              <option>Guayaquil</option>
+              <option>Quito</option>
+          </select>
+      </div>
+      <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="whatsapp">
+          <label class="form-check-label" for="whatsapp">¿Desearías que la información de los eventos de formación e innovación docente te lleguen por medio de WhatsApp?</label>
+      </div>
+      <button type="submit">Submit</button>
+      <nuxt-link tag="button" :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
+  </form>
 </div>
 </template>
 

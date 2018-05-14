@@ -3,13 +3,11 @@
   <ul>
     <li><nuxt-link :to="{name: 'index'}">UTPL</nuxt-link></li>
     <li class="dropdown">
-      <nuxt-link class="dropbtn" :to="{path: '/programa-formacion'}">Formación Docente</nuxt-link>
+      <nuxt-link class="dropbtn" :to="{name: 'formacion-docente-programa-formacion'}">Formación Docente</nuxt-link>
       <div class="dropdown-content">
-        <nuxt-link :to="{path: '/programa-formacion'}">Programa de Formación</nuxt-link>
-        <nuxt-link :to="{path: '/cafe-cientifico'}">Café Científico</nuxt-link>
+        <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+        <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
         <nuxt-link :to="{path: '/jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
-        <nuxt-link :to="{path: '/tipsexpertos'}">Nuestros cursos</nuxt-link>
-        <nuxt-link :to="{path: '/programaformacion'}">Recomendaciones de expertos</nuxt-link>
       </div>
     </li>
     <li>
@@ -54,21 +52,31 @@ nav > ul li a {
   font-weight: bold;
   position: relative;
 }
-nav > ul li a::before {
-  background: $color-font-primary;
-  bottom: 0px;
-  height: 3px;
-  content: "";
-  left: 0;
-  position: absolute;
-  width: 0%;
-  transition: 0.5s;
+@media (min-width: 992px) {
+  nav > ul li a::before {
+    background: $color-font-primary;
+    bottom: 0px;
+    height: 3px;
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 0%;
+    transition: 0.5s;
+  }
+  nav > ul li a:hover::before {
+    width: 100%;
+  }
+  .nuxt-link-exact-active::before {
+    width: 25%;
+  }
 }
-nav > ul li a:hover::before {
-  width: 100%;
-}
-.nuxt-link-exact-active::before {
-  width: 25%;
+@media (max-width: 992px) {
+  nav > ul li a:hover {
+    background-color: $color-primary-light;
+  }
+  .nuxt-link-exact-active {
+    background-color: $color-primary-dark;
+  }
 }
 /*dropdown*/
 nav > ul li a,

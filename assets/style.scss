@@ -6,7 +6,6 @@ img {
     width: 100%;
 }
 
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -209,7 +208,14 @@ label {
 }
 
 button {
-  border-radius: 0;
+  background-color: $color-background;
+  border: 2px solid $color-font;
+  color: $color-font;
+  padding: 8px 16px;
+  margin: 0px 15px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 18px;
 }
 
 button:focus {

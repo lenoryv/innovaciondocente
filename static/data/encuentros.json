@@ -1,0 +1,69 @@
+[
+    {
+        "id": "1",
+        "img": "familia.jpg",
+        "fecha": "26/04/2018",
+        "tema": "Derecho de familia y complejidad en Ecuador: una perspectiva actual",
+        "desc": "El modelo de familia instaurado en el Estado ecuatoriano se construyó sobre la fusión entre el matrimonio romano y el derecho canónico. La evolución de instituciones como la familia, tiene nuevas perspectivas y variaciones, que en muchos casos se debe a cuestiones demográficas, económicas, políticas, sociales y culturales, etc. Esto ha permitido considerar a la familia como un problema interdisciplinario de estudio desde todos los ámbitos de las ciencias sociales y humanas, así la familia como un grupo pre-formado dinámico abierto a la sociedad, con una determinada estructura interna y externa, alrededor del cual se establecen una serie de relaciones y funciones.\nParticularmente la Psicología, el Derecho, la Teología y las Ciencias de la Complejidad han realizado interesantes aportes para la comprensión de lo que es y debería ser la familia. Por ejemplo, desde la Teología el Papa Francisco regala al mundo entero, la maravillosa encíclica: Amoris Laetitia (La alegría del amor), una oración conclusiva dirigida a la Sagrada Familia.\nLas ciencias de la complejidad creen que dentro de la autoorganización de los elementos que conforman en particular la vida humana se encuentra la familia, ya no como un \"núcleo esencial\" (ni vertical) de la sociedad, sino altamente conectado dentro de la gran red que conforma la sociedad, con mecanismos de retroalimentación que se relacionan para que emerja la vida humana.",
+        "invitados": [
+            {
+                "name": "PhD. Jorge Benítez Hurtado",
+                "desc": "Investigador del Departamento de Ciencias Jurídicas de la Universidad Técnica Particular de Loja. Profesor de Filosofía del Derecho y Lógica Jurídica en la misma universidad. Diplomado en Humanismo y Espiritualidad, Máster en Derecho Administrativo por la UTPL y Maestro en Derecho por la Universidad Nacional Autónoma de México (UNAM). Doctor (Ph.D.) en Derecho por el Departamento de Filosofía del Derecho, Moral y Política de la Universidad Complutense de Madrid."
+            },
+            {
+                "name": "Mgtr. Rolando Andrade Hidalgo",
+                "desc": "Abogado de los Juzgados y Tribunales de la República del Ecuador por la Universidad Técnica Particular de Loja. Magíster en Derecho Civil y Procesal Civil por la Universidad Técnica Particular de Loja. Doctorando en Ciencias Sociales y Jurídicas por la Universidad de Cádiz, España. Docente Titular del Departamento de Ciencias Jurídicas de la Universidad Técnica Particular de Loja. Coordinador de la Maestría y Especialidad en Derecho Empresarial de la Universidad Técnica Particular de Loja."
+            },
+            {
+                "name": "Padre Vicente Delgado Flores",
+                "desc": "Delegado del Departamento de Familia de la Diócesis de Loja. Capellán de la Unidad Educativa Particular Santa Mariana de Jesús de Loja. Capellán de SOLCA-núcleo de Loja. Vicario Adscrito de la Parroquia El Sagrario-La Catedral. Licenciado en Ciencia de la Educación, mención: Ciencias Humanas y Religiosas. Magíster en Educación y orientación familiar."
+            },
+            {
+                "name": "Dra. Ruth Maldonado Rivera",
+                "desc": "Dra. en Psicorehabilitación y Educación Especial-Universidad Nacional de Loja. Magíster en Ciencias de la Familia, especialidad: Terapia Familia. USC-España. Magíster en Desarrollo de la Inteligencia y Educación. UTPL. Magíster en Evaluación, Gestión y Dirección de la Calidad Educativa-Universidad de Sevilla. Especialidad en Diagnóstico Intelectual. Docente Universitario."
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "img": "tecnologia.jpg",
+        "fecha": "29/06/2017",
+        "tema": "Alineando tecnología con estrategia de negocio: Retos y Expectativa",
+        "desc": "Acompáñanos a dialogar sobre este interesante tema con una rica taza de café",
+        "invitados": [
+            {
+                "name": "MSc. Armando Cabrera Silva\nAlineamiento Estratégico del Negocio y TI",
+                "desc": "Ingeniero en Sistemas informáticos y Computación de la Universidad Técnica Particular de Loja, Diplomado en Gestión Estratégica Empresarial (UTPL) Magister en Ciencias y Tecnologías de la Computación de la Universidad Politécnica de Madrid (UPM), Doctorando en Software y Sistemas de la UPM, Docente Investigador de la sección de Ingeniería de Software y Gestión de TI, Departamento de Ciencias de la Computación en UTPL."
+            },
+            {
+                "name": "Ing. Galo Castillo Estrella\nEstrategia del Municipio de Loja para gestionar TI de acuerdo al Plan de Gestión Municipal",
+                "desc": "Ingeniero en Sistemas informáticos y Computación de la Universidad Técnica Particular de Loja , en la actualidad Director del departamento de sistemas informáticos del Gobierno Autónomo Descentralizado de Loja, docente invitado de la UTPL,  experiencia como coordinador de Infraestructura Tecnológica del Gobierno Provincial de Loja, gerencia, gestión y coordinación de proyectos de TI en instituciones públicas y privadas"
+            },
+            {
+                "name": "Ing. Jorge Stalin Calderon Bustamante\nAlineación de TI a la estrategia organizacional, caso UTPL",
+                "desc": "Ingeniero en Sistemas Informáticos y Computación en la Universidad Técnica Particular de Loja . Certificado en desarrollo web por Microsoft (MCP). Egresado de la Maestría en Gestión Estratégica de Tecnologías de la Información en la Universidad de Cuenca. Desarrollador de software en la UTPL. Ingeniero de desarrollo en la empresa COBISCorp. En la actualidad Arquitecto de Soluciones en la UTPL"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "img": "emprendimiento.jpg",
+        "fecha": "23/05/2017",
+        "tema": "Innovación y Emprendimiento en la Universidad",
+        "desc": "Acompáñanos a dialogar sobre este interesante tema.",
+        "invitados": [
+            {
+                "name": "Jane Lucia Santos:\nInnovación y Emprendimiento en la UTPL",
+                "desc": "Doctora en  Ingeniería  y Gestión del Conocimiento, con experiencia en temas de innovación y proyectos de investigación desarrollados en la Pontificia Universidad Católica do Rio Grande do Sul (PUCRS) y en el Parque Científico y Tecnológico de aquella universidad, en Brasil. Actualmente es profesora visitante del Departamento de Ciencias Empresariales de la UTPL, colabora ádemas en actividades con el Centro de Emprendimiento Prendho."
+            },
+            {
+                "name": "Jorge Mesa:\nInnovación en Empresas y Universidades en Medellín/Colombia",
+                "desc": "Master en Administración y experto en emprendimiento e innovación, docente investigador senior de la Universidad EAFIT – Medellin, Colombia. Consolidar el emprendimiento en diversas áreas de EAFIT, es uno de sus objetivos de acción en esta institución."
+            },
+            {
+                "name": "Juan Pablo Suárez:\nParque Científico y Tecnológico UTPL",
+                "desc": "Doctor por la Universidad de Tubinga, Alemania.  Es Viverrector de Investigación y profesor principal de la UTPL en el Departamento de Ciencias Biológicas, grupo de investigación \"ecología y evolución de sistemas microbianos\"."
+            }
+        ]
+    }
+]
