@@ -24,7 +24,7 @@
     <div class="container-fluid">
       <h2>Nuestros Encuentros</h2>
       <div class="row">
-        <nuxt-link class="col-lg-3 col-sm-6" v-for="(encuentro, i) in nuestrosEncuentos" :key="i"
+        <nuxt-link class="col-lg-3 col-sm-6 encuentro" v-for="(encuentro, i) in nuestrosEncuentos" :key="i"
         :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.id}}" tag="div">
           <img :src="require('@/static/img/' + encuentro.img)" :alt="encuentro.img">
           <h4>{{encuentro.tema}}</h4>
@@ -64,5 +64,9 @@ section {
 #suscripcion {
   background-color: $color-primary;
   color: $color-font-primary;
+}
+
+.encuentro {
+  cursor: pointer;
 }
 </style>
