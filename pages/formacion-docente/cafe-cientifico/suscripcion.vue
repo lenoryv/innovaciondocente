@@ -36,8 +36,8 @@
       <input type="checkbox" class="form-check-input" id="whatsapp">
           <label class="form-check-label" for="whatsapp">¿Desearías que la información de los eventos de formación e innovación docente te lleguen por medio de WhatsApp?</label>
       </div>
-      <button type="submit">Submit</button>
-      <nuxt-link tag="button" :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
+      <button class="btn btn-success" type="submit">Submit</button>
+      <nuxt-link class="btn btn-danger" :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
   </form>
 </div>
 </template>

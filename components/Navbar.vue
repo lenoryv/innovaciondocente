@@ -2,7 +2,7 @@
 <nav>
   <ul>
     <li><nuxt-link :to="{name: 'index'}">UTPL</nuxt-link></li>
-    <li><nuxt-link :to="{name: 'innovacion'}">Innovación Docente</nuxt-link></li>
+    <li><nuxt-link :to="{name: 'innovacion-docente'}">Innovación Docente</nuxt-link></li>
     <li class="dropdown">
       <nuxt-link class="dropbtn" :to="{name: 'formacion-docente-programa-formacion'}">Formación Docente</nuxt-link>
       <div class="dropdown-content">
