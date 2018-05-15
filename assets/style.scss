@@ -6,7 +6,6 @@ img {
     width: 100%;
 }
 
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -209,12 +208,9 @@ label {
 }
 
 button {
-  border-radius: 0;
-}
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  padding: 8px 16px;
+  margin: 0px 15px;
+  cursor: pointer;
 }
 
 input, button, select, optgroup, textarea {
@@ -260,6 +256,11 @@ fieldset {
   padding: 0;
   margin: 0;
   border: 0;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 legend {
