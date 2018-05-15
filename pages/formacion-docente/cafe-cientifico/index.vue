@@ -15,14 +15,14 @@
           <h1>{{ultimoEncuento.tema}}</h1>
           <small>{{ultimoEncuento.fecha}}</small>
           <p>{{ultimoEncuento.desc}}</p>
-          <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.id}}">Leer mas</nuxt-link>
+          <nuxt-link class="btn" :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.id}}">Leer mas</nuxt-link>
         </div>
       </div>
     </div>
   </section>
   <section>
     <div class="container-fluid">
-      <h2>Nuestros Encuentros</h2>
+      <h2>Otros Cafés</h2>
       <div class="row">
         <nuxt-link class="col-lg-3 col-sm-6 encuentro" v-for="(encuentro, i) in nuestrosEncuentos" :key="i"
         :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.id}}" tag="div">
@@ -38,7 +38,7 @@
       <p>
       Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior y que ayuden a fomentar inquietudes que despierten una entretenida discusión.
       </p>
-      <nuxt-link tag="button" :to="{name: 'formacion-docente-cafe-cientifico-suscripcion'}">Suscribirse</nuxt-link>
+      <nuxt-link class="btn btn-inverse btn-large" :to="{name: 'formacion-docente-cafe-cientifico-suscripcion'}">Suscribirse</nuxt-link>
     </div>
   </section>
 </div>

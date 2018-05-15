@@ -6,6 +6,44 @@ img {
     width: 100%;
 }
 
+.btn {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none !important;
+  text-align: center;
+  color: $color-font-primary !important;
+  background-color: $color-primary !important;
+  
+  &:hover {
+    opacity: 0.8;
+    transition: 0.2s all ease;
+  }
+}
+
+.btn-inverse {
+  background-color: $color-font-primary !important;
+  color: $color-primary !important;
+}
+
+.btn-danger {
+  background-color: $color-danger !important;
+  color: $color-font-primary  !important;
+}
+.btn-success {
+  background-color: $color-success !important;
+  color: $color-font-primary !important;
+}
+
+.btn-large {
+  width: 100%;
+}
+
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
