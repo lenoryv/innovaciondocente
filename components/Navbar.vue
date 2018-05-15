@@ -1,143 +1,100 @@
 <template>
-<nav id="navbar">
-  <nuxt-link style="font-weight: Bold" :to="{name: 'index'}">UTPL</nuxt-link>
-  <nuxt-link :to="{name: 'innovacion'}">Innovación Docente</nuxt-link>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <nuxt-link :to="{name: 'index'}">Link1</nuxt-link>
-      <nuxt-link :to="{name: 'index'}">Link2</nuxt-link>
-      <nuxt-link :to="{name: 'index'}">Link3</nuxt-link>
-    </div>
-  </div> 
-  <nuxt-link :to="{name: 'about'}">About</nuxt-link>
-  <a style="font-size:15px;" class="icon" @click="toggleMenu">&#9776;</a>
+<nav>
+  <ul>
+    <li><nuxt-link :to="{name: 'index'}">UTPL</nuxt-link></li>
+    <li><nuxt-link :to="{name: 'innovacion'}">Innovación Docente</nuxt-link></li>
+    <li class="dropdown">
+      <nuxt-link class="dropbtn" :to="{name: 'formacion-docente-programa-formacion'}">Formación Docente</nuxt-link>
+      <div class="dropdown-content">
+        <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+        <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+        <nuxt-link :to="{path: '/jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+      </div>
+    </li>
+    <li>
+      <nuxt-link :to="{name: 'about'}">About</nuxt-link>
+    </li>
+  </ul>
 </nav>
 </template>
 
-<script>
-export default {
-  methods: {
-    toggleMenu: () => {
-      var x = document.getElementById("navbar");
-      if (x.className === "") x.className += "responsive";
-      else x.className = "";
-    }
-  }
-};
-</script>
+<style lang="scss" scoped >
+@import "assets/variables";
 
-<style lang="scss" scoped>
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+
 nav {
   width: 100%;
-  overflow: hidden;
-  background-color: #0d47a1;
+  background-color: $color-primary;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+  margin: 0px;
 }
-
-nav a {
-  float: left;
-  display: block;
-  color: #e9ecef;
-  text-align: center;
-  padding: 10px;
+nav > ul {
+  margin: 0px;
+  padding: 0px;
+}
+nav > ul li {
+  display: inline-block;
+}
+nav > ul li a {
   text-decoration: none;
+  color: $color-font-primary;
   min-width: 100px;
-  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 10px;
+  font-weight: bold;
+  position: relative;
+}
+@media (min-width: 992px) {
+  nav > ul li a::before {
+    background: $color-font-primary;
+    bottom: 0px;
+    height: 3px;
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 0%;
+    transition: 0.5s;
+  }
+  nav > ul li a:hover::before {
+    width: 100%;
+  }
+  .nuxt-link-exact-active::before {
+    width: 25%;
+  }
 }
 
-nav .icon {
-  display: none;
-  color: #e9ecef !important;
+/*dropdown*/
+nav > ul li a,
+.dropbtn {
+  color: $color-font-primary;
+  text-align: center;
+  text-decoration: none;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
+nav > ul li.dropdown {
+  display: inline-block;
 }
 
-.dropdown .dropbtn {
-  font-size: 14px;
-  border: none;
-  outline: none;
-  color: #e9ecef;
-  padding: 10px;
-  background-color: inherit;
-  font-family: inherit;
-  min-width: 100px;
-  margin: 0;
-}
-
-.dropdown-content {
+nav > ul li .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #0d47a1;
-  min-width: 100px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+  background-color: $color-primary;
+  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
-
-.dropdown-content a {
-  float: none;
-  color: #e9ecef;
-  padding: 10px;
-  text-decoration: none;
+nav > ul li .dropdown-content a {
   display: block;
-  text-align: left;
 }
-
-nav a:hover,
-.dropdown:hover .dropbtn {
-  background-color: #1565c0;
-}
-
-.dropdown-content a:hover {
-  background-color: #1565c0;
-}
-
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-@media screen and (max-width: 600px) {
-  nav a:not(:first-child),
-  .dropdown .dropbtn {
-    display: none;
-  }
-  nav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  nav.responsive {
-    position: relative;
-    padding-left: 20px;
-  }
-  nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    text-align: center;
-  }
-  nav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  nav.responsive .dropdown {
-    float: none;
-  }
-  nav.responsive .dropdown-content {
-    position: relative;
-  }
-  nav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
 }
 </style>
