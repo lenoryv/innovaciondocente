@@ -1,7 +1,7 @@
 <template>
 <nav id="navbar">
   <nuxt-link style="font-weight: Bold" :to="{name: 'index'}">UTPL</nuxt-link>
-  <nuxt-link :to="{name: 'index'}">Link1</nuxt-link>
+  <nuxt-link :to="{name: 'innovacion'}">Innovación Docente</nuxt-link>
   <div class="dropdown">
     <button class="dropbtn">Dropdown 
       <i class="fa fa-caret-down"></i>
