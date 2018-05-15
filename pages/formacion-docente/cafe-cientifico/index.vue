@@ -57,9 +57,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
-section {
-  padding: 50px 0px;
-}
 
 #suscripcion {
   background-color: $color-primary;

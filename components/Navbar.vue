@@ -70,14 +70,7 @@ nav > ul li a {
     width: 25%;
   }
 }
-@media (max-width: 992px) {
-  nav > ul li a:hover {
-    background-color: $color-primary-light;
-  }
-  .nuxt-link-exact-active {
-    background-color: $color-primary-dark;
-  }
-}
+
 /*dropdown*/
 nav > ul li a,
 .dropbtn {

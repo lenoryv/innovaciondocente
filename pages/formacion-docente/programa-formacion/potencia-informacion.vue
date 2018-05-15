@@ -8,12 +8,12 @@
   </div>
   <div class="container-fluid">
     <div class="card-container">
-      <div v-for="(curso, index) in cursos" :key="index" class="item">
+      <div v-for="(video, index) in videos" :key="index" class="item">
         <div class="embed-container">
-          <iframe :src="curso.vid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe :src="video.vid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <h3>{{curso.title}}</h3>
-        <p>{{curso.desc}}</p>
+        <h3>{{video.title}}</h3>
+        <p>{{video.desc}}</p>
       </div>
     </div>
   </div>
@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import cursos from "@/static/data/potencia-informacion.json";
+import videos from "@/static/data/potencia-informacion.json";
 
 export default {
-  asyncData ({ params }) {
-    return { cursos };
+  asyncData({ params }) {
+    return { videos };
   }
 };
 </script>
