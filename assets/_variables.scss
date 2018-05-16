@@ -9,8 +9,11 @@ $col-white: #fefefe;
 $col-black: #20222e;
 
 $col-yellow: #d1a961;
-$col-yellow-dark: #d1ac66;
-$col-yellow-light: #9c8252;
+$col-yellow-light: #d1ac66;
+$col-yellow-dark: #9c8252;
+$col-mustard: #feea00;
+$col-mustard-light: #fff36d;
+$col-mustard-dark:#ddcb00;
 
 $col-red: #ea191c;
 
@@ -25,7 +28,8 @@ $color-primary-dark: $col-blue-dark;
 $color-secondary: $col-white;
 $color-active: $col-blue;
 $color-success: $col-green;
-$color-warning: $col-yellow;
+$color-warning: $col-mustard;
+$color-warning-dark: $col-mustard-dark;
 $color-danger: $col-red;
 
 $color-font-primary: $col-white;
