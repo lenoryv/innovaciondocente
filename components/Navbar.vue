@@ -97,7 +97,8 @@ nav > ul li.dropdown {
 nav > ul li .dropdown-content {
   display: none;
   position: absolute;
-  background-color: $color-primary;
+  background-color: $color-primary-light;
+  opacity: 0.95;
   box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
