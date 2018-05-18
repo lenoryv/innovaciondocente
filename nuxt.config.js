@@ -68,7 +68,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: ['vee-validate']
   },
   css: [
     '@/assets/bootstrap/bootstrap-grid.scss',
@@ -77,5 +78,8 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/pwa'
+  ],
+  plugins: [
+    { src: '~/plugins/vee-validate.js', ssr: true }
   ]
 }
