@@ -1,6 +1,27 @@
 [
     {
         "id": "1",
+        "img": "ciruito.png",
+        "fecha": "31/05/2018",
+        "tema": "Transformación Digital: Estrategia para gestión del cambio de la Tecnología y Disrupción Digital",
+        "desc": "Organizaciones de todos tipos y tamaños tradicionalmente han dependido de su habilidad para reaccionar rápidamente a los retos cambiantes que van de la mano del avance tecnológico, a la disrupción digital, las demandas del mercado y otros tipos de eventos disruptivos. La agilidad con la que pueden afrontar estos cambios es fundamental para que las organizaciones no se vean abocadas a largos procesos de planificación que no van de la mano con la era de aceleración disruptiva (tecnológica - digital - negocio) que actualmente estamos viviendo. La finalidad de esta temática es mostrar un marco de trabajo que permita a las organizaciones anticiparse a este cambio exponencial.",
+        "invitados": [
+            {
+                "name": "Msc. Armando Cabrera",
+                "desc": "Ingeniero en Sistemas Informáticos y Computación, Diplomado en Gestión Estratégica Empresarial, (UTPL), Magíster en Ciencias y Tecnologías de Computación, Doctorando en Software y Sistemas - Universidad Politécnica de Madrid, Director Departamento de Ciencias de la Computación y Electrónica, Docente Investigador-Sección Departamental de Ingeniería de Software y Gestión de TI (UTPL), Miembro de The Open Group (TOGAF, Archimate), Miembro de la red de CIOs del Ecuador CIONET, Columnista Revista IT ahora."
+            },
+            {
+                "name": "Msc. Carlos Córdova",
+                "desc": "Ingeniero en Sistemas Informáticos y Computación de la Universidad Técnica Particular de Loja, Magíster en Seguridad Informática Aplicada de la Escuela Superior Politécnica del Litoral. Actualmente está a cargo de la Gerencia de la Unidad de Gestión de Tecnologías de la información (UGTI), ha liderado proyectos de implementación de soluciones tecnológicas para áreas de servicios académicos, administrativos, seguridad de la información y de infraestructura de tecnología."
+            },
+            {
+                "name": "Msc. Eddy Torres",
+                "desc": "Ingeniero en Informática UTPL, Ex-docente UTPL, Magíster en Gerencia Contable y Financiera UNL. CEO Tovacompu Cia Ltda desde 1996. Creador de VisualFAC -22 años en el mercado. Implementador en más de 1000 empresas comerciales y de servicios. Influye en más de 1 millón de usuarios indirectos. Actualmente CEO en Tecsicom Cia Ltda; Creador de VisualPlus ERP, Ghost-Facturación Electrónica, Apps Móviles/Web para e-commerce."
+            }
+        ]
+    },
+    {
+        "id": "2",
         "img": "familia.jpg",
         "fecha": "26/04/2018",
         "tema": "Derecho de familia y complejidad en Ecuador: una perspectiva actual",
@@ -25,7 +46,7 @@
         ]
     },
     {
-        "id": "2",
+        "id": "3",
         "img": "tecnologia.jpg",
         "fecha": "29/06/2017",
         "tema": "Alineando tecnología con estrategia de negocio: Retos y Expectativa",
@@ -46,7 +67,7 @@
         ]
     },
     {
-        "id": "3",
+        "id": "4",
         "img": "emprendimiento.jpg",
         "fecha": "23/05/2017",
         "tema": "Innovación y Emprendimiento en la Universidad",

@@ -12,12 +12,13 @@ img {
   margin-bottom: 10px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0.25rem;
   text-decoration: none !important;
   text-align: center;
   color: $color-font-primary !important;
   background-color: $color-primary !important;
-  
+  text-transform: uppercase;
+  font-size: 80%;
   &:hover {
     opacity: 0.8;
     transition: 0.2s all ease;
