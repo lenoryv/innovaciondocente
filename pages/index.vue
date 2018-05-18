@@ -2,7 +2,7 @@
 <div>
   <header class="header content">
     <div class="header-video">
-        <video src="../static/example.mp4" autoplay loop></video>
+        <video src="@/static/videos/Decide_ser_más_en_la_UTPL.mp4" autoplay loop muted></video>
     </div>
     <div class="header-overlay"></div>
     <div class="header-content">
@@ -45,7 +45,6 @@
       </div>
     </div>
   </div>
-  <div class="e"></div>
 </div>  
 </template>
 
@@ -81,8 +80,10 @@ div {
 
 .header {
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
+  color: #feea00;
 }
 
 .content {
@@ -118,6 +119,8 @@ div {
   position: absolute;
   top: 0;
   left: 0;
+  background: #0227499f;
+  z-index: -1;
 }
 
 .header-content h1 {
@@ -140,10 +143,6 @@ div {
   padding: 1rem;
 }
 
-.e {
-  height: 500vh;
-}
-
 .div1 {
   position: sticky;
   transition: transform ease 0.4s;
@@ -152,6 +151,7 @@ div {
   border-color: #eaecef !important;
   border-bottom: 1px #e1e4e8 solid !important;
   top: 0;
+  background: rgb(198, 200, 202);
 }
 
 .div2 {
