@@ -1,6 +1,8 @@
 <template>
 <div class="container">
-  <img :src="require('@/static/img/' + encuentro.img)" :alt="encuentro.img">
+  <figure>
+    <img :src="require('@/static/img/' + encuentro.img)" :alt="encuentro.img">
+  </figure>
   <h1>{{encuentro.tema}}</h1>
   <small>{{encuentro.fecha}}</small>
   <hr>
@@ -41,5 +43,16 @@ export default {
 <style lang="scss" scoped>
 p {
   text-align: justify;
+}
+figure {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 50%;
+  height: 0;
+  margin: 0;
+}
+figure img {
+  display: block;
+  width: 100%;
 }
 </style>
