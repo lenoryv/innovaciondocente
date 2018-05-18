@@ -1,10 +1,9 @@
 <template>
   <section>
-    <div class="container">
-      <h1>Innovación Docente</h1>
+    <div class="container-fluid">
       <div class="row">
           <div class="col-lg-4 col-md-6">
-            <nuxt-link :to="{name: 'innovacion-docente-convocatorias'}">
+            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">
               <img src="~/static/img/innovacion/convocatorias.png" alt="convocatoria">
             </nuxt-link>
           </div>
@@ -40,7 +39,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 .col-md-6{
   margin: 0;
   padding: 5px;
