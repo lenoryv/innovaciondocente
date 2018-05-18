@@ -2,7 +2,7 @@
 <div>
   <header class="header content">
     <div class="header-video">
-        <video src="@/static/videos/Decide_ser_más_en_la_UTPL.mp4" autoplay loop muted></video>
+        <video :src="require('@/static/videos/Decide_ser_mas_en_la_UTPL.mp4')" alt="" autoplay loop muted></video>
     </div>
     <div class="header-overlay"></div>
     <div class="header-content">
@@ -14,34 +14,34 @@
   <div class="div1" id="navbar">
     <div class="div2">
       <div class="div3">
-        <a href="" class="link">
+        <nuxt-link class="link" :to="{name: 'index'}">
           <svg class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
           <span class="d-block">Inicio</span>
-        </a>
-        <a href="" class="link">
+        </nuxt-link>
+        <nuxt-link class="link" :to="{name: 'formacion-docente-programa-formacion'}">
           <svg class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
           <span class="d-block">Formación Docente</span>
-        </a>
-        <a href="" class="link">
+         </nuxt-link>
+        <nuxt-link class="link" :to="{name: 'innovacion-docente'}">
           <svg class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
           <span class="d-block">Innovación Docente</span>
-        </a>
-        <a href="" class="link">
+        </nuxt-link>
+        <nuxt-link class="link" :to="{name: 'innovacion-docente'}">
           <svg class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
           <span class="d-block">Observatorio EduTendencias</span>
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </div>
