@@ -1,32 +1,33 @@
 <template>
   <section>
     <div class="container">
+      <h1>Innovación Docente</h1>
       <div class="row">
           <div class="col-lg-4 col-md-6">
-            <a href="">
+            <nuxt-link :to="{name: 'innovacion-docente-convocatoria'}">
               <img src="~/static/convocatorias.png" alt="convocatoria">
-            </a>
+            </nuxt-link>
           </div>
          <div class="col-lg-4 col-md-6">
-           <a href="">
+           <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">
              <img src="~/static/proyectos-actuales.png" alt="proyectos-actuales">
-            </a>
+           </nuxt-link>
           </div>
           <div class="col-lg-4 col-md-6">
-            <a href="">
+            <nuxt-link :to="{name: 'innovacion-docente-proyecto-mentores'}">
               <img src="~/static/proyecto-mentores.png" alt="proyecto-mentores">
-            </a>
+            </nuxt-link>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <a href="">
+            <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">
               <img src="~/static/buenas-practicas.png" alt="buenas-practicas">
-            </a>
+            </nuxt-link>
           </div>
           <div class="col-lg-4 col-md-6">
-            <a target="_blank" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20ayudante%20de%20ca%CC%81tedra%20abril-agosto%202018.pdf">
+            <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">
               <img src="~/static/ayudante-catedra.png" alt="ayudante-catedra">
-            </a>
+            </nuxt-link>
           </div>
           <div class="col-lg-4 col-md-6">
             <a target="_blank" href="https://retos.utpl.edu.ec/">
