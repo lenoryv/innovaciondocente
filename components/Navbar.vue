@@ -60,7 +60,7 @@ nav > ul li a {
   display: inline-block;
   text-align: center;
   padding: 10px 10px;
-  font-weight: bold;
+  font-weight: 500;
   position: relative;
 }
 @media (min-width: 992px) {

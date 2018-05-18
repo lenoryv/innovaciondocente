@@ -14,8 +14,8 @@
         <div class="col-md-8">
           <h1>{{ultimoEncuento.tema}}</h1>
           <small>{{ultimoEncuento.fecha}}</small>
-          <p>{{ultimoEncuento.desc}}</p>
-          <nuxt-link class="btn" :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.id}}">Leer mas</nuxt-link>
+          <p>{{ultimoEncuento.desc | slice(0,500)}}</p>
+          <nuxt-link class="btn" :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.id}}">Leer más</nuxt-link>
         </div>
       </div>
     </div>
@@ -65,5 +65,8 @@ export default {
 
 .encuentro {
   cursor: pointer;
+}
+p {
+  text-align: justify;
 }
 </style>

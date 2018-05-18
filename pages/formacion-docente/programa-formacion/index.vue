@@ -35,7 +35,7 @@
                     <div class="embed-container">
                         <iframe :src="video.vid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
-                    <p>{{video.desc}}</p>
+                    <p>{{video.desc|slice(0,150)}}</p>
                     <router-link class="btn btn-inverse btn-large" :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">Ver mas potencia informacion</router-link>
                 </div>
             </div>
