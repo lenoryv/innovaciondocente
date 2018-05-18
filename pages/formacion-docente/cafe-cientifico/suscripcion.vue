@@ -1,46 +1,96 @@
 <template>
 <div class="container">
   <h1>Suscribete a nuestro Café científico</h1>
-  <form>
-      <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input v-model="forma.nombre" type="text" name="nombre" class="form-control" placeholder="Primer Nombre" v-validate="'required'">
+    <span v-show="errors.has('nombre')" class="invalid-feedback">Nombre es requerido</span>
+  </div>
+  <div class="form-group">
+    <label for="apellido">Apellido</label>
+    <input v-model="forma.apellido" type="text" name="apellido" class="form-control" placeholder="Primer apellido" v-validate="'required'">
+    <span v-show="errors.has('apellido')" class="invalid-feedback">Apellido es requerido</span>
+  </div>
+  <div class="form-group">
+    <label for="titulacion">Titulación</label>
+    <input v-model="forma.titulacion" type="text" name="titulacion" class="form-control" placeholder="Primer titulacion" v-validate="'required'">
+    <span v-show="errors.has('titulacion')" class="invalid-feedback">Titulación es requerido</span>
+  </div>
+  <div class="form-group">
+    <label for="email">Correo Electronico</label>
+    <input v-model="forma.email" class="form-control" name="email" type="text" placeholder="Email" v-validate="'required|email'">
+    <span v-show="errors.has('email')" class="invalid-feedback">Tiene que ser un email valido</span>
+  </div>
+  <div class="form-group">
+    <label for="telefono">Teléfono Celular</label>
+    <input v-model="forma.telefono" class="form-control" name="telefono" type="text" placeholder="Número de telefono" v-validate="'required|numeric'">
+    <span v-show="errors.has('telefono')" class="invalid-feedback">Tiene que ser un número valido</span>
+  </div>
+  <div class="form-group">
+    <label for="universidad">Universidad</label>
+    <input v-model="forma.universidad" class="form-control" name="universidad" type="text" placeholder="Universidad" v-validate="'required'">
+    <span v-show="errors.has('universidad')" class="invalid-feedback">Universidad es requerido</span>
+  </div>
+  <div class="form-group">
+      <label for="ciudad">Ciudad</label>
+      <select v-model="forma.ciudad" class="form-control" id="ciudad">
+          <option value="Loja">Loja</option>
+          <option value="Cuenca">Cuenca</option>
+          <option value="Guayaquil">Guayaquil</option>
+          <option value="Quito">Quito</option>
+      </select>
+  </div>
+  <div class="form-group form-check">
+    <input v-model="forma.whatsapp" type="checkbox" class="form-check-input" id="whatsapp">
+      <label class="form-check-label" for="whatsapp">¿Desearías que la información de los eventos de formación e innovación docente te lleguen por medio de WhatsApp?</label>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-6">
+    <nuxt-link class="btn btn-danger btn-large" :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
+
       </div>
-      <div class="form-group">
-          <label for="apellido">Apellido</label>
-          <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+      <div class="col-6">
+    <button @click="validateBeforeSubmit" class="btn btn-success btn-large">Suscribirse</button>
+
       </div>
-      <div class="form-group">
-          <label for="titulacion">Titulación</label>
-          <input type="text" class="form-control" id="titulacion" placeholder="Titulación">
-      </div>
-      <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Email ">
-      </div>
-      <div class="form-group">
-          <label for="telefono">Teléfono Celular</label>
-          <input type="text" class="form-control" id="telefono" placeholder="Teléfono Celular">
-      </div>
-      <div class="form-group">
-          <label for="ciudad">Ciudad</label>
-          <select class="form-control" id="ciudad">
-              <option>-Seleccionar-</option>
-              <option>Loja</option>
-              <option>Cuenca</option>
-              <option>Guayaquil</option>
-              <option>Quito</option>
-          </select>
-      </div>
-      <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="whatsapp">
-          <label class="form-check-label" for="whatsapp">¿Desearías que la información de los eventos de formación e innovación docente te lleguen por medio de WhatsApp?</label>
-      </div>
-      <button class="btn btn-success" type="submit">Submit</button>
-      <nuxt-link class="btn btn-danger" :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
-  </form>
+    </div>
+  </div>
 </div>
 </template>
+
+<script>
+export default {
+  data() {
+    let forma = {
+      nombre: "",
+      apellido: "",
+      ciudad: "Loja",
+      telefono: 0,
+      whatsapp: false,
+      titulacion: "",
+      universidad: "UTPL"
+    };
+    return {
+      forma
+    };
+  },
+  methods: {
+    validateBeforeSubmit(e) {
+      this.$validator
+        .validateAll()
+        .then(x => {
+          console.log(x);
+        })
+        .catch(e => {
+          console.log(e);
+        });
+      console.log(this.forma);
+    }
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 @import "assets/variables";
@@ -70,7 +120,7 @@
 .form-control:focus {
   color: $color-font;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem $color-primary-dark;
+  box-shadow: 0 0 0 0.2rem lighten($color: $color-primary-dark, $amount: 60);
 }
 
 .form-control::placeholder {
@@ -91,9 +141,17 @@
 
 .form-check-label {
   color: $color-font-light;
+  margin-bottom: 0;
 }
 
-.form-check-label {
-  margin-bottom: 0;
+.invalid-feedback {
+  display: block;
+  width: 100%;
+  color: $color-font-primary;
+  background-color: $color-danger;
+  padding: 0.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 80%;
 }
 </style>
