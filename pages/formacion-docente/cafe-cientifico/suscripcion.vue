@@ -148,10 +148,10 @@ export default {
   display: block;
   width: 100%;
   color: $color-font-primary;
-  background-color: lighten($color: $color-danger, $amount: 5);
-  border: 1px solid $color-danger;
-  border-radius: 5px;
+  background-color: $color-danger;
   padding: 0.25rem;
-  transition: opacity 0.5s;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 80%;
 }
 </style>

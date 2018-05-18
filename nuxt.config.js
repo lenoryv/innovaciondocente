@@ -69,6 +69,7 @@ module.exports = {
         })
       }
     },
+    extractCSS: true,
     vendor: ['vee-validate']
   },
   css: [

@@ -6,9 +6,9 @@
       Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.
     </p>
   </div>
-  <div class="container-fluid">
-    <div class="card-container">
-      <div v-for="(video, index) in videos" :key="index" class="item">
+  <section class="container-fluid">
+    <div class="row">
+      <div v-for="(video, index) in videos" :key="index" class="col-lg-4 col-md-6">
         <div class="embed-container">
           <iframe :src="video.vid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
@@ -16,7 +16,7 @@
         <p>{{video.desc}}</p>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 </template>
 
@@ -46,16 +46,5 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-}
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 450px);
-  grid-gap: 10px;
-  justify-content: center;
-}
-.item {
-  border-radius: 5px;
-  padding: 10px;
-  grid-row-end: span 6;
 }
 </style>
