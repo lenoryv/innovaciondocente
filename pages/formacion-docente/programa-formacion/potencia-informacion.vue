@@ -17,6 +17,9 @@
       </div>
     </div>
   </section>
+  <div class="container">
+    <button @click="$router.go(-1)" class="btn btn-large">Regresar</button>
+  </div>
 </div>
 </template>
 
