@@ -24,28 +24,28 @@
     <div class="div2">
       <div class="div3">
         <nuxt-link class="link" :to="{name: 'innovacion-docente'}">
-          <svg class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
+          <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
           <span class="d-block">Innovación Docente</span>
         </nuxt-link>
         <nuxt-link class="link" :to="{name: 'formacion-docente-programa-formacion'}">
-          <svg class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
+          <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
           <span class="d-block">Formación Docente</span>
          </nuxt-link>
         <nuxt-link class="link" :to="{name: ''}">
-          <svg class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
+          <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
           <span class="d-block">Observatorio EduTendencias</span>
         </nuxt-link>
         <nuxt-link class="link" :to="{name: 'index'}">
-          <svg class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
+          <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
@@ -86,12 +86,36 @@
         </div>
     </div>
   </section>
+  <div class="momentanio">
+
+  </div>
 </div>  
 </template>
 
 <script>
 export default {
-  layout: "empty"
+  layout: "empty",
+
+  data() {
+    return {
+      scrolled: false
+    };
+  },
+  methods: {
+    handleScroll() {
+      this.scrolled = window.scrollY > 650;
+    },
+    topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  },
+  beforeMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }  
 };
 </script>
 
@@ -102,6 +126,9 @@ h1 {
   color: $color-secondary;
 }
 
+.momentanio {
+  height: 500vh;
+}
 .header {
   height: 100vh;
   width: 100%;
@@ -176,6 +203,11 @@ h1 {
   text-align: center !important;
   display: inline-block;
   padding: 1rem;
+  font-size: 13px;
+}
+
+.link svg {
+  margin: 10px;
 }
 
 .div1 {
@@ -186,7 +218,7 @@ h1 {
   border-color: #eaecef !important;
   border-bottom: 1px #e1e4e8 solid !important;
   top: 0;
-  background: $color-warning;
+  background: $color-primary-light;
   z-index: 1;
 }
 
@@ -210,7 +242,6 @@ h1 {
   border-bottom: 3px solid transparent;
   display: block;
   text-decoration: none;
-  padding: 24px 0 24px;
 }
 
 .div3 svg {
@@ -219,7 +250,7 @@ h1 {
 }
 
 .div3 span {
-  color: #24292e !important;
+  color: $color-secondary;
 }
 
 .notes-text {
