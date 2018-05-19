@@ -41,7 +41,7 @@
             </div>
         </div>
     </section>
-    <section id="informacion">
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -79,15 +79,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
-
-#cursos {
-}
-
 h2 {
   text-align: center;
-}
-
-#informacion {
 }
 
 #video {
