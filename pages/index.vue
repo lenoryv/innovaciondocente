@@ -1,11 +1,14 @@
 <template>
 <div>
   <header  class="header content">
-    <div class="header-video">
-      <img class="background" src="@/static/imgIndex.jpg" alt="">
-       <!-- <video :src="require('@/static/videos/Decide_ser_mas_en_la_UTPL.mp4')" alt="" autoplay loop muted></video> -->
-    </div>
+    <!--<div class="header-video">
+      <img class="background img-move" src="@/static/imgIndex.jpg" alt="">
+       <video :src="require('@/static/videos/Decide_ser_mas_en_la_UTPL.mp4')" alt="" autoplay loop muted></video> 
+    </div>-->
     <div class="header-overlay"></div>
+    <div class="fondo">
+      <img class="img-move" src="@/static/imgIndex.jpg" alt="">
+    </div>
     <div class="header-content">
       <h1>The drive to study</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -83,14 +86,12 @@
         </div>
     </div>
   </section>
-
 </div>  
 </template>
 
-
 <script>
 export default {
-  layout: "empty",
+  layout: "empty"
 };
 </script>
 
@@ -117,17 +118,18 @@ h1 {
   text-align: center;
 }
 
-.header-video {
-  position: absolute;
+.fondo {
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  z-index: -2;
 }
 
-.background,
-.header-video video {
+.img-move {
   object-fit: cover;
   width: 100%;
   min-height: 300px;
@@ -135,6 +137,15 @@ h1 {
   max-height: 100vh;
   opacity: 1;
   position: relative;
+  animation: moving 10s infinite linear alternate;
+  @keyframes moving {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.3);
+    }
+  }
 }
 
 .header-overlay {
