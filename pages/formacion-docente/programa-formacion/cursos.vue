@@ -4,7 +4,7 @@
   <div v-for="(anio, i) in cursos" :key="i">
     <div v-for="(month, j) in anio.months" :key="j">
       <div class="container">
-      <h3>{{month.month}} de {{anio.year}}</h3>
+      <h2>{{month.month}} de {{anio.year}}</h2>
       <div class="row">
         <nuxt-link v-for="(curso, k) in month.cursos" :key="k" class="col-lg-4 col-md-6 curso" :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.id}}" tag="div">
           <img :src="require('@/static/img/' + curso.poster)" :alt="curso.img">
@@ -31,5 +31,8 @@ export default {
 <style lang="scss" scoped>
 .curso {
   cursor: pointer;
+}
+h4 {
+  text-align: justify;
 }
 </style>

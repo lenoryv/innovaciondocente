@@ -21,8 +21,6 @@
         </div>
       </div>
     </div>
-  </section>
-  <section>
     <div class="container-fluid">
       <h2>Otros Cafés</h2>
       <div class="row">
