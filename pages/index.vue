@@ -12,7 +12,7 @@
     <div class="header-content">
       <h1>The drive to study</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <button href="#" class="btn">Go to Course</button>
+      <button href="#" class="btn">GO TO COURSE</button>
       <a href="#" class="arrow arrow-1"><span></span></a>
       <a href="#" class="arrow arrow-2"><span></span></a>
       <a href="#" class="arrow arrow-3"><span></span></a>
@@ -28,28 +28,28 @@
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
-          <span class="d-block">Innovación Docente</span>
+          <span class="d-block">INNOVACIÓN DOCENTE</span>
         </nuxt-link>
         <nuxt-link class="link" :to="{name: 'formacion-docente-programa-formacion'}">
           <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
-          <span class="d-block">Formación Docente</span>
+          <span class="d-block">FORMACIÓN DOCENTE</span>
          </nuxt-link>
         <nuxt-link class="link" :to="{name: ''}">
           <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
-          <span class="d-block">Observatorio EduTendencias</span>
+          <span class="d-block">OBSERVATORIO EDUTENDENCIAS</span>
         </nuxt-link>
         <nuxt-link class="link" :to="{name: 'index'}">
           <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
-          <span class="d-block">Radio UTPL</span>
+          <span class="d-block">RADIO UTPL</span>
         </nuxt-link>
       </div>
     </div>
@@ -60,7 +60,8 @@
     <div class="container">
         <div class="row">
           <div class="col-md-4 notes">
-            <img src="~/static/img/innovacion/convocatorias.png" alt="convocatoria">
+            <img class="notes-img" src="~/static/img/innovacion/convocatorias.png" alt="convocatoria">
+            <div class="notes-content"></div>
             <div class="notes-text">
               <h3>Noticia Reciente</h3>
               <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
@@ -68,7 +69,8 @@
             </div>
           </div>
           <div class="col-md-4 notes">
-            <img src="~/static/img/innovacion/proyectos-actuales.png" alt="proyectos-actuales">
+            <img class="notes-img" src="~/static/img/innovacion/proyectos-actuales.png" alt="proyectos-actuales">
+            <div class="notes-content"></div>
             <div class="notes-text">
               <h3>Curso Reciente</h3>
               <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
@@ -76,7 +78,8 @@
             </div>
           </div>
           <div class="col-md-4 notes">
-            <img src="~/static/img/innovacion/proyecto-mentores.png" alt="proyecto-mentores">   
+            <img class="notes-img" src="~/static/img/innovacion/proyecto-mentores.png" alt="proyecto-mentores">   
+            <div class="notes-content"></div>
             <div class="notes-text">
               <h3>Tip Reciente</h3>
               <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
@@ -87,7 +90,6 @@
     </div>
   </section>
   <div class="momentanio">
-
   </div>
 </div>  
 </template>
@@ -103,7 +105,7 @@ export default {
   },
   methods: {
     handleScroll() {
-      this.scrolled = window.scrollY > 650;
+      this.scrolled = window.scrollY > 680;
     },
     topFunction() {
       document.body.scrollTop = 0;
@@ -115,7 +117,7 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
-  }  
+  }
 };
 </script>
 
@@ -211,6 +213,7 @@ h1 {
 }
 
 .div1 {
+  position: -webkit-sticky;
   position: sticky;
   transition: transform ease 0.4s;
   height: 100%;
@@ -218,7 +221,7 @@ h1 {
   border-color: #eaecef !important;
   border-bottom: 1px #e1e4e8 solid !important;
   top: 0;
-  background: $color-primary-light;
+  background: $color-background-white;
   z-index: 1;
 }
 
@@ -250,7 +253,8 @@ h1 {
 }
 
 .div3 span {
-  color: $color-secondary;
+  color: $color-primary;
+  font-weight: bold;
 }
 
 .notes-text {
@@ -335,6 +339,16 @@ h1 {
       opacity: 0;
     }
   }
+}
+
+.link:hover {
+  span {
+    color: $color-warning-dark;
+  }
+}
+
+.notes-content {
+  border-top: 4px solid $color-primary-mate;
 }
 
 @media (max-width: 992px) {
