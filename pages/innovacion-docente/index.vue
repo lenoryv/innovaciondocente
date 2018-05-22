@@ -19,7 +19,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">
+            <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas'}">
               <img src="~/static/img/innovacion/buenas-practicas.png" alt="buenas-practicas">
             </nuxt-link>
           </div>

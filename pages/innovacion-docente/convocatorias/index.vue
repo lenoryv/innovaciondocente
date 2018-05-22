@@ -8,7 +8,7 @@
         <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'3'}}">Abril-Agosto 2017</nuxt-link>
         <button class="btn btn-large" @click="closeNav()">Cerrar</button>
       </div>
-    <section id="main">
+      <section id="main">
         <div class="container">
           <button class="btn" @click="openNav()">Otras Convocatorias</button>
           <div>
@@ -16,7 +16,7 @@
             <nuxt-child/>
           </div>
         </div>
-    </section>
+      </section>
     </div>
 </template>
 <script>
