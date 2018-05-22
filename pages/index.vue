@@ -1,6 +1,6 @@
 <template>
 <div>
-  <header  class="header content">
+  <header  class="header">
     <!--<div class="header-video">
       <img class="background img-move" src="@/static/imgIndex.jpg" alt="">
        <video :src="require('@/static/videos/Decide_ser_mas_en_la_UTPL.mp4')" alt="" autoplay loop muted></video> 
@@ -10,8 +10,8 @@
       <img class="img-move" src="@/static/imgIndex.jpg" alt="">
     </div>
     <div class="header-content">
-      <h1>The drive to study</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <h1>Decide ser más</h1>
+      <p>Proyecto Ascendere</p>
       <button href="#" class="btn">GO TO COURSE</button>
       <a href="#" class="arrow arrow-1"><span></span></a>
       <a href="#" class="arrow arrow-2"><span></span></a>
@@ -105,7 +105,7 @@ export default {
   },
   methods: {
     handleScroll() {
-      this.scrolled = window.scrollY > 680;
+      this.scrolled = window.scrollY > 600;
     },
     topFunction() {
       document.body.scrollTop = 0;
@@ -131,19 +131,13 @@ h1 {
 .momentanio {
   height: 500vh;
 }
+
 .header {
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   color: $color-secondary;
-}
-
-.content {
-  max-width: 40rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: auto;
   text-align: center;
 }
 
@@ -185,6 +179,11 @@ h1 {
   left: 0;
   background: #0227499f;
   z-index: -1;
+}
+
+.header-content {
+  margin: auto;
+  text-align: center;
 }
 
 .header-content h1 {
@@ -312,7 +311,6 @@ h1 {
   transform: rotate(-45deg);
   -webkit-animation: sdb05 1.5s infinite;
   animation: sdb05 1.5s infinite;
-  box-sizing: border-box;
   @-webkit-keyframes sdb05 {
     0% {
       -webkit-transform: rotate(-45deg) translate(0, 0);
@@ -348,7 +346,7 @@ h1 {
 }
 
 .notes-content {
-  border-top: 4px solid $color-primary-mate;
+  border-top: 4px solid $color-section;
 }
 
 @media (max-width: 992px) {

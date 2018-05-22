@@ -4,7 +4,7 @@
 $col-blue: #14336a;
 $col-blue-dark: #142b53;
 $col-blue-light: #1d4488;
-$col-blue-mate: #00406f;
+$col-blue-matte: #00406f;
 
 $col-white: #fefefe;
 $col-white-dark: #f2f2f2;
@@ -27,7 +27,8 @@ $col-green: #28a745;
 $color-primary: $col-blue;
 $color-primary-light: $col-blue-light;
 $color-primary-dark: $col-blue-dark;
-$color-primary-mate: $col-blue-mate;
+
+$color-section: $col-blue-matte;
 
 $color-secondary: $col-white;
 $color-active: $col-blue;
