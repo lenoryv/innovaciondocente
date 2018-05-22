@@ -44,13 +44,13 @@
           </svg>
           <span class="d-block">OBSERVATORIO EDUTENDENCIAS</span>
         </nuxt-link>
-        <nuxt-link class="link" :to="{name: 'index'}">
+        <a class="link" target="_blank" href="https://radio.utpl.edu.ec">
           <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
                 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
           </svg>
           <span class="d-block">RADIO UTPL</span>
-        </nuxt-link>
+        </a>
       </div>
     </div>
   </div>
@@ -89,9 +89,30 @@
         </div>
     </div>
   </section>
-  <div class="momentanio">
-  </div>
-</div>  
+  <section>
+    
+    <div class="quienes-somos">
+      <div class="quienes-overlay"></div>
+      <div class="fondo">
+        <img class="img-background" src="@/static/imgIndex.jpg" alt="">
+      </div>
+      <div class="col-md-6 quienes-content">
+        <h1>Quienes Somos</h1>
+        
+        <p>Enmarcado en el Plan Estratégico de Desarrollo Institucional 2011 - 2020, el Vicerrectorado Académico, a través de su Dirección de Innovación, Formación y Evaluación Docente, trabaja e impulsa actividades innovadoras en la docencia y en la planificación docente; define un modelo integral para todas las titulaciones en el programa de innovación académica.</p>
+    </div>
+    <div>
+      <div class="col-mg-6">
+        <div class="avatar">
+          
+        </div>
+      </div>
+    </div> 
+    </div>
+    
+
+  </section>
+</div>   
 </template>
 
 <script>
@@ -142,7 +163,6 @@ h1 {
 }
 
 .fondo {
-  top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -175,7 +195,6 @@ h1 {
   height: 100vh;
   width: 100%;
   position: absolute;
-  top: 0;
   left: 0;
   background: #0227499f;
   z-index: -1;
@@ -347,6 +366,51 @@ h1 {
 
 .notes-content {
   border-top: 4px solid $color-section;
+}
+
+.quienes-somos {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;  
+  color: $color-secondary;
+}
+
+.quienes-content {
+  text-align: center;
+  align-items: center;
+}
+
+.img-avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.img-background {
+  object-fit: cover;
+  width: 100%;
+  min-height: 300px;
+  height: 100vh;
+  max-height: 100vh;
+  opacity: 1;
+  z-index: -1;
+}
+
+.avatar {
+  text-align: center;
+  padding: 10px;
+}
+
+.quienes-overlay {
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  left: 0;
+  background: $color-section;
+  z-index: -1;
+  opacity: 0.7;
 }
 
 @media (max-width: 992px) {
