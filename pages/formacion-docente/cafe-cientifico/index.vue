@@ -5,7 +5,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <img :src="require('@/static/img/' + ultimoEncuento.img)" :alt="ultimoEncuento.img">
+          <figure>
+            <img :src="require('@/static/img/' + ultimoEncuento.img)" :alt="ultimoEncuento.img">
+          </figure>
           <h2>Invitados</h2>
           <ul>
             <li v-for="(invitado, index) in ultimoEncuento.invitados" :key="index">{{ invitado.name }}</li>
@@ -14,8 +16,8 @@
         <div class="col-md-8">
           <h1>{{ultimoEncuento.tema}}</h1>
           <small>{{ultimoEncuento.fecha}}</small>
-          <p>{{ultimoEncuento.desc}}</p>
-          <nuxt-link class="btn" :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.id}}">Leer mas</nuxt-link>
+          <p>{{ultimoEncuento.desc | slice(0,500)}}</p>
+          <nuxt-link class="btn" :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.id}}">Leer más</nuxt-link>
         </div>
       </div>
     </div>
@@ -26,7 +28,9 @@
       <div class="row">
         <nuxt-link class="col-lg-3 col-sm-6 encuentro" v-for="(encuentro, i) in nuestrosEncuentos" :key="i"
         :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.id}}" tag="div">
-          <img :src="require('@/static/img/' + encuentro.img)" :alt="encuentro.img">
+          <figure>
+            <img :src="require('@/static/img/' + encuentro.img)" :alt="encuentro.img">
+          </figure>
           <h4>{{encuentro.tema}}</h4>
         </nuxt-link>
       </div>
@@ -65,5 +69,19 @@ export default {
 
 .encuentro {
   cursor: pointer;
+}
+p {
+  text-align: justify;
+}
+figure {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 50%;
+  height: 0;
+  margin: 0;
+}
+figure img {
+  display: block;
+  width: 100%;
 }
 </style>

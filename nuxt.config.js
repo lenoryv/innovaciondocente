@@ -81,6 +81,7 @@ module.exports = {
     '@nuxtjs/pwa'
   ],
   plugins: [
-    { src: '~/plugins/vee-validate.js', ssr: true }
+    { src: '~/plugins/vee-validate.js', ssr: true },
+    { src: '~/plugins/filters.js', ssr: true }
   ]
 }

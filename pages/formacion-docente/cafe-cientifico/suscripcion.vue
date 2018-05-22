@@ -67,7 +67,7 @@ export default {
       apellido: "",
       ciudad: "Loja",
       telefono: 0,
-      whatsapp: false,
+      whatsapp: true,
       titulacion: "",
       universidad: "UTPL"
     };

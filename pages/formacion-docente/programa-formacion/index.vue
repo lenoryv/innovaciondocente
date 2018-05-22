@@ -35,13 +35,13 @@
                     <div class="embed-container">
                         <iframe :src="video.vid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
-                    <p>{{video.desc}}</p>
+                    <p>{{video.desc|slice(0,150)}}</p>
                     <router-link class="btn btn-inverse btn-large" :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">Ver mas potencia informacion</router-link>
                 </div>
             </div>
         </div>
     </section>
-    <section id="informacion">
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -53,6 +53,9 @@
                 </div>
                 <div class="col-md-6">
                     <h2>Valida tu formación Docente - Pedagógica</h2>
+                    <p>
+                        Intructivo para validar tus cursos del Programa de Formación Docente Pedagógica en el Sistema de Información Académica Científica (SIAC)
+                    </p>
                     <a class="btn btn-large"  href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf" target="_blank">Intructivo para validar tus cursos</a>
                 </div>
             </div>
@@ -76,15 +79,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
-
-#cursos {
-}
-
 h2 {
   text-align: center;
-}
-
-#informacion {
 }
 
 #video {

@@ -1,6 +1,8 @@
 <template>
 <div class="container">
-  <img :src="require('@/static/img/' + encuentro.img)" :alt="encuentro.img">
+  <figure>
+    <img :src="require('@/static/img/' + encuentro.img)" :alt="encuentro.img">
+  </figure>
   <h1>{{encuentro.tema}}</h1>
   <small>{{encuentro.fecha}}</small>
   <hr>
@@ -8,10 +10,11 @@
   <h2>Invitados</h2>
   <div class="row">
     <div class="col-md-6" v-for="(invitado, index) in encuentro.invitados" :key="index">
-      <strong>{{invitado.name}}: </strong><br>{{invitado.desc}}
+      <strong>{{invitado.name}}: </strong>
+      <p>{{invitado.desc}}</p>
     </div>
   </div>
-  <button @click="$router.go(-1)">Regresar</button>
+  <button @click="$router.go(-1)" class="btn btn-large">Regresar</button>
 </div>
 </template>
 
@@ -36,3 +39,20 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+p {
+  text-align: justify;
+}
+figure {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 50%;
+  height: 0;
+  margin: 0;
+}
+figure img {
+  display: block;
+  width: 100%;
+}
+</style>
