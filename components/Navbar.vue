@@ -5,10 +5,10 @@
     <li class="dropdown">
       <nuxt-link class="dropbtn" :to="{name: 'innovacion-docente'}">Innovación Docente</nuxt-link>
       <div class="dropdown-content">
-        <nuxt-link :to="{name: 'innovacion-docente-convocatorias'}">Convocatorias</nuxt-link>
+        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
         <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
         <nuxt-link :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
-        <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas'}">Buenas Practicas</nuxt-link>
+        <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
         <nuxt-link :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
         <a target="_blank" href="https://retos.utpl.edu.ec/">Retos</a>
       </div>

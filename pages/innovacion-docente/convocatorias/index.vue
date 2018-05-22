@@ -1,28 +1,22 @@
 <template>
     <div>
-        <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">Actual</a>
-                    <a href="#">Abril-Agosto 2018</a>
-                    <a href="#">Octubre 2017-Febrero 2018</a>
-                    <a href="#">Abril-Agosto 2017</a>
-                    <button class="btn btn-large" @click="closeNav()">Cerrar</button>
-                </div>
-
-    
-    <section id="main">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Actual</nuxt-link>
+        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'1'}}">Abril-Agosto 2018</nuxt-link>
+        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'2'}}">Octubre 2017-Febrero 2018</nuxt-link>
+        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'3'}}">Abril-Agosto 2017</nuxt-link>
+        <button class="btn btn-large" @click="closeNav()">Cerrar</button>
+      </div>
+      <section id="main">
         <div class="container">
-                
-                    <button class="btn" @click="openNav()">Otras Convocatorias</button>
-                <div >
-                        <h1>Convocatoria de Proyectos de Innovación Docente</h1>
-                        
-                    <div class="embed-container">
-                            <embed name="plugin" id="plugin" src="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf" type="application/pdf" internalinstanceid="423">
-                    </div>
-            </div>
+          <button class="btn" @click="openNav()">Otras Convocatorias</button>
+          <div>
+            <h1>Convocatoria de Proyectos de Innovación Docente</h1>  
+            <nuxt-child/>
+          </div>
         </div>
-    </section>
+      </section>
     </div>
 </template>
 <script>
@@ -31,21 +25,19 @@ export default {
     openNav() {
       document.getElementById("mySidenav").style.width = "250px";
       document.getElementById("main").style.marginLeft = "250px";
-      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     },
 
     /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
     closeNav() {
       document.getElementById("mySidenav").style.width = "0";
       document.getElementById("main").style.marginLeft = "0";
-      document.body.style.backgroundColor = "white";
     }
   }
 };
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "assets/variables";
 .sidenav {
   height: 100%;
@@ -111,4 +103,5 @@ export default {
   width: 100%;
   height: 100%;
 }
+
 </style>
