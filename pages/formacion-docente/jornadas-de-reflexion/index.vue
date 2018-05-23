@@ -3,12 +3,10 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <input type="radio"
-                               name="1"
-                               id="op">
+                    <div class="col-md-3">
+
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <div v-html="html"></div>
                     </div>
                 </div>
@@ -16,7 +14,9 @@
         </section>
         <section id="anteriores">
             <div class="container">
-                <h2>Jornadas de reflexión</h2>
+                <h2>
+                    Jornadas de reflexión
+                </h2>
                 <p>
                     Consolidadas como instancias de diálogo, análisis y reflexión, las Jornadas de Reflexión son encuentros
                     centrados en temas en los que se conjugan ciencia y filosofía institucional, están
@@ -105,16 +105,22 @@ export default {
         </p>
         <ul>
             <li>
-                Reconócete: fototéca digital colaborativa-patrimonio fotográfico UTPL. Dirigido por: Ana María Beltrán, Carlos Ortíz y Ramiro
-                Ramírez.
+                <p>
+                    Reconócete: fototéca digital colaborativa-patrimonio fotográfico UTPL. Dirigido por: Ana María Beltrán, Carlos Ortíz y Ramiro
+                    Ramírez.
+                </p>
             </li>
             <li>
-                Proyecto mundos virtuales: simulación de audiencias de derecho procesal civil I y II con la ayuda de mundos virtuales inmersivos.
-                Dirigido por: Paul Moreno, José León, Eduardo Castillo, María Alejandra Cueva y Jairo Contreras.
+                <p>
+                    Proyecto mundos virtuales: simulación de audiencias de derecho procesal civil I y II con la ayuda de mundos virtuales inmersivos.
+                    Dirigido por: Paul Moreno, José León, Eduardo Castillo, María Alejandra Cueva y Jairo Contreras.
+                </p>
             </li>
             <li>
-                Micro 2.0 La experimentación y enseñanza-aprendizaje en las aulas de microeconomía. Dirigido por: Katty Celi, Diana Encalada,
-                María del Cisne Tituaña, Luis Rojas y Jéssica Ordóñez.
+                <p>
+                    Micro 2.0 La experimentación y enseñanza-aprendizaje en las aulas de microeconomía. Dirigido por: Katty Celi, Diana Encalada,
+                    María del Cisne Tituaña, Luis Rojas y Jéssica Ordóñez.
+                </p>
             </li>
         </ul>
         <p>
