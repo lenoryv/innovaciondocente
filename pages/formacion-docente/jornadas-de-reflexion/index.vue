@@ -1,0 +1,142 @@
+<template>
+    <div>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="radio"
+                               name="1"
+                               id="op">
+                    </div>
+                    <div class="col-md-8">
+                        <div v-html="html"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="anteriores">
+            <div class="container">
+                <h2>Jornadas de reflexión</h2>
+                <p>
+                    Consolidadas como instancias de diálogo, análisis y reflexión, las Jornadas de Reflexión son encuentros
+                    centrados en temas en los que se conjugan ciencia y filosofía institucional, están
+                    dirigidos al personal docente y administrativo, contando con una parte académica
+                    y otra humanística.
+                </p>
+                <p>
+                    En lo que tiene que ver a las Jornadas Académicas, se generan espacios durante cada ciclo académico,
+                    donde los docentes de todas las áreas hacen una reflexión académica para mejorar
+                    procesos y elaborar propuestas que optimicen la educación. Bajo la dirección del
+                    Vicerrectorado Académico en un trabajo compartido con los otros Vicerrectorados y
+                    Direcciones Generales que forman parte de la universidad, los participantes comparten
+                    valiosas experiencias, exponen temas relacionados con innovaciones aplicadas en sus
+                    materias, ensayos, investigaciones aplicadas, reflexiones sobre su profesión y herramientas
+                    pedagógicas. Además estos encuentros son aprovechados para difundir información académica
+                    actual y de interés a la comunidad docente de la institución.
+                </p>
+                <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores'}"
+                           class="btn btn-large btn-inverse">
+                    Jornadas Anteriores
+                </nuxt-link>
+            </div>
+        </section>
+    </div>
+</template>
+
+<script>
+export default {
+  asyncData() {
+    return {
+      html: `
+        <h1>
+            Jornada de Reflexión Académica - Inicio del ciclo académico Abril-Agosto 2018
+        </h1>
+        <h2>
+            Tema: Desarrollo de competencias transversales en el aula de clases: innovación, creatividad y emprendimiento
+        </h2>
+        <img src="https://innovaciondocente.utpl.edu.ec/sites/default/files/images/39146835140_fcaf0fd41e_z.jpg" alt="imagen">
+        <p>
+            Los docentes y las autoridades de la Universidad Técnica Particular de Loja reciben el nuevo período académico abril-agosto
+            2018 con un nuevo reto, impulsar la innovación y el emprendimiento en las aulas.
+        </p>
+        <p>
+            Al inicio de la Jornada el señor Vicerrector Académico intervino con un saludo de bienvenida y también presentó algunos temas
+            de importancia para el desarrollo de actividades del próximo período académico.
+        </p>
+        <img src="https://innovaciondocente.utpl.edu.ec/sites/default/files/images/40062679985_7b2c822874_z(1).jpg" alt="imagen">
+        <p>
+            Adicional a esto el señor Rector Dr. José Barbosa Corbacho contribuyó a la Jornada de Reflexión Académica con un mensaje
+            institucional, enmarcado en torno a la importancia de los nuevos escenarios para el desarrollo de la innovación en las
+            universidades y la necesidad de mejorar cada día en el ámbito docente.
+        </p>
+        <img src="https://innovaciondocente.utpl.edu.ec/sites/default/files/images/40062691185_e20deaf70c_z.jpg" alt="imagen">
+        <a href="https://www.flickr.com/photos/utpl/albums/72157689053784360/with/39146835980/">Ver galería</a>
+        <h2>Desarrollo del taller "ADN Innovador"-Jornada de Reflexión Académica 2018</h2>
+        <p>
+            Acto seguido el
+            <b>Dr. Jorge Mesa</b>de la Universidad EAFIT de Medellín, Colombia, visitó la UTPL y compartió a través de una charla magistral
+            su experiencia en las aulas universitarias y el desafío constante de ser un profesor que aprende de sus alumnos en el
+            día a día, dentro de los procesos de enseñanza-aprendizaje
+        </p>
+        <p>
+            En un segundo segmento del evento se llevó a cabo la parte práctica a través de un taller denominado
+            <b>“ADN Innovador”</b>, en el cual se desarrollaron una diversidad de actividades dinámicas comprendiendo la importancia
+            de experimentar, asociar, focalizar, interrogar y trabajar en red en las aulas universitarias; esto con el motivo de
+            aportar a la innovación de los estudiantes y proyectar por medio de ellos el emprendimiento en el aula y fuera de ella,
+            representando un avance e impacto académico y social.
+        </p>
+        <a href="https://www.youtube.com/watch?v=JXcwa0zUDLw">Ver la Jornada</a>
+        <img src="https://innovaciondocente.utpl.edu.ec/sites/default/files/images/40062683505_96b224945e_z.jpg" alt="imagen">
+        <p>
+            Además como una actividad práctica del taller se entregó en cada una de las mesas un crucigrama, postriormente se eligieron
+            aquellos con mayor aciertos y se premio a los docentes participantes.
+        </p>
+        <h3>
+            De interés:
+        </h3>
+        <p>
+            Las jornadas de reflexión académica también se han convertido en un espacio para compartir la dedicación de los docentes
+            por innovar en sus clases. Este espacio fue aprovechado para difundir los proyectos de buenas prácticas e innovación
+            docente trabajados durante el ciclo anterior.
+        </p>
+        <p>
+            En total participaron 37 proyectos, de los cuáles 3 fueron escogidos para recibir un reconocimiento, esta selección se realizó
+            por un jurado calificador y a través de una votación en medios sociales. Los seleccionados fueron:
+        </p>
+        <ul>
+            <li>
+                Reconócete: fototéca digital colaborativa-patrimonio fotográfico UTPL. Dirigido por: Ana María Beltrán, Carlos Ortíz y Ramiro
+                Ramírez.
+            </li>
+            <li>
+                Proyecto mundos virtuales: simulación de audiencias de derecho procesal civil I y II con la ayuda de mundos virtuales inmersivos.
+                Dirigido por: Paul Moreno, José León, Eduardo Castillo, María Alejandra Cueva y Jairo Contreras.
+            </li>
+            <li>
+                Micro 2.0 La experimentación y enseñanza-aprendizaje en las aulas de microeconomía. Dirigido por: Katty Celi, Diana Encalada,
+                María del Cisne Tituaña, Luis Rojas y Jéssica Ordóñez.
+            </li>
+        </ul>
+        <p>
+            El apoyo que ricibieron por parte del Vicerrectorado Académico es la financiación completa para difundir sus proyectos en
+            congresos internacionales.
+        </p>
+        <a href="https://www.facebook.com/pg/LiiDUTPL/photos/?tab=album&album_id=201665140607612">Proyectos</a>
+        `
+    };
+  }
+};
+</script>
+
+
+
+<style lang="scss" scoped>
+@import "assets/variables";
+
+#anteriores {
+  background-color: $color-primary;
+  color: $color-font-primary;
+}
+</style>
+
+    

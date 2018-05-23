@@ -1,21 +1,25 @@
 <template>
-<div class="container">
-  <figure>
-    <img :src="require('@/static/img/' + encuentro.img)" :alt="encuentro.img">
-  </figure>
-  <h1>{{encuentro.tema}}</h1>
-  <small>{{encuentro.fecha}}</small>
-  <hr>
-  <p>{{encuentro.desc}}</p>
-  <h2>Invitados</h2>
-  <div class="row">
-    <div class="col-md-6" v-for="(invitado, index) in encuentro.invitados" :key="index">
-      <strong>{{invitado.name}}: </strong>
-      <p>{{invitado.desc}}</p>
+  <div class="container">
+    <figure>
+      <img :src="require('@/static/img/' + encuentro.img)"
+           :alt="encuentro.img">
+    </figure>
+    <h1>{{encuentro.tema}}</h1>
+    <small>{{encuentro.fecha}}</small>
+    <hr>
+    <p>{{encuentro.desc}}</p>
+    <h2>Invitados</h2>
+    <div class="row">
+      <div class="col-md-6"
+           v-for="(invitado, index) in encuentro.invitados"
+           :key="index">
+        <strong>{{invitado.name}}: </strong>
+        <p>{{invitado.desc}}</p>
+      </div>
     </div>
+    <button @click="$router.go(-1)"
+            class="btn btn-large">Regresar</button>
   </div>
-  <button @click="$router.go(-1)" class="btn btn-large">Regresar</button>
-</div>
 </template>
 
 <script>
@@ -41,9 +45,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-p {
-  text-align: justify;
-}
 figure {
   width: 100%;
   overflow: hidden;

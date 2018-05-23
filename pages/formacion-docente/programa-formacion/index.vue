@@ -24,14 +24,14 @@
             <h2>Videos</h2>
             <div class="row">
                 <div class="col-lg-8">
-                    <h2>#InnovaciónenlaUTPL</h2>
+                    <h3>#InnovaciónenlaUTPL</h3>
                     <div class="embed-container">
                         <iframe src="https://www.youtube.com/embed/Fo6uuUi86F4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                     <a target="_blank" class="btn btn-inverse btn-large" href="https://www.youtube.com/channel/UCzRd2Y87-NJnVliV8B6e_Xg">Innovación Docente en YouTube</a>
                 </div>
                 <div class="col-lg-4">
-                    <h2>{{video.title}}</h2>
+                    <h3>{{video.title}}</h3>
                     <div class="embed-container">
                         <iframe :src="video.vid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
@@ -45,14 +45,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Calendario Anual</h2>
+                    <h3>Calendario Anual</h3>
                     <p>
                         El Programa de Formación se desarrolla por medio de la articulación de varios módulos, los cuales están integrados por itinerarios. En esta estructura se reflejen las líneas de capacitación de toda la comunidad universitaria. De acuerdo a los ejes formativos: académia e investigación, e identidad y excelencia, se podrán ordenar el tipo de capacitación requerida por módulos e itinerarios, garantizando que el alcance de una formación, cumpla los objetivos deseados.
                     </p>
                     <a class="btn btn-large" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf" target="_blank">Programa de Formación Docente 2018</a>
                 </div>
                 <div class="col-md-6">
-                    <h2>Valida tu formación Docente - Pedagógica</h2>
+                    <h3>Valida tu formación Docente - Pedagógica</h3>
                     <p>
                         Intructivo para validar tus cursos del Programa de Formación Docente Pedagógica en el Sistema de Información Académica Científica (SIAC)
                     </p>
@@ -79,16 +79,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
-h2 {
-  text-align: center;
-}
-
 #video {
   background-color: $color-primary;
   color: $color-font-primary;
-}
-p {
-  text-align: justify;
 }
 
 .embed-container {

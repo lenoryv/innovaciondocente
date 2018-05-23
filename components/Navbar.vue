@@ -18,7 +18,7 @@
       <div class="dropdown-content">
         <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
         <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
-        <nuxt-link :to="{path: '/jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+        <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
       </div>
     </li>
     <li>
