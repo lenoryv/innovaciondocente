@@ -83,9 +83,6 @@ export default {
   background-color: $color-primary;
   color: $color-font-primary;
 }
-h4, p {
-  text-align: justify;
-}
 
 .embed-container {
   position: relative;
