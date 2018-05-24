@@ -18,7 +18,7 @@
       </div>
     </div>
     <button @click="$router.go(-1)"
-            class="btn btn-large">Regresar</button>
+            class="btn btn-primary btn-large">Regresar</button>
   </div>
 </template>
 

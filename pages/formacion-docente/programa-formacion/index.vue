@@ -1,67 +1,99 @@
 <template>
-<div>
-    <img :src="require('@/static/img/banner-formacion-docente.jpg')" alt="banner-formacion-docente">
-    <section>
-        <div class="container">
-            <h1>Programa de Formación Docente</h1>
-            <p>
-                “El Programa de Formación  Docente de la universidad está orientado de forma prioritaria a facilitar y apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias profesionales y apoyar el desarrollo de dichas competencias desde la formación del profesorado y desde el enfoque de nuestra universidad.” 
-            </p>
-            <h2>Cursos</h2>
-            <div class="row">
-                <nuxt-link class="col-sm-6 curso" v-for="(curso, i) in cursos" :key="i"
-                :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.id}}" tag="div">
-                    <img :src="require('@/static/img/' + curso.poster)" :alt="curso.img">
-                    <h4>{{curso.nombre}}</h4>
-                    <small>{{curso.fecha}}</small>
-                </nuxt-link>
+    <div>
+        <img :src="require('@/static/img/banner-formacion-docente.jpg')"
+             alt="banner-formacion-docente">
+        <section>
+            <div class="container">
+                <h1>Programa de Formación Docente</h1>
+                <p>
+                    “El Programa de Formación Docente de la universidad está orientado de forma prioritaria a facilitar y
+                    apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles
+                    de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias
+                    profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias
+                    profesionales y apoyar el desarrollo de dichas competencias desde la formación del
+                    profesorado y desde el enfoque de nuestra universidad.”
+                </p>
+                <h2>Cursos</h2>
+                <div class="row">
+                    <nuxt-link class="col-sm-6 curso"
+                               v-for="(curso, i) in cursos"
+                               :key="i"
+                               :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.id}}"
+                               tag="div">
+                        <img :src="require('@/static/img/' + curso.poster)"
+                             :alt="curso.img">
+                        <h4>{{curso.nombre}}</h4>
+                        <small>{{curso.fecha}}</small>
+                    </nuxt-link>
+                </div>
+                <nuxt-link class="btn btn-primary btn-large"
+                           :to="{name: 'formacion-docente-programa-formacion-cursos'}">Formación Docente</nuxt-link>
             </div>
-            <nuxt-link class="btn btn-large" :to="{name: 'formacion-docente-programa-formacion-cursos'}">Formación Docente</nuxt-link>
-        </div>
-    </section>
-    <section id="video">
-        <div class="container">
-            <h2>Videos</h2>
-            <div class="row">
-                <div class="col-lg-8">
-                    <h3>#InnovaciónenlaUTPL</h3>
-                    <div class="embed-container">
-                        <iframe src="https://www.youtube.com/embed/Fo6uuUi86F4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </section>
+        <section id="video">
+            <div class="container">
+                <h2>Videos</h2>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h3>#InnovaciónenlaUTPL</h3>
+                        <div class="embed-container">
+                            <iframe src="https://www.youtube.com/embed/Fo6uuUi86F4"
+                                    frameborder="0"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <a target="_blank"
+                           class="btn btn-inverse btn-large"
+                           href="https://www.youtube.com/channel/UCzRd2Y87-NJnVliV8B6e_Xg">Innovación Docente en YouTube</a>
                     </div>
-                    <a target="_blank" class="btn btn-inverse btn-large" href="https://www.youtube.com/channel/UCzRd2Y87-NJnVliV8B6e_Xg">Innovación Docente en YouTube</a>
-                </div>
-                <div class="col-lg-4">
-                    <h3>{{video.title}}</h3>
-                    <div class="embed-container">
-                        <iframe :src="video.vid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="col-lg-4">
+                        <h3>{{video.title}}</h3>
+                        <div class="embed-container">
+                            <iframe :src="video.vid"
+                                    frameborder="0"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p>{{video.desc|slice(0,250)}}</p>
+                        <router-link class="btn btn-inverse btn-large"
+                                     :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">Ver mas potencia informacion</router-link>
                     </div>
-                    <p>{{video.desc|slice(0,150)}}</p>
-                    <router-link class="btn btn-inverse btn-large" :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">Ver mas potencia informacion</router-link>
                 </div>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Calendario Anual</h3>
-                    <p>
-                        El Programa de Formación se desarrolla por medio de la articulación de varios módulos, los cuales están integrados por itinerarios. En esta estructura se reflejen las líneas de capacitación de toda la comunidad universitaria. De acuerdo a los ejes formativos: académia e investigación, e identidad y excelencia, se podrán ordenar el tipo de capacitación requerida por módulos e itinerarios, garantizando que el alcance de una formación, cumpla los objetivos deseados.
-                    </p>
-                    <a class="btn btn-large" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf" target="_blank">Programa de Formación Docente 2018</a>
-                </div>
-                <div class="col-md-6">
-                    <h3>Valida tu formación Docente - Pedagógica</h3>
-                    <p>
-                        Intructivo para validar tus cursos del Programa de Formación Docente Pedagógica en el Sistema de Información Académica Científica (SIAC)
-                    </p>
-                    <a class="btn btn-large"  href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf" target="_blank">Intructivo para validar tus cursos</a>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Calendario Anual</h3>
+                        <p>
+                            El Programa de Formación se desarrolla por medio de la articulación de varios módulos, los cuales están
+                            integrados por itinerarios. En esta estructura se reflejen las líneas de
+                            capacitación de toda la comunidad universitaria. De acuerdo a los ejes formativos:
+                            académia e investigación, e identidad y excelencia, se podrán ordenar el
+                            tipo de capacitación requerida por módulos e itinerarios, garantizando que
+                            el alcance de una formación, cumpla los objetivos deseados.
+                        </p>
+                        <a class="btn btn-outline-primary btn-large"
+                           href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf"
+                    
+                           target="_blank">Programa de Formación Docente 2018</a>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Valida tu formación Docente - Pedagógica</h3>
+                        <p>
+                            Intructivo para validar tus cursos del Programa de Formación Docente Pedagógica en el Sistema de Información
+                            Académica Científica (SIAC)
+                        </p>
+                        <a class="btn btn-outline-primary btn-large"
+                           href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf"
+                    
+                           target="_blank">Intructivo para validar tus cursos</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 </template>
 
 <script>

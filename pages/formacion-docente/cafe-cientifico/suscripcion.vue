@@ -1,62 +1,109 @@
 <template>
-<div class="container">
-  <h1>Suscribete a nuestro Café científico</h1>
-  <div class="form-group">
-    <label for="nombre">Nombre</label>
-    <input v-model="forma.nombre" type="text" name="nombre" class="form-control" placeholder="Primer Nombre" v-validate="'required'">
-    <span v-show="errors.has('nombre')" class="invalid-feedback">Nombre es requerido</span>
-  </div>
-  <div class="form-group">
-    <label for="apellido">Apellido</label>
-    <input v-model="forma.apellido" type="text" name="apellido" class="form-control" placeholder="Primer apellido" v-validate="'required'">
-    <span v-show="errors.has('apellido')" class="invalid-feedback">Apellido es requerido</span>
-  </div>
-  <div class="form-group">
-    <label for="titulacion">Titulación</label>
-    <input v-model="forma.titulacion" type="text" name="titulacion" class="form-control" placeholder="Primer titulacion" v-validate="'required'">
-    <span v-show="errors.has('titulacion')" class="invalid-feedback">Titulación es requerido</span>
-  </div>
-  <div class="form-group">
-    <label for="email">Correo Electronico</label>
-    <input v-model="forma.email" class="form-control" name="email" type="text" placeholder="Email" v-validate="'required|email'">
-    <span v-show="errors.has('email')" class="invalid-feedback">Tiene que ser un email valido</span>
-  </div>
-  <div class="form-group">
-    <label for="telefono">Teléfono Celular</label>
-    <input v-model="forma.telefono" class="form-control" name="telefono" type="text" placeholder="Número de telefono" v-validate="'required|numeric'">
-    <span v-show="errors.has('telefono')" class="invalid-feedback">Tiene que ser un número valido</span>
-  </div>
-  <div class="form-group">
-    <label for="universidad">Universidad</label>
-    <input v-model="forma.universidad" class="form-control" name="universidad" type="text" placeholder="Universidad" v-validate="'required'">
-    <span v-show="errors.has('universidad')" class="invalid-feedback">Universidad es requerido</span>
-  </div>
-  <div class="form-group">
-      <label for="ciudad">Ciudad</label>
-      <select v-model="forma.ciudad" class="form-control" id="ciudad">
-          <option value="Loja">Loja</option>
-          <option value="Cuenca">Cuenca</option>
-          <option value="Guayaquil">Guayaquil</option>
-          <option value="Quito">Quito</option>
-      </select>
-  </div>
-  <div class="form-group form-check">
-    <input v-model="forma.whatsapp" type="checkbox" class="form-check-input" id="whatsapp">
-      <label class="form-check-label" for="whatsapp">¿Desearías que la información de los eventos de formación e innovación docente te lleguen por medio de WhatsApp?</label>
-  </div>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-6">
-    <nuxt-link class="btn btn-danger btn-large" :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
-
+  <div class="container">
+    <h1>Suscribete a nuestro Café científico</h1>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nombre">Nombre</label>
+        <input v-model="forma.nombre"
+               type="text"
+               name="nombre"
+               class="form-control"
+               placeholder="Nombre"
+               v-validate="'required'">
+        <span v-show="errors.has('nombre')"
+              class="invalid-feedback">Nombre es requerido</span>
       </div>
-      <div class="col-6">
-    <button @click="validateBeforeSubmit" class="btn btn-success btn-large">Suscribirse</button>
+      <div class="form-group col-md-6">
+        <label for="apellido">Apellido</label>
+        <input v-model="forma.apellido"
+               type="text"
+               name="apellido"
+               class="form-control"
+               placeholder="Apellido"
+               v-validate="'required'">
+        <span v-show="errors.has('apellido')"
+              class="invalid-feedback">Apellido es requerido</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="titulacion">Titulación</label>
+      <input v-model="forma.titulacion"
+             type="text"
+             name="titulacion"
+             class="form-control"
+             placeholder="Primer titulacion"
+             v-validate="'required'">
+      <span v-show="errors.has('titulacion')"
+            class="invalid-feedback">Titulación es requerido</span>
+    </div>
+    <div class="form-group">
+      <label for="email">Correo Electronico</label>
+      <input v-model="forma.email"
+             class="form-control"
+             name="email"
+             type="text"
+             placeholder="Email"
+             v-validate="'required|email'">
+      <span v-show="errors.has('email')"
+            class="invalid-feedback">Tiene que ser un email valido</span>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono Celular</label>
+      <input v-model="forma.telefono"
+             class="form-control"
+             name="telefono"
+             type="text"
+             placeholder="Número de telefono"
+             v-validate="'required|numeric'">
+      <span v-show="errors.has('telefono')"
+            class="invalid-feedback">Tiene que ser un número valido</span>
+    </div>
+    <div class="form-group">
+      <label for="universidad">Universidad</label>
+      <input v-model="forma.universidad"
+             class="form-control"
+             name="universidad"
+             type="text"
+             placeholder="Universidad"
+             v-validate="'required'">
+      <span v-show="errors.has('universidad')"
+            class="invalid-feedback">Universidad es requerido</span>
+    </div>
+    <div class="form-group">
+      <label for="ciudad">Ciudad</label>
+      <select v-model="forma.ciudad"
+              class="form-control"
+              id="ciudad">
+        <option value="Loja">Loja</option>
+        <option value="Cuenca">Cuenca</option>
+        <option value="Guayaquil">Guayaquil</option>
+        <option value="Quito">Quito</option>
+      </select>
+    </div>
+    <div class="form-group form-check">
+      <input v-model="forma.whatsapp"
+             type="checkbox"
+             class="form-check-input"
+             id="whatsapp">
+      <label class="form-check-label"
+             for="whatsapp">¿Desearías que la información de los eventos de formación e innovación docente te lleguen por medio
+        de WhatsApp?</label>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <nuxt-link class="btn btn-outline-danger btn-large"
+                     :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
 
+        </div>
+        <div class="col-6">
+          <button @click="validateBeforeSubmit"
+                  class="btn btn-success btn-large">Suscribirse</button>
+
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -94,6 +141,21 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
+
+.form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
 .form-group {
   margin-bottom: 1rem;
 }
