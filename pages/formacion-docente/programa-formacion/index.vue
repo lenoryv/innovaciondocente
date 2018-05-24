@@ -26,7 +26,7 @@
                         <small>{{curso.fecha}}</small>
                     </nuxt-link>
                 </div>
-                <nuxt-link class="btn btn-large"
+                <nuxt-link class="btn btn-primary btn-large"
                            :to="{name: 'formacion-docente-programa-formacion-cursos'}">Formación Docente</nuxt-link>
             </div>
         </section>
@@ -54,7 +54,7 @@
                                     allow="autoplay; encrypted-media"
                                     allowfullscreen></iframe>
                         </div>
-                        <p>{{video.desc|slice(0,150)}}</p>
+                        <p>{{video.desc|slice(0,250)}}</p>
                         <router-link class="btn btn-inverse btn-large"
                                      :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">Ver mas potencia informacion</router-link>
                     </div>
@@ -74,7 +74,7 @@
                             tipo de capacitación requerida por módulos e itinerarios, garantizando que
                             el alcance de una formación, cumpla los objetivos deseados.
                         </p>
-                        <a class="btn btn-large"
+                        <a class="btn btn-outline-primary btn-large"
                            href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf"
                     
                            target="_blank">Programa de Formación Docente 2018</a>
@@ -85,7 +85,7 @@
                             Intructivo para validar tus cursos del Programa de Formación Docente Pedagógica en el Sistema de Información
                             Académica Científica (SIAC)
                         </p>
-                        <a class="btn btn-large"
+                        <a class="btn btn-outline-primary btn-large"
                            href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf"
                     
                            target="_blank">Intructivo para validar tus cursos</a>

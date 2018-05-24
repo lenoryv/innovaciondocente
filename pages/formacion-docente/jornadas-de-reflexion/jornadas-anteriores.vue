@@ -17,7 +17,7 @@
               <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2014}}">2014</nuxt-link>
             </li>
           </ul>
-          <nuxt-link class="btn btn-large" :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornada Actual</nuxt-link>
+          <nuxt-link class="btn btn-primary btn-large" :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornada Actual</nuxt-link>
         </div>
         <div class="col-md-9">
           <nuxt-child />

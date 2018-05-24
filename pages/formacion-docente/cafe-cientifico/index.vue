@@ -20,7 +20,7 @@
             <h1>{{ultimoEncuento.tema}}</h1>
             <small>{{ultimoEncuento.fecha}}</small>
             <p>{{ultimoEncuento.desc | slice(0,500)}}</p>
-            <nuxt-link class="btn"
+            <nuxt-link class="btn btn-primary"
                        :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.id}}">
               Leer más
             </nuxt-link>
