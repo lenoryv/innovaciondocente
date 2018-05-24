@@ -1,27 +1,29 @@
 <template>
   <div class="container">
     <h1>Suscribete a nuestro Café científico</h1>
-    <div class="form-group">
-      <label for="nombre">Nombre</label>
-      <input v-model="forma.nombre"
-             type="text"
-             name="nombre"
-             class="form-control"
-             placeholder="Primer Nombre"
-             v-validate="'required'">
-      <span v-show="errors.has('nombre')"
-            class="invalid-feedback">Nombre es requerido</span>
-    </div>
-    <div class="form-group">
-      <label for="apellido">Apellido</label>
-      <input v-model="forma.apellido"
-             type="text"
-             name="apellido"
-             class="form-control"
-             placeholder="Primer apellido"
-             v-validate="'required'">
-      <span v-show="errors.has('apellido')"
-            class="invalid-feedback">Apellido es requerido</span>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nombre">Nombre</label>
+        <input v-model="forma.nombre"
+               type="text"
+               name="nombre"
+               class="form-control"
+               placeholder="Nombre"
+               v-validate="'required'">
+        <span v-show="errors.has('nombre')"
+              class="invalid-feedback">Nombre es requerido</span>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="apellido">Apellido</label>
+        <input v-model="forma.apellido"
+               type="text"
+               name="apellido"
+               class="form-control"
+               placeholder="Apellido"
+               v-validate="'required'">
+        <span v-show="errors.has('apellido')"
+              class="invalid-feedback">Apellido es requerido</span>
+      </div>
     </div>
     <div class="form-group">
       <label for="titulacion">Titulación</label>
@@ -139,6 +141,21 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
+
+.form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
 .form-group {
   margin-bottom: 1rem;
 }
