@@ -3,21 +3,22 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <ul>
-            <li>
-              <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2018}}">2018</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2016}}">2016</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2015}}">2015</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2014}}">2014</nuxt-link>
-            </li>
-          </ul>
-          <nuxt-link class="btn btn-primary btn-large" :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornada Actual</nuxt-link>
+          <nuxt-link class="btn btn-outline-dark btn-large"
+                     :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores'}">
+            JORNADAS DE REFLEXIÓN
+          </nuxt-link>
+          <nuxt-link class="btn btn-outline-dark btn-large"
+                     :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2018}}">
+            Jornada 2018
+          </nuxt-link>
+          <nuxt-link class="btn btn-outline-dark btn-large"
+                     :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2016}}">
+            Jornada 2016
+          </nuxt-link>
+          <nuxt-link class="btn btn-primary btn-large"
+                     :to="{name: 'formacion-docente-jornadas-de-reflexion'}">
+            Jornada Actual
+          </nuxt-link>
         </div>
         <div class="col-md-9">
           <nuxt-child />
@@ -26,3 +27,16 @@
     </div>
   </section>
 </template>
+
+<style lang="scss" scoped>
+@import "assets/variables";
+.nuxt-link-exact-active {
+  color: $color-font-primary !important;
+  background-color: $color-dark !important;
+  border-color: $color-dark !important;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.2s all ease;
+  }
+}
+</style>
