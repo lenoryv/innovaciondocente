@@ -2,16 +2,14 @@
     <section>
         <div class="menu">
         <div id="mySidenav" class="sidenav">
-            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}" id="biologia">Biológica</nuxt-link>
-            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}" id="tecnica">Técnica</nuxt-link>
-            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}" id="social">Sociohumanística</nuxt-link>
-            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}" id="admin">Administrativa</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'1'}}" id="biologia">Biológica</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'11'}}" id="tecnica">Técnica</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'23'}}" id="social">Sociohumanística</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'11'}}" id="admin">Administrativa</nuxt-link>
         </div>
         </div>
         <div class="container">
-            
-                <nuxt-child/>
-
+            <nuxt-child/>
         </div>
     </section>
 </template>

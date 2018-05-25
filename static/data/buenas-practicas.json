@@ -1,0 +1,334 @@
+[
+    {
+        "id": 1,
+        "area": "Área Biologíca",
+        "repositorio":[
+            {
+                "id": 2,
+                "titulo": "Implementación de técnicas de control biológico en cultivos de ciclo corto en la finca UTPL",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Desarrollo%20de%20procesos%20cognitivos%20superiores.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "titulo": "Aprendizaje basado en objetos: Uso de juegos educativos como una estrategia didáctica para la enseñanza de la matemática",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Aprendizaje%20basado%20en%20objetos.pdf",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20ABO-ilovepdf-compressed.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "titulo": "Edificación en colectivo del conocimiento",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Edificaci%C3%B3n%20del%20conocimiento%20en%20colectivo%20Natacha%20Fierro.pdf",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "titulo": "Combinación de medios tecnológicos para potenciar el proceso de enseñanza aprendizaje de los estudiantes de matemáticas",
+                "practica":[
+                    {
+                        "infografia":"",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "titulo": "Fortalecimiento de los conocimientos y competencias básicas para mejorar el rendimiento académico en los componentes de Física y Matemáticas",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20Fortalecimiento%20de%20los%20conocimientos%20y%20competencias.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "titulo": "Enseñanza de la matemática universitaria mediante la estrategia didáctica de proyectos II",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "titulo": "Integración de un equipo de salud para el estudio del uso e impacto de un medicamento veterinario como terapia alternativa cntra el cáncer en Loja-Ecuador",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "titulo": "Aplicaciones de las derivadas e integrales",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Aplicaciones%20de%20derivadas%20e%20integrales(1).pdf",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "titulo": "Aprendizaje activo mediante enseñanza por pares y trabajo colaborativo",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Aprendizaje%20activo%20ense%C3%B1anza%20por%20pares%20Geovanny%20Figueroa.pdf",
+                        "url": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "area": "Área Técnica",
+        "repositorio":[
+            {
+                "id": 12,
+                "titulo": "Murales exteriores y juegos interactivos para el aula en la escuela 18 de noviembre de la ciudad de Loja",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Development%20of%20projects%20of%20Internet%20of%20Things(1).pdf"
+                    }
+                ]
+            },
+            {
+                "id": 13,
+                "titulo": "Diseño Web, lo híbrido entre el arte y la programación",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Dise%C3%B1o%20Web.pdf",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20laboratorio%20remoto%20ense%C3%B1anza%20de%20la%20f%C3%ADsica%20con%20pr%C3%A1cticas%20experimentales.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 14,
+                "titulo": "Práctica de diseño y construcción participativa sinergia entre Titulaciones",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Development%20of%20projects%20of%20Internet%20of%20Things(1).pdf"
+                    }
+                ]
+            },
+            {
+                "id": 15,
+                "titulo": "Desarrollo de recursos educativos abiertos (REAS) interactivos para la enseñanza de las Matemáticas Discretas",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20laboratorio%20remoto%20ense%C3%B1anza%20de%20la%20f%C3%ADsica%20con%20pr%C3%A1cticas%20experimentales.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 16,
+                "titulo": "Festival internacional de Artes Vivas (OFF)",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/INFORME%20FINAL%20BUENAS%20P_%20ESC_%2018%20DE%20NOV_%202017_%20ARQUITECTURA%20AM.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 17,
+                "titulo": "Historia del arte mediante infografía",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/HISTORIA%20DEL%20ARTE%20ELENA%20MALO.pdf",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20Historia%20del%20arte%20mediante%20Infograf%C3%ADa.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 18,
+                "titulo": "Artesanía identitatia de Cera",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 19,
+                "titulo": "Creación de hologramas aplicados al ámbito cultural y educativo",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/infografia%20hologramas.pdf",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 20,
+                "titulo": "Evaluación de aprendizajes basado en talleres, proyectos y control de lectura en el contexto de Redes de Datos ( Evaluation of project-based learning and reading control inthe context of data Networks)",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 21,
+                "titulo": "Flipped Classroom, una nueva metodología de aprendizaje significativo y uso de herramientas colaborativas en el componente de Redes de Datos",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Captura%20de%20pantalla%202018-04-09%20a%20las%2011_48_54.pdf",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 22,
+                "titulo": "Rúbricas para la evaluación del trabajo técnico y sustentación oral como parte del examen complexivo de la Maestría en Ordenamiento Territorial y Diseño Urbano OTDU-Primera Cohorte",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Infograf%C3%ADa_R%C3%BAbricas%20OTDU_Arquitectura.pdf",
+                        "url": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "area": "Área Socio-Humanística",
+        "repositorio":[
+            {
+                "id": 24,
+                "titulo": "Murales exteriores y juegos interactivos para el aula en la escuela 18 de noviembre de la ciudad de Loja",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Development%20of%20projects%20of%20Internet%20of%20Things(1).pdf"
+                    }
+                ]
+            },
+            {
+                "id": 25,
+                "titulo": "Diseño Web, lo híbrido entre el arte y la programación",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Dise%C3%B1o%20Web.pdf",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20laboratorio%20remoto%20ense%C3%B1anza%20de%20la%20f%C3%ADsica%20con%20pr%C3%A1cticas%20experimentales.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "titulo": "Práctica de diseño y construcción participativa sinergia entre Titulaciones",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Development%20of%20projects%20of%20Internet%20of%20Things(1).pdf"
+                    }
+                ]
+            },
+            {
+                "id": 27,
+                "titulo": "Desarrollo de recursos educativos abiertos (REAS) interactivos para la enseñanza de las Matemáticas Discretas",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20laboratorio%20remoto%20ense%C3%B1anza%20de%20la%20f%C3%ADsica%20con%20pr%C3%A1cticas%20experimentales.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 28,
+                "titulo": "Festival internacional de Artes Vivas (OFF)",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/INFORME%20FINAL%20BUENAS%20P_%20ESC_%2018%20DE%20NOV_%202017_%20ARQUITECTURA%20AM.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 29,
+                "titulo": "Historia del arte mediante infografía",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/HISTORIA%20DEL%20ARTE%20ELENA%20MALO.pdf",
+                        "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20Historia%20del%20arte%20mediante%20Infograf%C3%ADa.pdf"
+                    }
+                ]
+            },
+            {
+                "id": 30,
+                "titulo": "Artesanía identitatia de Cera",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 31,
+                "titulo": "Creación de hologramas aplicados al ámbito cultural y educativo",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/infografia%20hologramas.pdf",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 32,
+                "titulo": "Evaluación de aprendizajes basado en talleres, proyectos y control de lectura en el contexto de Redes de Datos ( Evaluation of project-based learning and reading control inthe context of data Networks)",
+                "practica": [
+                    {
+                        "infografia": "",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 33,
+                "titulo": "Flipped Classroom, una nueva metodología de aprendizaje significativo y uso de herramientas colaborativas en el componente de Redes de Datos",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Captura%20de%20pantalla%202018-04-09%20a%20las%2011_48_54.pdf",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 34,
+                "titulo": "Rúbricas para la evaluación del trabajo técnico y sustentación oral como parte del examen complexivo de la Maestría en Ordenamiento Territorial y Diseño Urbano OTDU-Primera Cohorte",
+                "practica": [
+                    {
+                        "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Infograf%C3%ADa_R%C3%BAbricas%20OTDU_Arquitectura.pdf",
+                        "url": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "area": "Área Administrativa"
+    }
+]
