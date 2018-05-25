@@ -37,7 +37,7 @@ module.exports = {
   /**
    * mode 'spa' or 'universal'
    */
-  mode: 'universal',
+  mode: 'spa',
   /**
    * manifest
    */

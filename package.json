@@ -20,6 +20,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "firebase": "^5.0.4",
+    "firebase-admin": "^5.12.1",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {

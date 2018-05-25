@@ -34,7 +34,17 @@
 <script>
 import videos from "@/static/data/potencia-informacion.json";
 
+import { db } from "~/plugins/firebase.js";
+
 export default {
+  mounted() {
+    db
+      .collection("potencia-informacion")
+      .get()
+      .then(querySnapshot => {
+        console.log(querySnapshot);
+      });
+  },
   asyncData({ params }) {
     return { videos };
   }
