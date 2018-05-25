@@ -5,7 +5,7 @@
         </div> 
     </div>
 </template>
-
+ 
 <script>
 import pdfs from "@/static/data/convocatorias.json";
 export default {
