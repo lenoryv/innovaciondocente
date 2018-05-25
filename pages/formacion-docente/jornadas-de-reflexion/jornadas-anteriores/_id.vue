@@ -1,8 +1,7 @@
 <template>
-    <div>
-        <h2>Año {{jornada.year}}</h2>
-        <div v-html="jornada.html"></div>
-    </div>
+  <div>
+    <div v-html="jornada.html"></div>
+  </div>
 </template>
 
 <script>

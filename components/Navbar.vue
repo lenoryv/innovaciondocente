@@ -1,31 +1,37 @@
 <template>
-<nav>
-  <ul>
-    <li><nuxt-link :to="{name: 'index'}">UTPL</nuxt-link></li>
-    <li class="dropdown">
-      <nuxt-link class="dropbtn" :to="{name: 'innovacion-docente'}">Innovación Docente</nuxt-link>
-      <div class="dropdown-content">
-        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
-        <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
-        <nuxt-link :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
-        <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
-        <nuxt-link :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
-        <a target="_blank" href="https://retos.utpl.edu.ec/">Retos</a>
-      </div>
-    </li>
-    <li class="dropdown">
-      <nuxt-link class="dropbtn" :to="{name: 'formacion-docente-programa-formacion'}">Formación Docente</nuxt-link>
-      <div class="dropdown-content">
-        <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
-        <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
-        <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
-      </div>
-    </li>
-    <li>
-      <nuxt-link :to="{name: 'about'}">About</nuxt-link>
-    </li>
-  </ul>
-</nav>
+  <nav>
+    <ul>
+      <li>
+        <nuxt-link :to="{name: 'index'}"
+                   style="font-weight: 700">UTPL</nuxt-link>
+      </li>
+      <li class="dropdown">
+        <nuxt-link class="dropbtn"
+                   :to="{name: 'innovacion-docente'}">Innovación Docente</nuxt-link>
+        <div class="dropdown-content">
+          <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+          <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
+          <nuxt-link :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
+          <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
+          <nuxt-link :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+          <a target="_blank"
+             href="https://retos.utpl.edu.ec/">Retos</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <nuxt-link class="dropbtn"
+                   :to="{name: 'formacion-docente-programa-formacion'}">Formación Docente</nuxt-link>
+        <div class="dropdown-content">
+          <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+          <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+          <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+        </div>
+      </li>
+      <li>
+        <nuxt-link :to="{name: 'about'}">About</nuxt-link>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <style lang="scss" scoped >
