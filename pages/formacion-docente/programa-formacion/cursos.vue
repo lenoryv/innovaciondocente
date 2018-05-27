@@ -1,6 +1,7 @@
 <template>
   <div class="container-fluid">
     <h1>Cursos</h1>
+    <!--
     <div v-for="(anio, i) in cursos"
          :key="i">
       <div v-for="(month, j) in anio.months"
@@ -24,15 +25,14 @@
     </div>
     <button @click="$router.go(-1)"
             class="btn btn-primary btn-large">Regresar</button>
+            -->
   </div>
 </template>
 
 <script>
-import cursos from "@/static/data/cursos.json";
-
 export default {
   asyncData({ params }) {
-    return { cursos };
+    return {};
   }
 };
 </script>

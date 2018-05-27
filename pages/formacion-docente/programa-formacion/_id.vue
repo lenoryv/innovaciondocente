@@ -1,5 +1,6 @@
 <template>
   <section>
+    <!--
     <div class="container">
       <h1>{{ curso.nombre }}</h1>
       <small v-if="curso.fecha">Fecha: {{ curso.fecha }}</small>
@@ -34,29 +35,15 @@
         </div>
       </div>
     </div>
+    -->
   </section>
 </template>
 
 <script>
-import cursos from "@/static/data/cursos.json";
 export default {
-  asyncData({ params }) {
-    let curso = null;
-    for (let i = 0; i < cursos.length; i++) {
-      for (let j = 0; j < cursos[i].months.length; j++) {
-        for (let k = 0; k < cursos[i].months[j].cursos.length; k++) {
-          if (cursos[i].months[j].cursos[k].id == params.id)
-            curso = cursos[i].months[j].cursos[k];
-        }
-      }
-    }
-    return { curso };
-  },
+  asyncData({ params }) {},
   validate({ params }) {
-    for (let i = 0; i < cursos.length; i++)
-      for (let j = 0; j < cursos[i].months.length; j++)
-        for (let k = 0; k < cursos[i].months[j].cursos.length; k++)
-          if (cursos[i].months[j].cursos[k].id == params.id) return true;
+    return true;
     return false;
   }
 };
