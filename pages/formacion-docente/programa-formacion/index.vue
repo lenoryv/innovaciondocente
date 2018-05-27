@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img :src="require('@/static/img/banner-formacion-docente.jpg')"
+        <img :src="banner"
              alt="banner-formacion-docente">
         <section>
             <div class="container">
@@ -97,13 +97,18 @@
 </template>
 
 <script>
-import videos from "@/static/data/potencia-informacion.json";
+import axios from "axios";
 import cursosdata from "@/static/data/cursos.json";
 export default {
-  asyncData({ params }) {
+  async asyncData({ params }) {
     let cursos = cursosdata[0].months[0].cursos;
-    let video = videos[0];
-    return { video, cursos };
+    let res = await axios.get(
+      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion.json"
+    );
+    let video = res.data.videos[0];
+    let banner = res.data.banner;
+
+    return { video, banner, cursos };
   }
 };
 </script>

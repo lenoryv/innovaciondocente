@@ -33,7 +33,7 @@ import axios from "axios";
 export default {
   async asyncData({ params }) {
     let res = await axios.get(
-      "https://innovaciondocente-utpl.firebaseio.com/programa-formacion/videos.json"
+      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
     );
     return { videos: res.data };
   }
