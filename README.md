@@ -3,12 +3,12 @@
 > Código fuente de la página web de Innovacion Docente | UTPL
 
 ## TODO: !important list
-[] add seo
-[] add lazy loading images
-[] add store to avoid data duplication
-[] add service worker to store data
-[] add web workers to fetch data
-[x] rework error page 
+- add seo
+- add lazy loading images
+- add store to avoid data duplication
+- add service worker to store data
+- add web workers to fetch data
+- rework error page 
 
 ## Build Setup
 
