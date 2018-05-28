@@ -42,17 +42,15 @@ import axios from "axios";
 
 export default {
   async asyncData({ params }) {
+    let curso = null;
     let res = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos/${
         params.id
       }.json`
     );
-
-    return { curso: res.data };
-  },
-  validate({ params }) {
-    return true;
-    return false;
+    curso = res.data;
+    return { curso };
   }
+  // TODO: validate param
 };
 </script>
