@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="require('@/static/img/banner-cafe-cientifico.png')"
+    <img :src="banner"
          alt="banner-cafe-cientifico">
     <section>
       <div class="container">
@@ -21,7 +21,7 @@
             <small>{{ultimoEncuento.fecha}}</small>
             <p>{{ultimoEncuento.desc | slice(0,500)}}</p>
             <nuxt-link class="btn btn-primary"
-                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.id}}">
+                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: 0}}">
               Leer más
             </nuxt-link>
           </div>
@@ -33,7 +33,7 @@
           <nuxt-link class="col-lg-3 col-sm-6 encuentro"
                      v-for="(encuentro, i) in nuestrosEncuentos"
                      :key="i"
-                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.id}}"
+                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: i}}"
                      tag="div">
             <figure>
               <img :src="require('@/static/img/' + encuentro.img)"
@@ -61,12 +61,16 @@
 </template>
 
 <script>
-import encuentros from "@/static/data/encuentros.json";
+import axios from "axios";
 export default {
-  asyncData({ params }) {
-    let ultimoEncuento = encuentros[0];
-    let nuestrosEncuentos = encuentros.slice(0, 4);
-    return { nuestrosEncuentos, ultimoEncuento };
+  async asyncData({ params }) {
+    let res = await axios.get(
+      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json"
+    );
+    let ultimoEncuento = res.data.encuentros[0];
+    let nuestrosEncuentos = res.data.encuentros.slice(0, 4);
+    let banner = res.data.banner;
+    return { banner, nuestrosEncuentos, ultimoEncuento };
   }
 };
 </script>
