@@ -28,7 +28,7 @@
         </div>
       </li>
       <li>
-        <nuxt-link :to="{name: 'about'}">About</nuxt-link>
+        <nuxt-link :to="{name: 'observatorio-edutendencias'}">Observatorio EduTencencias</nuxt-link>
       </li>
     </ul>
   </nav>
