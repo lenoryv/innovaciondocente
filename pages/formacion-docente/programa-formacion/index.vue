@@ -99,7 +99,7 @@
 <script>
 import axios from "axios";
 export default {
-  async asyncData({ params }) {
+  async asyncData() {
     let res = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion.json"
     );
@@ -111,7 +111,6 @@ export default {
   }
 };
 </script>
-
 
 <style lang="scss" scoped>
 @import "assets/variables";

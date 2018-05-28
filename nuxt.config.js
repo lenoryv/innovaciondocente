@@ -37,7 +37,7 @@ module.exports = {
   /**
    * mode 'spa' or 'universal'
    */
-  mode: 'spa',
+  mode: 'universal',
   /**
    * manifest
    */
@@ -70,7 +70,10 @@ module.exports = {
       }
     },
     extractCSS: true,
-    vendor: ['vee-validate']
+    vendor: [
+      'vee-validate',
+      'axios'
+    ]
   },
   css: [
     '@/assets/bootstrap/bootstrap-grid.scss',

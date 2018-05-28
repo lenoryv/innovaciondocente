@@ -20,12 +20,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "firebase": "^5.0.4",
-    "firebase-admin": "^5.12.1",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {
-    "vee-validate": "^2.0.9",
     "@nuxtjs/pwa": "^2.0.8",
     "axios": "^0.18.0",
     "babel-eslint": "^8.2.1",
@@ -39,6 +36,7 @@
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.0.1",
-    "ts-loader": "^4.2.0"
+    "ts-loader": "^4.2.0",
+    "vee-validate": "^2.0.9"
   }
 }
