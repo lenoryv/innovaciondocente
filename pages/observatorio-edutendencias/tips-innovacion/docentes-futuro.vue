@@ -1,9 +1,6 @@
 <template>
 <div>
   <header class="header content">
-    <div class="header-video">
-        <video src="@/static/videos/Decide_ser_más_en_la_UTPL.mp4" autoplay loop muted></video>
-    </div>
     <div class="header-overlay"></div>
     <div class="header-content">
       <h1>The drive to study</h1>
