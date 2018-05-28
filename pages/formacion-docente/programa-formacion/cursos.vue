@@ -5,7 +5,7 @@
       <div class="row">
         <nuxt-link v-for="(curso, i) in cursos"
                    :key="i"
-                   class="col-lg-4 col-md-6 curso"
+                   class="col-xl-4 col-md-6 curso"
                    :to="{name: 'formacion-docente-programa-formacion-id', params: {id: i}}"
                    tag="div">
           <img :src="require('@/static/img/' + curso.poster)"

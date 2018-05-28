@@ -1,6 +1,5 @@
 <template>
   <section>
-    <!--
     <div class="container">
       <h1>{{ curso.nombre }}</h1>
       <small v-if="curso.fecha">Fecha: {{ curso.fecha }}</small>
@@ -35,13 +34,22 @@
         </div>
       </div>
     </div>
-    -->
   </section>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  asyncData({ params }) {},
+  async asyncData({ params }) {
+    let res = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos/${
+        params.id
+      }.json`
+    );
+
+    return { curso: res.data };
+  },
   validate({ params }) {
     return true;
     return false;
