@@ -1,112 +1,113 @@
-<template lang="pug">
-.artboard
-
-  .bb8
-
-    .bb8-body
-
-      .dot.dot-1
-        .line.line-1
-        .line.line-2
-        .line.line-3
-      .dot.dot-2
-
-      .circle.circle-1
-      .circle.circle-2
-      .circle.circle-3
-
-    .body-shadow-crop  
-      .body-shadow
-
-    .bb8-head
-
-      .head-bottom
-        .head-side-1
-        .head-side-2
-        .head-bottom-base
-
-      .head-top-crop
-        .head-top
-
-      .lens
-      .freckle
-
-    .speedlines
-      .one.tail
-      .two.tail
-      .three
-      .four
-      .five.tail
-
-    .sparkles
-      .one.small.pulse-1
-      .two.blue.small.pulse-2
-      .three.blue.med.pulse-3
-      .four.orange.pulse-2
-      .five.orange.pulse-1
-      .six.blue.small.pulse
-      .seven.blue.small.pulse
-      .eight.small.pulse-3
-      .nine.pulse
-      .ten.orange.small-1.pulse
-      .eleven.small.pulse
-      .twelve.small.pulse-2
-      .thirteen.orange.small.pulse
-      .fourteen.orange.med.pulse-3
-      .fifteen.small.pulse-1
-      .sixteen.small.pulse
-
-    .ground
-      .one
-        .bump.move-1
-      .two
-      .three
-        .bump.move-2
-      .four
-        .bump
-      .five
-      .six
-        .bump.move-2
-      .seven
-        .bump
-      .eight
-        .bump.move-1
-        
-</template>
-<!--
+<template>
   <div>
     <div>
-      <div>
-        {{error.statusCode}}
-      </div>
-      <hr>
-      <div v-if="error.statusCode === 400">
+      <h1 v-if="error.statusCode === 400">
         BAD REQUEST
-      </div>
-      <div v-else-if="error.statusCode === 401">
+      </h1>
+      <h1 v-else-if="error.statusCode === 401">
         UNAUTHORIZED
-      </div>
-      <div v-else-if="error.statusCode === 402">
+      </h1>
+      <h1 v-else-if="error.statusCode === 402">
         FORBIDDEN
-      </div>
-      <div v-else-if="error.statusCode === 403">
+      </h1>
+      <h1 v-else-if="error.statusCode === 403">
         NOT FOUND
-      </div>
-      <div v-else-if="error.statusCode === 404">
+      </h1>
+      <h1 v-else-if="error.statusCode === 404">
         SERVER ERROR
-      </div>
-      <div v-else>
+      </h1>
+      <h1 v-else>
         An error occurred
+      </h1>
+      <h2>
+        {{error.statusCode}}
+      </h2>
+    </div>
+    <div class="artboard">
+      <div class="bb8">
+        <div class="bb8-body">
+          <div class="dot dot-1">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+          </div>
+          <div class="dot dot-2"></div>
+          <div class="circle circle-1"></div>
+          <div class="circle circle-2"></div>
+          <div class="circle circle-3"></div>
+        </div>
+        <div class="body-shadow-crop">
+          <div class="body-shadow"></div>
+        </div>
+        <div class="bb8-head">
+          <div class="head-bottom">
+            <div class="head-side-1"></div>
+            <div class="head-side-2"></div>
+            <div class="head-bottom-base"></div>
+          </div>
+          <div class="head-top-crop">
+            <div class="head-top"></div>
+          </div>
+          <div class="lens"></div>
+          <div class="freckle"></div>
+        </div>
+        <div class="speedlines">
+          <div class="one tail"></div>
+          <div class="two tail"></div>
+          <div class="three"></div>
+          <div class="four"></div>
+          <div class="five tail"></div>
+        </div>
+        <div class="sparkles">
+          <div class="one small pulse-1"></div>
+          <div class="two blue small pulse-2"></div>
+          <div class="three blue med pulse-3"></div>
+          <div class="four orange pulse-2"></div>
+          <div class="five orange pulse-1"></div>
+          <div class="six blue small pulse"></div>
+          <div class="seven blue small pulse"></div>
+          <div class="eight small pulse-3"></div>
+          <div class="nine pulse"></div>
+          <div class="ten orange small-1 pulse"></div>
+          <div class="eleven small pulse"></div>
+          <div class="twelve small pulse-2"></div>
+          <div class="thirteen orange small pulse"></div>
+          <div class="fourteen orange med pulse-3"></div>
+          <div class="fifteen small pulse-1"></div>
+          <div class="sixteen small pulse"></div>
+        </div>
+        <div class="ground">
+          <div class="one">
+            <div class="bump move-1"></div>
+          </div>
+          <div class="two"></div>
+          <div class="three">
+            <div class="bump move-2"></div>
+          </div>
+          <div class="four">
+            <div class="bump"></div>
+          </div>
+          <div class="five"></div>
+          <div class="six">
+            <div class="bump move-2"></div>
+          </div>
+          <div class="seven">
+            <div class="bump"></div>
+          </div>
+          <div class="eight">
+            <div class="bump move-1"></div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="return">
       <nuxt-link to="/">
         HOME
       </nuxt-link>
-      <button @click="$router.go(-1)">
-        BACK
-      </button>
     </div>
-  </div>        
--->
+  </div>
+</template>
+ 
 
 <script>
 export default {
@@ -609,35 +610,18 @@ body
     transform: scale(0)
 
   
-// Page Styles
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono)
-
-.credit
+.return
   text-align: center
   color: #999
-  font-family: 'Roboto Mono'
 
 a
   color: #333
 
 h1, h2
-  font-family: 'Roboto Mono'
   text-align: center
   margin: 50px
 
 h2
   color: #666
-
-iframe
-  margin: 50px auto
-  display: block
-
-hr
-  height: 0px
-  border: none
-  border-top: 2px solid #ccc
-  margin: 100px auto 50px
-  width: 80px
-
 
 </style>
