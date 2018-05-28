@@ -59,7 +59,7 @@
   <section>
     <div class="container">
         <div class="row">
-          <div class="col-md-4 notes">
+          <div class="col-md-4">
             <img class="notes-img" src="~/static/img/innovacion/convocatorias.png" alt="convocatoria">
             <div class="notes-content"></div>
             <div class="notes-text">
@@ -68,7 +68,7 @@
               <button class="btn">Leer Más</button>
             </div>
           </div>
-          <div class="col-md-4 notes">
+          <div class="col-md-4">
             <img class="notes-img" src="~/static/img/innovacion/proyectos-actuales.png" alt="proyectos-actuales">
             <div class="notes-content"></div>
             <div class="notes-text">
@@ -77,7 +77,7 @@
               <button class="btn btn">Leer Más</button>
             </div>
           </div>
-          <div class="col-md-4 notes">
+          <div class="col-md-4">
             <img class="notes-img" src="~/static/img/innovacion/proyecto-mentores.png" alt="proyecto-mentores">   
             <div class="notes-content"></div>
             <div class="notes-text">
@@ -151,7 +151,82 @@
       </div>
     </div>
   </section>
-
+  
+  <footer>
+    <div class="footer-commo container">
+      <div class="cards-news">
+        <p>Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada.</p>
+        <div class="form-row">
+          <label class="label">
+            Your Email:
+          </label>
+          <input type="email" name="email" class="input-text" placeholder="your_email@email.com">
+          <button class="btn btn-secondary">Suscribite</button>
+        </div> 
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="list-vertical">
+            <h3>Innovación Docente</h3>
+            <ul>
+              <li>Convocatorias</li>
+              <li>Proyectos Actuales</li>
+              <li>Proyecto Mentores</li>
+              <li>Buenas Parcticas</li>
+              <li>Ayudante de Catedra</li>
+            </ul>
+          </div>
+          <div class="list-vertical">
+            <h3>Formación Docente</h3>
+            <ul>
+              <li>Programa de Formacíon</li>
+              <li>Café Científico</li>
+              <li>Jornadas de Reflexión</li>
+            </ul>
+          </div>
+          <div class="list-vertical">
+            <h3>Observatorio EduTendencias</h3>
+            <ul>
+              <li>Aula Divertida</li>
+              <li>Docentes del Futuro</li>
+              <li>Videos</li>
+              <li>Podcast</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="list-vertical">
+            <h3>Acerca de Nosotros</h3>
+            <ul>
+              <li>Quienes Somos</li>
+              <li>Nuestro Equipo</li>
+              <li>Nuestros Servicios</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <ul class="mb">
+        <li class="mr">© 2018 <a href="https://www.utpl.edu.ec/">UTPL</a></li>
+        <li class="mr">San Cayetano Alto</li>
+        <li>Loja - Ecuador</li>
+    </ul>
+    <a class="footer-heart" href="" title="With love by InDevelopmentCompany">
+        <svg class="heart" width="16px" height="16px" viewBox="0 0 510 510" >
+            <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
+                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
+        </svg>
+        
+    </a>
+    <ul>
+        <li class="mr">Contactos</li>
+        <li class="mr">1800 8875 8875</li>
+        <li><a href="mailto:vacademico@utpl.edu.ec">vacademico@utpl.edu.ec</a></li>
+    </ul>
+    </div>
+  </footer>
 </div>   
 </template>
 
@@ -166,12 +241,12 @@ export default {
   },
   methods: {
     handleScroll() {
-      this.scrolled = window.scrollY > 600;
+      this.scrolled = window.scrollY > 690;
     },
     topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
-    },
+    }
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -196,8 +271,8 @@ h1 {
 
 p {
   text-align: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .header {
@@ -329,6 +404,7 @@ p {
   transition: 0.3s;
   width: 100%;
   padding: 15px 16px;
+  text-align: center;
 }
 
 .notes-text:hover {
@@ -484,16 +560,15 @@ p {
   font-weight: 200;
 }
 
-.section-text p{
+.section-text p {
   text-align: left;
   padding: 10px;
 }
 
-.section-text h3{
+.section-text h3 {
   text-align: left;
   padding: 10px;
 }
-
 
 .avatar:hover {
   .img-avatar {
@@ -518,6 +593,122 @@ figure {
   width: 100%;
 }
 
+footer {
+  line-height: 1.2;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  padding: 65px 0 25px;
+  background: #3b3e43;
+  color: #fff;
+  text-align: center;
+}
+
+.cards-news {
+  margin-bottom: 3rem;
+}
+
+.cards-news p {
+  font-size: 1.5em;
+}
+
+.input-text {
+  width: 300px;
+  border: 1px solid #8996a0;
+  border-radius: 2px;
+  padding: 0.5em;
+}
+
+.form-row .btn {
+  margin: 0 1em;
+  vertical-align: initial;
+}
+
+.form-row {
+  padding: 1.25em;
+}
+
+.label {
+  bottom: 10%;
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  transition: bottom 0.2s, opacity 0.2s;
+}
+
+.list-vertical {
+  padding: 10px;
+}
+
+.list-vertical li {
+  list-style: none;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.list-vertical h3 {
+  font-weight: bold;
+  text-align: left !important;
+}
+
+.footer-copy p {
+  text-align: left !important;
+}
+
+.footer-copy {
+  display: flex;
+  border-top: 1px $color-font-light solid;
+  font-size: 0.7rem;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 40px 40px 0 40px;
+  position: relative;
+  justify-content: space-between !important;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  margin-top: 0;
+  margin-right: 16px;
+  margin-bottom: 0;
+  color: $color-font-light;
+}
+
+footer li {
+  margin-left: 1rem;
+}
+
+.mr {
+  margin-right: 16px;
+}
+
+.footer-heart {
+  color: $color-font-light;
+}
+
+.footer-heart:hover {
+  color: $color-danger;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.heart {
+  vertical-align: text-bottom;
+}
+
+.heart {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
 @media (max-width: 992px) {
   .content {
     padding: 0 3rem 0 3rem;
@@ -527,6 +718,19 @@ figure {
   }
   .quienes-somos {
     background: #00406f;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 3rem 0 3rem;
+  }
+  .form-row .btn {
+    margin: 1em 0;
+    width: 100%;
+  }
+  .form-row .input-text {
+    width: 100%;
   }
 }
 </style>
