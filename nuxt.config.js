@@ -70,7 +70,10 @@ module.exports = {
       }
     },
     extractCSS: true,
-    vendor: ['vee-validate']
+    vendor: [
+      'vee-validate',
+      'axios'
+    ]
   },
   css: [
     '@/assets/bootstrap/bootstrap-grid.scss',

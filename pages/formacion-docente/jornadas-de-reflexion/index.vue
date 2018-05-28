@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-4">
         <!--form-->
+        <!--TODO: prevent default submit-->
         <h3>Valora la jornada:</h3>
         <div class="form-group">
           <label for="preg_1">1. En relación a la jornada ¿Qué valoración le daría?</label>

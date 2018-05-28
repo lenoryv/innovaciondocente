@@ -24,19 +24,18 @@
         </div>
       </div>
     </section>
-    <div class="container">
-      <button @click="$router.go(-1)"
-              class="btn btn-primary btn-large">Regresar</button>
-    </div>
   </div>
 </template>
 
 <script>
-import videos from "@/static/data/potencia-informacion.json";
+import axios from "axios";
 
 export default {
-  asyncData({ params }) {
-    return { videos };
+  async asyncData({ params }) {
+    let res = await axios.get(
+      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
+    );
+    return { videos: res.data };
   }
 };
 </script>

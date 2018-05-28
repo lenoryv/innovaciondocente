@@ -38,26 +38,19 @@
 </template>
 
 <script>
-import cursos from "@/static/data/cursos.json";
+import axios from "axios";
+
 export default {
-  asyncData({ params }) {
+  async asyncData({ params }) {
     let curso = null;
-    for (let i = 0; i < cursos.length; i++) {
-      for (let j = 0; j < cursos[i].months.length; j++) {
-        for (let k = 0; k < cursos[i].months[j].cursos.length; k++) {
-          if (cursos[i].months[j].cursos[k].id == params.id)
-            curso = cursos[i].months[j].cursos[k];
-        }
-      }
-    }
+    let res = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos/${
+        params.id
+      }.json`
+    );
+    curso = res.data;
     return { curso };
-  },
-  validate({ params }) {
-    for (let i = 0; i < cursos.length; i++)
-      for (let j = 0; j < cursos[i].months.length; j++)
-        for (let k = 0; k < cursos[i].months[j].cursos.length; k++)
-          if (cursos[i].months[j].cursos[k].id == params.id) return true;
-    return false;
   }
+  // TODO: validate param
 };
 </script>

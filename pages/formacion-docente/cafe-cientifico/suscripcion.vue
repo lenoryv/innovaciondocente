@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <h1>Suscribete a nuestro Café científico</h1>
+    <!--TODO: prevent default submit-->
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="nombre">Nombre</label>

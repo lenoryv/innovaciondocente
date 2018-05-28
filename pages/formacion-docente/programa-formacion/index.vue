@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img :src="require('@/static/img/banner-formacion-docente.jpg')"
+        <img :src="banner"
              alt="banner-formacion-docente">
         <section>
             <div class="container">
@@ -15,15 +15,15 @@
                 </p>
                 <h2>Cursos</h2>
                 <div class="row">
-                    <nuxt-link class="col-sm-6 curso"
+                    <nuxt-link class="col-lg-6 curso"
                                v-for="(curso, i) in cursos"
                                :key="i"
-                               :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.id}}"
+                               :to="{name: 'formacion-docente-programa-formacion-id', params: {id: i}}"
                                tag="div">
                         <img :src="require('@/static/img/' + curso.poster)"
                              :alt="curso.img">
                         <h4>{{curso.nombre}}</h4>
-                        <small>{{curso.fecha}}</small>
+                        <small>{{curso.anio}} - {{curso.mes}} - {{curso.dia}}</small>
                     </nuxt-link>
                 </div>
                 <nuxt-link class="btn btn-primary btn-large"
@@ -97,17 +97,20 @@
 </template>
 
 <script>
-import videos from "@/static/data/potencia-informacion.json";
-import cursosdata from "@/static/data/cursos.json";
+import axios from "axios";
 export default {
-  asyncData({ params }) {
-    let cursos = cursosdata[0].months[0].cursos;
-    let video = videos[0];
-    return { video, cursos };
+  async asyncData() {
+    let res = await axios.get(
+      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion.json"
+    );
+    let video = res.data.videos[0];
+    let banner = res.data.banner;
+    let cursos = res.data.cursos.slice(0, 4);
+
+    return { video, banner, cursos };
   }
 };
 </script>
-
 
 <style lang="scss" scoped>
 @import "assets/variables";
