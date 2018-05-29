@@ -1,5 +1,4 @@
 @import 'assets/variables';
-
 //////////how to use//////////
 ///
 ///  BASIC EXAMPLE FOR USING button
@@ -20,7 +19,6 @@
 ///
 ///  <a class="btn btn-primary btn-large">HELLO WORLD</a>
 ///  <button class="btn btn-primary btn-large">HELLO WORLD</button>
-
 .btn {
     display: inline-block;
     text-align: center;
@@ -43,11 +41,12 @@
     margin-bottom: 10px;
     font-weight: 400;
 }
-  
-.btn.disabled, .btn:disabled {
+
+.btn.disabled,
+.btn:disabled {
     opacity: 0.65;
 }
-  
+
 .btn-inverse {
     color: $color-primary !important;
     background-color: $color-font-primary !important;
@@ -57,7 +56,7 @@
         transition: 0.2s all ease;
     }
 }
-  
+
 .btn-primary {
     color: $color-font-primary !important;
     background-color: $color-primary !important;
@@ -67,7 +66,7 @@
         transition: 0.2s all ease;
     }
 }
-  
+
 .btn-outline-primary {
     color: $color-primary !important;
     background-color: transparent;
@@ -78,8 +77,8 @@
         background-color: $color-primary !important;
     }
 }
-  
-  .btn-secondary {
+
+.btn-secondary {
     color: $color-font-primary !important;
     background-color: $color-font-light !important;
     border-color: $color-font-light !important;
@@ -88,7 +87,7 @@
         transition: 0.2s all ease;
     }
 }
-  
+
 .btn-outline-secondary {
     color: $color-font-light !important;
     background-color: transparent;
@@ -99,7 +98,7 @@
         background-color: $color-font-light !important;
     }
 }
-  
+
 .btn-success {
     color: $color-font-primary !important;
     background-color: $color-success !important;
@@ -109,7 +108,7 @@
         transition: 0.2s all ease;
     }
 }
-  
+
 .btn-outline-success {
     color: $color-success !important;
     background-color: transparent;
@@ -120,7 +119,7 @@
         background-color: $color-success !important;
     }
 }
-  
+
 .btn-warning {
     color: $color-dark !important;
     background-color: $color-warning !important;
@@ -130,7 +129,7 @@
         transition: 0.2s all ease;
     }
 }
-  
+
 .btn-outline-warning {
     color: $color-dark !important;
     background-color: transparent;
@@ -141,7 +140,7 @@
         background-color: $color-warning !important;
     }
 }
-  
+
 .btn-danger {
     color: $color-font-primary !important;
     background-color: $color-danger !important;
@@ -151,7 +150,7 @@
         transition: 0.2s all ease;
     }
 }
-  
+
 .btn-outline-danger {
     color: $color-danger !important;
     background-color: transparent;
@@ -162,7 +161,7 @@
         background-color: $color-danger !important;
     }
 }
-  
+
 .btn-dark {
     color: $color-font-primary !important;
     background-color: $color-dark !important;
@@ -172,7 +171,7 @@
         transition: 0.2s all ease;
     }
 }
-  
+
 .btn-outline-dark {
     color: $color-dark !important;
     background-color: transparent;
@@ -183,13 +182,14 @@
         background-color: $color-dark !important;
     }
 }
-  
-.btn-large, .btn-block {
+
+.btn-large,
+.btn-block {
     display: block;
     width: 100%;
 }
-  
-.btn-large + .btn-large ,
-.btn-block + .btn-block {
-        margin-top: 0.5rem;
+
+.btn-large+.btn-large,
+.btn-block+.btn-block {
+    margin-top: 0.5rem;
 }

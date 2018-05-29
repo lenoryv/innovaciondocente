@@ -297,56 +297,7 @@ export default {
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import "assets/variables";
 @import "assets/button";
-
-.form-group {
-  margin-bottom: 1rem;
-}
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: $color-font;
-  background-color: $color-background;
-  background-clip: padding-box;
-  border: 1px solid $color-primary;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .form-control {
-    transition: none;
-  }
-}
-
-.form-control:focus {
-  color: $color-font;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem lighten($color: $color-primary-dark, $amount: 60);
-}
-
-.form-control::placeholder {
-  color: $color-font-light;
-}
-
-.invalid-feedback {
-  color: $color-danger;
-}
-
-fieldset,
-label {
-  margin: 0;
-  padding: 0;
-}
-body {
-  margin: 20px;
-}
-h1 {
-  font-size: 1.5em;
-  margin: 10px;
-}
+@import "assets/form";
 
 /****** Style Star Rating Widget *****/
 

@@ -90,18 +90,16 @@
              for="whatsapp">¿Desearías que la información de los eventos de formación e innovación docente te lleguen por medio
         de WhatsApp?</label>
     </div>
-    <div class="form-group">
-      <div class="row">
-        <div class="col-6">
-          <nuxt-link class="btn btn-outline-danger btn-large"
-                     :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
+    <div class="form-row">
+      <div class="col-6">
+        <nuxt-link class="btn btn-outline-danger btn-large"
+                   :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
 
-        </div>
-        <div class="col-6">
-          <button @click="validateBeforeSubmit"
-                  class="btn btn-success btn-large">Suscribirse</button>
+      </div>
+      <div class="col-6">
+        <button @click="validateBeforeSubmit"
+                class="btn btn-success btn-large">Suscribirse</button>
 
-        </div>
       </div>
     </div>
   </div>
@@ -143,79 +141,5 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/button";
-
-.form-row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px;
-}
-
-.form-row > .col,
-.form-row > [class*="col-"] {
-  padding-right: 5px;
-  padding-left: 5px;
-}
-.form-group {
-  margin-bottom: 1rem;
-}
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: $color-font;
-  background-color: $color-background;
-  background-clip: padding-box;
-  border: 1px solid $color-primary;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .form-control {
-    transition: none;
-  }
-}
-
-.form-control:focus {
-  color: $color-font;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem lighten($color: $color-primary-dark, $amount: 60);
-}
-
-.form-control::placeholder {
-  color: $color-font-light;
-}
-
-.form-check {
-  position: relative;
-  display: block;
-  padding-left: 1.25rem;
-}
-
-.form-check-input {
-  position: absolute;
-  margin-top: 0.3rem;
-  margin-left: -1.25rem;
-}
-
-.form-check-label {
-  color: $color-font-light;
-  margin-bottom: 0;
-}
-
-.invalid-feedback {
-  display: block;
-  width: 100%;
-  color: $color-font-primary;
-  background-color: $color-danger;
-  padding: 0.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  font-size: 80%;
-}
+@import "assets/form";
 </style>
