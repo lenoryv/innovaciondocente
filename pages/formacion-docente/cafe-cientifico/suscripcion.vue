@@ -98,8 +98,10 @@
       </div>
       <div class="col-6">
         <button @click="validateBeforeSubmit"
-                class="btn btn-success btn-large">Suscribirse</button>
-
+                class="btn btn-success btn-large"
+                v-bind:class="{ disabled: errors.items.length > 0 }">
+          Suscribirse
+        </button>
       </div>
     </div>
   </div>
@@ -115,7 +117,7 @@ export default {
       telefono: 0,
       whatsapp: true,
       titulacion: "",
-      universidad: "UTPL"
+      universidad: "UTPL",
     };
     return {
       forma

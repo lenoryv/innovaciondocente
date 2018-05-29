@@ -240,7 +240,8 @@
                     class="form-control" />
         </div>
         <button @click="validateBeforeSubmit"
-                class="btn btn-primary btn-large">
+                class="btn btn-primary btn-large"
+                v-bind:class="{ disabled: errors.items.length > 0 }">
           Valorar
         </button>
       </div>
