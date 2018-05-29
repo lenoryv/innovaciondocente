@@ -15,19 +15,27 @@
                 </p>
                 <h2>Cursos</h2>
                 <div class="row">
-                    <nuxt-link class="col-lg-6 curso"
+                    <nuxt-link class="col-lg-6"
                                v-for="(curso, i) in cursos"
                                :key="i"
                                :to="{name: 'formacion-docente-programa-formacion-id', params: {id: i}}"
                                tag="div">
-                        <img :src="require('@/static/img/' + curso.poster)"
-                             :alt="curso.img">
-                        <h4>{{curso.nombre}}</h4>
-                        <small>{{curso.anio}} - {{curso.mes}} - {{curso.dia}}</small>
+                        <div class="card card__one link">
+                            <figure class="card__img">
+                                <img :src="require('@/static/img/' + curso.poster)"
+                                     :alt="curso.img">
+                            </figure>
+                            <div class="card__desc">
+                                <h3>{{curso.nombre}}</h3>
+                                <small>{{curso.anio}} - {{curso.mes}} - {{curso.dia}}</small>
+                            </div>
+                        </div>
                     </nuxt-link>
                 </div>
                 <nuxt-link class="btn btn-primary btn-large"
-                           :to="{name: 'formacion-docente-programa-formacion-cursos'}">Formación Docente</nuxt-link>
+                           :to="{name: 'formacion-docente-programa-formacion-cursos'}">
+                    Formación Docente
+                </nuxt-link>
             </div>
         </section>
         <section id="video">
@@ -114,6 +122,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/card";
 #video {
   background-color: $color-primary;
   color: $color-font-primary;
@@ -131,8 +140,5 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-}
-.curso {
-  cursor: pointer;
 }
 </style>

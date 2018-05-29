@@ -8,10 +8,16 @@
                    class="col-xl-4 col-md-6 curso"
                    :to="{name: 'formacion-docente-programa-formacion-id', params: {id: i}}"
                    tag="div">
-          <img :src="require('@/static/img/' + curso.poster)"
-               :alt="curso.img">
-          <h4>{{curso.nombre}}</h4>
-          <small>{{curso.fecha}}</small>
+          <div class="card card__one link">
+            <figure class="card__img">
+              <img :src="require('@/static/img/' + curso.poster)"
+                   :alt="curso.img">
+            </figure>
+            <div class="card__desc">
+              <h4>{{curso.nombre}}</h4>
+              <small>{{curso.fecha}}</small>
+            </div>
+          </div>
         </nuxt-link>
       </div>
     </div>
@@ -38,10 +44,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.curso {
-  cursor: pointer;
-}
-h4 {
-  text-align: justify;
-}
+@import "assets/card";
 </style>
