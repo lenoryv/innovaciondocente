@@ -1,66 +1,107 @@
 <template>
-<div>
-  <header  class="header">
-    <!--<div class="header-video">
-      <img class="background img-move" src="@/static/imgIndex.jpg" alt="">
+  <div>
+    <header class="header">
+      <!--<div class="header-video">
+      <img class="background img-move" :src="require('@/static/imgIndex.jpg')" alt="">
        <video :src="require('@/static/videos/Decide_ser_mas_en_la_UTPL.mp4')" alt="" autoplay loop muted></video> 
     </div>-->
-    <div class="header-overlay"></div>
-    <div class="fondo">
-      <img class="img-move" src="@/static/imgIndex.jpg" alt="">
-    </div>
-    <div class="header-content">
-      <h1>Decide ser más</h1>
-      <p>Proyecto Ascendere</p>
-      <button href="#" class="btn btn-primary">GO TO COURSE</button>
-      <a href="#" class="arrow arrow-1"><span></span></a>
-      <a href="#" class="arrow arrow-2"><span></span></a>
-      <a href="#" class="arrow arrow-3"><span></span></a>
-    </div>
-  </header>
-
-  <!-- Navbar  -->
-  <div class="div1" id="navbar">
-    <div class="div2">
-      <div class="div3">
-        <nuxt-link class="link" scroll :to="{name: 'innovacion-docente'}">
-          <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
-            <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
-                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
-          </svg>
-          <span class="d-block">INNOVACIÓN DOCENTE</span>
-        </nuxt-link>
-        <nuxt-link class="link" :to="{name: 'formacion-docente-programa-formacion'}">
-          <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
-            <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
-                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
-          </svg>
-          <span class="d-block">FORMACIÓN DOCENTE</span>
-         </nuxt-link>
-        <nuxt-link class="link" :to="{name: 'observatorio-edutendencias'}">
-          <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
-            <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
-                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
-          </svg>
-          <span class="d-block">OBSERVATORIO EDUTENDENCIAS</span>
-        </nuxt-link>
-        <a class="link" target="_blank" href="https://radio.utpl.edu.ec">
-          <svg v-show="!scrolled" class="heart" width="40px" height="40px" viewBox="0 0 510 510" >
-            <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
-                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
-          </svg>
-          <span class="d-block">RADIO UTPL</span>
+      <div class="header-overlay"></div>
+      <div class="fondo">
+        <img class="img-move"
+             :src="require('@/static/imgIndex.jpg')"
+             alt="">
+      </div>
+      <div class="header-content">
+        <h1>Decide ser más</h1>
+        <p>Proyecto Ascendere</p>
+        <button href="#"
+                class="btn btn-primary">GO TO COURSE</button>
+        <a href="#"
+           class="arrow arrow-1">
+          <span></span>
+        </a>
+        <a href="#"
+           class="arrow arrow-2">
+          <span></span>
+        </a>
+        <a href="#"
+           class="arrow arrow-3">
+          <span></span>
         </a>
       </div>
-    </div>
-  </div>
+    </header>
 
-  <!-- Noticia, Curso, tip -->
-  <section>
-    <div class="container">
+    <!-- Navbar  -->
+    <div class="div1"
+         id="navbar">
+      <div class="div2">
+        <div class="div3">
+          <nuxt-link class="link"
+                     scroll
+                     :to="{name: 'innovacion-docente'}">
+            <svg v-show="!scrolled"
+                 class="heart"
+                 width="40px"
+                 height="40px"
+                 viewBox="0 0 510 510">
+              <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
+                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"
+              />
+            </svg>
+            <span class="d-block">INNOVACIÓN DOCENTE</span>
+          </nuxt-link>
+          <nuxt-link class="link"
+                     :to="{name: 'formacion-docente-programa-formacion'}">
+            <svg v-show="!scrolled"
+                 class="heart"
+                 width="40px"
+                 height="40px"
+                 viewBox="0 0 510 510">
+              <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
+                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"
+              />
+            </svg>
+            <span class="d-block">FORMACIÓN DOCENTE</span>
+          </nuxt-link>
+          <nuxt-link class="link"
+                     :to="{name: 'observatorio-edutendencias'}">
+            <svg v-show="!scrolled"
+                 class="heart"
+                 width="40px"
+                 height="40px"
+                 viewBox="0 0 510 510">
+              <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
+                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"
+              />
+            </svg>
+            <span class="d-block">OBSERVATORIO EDUTENDENCIAS</span>
+          </nuxt-link>
+          <a class="link"
+             target="_blank"
+             href="https://radio.utpl.edu.ec">
+            <svg v-show="!scrolled"
+                 class="heart"
+                 width="40px"
+                 height="40px"
+                 viewBox="0 0 510 510">
+              <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
+                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"
+              />
+            </svg>
+            <span class="d-block">RADIO UTPL</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noticia, Curso, tip -->
+    <section>
+      <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <img class="notes-img" src="~/static/img/innovacion/convocatorias.png" alt="convocatoria">
+            <img class="notes-img"
+                 :src="require('~/static/img/innovacion/convocatorias.png')"
+                 alt="convocatoria">
             <div class="notes-content"></div>
             <div class="notes-text">
               <h3>Noticia Reciente</h3>
@@ -69,7 +110,9 @@
             </div>
           </div>
           <div class="col-md-4">
-            <img class="notes-img" src="~/static/img/innovacion/proyectos-actuales.png" alt="proyectos-actuales">
+            <img class="notes-img"
+                 :src="require('~/static/img/innovacion/proyectos-actuales.png')"
+                 alt="proyectos-actuales">
             <div class="notes-content"></div>
             <div class="notes-text">
               <h3>Curso Reciente</h3>
@@ -78,7 +121,9 @@
             </div>
           </div>
           <div class="col-md-4">
-            <img class="notes-img" src="~/static/img/innovacion/proyecto-mentores.png" alt="proyecto-mentores">   
+            <img class="notes-img"
+                 :src="require('~/static/img/innovacion/proyecto-mentores.png')"
+                 alt="proyecto-mentores">
             <div class="notes-content"></div>
             <div class="notes-text">
               <h3>Tip Reciente</h3>
@@ -87,147 +132,185 @@
             </div>
           </div>
         </div>
-    </div>
-  </section>
-  <!-- Cafe Cientifico -->
-  <section class="cafe-cientifico">
-    
-    <div class="container">
-      <div class="row">
-        <div>
-          <h2>Café Científico</h2>
-          <p>Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior y que ayuden a fomentar inquietudes que despierten una entretenida discusión.</p>
-        </div>
-        <div class="col-md-6 section-text">
-          <hr>
-          <h3>TRANSFORMACIÓN DIGITAL: ESTRATEGIA PARA GESTIÓN DEL CAMBIO DE LA TECNOLOGÍA Y DISRUPCIÓN DIGITAL</h3>
-          <p>Organizaciones de todos tipos y tamaños tradicionalmente han dependido de su habilidad para reaccionar rápidamente a los retos cambiantes que van de la mano del avance tecnológico, a la disrupción digital, las demandas del mercado y otros tipos de eventos disruptivos. La agilidad con la que pueden afrontar estos cambios es fundamental para que las organizaciones no se vean abocadas a largos procesos de planificación que no van de la mano con la era de aceleración disruptiva (tecnológica - digita...</p>
-          <nuxt-link class="btn btn-large btn-primary" :to="{name: ''}">
-              Leer más
-          </nuxt-link>
-        </div>
-        <div class="col-md-6">
-          <figure>
-            <img src="~/static/img/familia.jpg">
-          </figure>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- Cafe Cientifico -->
+    <section class="cafe-cientifico">
 
-  <!-- Quienes somos-->
-  <section class="quienes-somos">
-    <div class="quienes-content">
-      <h2>QUIENES SOMOS</h2>
-      <p class="section-text-center">A través de iniciativas como <strong>Encuentro Café Científico</strong>, <strong>Jornadas de Reflexión Académica</strong>, el <strong>Plan de Formación Docente</strong> , entre otras, busca instaurar un sello de calidad para todos los programas formativos de la Universidad Técnica Particular de Loja.</p>
-      <div class="avatar">
-        <img class="img-avatar" src="@/static/avatar-icom.png" alt="Avatar" >
-        <h3>Dr. Santiago Acosta Aide</h3>
-        <h4>Vicerrector Académico</h4>
-      </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-3 avatar">
-            <img class="img-avatar" src="@/static/avatar-icom.png" alt="Avatar" >
-            <h3>PhD. María Isabel Loaiza</h3>
-            <h4>Dirección de Innovación, Formación y Evaluación Docente</h4>
+          <div>
+            <h2>Café Científico</h2>
+            <p>Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos,
+              dialogan y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad
+              de escuchar opiniones diversas y realizar algunos postulados que contribuyan al trabajo
+              posterior y que ayuden a fomentar inquietudes que despierten una entretenida discusión.</p>
           </div>
-          <div class="col-md-3 avatar">
-            <img class="img-avatar" src="@/static/avatar-icom.png" alt="Avatar" >
-            <h3>Mgtr. Andrea Loaiza</h3>
-            <h4>Dirección de Planificación y Desarrollo Curricular</h4>
+          <div class="col-md-6 section-text">
+            <hr>
+            <h3>TRANSFORMACIÓN DIGITAL: ESTRATEGIA PARA GESTIÓN DEL CAMBIO DE LA TECNOLOGÍA Y DISRUPCIÓN
+              DIGITAL
+            </h3>
+            <p>Organizaciones de todos tipos y tamaños tradicionalmente han dependido de su habilidad para
+              reaccionar rápidamente a los retos cambiantes que van de la mano del avance tecnológico,
+              a la disrupción digital, las demandas del mercado y otros tipos de eventos disruptivos.
+              La agilidad con la que pueden afrontar estos cambios es fundamental para que las organizaciones
+              no se vean abocadas a largos procesos de planificación que no van de la mano con la era
+              de aceleración disruptiva (tecnológica - digita...</p>
+            <nuxt-link class="btn btn-large btn-primary"
+                       :to="{name: ''}">
+              Leer más
+            </nuxt-link>
           </div>
-          <div class="col-md-3 avatar">
-            <img class="img-avatar" src="@/static/avatar-icom.png" alt="Avatar" >
-            <h3>Mgtr. Paola Andrade</h3>
-            <h4>Coordinación General</h4>
-          </div>
-          <div class="col-md-3 avatar">
-            <img class="img-avatar" src="@/static/avatar-icom.png" alt="Avatar" >
-            <h3>Mgtr. Natalia Lutsak</h3>
-            <h4>Dirección de Posgrados</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <footer>
-    <div class="footer-commo container">
-      <div class="cards-news">
-        <p>Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada.</p>
-        <div class="form-row">
-          <label class="label">
-            Your Email:
-          </label>
-          <input type="email" name="email" class="input-text" placeholder="your_email@email.com">
-          <button class="btn btn-secondary">Suscribite</button>
-        </div> 
-      </div>
-      
-      <div class="row">
-        <div class="col-lg-9">
-          <div class="list-vertical">
-            <h3>Innovación Docente</h3>
-            <ul>
-              <li>Convocatorias</li>
-              <li>Proyectos Actuales</li>
-              <li>Proyecto Mentores</li>
-              <li>Buenas Parcticas</li>
-              <li>Ayudante de Catedra</li>
-            </ul>
-          </div>
-          <div class="list-vertical">
-            <h3>Formación Docente</h3>
-            <ul>
-              <li>Programa de Formacíon</li>
-              <li>Café Científico</li>
-              <li>Jornadas de Reflexión</li>
-            </ul>
-          </div>
-          <div class="list-vertical">
-            <h3>Observatorio EduTendencias</h3>
-            <ul>
-              <li>Aula Divertida</li>
-              <li>Docentes del Futuro</li>
-              <li>Videos</li>
-              <li>Podcast</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="list-vertical">
-            <h3>Acerca de Nosotros</h3>
-            <ul>
-              <li>Quienes Somos</li>
-              <li>Nuestro Equipo</li>
-              <li>Nuestros Servicios</li>
-            </ul>
+          <div class="col-md-6">
+            <figure>
+              <img :src="require('~/static/img/familia.jpg')">
+            </figure>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer-copy">
-      <ul class="mb">
-        <li class="mr">© 2018 <a href="https://www.utpl.edu.ec/">UTPL</a></li>
-        <li class="mr">San Cayetano Alto</li>
-        <li>Loja - Ecuador</li>
-    </ul>
-    <a class="footer-heart" href="" title="With love by InDevelopmentCompany">
-        <svg class="heart" width="16px" height="16px" viewBox="0 0 510 510" >
+    </section>
+
+    <!-- Quienes somos-->
+    <section class="quienes-somos">
+      <div class="quienes-content">
+        <h2>QUIENES SOMOS</h2>
+        <p class="section-text-center">A través de iniciativas como
+          <strong>Encuentro Café Científico</strong>,
+          <strong>Jornadas de Reflexión Académica</strong>, el
+          <strong>Plan de Formación Docente</strong> , entre otras, busca instaurar un sello de calidad para
+          todos los programas formativos de la Universidad Técnica Particular de Loja.</p>
+        <div class="avatar">
+          <img class="img-avatar"
+               :src="require('@/static/avatar-icom.png')"
+               alt="Avatar">
+          <h3>Dr. Santiago Acosta Aide</h3>
+          <h4>Vicerrector Académico</h4>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 avatar">
+              <img class="img-avatar"
+                   :src="require('@/static/avatar-icom.png')"
+                   alt="Avatar">
+              <h3>PhD. María Isabel Loaiza</h3>
+              <h4>Dirección de Innovación, Formación y Evaluación Docente</h4>
+            </div>
+            <div class="col-md-3 avatar">
+              <img class="img-avatar"
+                   :src="require('@/static/avatar-icom.png')"
+                   alt="Avatar">
+              <h3>Mgtr. Andrea Loaiza</h3>
+              <h4>Dirección de Planificación y Desarrollo Curricular</h4>
+            </div>
+            <div class="col-md-3 avatar">
+              <img class="img-avatar"
+                   :src="require('@/static/avatar-icom.png')"
+                   alt="Avatar">
+              <h3>Mgtr. Paola Andrade</h3>
+              <h4>Coordinación General</h4>
+            </div>
+            <div class="col-md-3 avatar">
+              <img class="img-avatar"
+                   :src="require('@/static/avatar-icom.png')"
+                   alt="Avatar">
+              <h3>Mgtr. Natalia Lutsak</h3>
+              <h4>Dirección de Posgrados</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-commo container">
+        <div class="cards-news">
+          <p>Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada.</p>
+          <div class="form-row">
+            <label class="label">
+              Your Email:
+            </label>
+            <input type="email"
+                   name="email"
+                   class="input-text"
+                   placeholder="your_email@email.com">
+            <button class="btn btn-secondary">Suscribite</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="list-vertical">
+              <h3>Innovación Docente</h3>
+              <ul>
+                <li>Convocatorias</li>
+                <li>Proyectos Actuales</li>
+                <li>Proyecto Mentores</li>
+                <li>Buenas Parcticas</li>
+                <li>Ayudante de Catedra</li>
+              </ul>
+            </div>
+            <div class="list-vertical">
+              <h3>Formación Docente</h3>
+              <ul>
+                <li>Programa de Formacíon</li>
+                <li>Café Científico</li>
+                <li>Jornadas de Reflexión</li>
+              </ul>
+            </div>
+            <div class="list-vertical">
+              <h3>Observatorio EduTendencias</h3>
+              <ul>
+                <li>Aula Divertida</li>
+                <li>Docentes del Futuro</li>
+                <li>Videos</li>
+                <li>Podcast</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="list-vertical">
+              <h3>Acerca de Nosotros</h3>
+              <ul>
+                <li>Quienes Somos</li>
+                <li>Nuestro Equipo</li>
+                <li>Nuestros Servicios</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <ul class="mb">
+          <li class="mr">© 2018
+            <a href="https://www.utpl.edu.ec/">UTPL</a>
+          </li>
+          <li class="mr">San Cayetano Alto</li>
+          <li>Loja - Ecuador</li>
+        </ul>
+        <a class="footer-heart"
+           href=""
+           title="With love by InDevelopmentCompany">
+          <svg class="heart"
+               width="16px"
+               height="16px"
+               viewBox="0 0 510 510">
             <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
-                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/>
-        </svg>
-        
-    </a>
-    <ul>
-        <li class="mr">Contactos</li>
-        <li class="mr">1800 8875 8875</li>
-        <li><a href="mailto:vacademico@utpl.edu.ec">vacademico@utpl.edu.ec</a></li>
-    </ul>
-    </div>
-  </footer>
-</div>   
+                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"
+            />
+          </svg>
+
+        </a>
+        <ul>
+          <li class="mr">Contactos</li>
+          <li class="mr">1800 8875 8875</li>
+          <li>
+            <a href="mailto:vacademico@utpl.edu.ec">vacademico@utpl.edu.ec</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
