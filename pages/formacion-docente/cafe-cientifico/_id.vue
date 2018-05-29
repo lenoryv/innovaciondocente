@@ -23,23 +23,19 @@
 </template>
 
 <script>
-import encuentros from "@/static/data/encuentros.json";
+import axios from "axios";
 export default {
-  asyncData({ params }) {
-    let encuentro = null;
-    for (let i = 0; i < encuentros.length; i++)
-      if (encuentros[i].id == params.id) {
-        encuentro = encuentros[i];
-        break;
-      }
-    return { encuentros, encuentro };
+  async asyncData({ params }) {
+    let res = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros/${
+        params.id
+      }.json`
+    );
+    return { encuentro: res.data };
   },
   validate({ params }) {
-    for (let i = 0; i < encuentros.length; i++)
-      if (encuentros[i].id == params.id) {
-        return true;
-      }
-    return false;
+    // TODO: validate param
+    return true;
   }
 };
 </script>
