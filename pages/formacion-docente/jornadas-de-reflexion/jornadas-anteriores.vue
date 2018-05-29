@@ -30,6 +30,8 @@
 
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/button";
+
 .nuxt-link-exact-active {
   color: $color-font-primary !important;
   background-color: $color-dark !important;

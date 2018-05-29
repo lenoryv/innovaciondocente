@@ -296,6 +296,7 @@ export default {
 <style lang="scss" scoped>
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import "assets/variables";
+@import "assets/button";
 
 .form-group {
   margin-bottom: 1rem;

@@ -54,3 +54,7 @@ export default {
   // TODO: validate param
 };
 </script>
+
+<style lang="scss">
+@import "assets/button";
+</style>
