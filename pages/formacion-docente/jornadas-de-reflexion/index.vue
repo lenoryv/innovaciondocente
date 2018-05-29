@@ -52,7 +52,7 @@
           </fieldset>
         </div>
         <div class="form-group">
-          <label for="preg_2">2.1 ¿En que aspectos te resulta aplicable el tema?</label>
+          <label for="preg_2">2. Valore la aplicabilidad del tema: Desarrollo de competencias transversales en el aula de clases: innovación, creatividad y emprendimiento</label>
           <select v-model="forma.preg_2"
                   class="form-control"
                   id="preg_2"
