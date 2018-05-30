@@ -71,5 +71,4 @@ export default {
 
 <style lang="scss">
 @import "assets/alert";
-@import "assets/button";
 </style>

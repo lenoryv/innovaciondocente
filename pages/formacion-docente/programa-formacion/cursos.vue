@@ -44,6 +44,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "assets/button";
 @import "assets/card";
 </style>
