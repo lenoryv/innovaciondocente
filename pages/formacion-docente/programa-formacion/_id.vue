@@ -3,8 +3,11 @@
     <div class="container">
       <div class="alert alert-danger"
            v-if="!curso.fin_postulacion">
-        Este curso no
-        <b>se encuentra disponible</b> para postular
+        Este curso ha finalizado
+      </div>
+      <div class="alert alert-success"
+           v-if="curso.fin_postulacion">
+        {{curso.fin_postulacion}}
       </div>
       <h1>{{ curso.nombre }}</h1>
       <small v-if="curso.fecha">Fecha: {{ curso.fecha }}</small>
@@ -17,14 +20,14 @@
           <a target="_blank"
              class="btn btn-large"
              v-bind:class="[
-                {'btn-outline-secondary':curso.descarga},
+                {'btn-outline-primary':curso.descarga},
                 {'btn-danger disabled':!curso.descarga}
               ]"
              :href="curso.descarga">Contenidos del curso</a>
           <a target="_blank"
              class="btn btn-large"
              v-bind:class="[
-                {'btn-outline-secondary':curso.descarga},
+                {'btn-outline-primary':curso.descarga},
                 {'btn-danger disabled':!curso.descarga}
               ]"
              :href="curso.url_postulacion">Postular</a>
@@ -34,9 +37,6 @@
         <div class="col-lg-8">
           <p v-if="curso.instructor">
             <b>Instructores:</b> {{ curso.instructor }}</p>
-          <p v-if="curso.fin_postulacion">
-            {{curso.fin_postulacion}}
-          </p>
           <p v-if="curso.duracion">
             <b>Duración:</b> {{ curso.duracion }}</p>
           <p v-if="curso.modulo">
