@@ -72,7 +72,8 @@ module.exports = {
     extractCSS: true,
     vendor: [
       'vee-validate',
-      'axios'
+      'axios',
+      'vue-lazyload'
     ]
   },
   css: [
@@ -85,7 +86,8 @@ module.exports = {
   ],
   plugins: [
     { src: '~/plugins/vee-validate.js', ssr: true },
-    { src: '~/plugins/filters.js', ssr: true }
+    { src: '~/plugins/filters.js', ssr: true },
+    { src: '~/plugins/lazyload.js', ssr: true }
   ],
   router: {
     scrollBehavior(to, from, savedPosition) {

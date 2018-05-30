@@ -1,13 +1,13 @@
 <template>
   <div>
-    <img :src="banner"
+    <img v-lazy="banner"
          alt="banner-cafe-cientifico">
     <section>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <figure>
-              <img :src="require('@/static/img/' + ultimoEncuento.img)"
+              <img v-lazy="require('@/static/img/' + ultimoEncuento.img)"
                    :alt="ultimoEncuento.img">
             </figure>
             <h2>Invitados</h2>
@@ -36,7 +36,7 @@
                      :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: i}}"
                      tag="div">
             <figure>
-              <img :src="require('@/static/img/' + encuentro.img)"
+              <img v-lazy="require('@/static/img/' + encuentro.img)"
                    :alt="encuentro.img">
             </figure>
             <h4>{{encuentro.tema}}</h4>

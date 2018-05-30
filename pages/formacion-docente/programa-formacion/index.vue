@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img :src="banner"
+        <img v-lazy="banner"
              alt="banner-formacion-docente">
         <section>
             <div class="container">
@@ -22,7 +22,7 @@
                                tag="div">
                         <div class="card card__one link">
                             <figure class="card__img">
-                                <img :src="require('@/static/img/' + curso.poster)"
+                                <img v-lazy="require('@/static/img/' + curso.poster)"
                                      :alt="curso.img">
                             </figure>
                             <div class="card__desc">
