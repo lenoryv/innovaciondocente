@@ -88,8 +88,6 @@ module.exports = {
     { src: '~/plugins/vee-validate.js', ssr: true },
     { src: '~/plugins/filters.js', ssr: true },
     { src: '~/plugins/lazyload.js', ssr: true }
-  ],
-    { src: '~/plugins/filters.js', ssr: true }
   ]
 }
 
