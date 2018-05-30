@@ -1,0 +1,61 @@
+@import 'assets/variables';
+//////////how to use//////////
+///
+///  BASIC EXAMPLE FOR USING alert
+///  
+///  required class        alert
+///  for tittle of alert   alert-heading
+///  for links in alert    alert-link
+///  for stroke            b tag
+///
+///  TYPES:
+///   - alert-primary
+///   - alert-success
+///   - alert-danger
+///   - alert-dark
+///
+////////functions////////
+@mixin alert($color, $light, $dark) {
+  color: $color;
+  background-color: lighten($color: $color, $amount: $light);
+  border-color: lighten($color: $color, $amount: $light);
+  hr {
+    border-top-color: lighten($color: $color, $amount: $light);
+  }
+  .alert-link {
+    color: darken($color: $color, $amount: $dark);
+  }
+}
+
+////////class`s////////
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-heading {
+  color: inherit;
+}
+
+.alert-link {
+  font-weight: 700;
+}
+
+.alert-primary {
+  @include alert($color-primary, 60, 20);
+}
+
+.alert-success {
+  @include alert($color-success, 40, 15);
+}
+
+.alert-danger {
+  @include alert($color-danger, 35, 10);
+}
+
+.alert-dark {
+  @include alert($color-dark, 75, 10);
+}

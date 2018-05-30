@@ -17,8 +17,15 @@
         <p>{{invitado.desc}}</p>
       </div>
     </div>
-    <button @click="$router.go(-1)"
-            class="btn btn-primary btn-large">Regresar</button>
+    <div class="row">
+      <div class="col-6">
+        <button @click="$router.go(-1)"
+                class="btn btn-outline-primary btn-large">Regresar</button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-primary btn-large">Incribete</button>
+      </div>
+    </div>
   </div>
 </template>
 

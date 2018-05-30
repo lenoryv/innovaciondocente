@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="container-fluid">
-        <h2>Otros Cafés</h2>
+        <h2>Portafolio de Encuentros</h2>
         <div class="row">
           <nuxt-link class="col-lg-3 col-sm-6 encuentro"
                      v-for="(encuentro, i) in nuestrosEncuentos"
@@ -46,7 +46,9 @@
     </section>
     <section id="suscripcion">
       <div class="container">
-        <h2>Suscribete a nuestro Café científico</h2>
+        <h2>
+          Suscribete a nuestro Café Científico
+        </h2>
         <p>
           Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan
           y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar
