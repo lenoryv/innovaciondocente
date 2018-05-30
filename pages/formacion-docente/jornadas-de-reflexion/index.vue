@@ -244,13 +244,13 @@
                 v-bind:class="{ disabled: errors.items.length > 0 }">
           Valorar
         </button>
+        <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores'}"
+                   class="btn btn-large btn-outline-primary btn-sm">
+          Jornadas Anteriores
+        </nuxt-link>
       </div>
       <div class="col-md-8">
         <div v-html="jornada.html"></div>
-        <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores'}"
-                   class="btn btn-large btn-outline-primary">
-          Jornadas Anteriores
-        </nuxt-link>
       </div>
     </div>
   </section>

@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <h1>Cursos</h1>
+    <h1>Portafolio de Cursos</h1>
     <div class="container">
       <div class="row">
         <nuxt-link v-for="(curso, i) in cursos"
@@ -44,6 +44,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "assets/card";
 @import "assets/button";
+@import "assets/card";
 </style>

@@ -1,18 +1,19 @@
 <template>
   <div>
-    <div class="container">
+    <section class="container">
       <h1>¡Potencia tu formación docente!</h1>
       <p>
         Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora
         de su formación académica. Te presentamos los testimonios de los expertos que han visitado el
         Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.
       </p>
-    </div>
-    <section class="container-fluid">
+    </section>
+    <div class="container-fluid">
       <div class="row">
         <div v-for="(video, index) in videos"
              :key="index"
-             class="col-lg-4 col-md-6">
+             class="col-xl-4 col-md-6"
+              v-bind:style="{'background-color: red': (index % 2 == 0)}">
           <div class="embed-container">
             <iframe :src="video.vid"
                     frameborder="0"
@@ -23,7 +24,11 @@
           <p>{{video.desc}}</p>
         </div>
       </div>
-    </section>
+      <router-link class="btn btn-outline-primary btn-large btn-sm"
+                   :to="{name: 'formacion-docente-programa-formacion'}">
+        Regresar a Programa Formación
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -41,6 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "assets/button";
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;

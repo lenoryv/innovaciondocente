@@ -13,7 +13,7 @@
                     profesionales y apoyar el desarrollo de dichas competencias desde la formación del
                     profesorado y desde el enfoque de nuestra universidad.”
                 </p>
-                <h2>Cursos</h2>
+                <h2>Cursos Actuales</h2>
                 <div class="row">
                     <nuxt-link class="col-lg-6"
                                v-for="(curso, i) in cursos"
@@ -26,7 +26,7 @@
                                      :alt="curso.img">
                             </figure>
                             <div class="card__desc">
-                                <h3>{{curso.nombre}}</h3>
+                                <h4>{{curso.nombre}}</h4>
                                 <small>{{curso.anio}} - {{curso.mes}} - {{curso.dia}}</small>
                             </div>
                         </div>
@@ -34,13 +34,13 @@
                 </div>
                 <nuxt-link class="btn btn-primary btn-large"
                            :to="{name: 'formacion-docente-programa-formacion-cursos'}">
-                    Formación Docente
+                    Portafolio de Cursos
                 </nuxt-link>
             </div>
         </section>
         <section id="video">
             <div class="container">
-                <h2>Videos</h2>
+                <h2>Tips de Expertos</h2>
                 <div class="row">
                     <div class="col-lg-8">
                         <h3>#InnovaciónenlaUTPL</h3>
@@ -64,7 +64,9 @@
                         </div>
                         <p>{{video.desc|slice(0,250)}}</p>
                         <router-link class="btn btn-inverse btn-large"
-                                     :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">Ver mas potencia informacion</router-link>
+                                     :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">
+                            Tips de expertos
+                        </router-link>
                     </div>
                 </div>
             </div>
