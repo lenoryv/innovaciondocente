@@ -48,7 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "assets/button";
 figure {
   width: 100%;
   overflow: hidden;

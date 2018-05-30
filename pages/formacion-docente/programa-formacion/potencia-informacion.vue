@@ -46,7 +46,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "assets/button";
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;

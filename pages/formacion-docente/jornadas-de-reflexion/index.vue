@@ -300,7 +300,6 @@ export default {
 // TODO: add svg icon from https://material.io/tools/icons/?icon=star_rate&style=baseline
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import "assets/variables";
-@import "assets/button";
 @import "assets/form";
 
 /****** Style Star Rating Widget *****/

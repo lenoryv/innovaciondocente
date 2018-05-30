@@ -79,7 +79,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
-@import "assets/button";
 
 #suscripcion {
   background-color: $color-primary;
