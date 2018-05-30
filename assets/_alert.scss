@@ -12,7 +12,6 @@
 ///   - alert-primary
 ///   - alert-success
 ///   - alert-danger
-///   - alert-warning
 ///   - alert-dark
 ///
 ////////functions////////
@@ -55,10 +54,6 @@
 
 .alert-danger {
   @include alert($color-danger, 35, 10);
-}
-
-.alert-warning {
-  @include alert($color-warning, 40, 20);
 }
 
 .alert-dark {
