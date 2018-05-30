@@ -123,6 +123,8 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/card";
+@import "assets/button";
+
 #video {
   background-color: $color-primary;
   color: $color-font-primary;

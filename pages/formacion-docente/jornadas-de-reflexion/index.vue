@@ -52,7 +52,7 @@
           </fieldset>
         </div>
         <div class="form-group">
-          <label for="preg_2">2.1 ¿En que aspectos te resulta aplicable el tema?</label>
+          <label for="preg_2">2. Valore la aplicabilidad del tema: Desarrollo de competencias transversales en el aula de clases: innovación, creatividad y emprendimiento</label>
           <select v-model="forma.preg_2"
                   class="form-control"
                   id="preg_2"
@@ -240,7 +240,8 @@
                     class="form-control" />
         </div>
         <button @click="validateBeforeSubmit"
-                class="btn btn-primary btn-large">
+                class="btn btn-primary btn-large"
+                v-bind:class="{ disabled: errors.items.length > 0 }">
           Valorar
         </button>
       </div>
@@ -296,56 +297,8 @@ export default {
 <style lang="scss" scoped>
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import "assets/variables";
-
-.form-group {
-  margin-bottom: 1rem;
-}
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: $color-font;
-  background-color: $color-background;
-  background-clip: padding-box;
-  border: 1px solid $color-primary;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .form-control {
-    transition: none;
-  }
-}
-
-.form-control:focus {
-  color: $color-font;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem lighten($color: $color-primary-dark, $amount: 60);
-}
-
-.form-control::placeholder {
-  color: $color-font-light;
-}
-
-.invalid-feedback {
-  color: $color-danger;
-}
-
-fieldset,
-label {
-  margin: 0;
-  padding: 0;
-}
-body {
-  margin: 20px;
-}
-h1 {
-  font-size: 1.5em;
-  margin: 10px;
-}
+@import "assets/button";
+@import "assets/form";
 
 /****** Style Star Rating Widget *****/
 
