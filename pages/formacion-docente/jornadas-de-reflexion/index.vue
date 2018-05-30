@@ -295,6 +295,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// TODO: add svg icon from https://material.io/tools/icons/?icon=star_rate&style=baseline
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import "assets/variables";
 @import "assets/button";

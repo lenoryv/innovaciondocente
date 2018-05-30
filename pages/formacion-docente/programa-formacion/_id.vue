@@ -1,6 +1,11 @@
 <template>
   <section>
     <div class="container">
+      <div class="alert alert-danger"
+           v-if="!curso.fin_postulacion">
+        Este curso no
+        <b>se encuentra disponible</b> para postular
+      </div>
       <h1>{{ curso.nombre }}</h1>
       <small v-if="curso.fecha">Fecha: {{ curso.fecha }}</small>
       <hr>
@@ -10,19 +15,28 @@
                :src="require('@/static/img/' + curso.poster)"
                :alt="curso.poster">
           <a target="_blank"
-             class="btn btn-outline-secondary btn-large"
-             v-if="curso.descarga"
-             :href="curso.descarga">Descarga los contenidos del curso</a>
+             class="btn btn-large"
+             v-bind:class="[
+                {'btn-outline-secondary':curso.descarga},
+                {'btn-danger disabled':!curso.descarga}
+              ]"
+             :href="curso.descarga">Contenidos del curso</a>
           <a target="_blank"
-             class="btn btn-outline-secondary btn-large"
-             v-if="curso.fin_postulacion"
-             :href="curso.url_postulacion">{{curso.fin_postulacion}}</a>
+             class="btn btn-large"
+             v-bind:class="[
+                {'btn-outline-secondary':curso.descarga},
+                {'btn-danger disabled':!curso.descarga}
+              ]"
+             :href="curso.url_postulacion">Postular</a>
           <button @click="$router.go(-1)"
                   class="btn btn-primary btn-large">Regresar</button>
         </div>
         <div class="col-lg-8">
           <p v-if="curso.instructor">
             <b>Instructores:</b> {{ curso.instructor }}</p>
+          <p v-if="curso.fin_postulacion">
+            {{curso.fin_postulacion}}
+          </p>
           <p v-if="curso.duracion">
             <b>Duración:</b> {{ curso.duracion }}</p>
           <p v-if="curso.modulo">
@@ -56,5 +70,6 @@ export default {
 </script>
 
 <style lang="scss">
+@import "assets/alert";
 @import "assets/button";
 </style>
