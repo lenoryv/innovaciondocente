@@ -23,7 +23,7 @@
                         <div class="card card__one link">
                             <figure class="card__img">
                                 <img v-lazy="require('@/static/img/' + curso.poster)"
-                                     :alt="curso.img">
+                                     alt="imagen curso">
                             </figure>
                             <div class="card__desc">
                                 <h4>{{curso.nombre}}</h4>
@@ -47,19 +47,24 @@
                         <div class="embed-container">
                             <iframe src="https://www.youtube.com/embed/Fo6uuUi86F4"
                                     frameborder="0"
-                                    allow="autoplay; encrypted-media"
+                                    allow="encrypted-media"
+                                    title="video"
                                     allowfullscreen></iframe>
                         </div>
                         <a target="_blank"
+                           rel="noopener"
                            class="btn btn-inverse btn-large"
-                           href="https://www.youtube.com/channel/UCzRd2Y87-NJnVliV8B6e_Xg">Innovación Docente en YouTube</a>
+                           href="https://www.youtube.com/channel/UCzRd2Y87-NJnVliV8B6e_Xg">
+                            Innovación Docente en YouTube
+                        </a>
                     </div>
                     <div class="col-lg-4">
                         <h3>{{video.title}}</h3>
                         <div class="embed-container">
                             <iframe :src="video.vid"
                                     frameborder="0"
-                                    allow="autoplay; encrypted-media"
+                                    allow="encrypted-media"
+                                    title="video"
                                     allowfullscreen></iframe>
                         </div>
                         <p>{{video.desc|slice(0,250)}}</p>
@@ -87,7 +92,10 @@
                         <a class="btn btn-outline-primary btn-large"
                            href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf"
                     
-                           target="_blank">Programa de Formación Docente 2018</a>
+                           rel="noopener"
+                           target="_blank">
+                            Programa de Formación Docente
+                        </a>
                     </div>
                     <div class="col-md-6">
                         <h3>Valida tu formación Docente - Pedagógica</h3>
@@ -98,7 +106,8 @@
                         <a class="btn btn-outline-primary btn-large"
                            href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf"
                     
-                           target="_blank">Intructivo para validar tus cursos</a>
+                           target="_blank"
+                           rel="noopener">Intructivo para validar tus cursos</a>
                     </div>
                 </div>
             </div>

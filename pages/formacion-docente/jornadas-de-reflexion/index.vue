@@ -15,7 +15,9 @@
                      value="5" />
               <label class="full"
                      for="preg_1_star5"
-                     title="Excelente"></label>
+                     title="Excelente">
+                <i class="fas fa-star" />
+              </label>
               <input type="radio"
                      id="preg_1_star4"
                      name="preg_1_rating"
@@ -23,7 +25,9 @@
                      value="4" />
               <label class="full"
                      for="preg_1_star4"
-                     title="Muy bueno"></label>
+                     title="Muy bueno">
+                <i class="fas fa-star" />
+              </label>
               <input type="radio"
                      id="preg_1_star3"
                      name="preg_1_rating"
@@ -31,7 +35,9 @@
                      value="3" />
               <label class="full"
                      for="preg_1_star3"
-                     title="Bueno"></label>
+                     title="Bueno">
+                <i class="fas fa-star" />
+              </label>
               <input type="radio"
                      id="preg_1_star2"
                      name="preg_1_rating"
@@ -39,7 +45,9 @@
                      value="2" />
               <label class="full"
                      for="preg_1_star2"
-                     title="Regular"></label>
+                     title="Regular">
+                <i class="fas fa-star" />
+              </label>
               <input type="radio"
                      id="preg_1_star1"
                      name="preg_1_rating"
@@ -47,7 +55,9 @@
                      value="1" />
               <label class="full"
                      for="preg_1_star1"
-                     title="Malo"></label>
+                     title="Malo">
+                <i class="fas fa-star" />
+              </label>
             </fieldset>
           </div>
           <div class="form-group">
@@ -93,7 +103,9 @@
                        value="5" />
                 <label class="full"
                        for="preg_3_1_star5"
-                       title="Excelente"></label>
+                       title="Excelente">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_1_star4"
                        name="preg_3_1_rating"
@@ -101,7 +113,9 @@
                        value="4" />
                 <label class="full"
                        for="preg_3_1_star4"
-                       title="Muy bueno"></label>
+                       title="Muy bueno">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_1_star3"
                        name="preg_3_1_rating"
@@ -109,7 +123,9 @@
                        value="3" />
                 <label class="full"
                        for="preg_3_1_star3"
-                       title="Bueno"></label>
+                       title="Bueno">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_1_star2"
                        name="preg_3_1_rating"
@@ -117,7 +133,9 @@
                        value="2" />
                 <label class="full"
                        for="preg_3_1_star2"
-                       title="Regular"></label>
+                       title="Regular">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_1_star1"
                        name="preg_3_1_rating"
@@ -125,7 +143,9 @@
                        value="1" />
                 <label class="full"
                        for="preg_3_1_star1"
-                       title="Malo"></label>
+                       title="Malo">
+                  <i class="fas fa-star" />
+                </label>
               </fieldset>
             </div>
             <div class="form-group">
@@ -140,7 +160,9 @@
                        value="5" />
                 <label class="full"
                        for="preg_3_2_star5"
-                       title="Excelente"></label>
+                       title="Excelente">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_2_star4"
                        name="preg_3_2_rating"
@@ -148,7 +170,9 @@
                        value="4" />
                 <label class="full"
                        for="preg_3_2_star4"
-                       title="Muy bueno"></label>
+                       title="Muy bueno">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_2_star3"
                        name="preg_3_2_rating"
@@ -156,7 +180,9 @@
                        value="3" />
                 <label class="full"
                        for="preg_3_2_star3"
-                       title="Bueno"></label>
+                       title="Bueno">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_2_star2"
                        name="preg_3_2_rating"
@@ -164,7 +190,9 @@
                        value="2" />
                 <label class="full"
                        for="preg_3_2_star2"
-                       title="Regular"></label>
+                       title="Regular">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_2_star1"
                        name="preg_3_2_rating"
@@ -172,7 +200,9 @@
                        value="1" />
                 <label class="full"
                        for="preg_3_2_star1"
-                       title="Malo"></label>
+                       title="Malo">
+                  <i class="fas fa-star" />
+                </label>
               </fieldset>
             </div>
             <div class="form-group">
@@ -186,7 +216,9 @@
                        value="5" />
                 <label class="full"
                        for="preg_3_3_star5"
-                       title="Excelente"></label>
+                       title="Excelente">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_3_star4"
                        name="preg_3_3_rating"
@@ -194,7 +226,9 @@
                        value="4" />
                 <label class="full"
                        for="preg_3_3_star4"
-                       title="Muy bueno"></label>
+                       title="Muy bueno">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_3_star3"
                        name="preg_3_3_rating"
@@ -202,7 +236,9 @@
                        value="3" />
                 <label class="full"
                        for="preg_3_3_star3"
-                       title="Bueno"></label>
+                       title="Bueno">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_3_star2"
                        name="preg_3_3_rating"
@@ -210,7 +246,9 @@
                        value="2" />
                 <label class="full"
                        for="preg_3_3_star2"
-                       title="Regular"></label>
+                       title="Regular">
+                  <i class="fas fa-star" />
+                </label>
                 <input type="radio"
                        id="preg_3_3_star1"
                        name="preg_3_3_rating"
@@ -218,7 +256,9 @@
                        value="1" />
                 <label class="full"
                        for="preg_3_3_star1"
-                       title="Malo"></label>
+                       title="Malo">
+                  <i class="fas fa-star" />
+                </label>
               </fieldset>
             </div>
           </div>
@@ -297,12 +337,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// TODO: add svg icon from https://material.io/tools/icons/?icon=star_rate&style=baseline
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import "assets/variables";
 @import "assets/form";
-
-/****** Style Star Rating Widget *****/
 
 .rating {
   border: none;
@@ -312,12 +348,10 @@ export default {
 .rating > input {
   display: none;
 }
-.rating > label:before {
+.rating > label {
   margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
+  font-size: 1em;
   display: inline-block;
-  content: "\f005";
 }
 
 .rating > label {
