@@ -25,7 +25,7 @@
 @import "assets/variables";
 footer {
   display: flex;
-  border-top: 1px $color-font-light solid;
+  border-top: 1px $color-font solid;
   font-size: 0.7rem;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -41,7 +41,7 @@ ul {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  color: $color-font-light;
+  color: $color-font;
 }
 
 .mr {
@@ -49,7 +49,7 @@ ul {
 }
 
 .footer-heart {
-  color: $color-font-light;
+  color: $color-font;
 }
 .footer-heart:hover {
   color: $color-danger;

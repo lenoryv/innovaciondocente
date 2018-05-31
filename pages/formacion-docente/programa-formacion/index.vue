@@ -23,7 +23,7 @@
                         <div class="card card__one link">
                             <figure class="card__img">
                                 <img v-lazy="require('@/static/img/' + curso.poster)"
-                                     :alt="curso.img">
+                                     alt="imagen curso">
                             </figure>
                             <div class="card__desc">
                                 <h4>{{curso.nombre}}</h4>
@@ -47,7 +47,8 @@
                         <div class="embed-container">
                             <iframe src="https://www.youtube.com/embed/Fo6uuUi86F4"
                                     frameborder="0"
-                                    allow="autoplay; encrypted-media"
+                                    allow="encrypted-media"
+                                    title="video"
                                     allowfullscreen></iframe>
                         </div>
                         <a target="_blank"
@@ -62,7 +63,8 @@
                         <div class="embed-container">
                             <iframe :src="video.vid"
                                     frameborder="0"
-                                    allow="autoplay; encrypted-media"
+                                    allow="encrypted-media"
+                                    title="video"
                                     allowfullscreen></iframe>
                         </div>
                         <p>{{video.desc|slice(0,250)}}</p>
