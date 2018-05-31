@@ -42,15 +42,15 @@ module.exports = {
    * manifest
    */
   manifest: {
-    name: 'Innovacion Docente UTPL',
+    name: 'Innovación Docente UTPL',
     lang: 'es',
-    short_name: 'Innovacion Docente',
+    short_name: 'Ascendere',
     start_url: '/',
     display: 'standalone',
     orientation: "portrait",
     background_color: "#0D47A1",
     theme_color: "#0D47A1",
-    description: "Pagina web de innovacion docente.",
+    description: "Pagina web de Innovación Docente. UTPL",
   },
   /*
   ** Build configuration
