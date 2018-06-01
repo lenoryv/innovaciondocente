@@ -49,7 +49,7 @@
 }
 
 .alert-success {
-  @include alert($color-success, 40, 15);
+  @include alert($color-success, 45, 15);
 }
 
 .alert-danger {

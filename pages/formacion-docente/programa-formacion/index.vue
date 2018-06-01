@@ -42,7 +42,7 @@
             <div class="container">
                 <h2>Tips de Expertos</h2>
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-xl-7 col-lg-8">
                         <h3>#InnovaciónenlaUTPL</h3>
                         <div class="embed-container">
                             <iframe src="https://www.youtube.com/embed/Fo6uuUi86F4"
@@ -58,7 +58,7 @@
                             Innovación Docente en YouTube
                         </a>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xl-5 col-lg-4">
                         <h3>{{video.title}}</h3>
                         <div class="embed-container">
                             <iframe :src="video.vid"
@@ -80,7 +80,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3>Calendario Anual</h3>
+                        <h3>
+                            <i class="fas fa-file-pdf"></i>
+                            Calendario Anual
+                        </h3>
                         <p>
                             El Programa de Formación se desarrolla por medio de la articulación de varios módulos, los cuales están
                             integrados por itinerarios. En esta estructura se reflejen las líneas de
@@ -98,7 +101,10 @@
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <h3>Valida tu formación Docente - Pedagógica</h3>
+                        <h3>
+                            <i class="fas fa-file-pdf"></i>
+                            Valida tu formación Docente - Pedagógica
+                        </h3>
                         <p>
                             Intructivo para validar tus cursos del Programa de Formación Docente Pedagógica en el Sistema de Información
                             Académica Científica (SIAC)
@@ -107,7 +113,8 @@
                            href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf"
                     
                            target="_blank"
-                           rel="noopener">Intructivo para validar tus cursos</a>
+                           rel="noopener">
+                            Intructivo para validar tus cursos</a>
                     </div>
                 </div>
             </div>

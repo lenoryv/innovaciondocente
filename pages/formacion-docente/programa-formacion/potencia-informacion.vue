@@ -13,10 +13,11 @@
         <div v-for="(video, index) in videos"
              :key="index"
              class="col-xl-4 col-md-6"
-              v-bind:style="{'background-color: red': (index % 2 == 0)}">
+             v-bind:style="{'background-color: red': (index % 2 == 0)}">
           <div class="embed-container">
             <iframe :src="video.vid"
                     frameborder="0"
+                    title="video"
                     allow="autoplay; encrypted-media"
                     allowfullscreen></iframe>
           </div>

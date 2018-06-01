@@ -1,11 +1,12 @@
 <template>
   <section class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <form v-on:submit.prevent="onSubmit">
           <h3>Valora la jornada:</h3>
           <div class="form-group">
             <label for="preg_1">1. En relación a la jornada ¿Qué valoración le daría?</label>
+            <br>
             <fieldset class="rating"
                       name="preg_1">
               <input type="radio"
@@ -16,7 +17,7 @@
               <label class="full"
                      for="preg_1_star5"
                      title="Excelente">
-                <i class="fas fa-star" />
+                <i class="fas fa-star"></i>
               </label>
               <input type="radio"
                      id="preg_1_star4"
@@ -26,7 +27,7 @@
               <label class="full"
                      for="preg_1_star4"
                      title="Muy bueno">
-                <i class="fas fa-star" />
+                <i class="fas fa-star"></i>
               </label>
               <input type="radio"
                      id="preg_1_star3"
@@ -36,7 +37,7 @@
               <label class="full"
                      for="preg_1_star3"
                      title="Bueno">
-                <i class="fas fa-star" />
+                <i class="fas fa-star"></i>
               </label>
               <input type="radio"
                      id="preg_1_star2"
@@ -46,7 +47,7 @@
               <label class="full"
                      for="preg_1_star2"
                      title="Regular">
-                <i class="fas fa-star" />
+                <i class="fas fa-star"></i>
               </label>
               <input type="radio"
                      id="preg_1_star1"
@@ -56,9 +57,10 @@
               <label class="full"
                      for="preg_1_star1"
                      title="Malo">
-                <i class="fas fa-star" />
+                <i class="fas fa-star"></i>
               </label>
             </fieldset>
+            <br>
           </div>
           <div class="form-group">
             <label for="preg_2">2. Valore la aplicabilidad del tema: Desarrollo de competencias transversales en el aula
@@ -92,8 +94,10 @@
           <div class="form-group">
             <label>3. Valore los siguientes aspectos contemplados en la jornada:</label>
             <div class="form-group">
-              <label for="preg_3_1">3.1 Valore el contenido, metodología y organización general de la Jornada
+              <label for="preg_3_1">
+                3.1 Valore el contenido, metodología y organización general de la Jornada
               </label>
+              <br>
               <fieldset class="rating"
                         name="preg_3_1">
                 <input type="radio"
@@ -104,7 +108,7 @@
                 <label class="full"
                        for="preg_3_1_star5"
                        title="Excelente">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_1_star4"
@@ -114,7 +118,7 @@
                 <label class="full"
                        for="preg_3_1_star4"
                        title="Muy bueno">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_1_star3"
@@ -124,7 +128,7 @@
                 <label class="full"
                        for="preg_3_1_star3"
                        title="Bueno">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_1_star2"
@@ -134,7 +138,7 @@
                 <label class="full"
                        for="preg_3_1_star2"
                        title="Regular">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_1_star1"
@@ -144,13 +148,16 @@
                 <label class="full"
                        for="preg_3_1_star1"
                        title="Malo">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
               </fieldset>
+              <br>
             </div>
             <div class="form-group">
-              <label for="preg_3_2">3.2 Valore el contenido y metodología de la charla magistral "Un docente aprendiendo"
+              <label for="preg_3_2">
+                3.2 Valore el contenido y metodología de la charla magistral "Un docente aprendiendo"
               </label>
+              <br>
               <fieldset class="rating"
                         name="preg_3_2">
                 <input type="radio"
@@ -161,7 +168,7 @@
                 <label class="full"
                        for="preg_3_2_star5"
                        title="Excelente">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_2_star4"
@@ -171,7 +178,7 @@
                 <label class="full"
                        for="preg_3_2_star4"
                        title="Muy bueno">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_2_star3"
@@ -181,7 +188,7 @@
                 <label class="full"
                        for="preg_3_2_star3"
                        title="Bueno">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_2_star2"
@@ -191,7 +198,7 @@
                 <label class="full"
                        for="preg_3_2_star2"
                        title="Regular">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_2_star1"
@@ -201,12 +208,16 @@
                 <label class="full"
                        for="preg_3_2_star1"
                        title="Malo">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
               </fieldset>
+              <br>
             </div>
             <div class="form-group">
-              <label for="preg_3_3">3.3 Valore el taller práctico"ADN Innovador".</label>
+              <label for="preg_3_3">
+                3.3 Valore el taller práctico"ADN Innovador".
+              </label>
+              <br>
               <fieldset class="rating"
                         name="preg_3_3">
                 <input type="radio"
@@ -217,7 +228,7 @@
                 <label class="full"
                        for="preg_3_3_star5"
                        title="Excelente">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_3_star4"
@@ -227,7 +238,7 @@
                 <label class="full"
                        for="preg_3_3_star4"
                        title="Muy bueno">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_3_star3"
@@ -237,7 +248,7 @@
                 <label class="full"
                        for="preg_3_3_star3"
                        title="Bueno">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_3_star2"
@@ -247,7 +258,7 @@
                 <label class="full"
                        for="preg_3_3_star2"
                        title="Regular">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
                 <input type="radio"
                        id="preg_3_3_star1"
@@ -257,9 +268,10 @@
                 <label class="full"
                        for="preg_3_3_star1"
                        title="Malo">
-                  <i class="fas fa-star" />
+                  <i class="fas fa-star"></i>
                 </label>
               </fieldset>
+              <br>
             </div>
           </div>
           <div class="form-group">
@@ -291,7 +303,7 @@
           </nuxt-link>
         </form>
       </div>
-      <div class="col-md-8">
+      <div class="col-lg-8">
         <div v-html="jornada.html"></div>
       </div>
     </div>

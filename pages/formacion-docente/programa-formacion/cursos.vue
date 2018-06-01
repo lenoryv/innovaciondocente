@@ -10,8 +10,8 @@
                    tag="div">
           <div class="card card__one link">
             <figure class="card__img">
-              <img :src="require('@/static/img/' + curso.poster)"
-                   :alt="curso.img">
+              <img v-lazy="require('@/static/img/' + curso.poster)"
+                   alt="Imagen Curso">
             </figure>
             <div class="card__desc">
               <h4>{{curso.nombre}}</h4>
@@ -20,11 +20,11 @@
           </div>
         </nuxt-link>
       </div>
-    </div>
     <button @click="$router.go(-1)"
             class="btn btn-primary btn-large">
       Regresar
     </button>
+    </div>
   </div>
 </template>
 
