@@ -32,7 +32,7 @@
                type="text"
                id="titulacion"
                class="form-control"
-               placeholder="Primer titulacion"
+               placeholder="titulacion"
                v-validate="'required'">
         <span v-show="errors.has('titulacion')"
               class="invalid-feedback">Titulación es requerido</span>
