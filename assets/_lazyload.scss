@@ -1,0 +1,24 @@
+@import "assets/variables";
+/////////animation//////////
+img[lazy=loading] {
+  animation-name: color;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  background: $color-font-primary;
+  animation-duration: 2s;
+}
+
+//  
+//  img[lazy=error] {}
+//  
+//  img[lazy=loaded] {}
+//  
+@keyframes color {
+  0% {
+    background: $color-font-primary;
+  }
+  100% {
+    background: $color-primary;
+  }
+}
