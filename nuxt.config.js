@@ -21,7 +21,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Página web de Innovacion Docente | UTPL' },
-      { name: 'msapplication-TileImage', content: '/static/icon.png' },
+      { name: 'msapplication-TileImage', content: '/icon.png' },
       { name: 'msapplication-TileColor', content: '#2a3e71' },
       { name: 'theme-color', content: '#2a3e71' },
       { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
@@ -32,7 +32,8 @@ module.exports = {
       // { rel: 'apple-touch-icon', href: '~/assets/images' },
       // { rel: 'apple-touch-icon', sizes: '57x57', href: '/Images/assets/icons/apple-icon-57x57-b82ef058b133f3197df61c326fa7cd6d.png' },
       // { rel: 'apple-touch-startup-image', sizes: '57x57', href: '/Images/assets/icons/apple-icon-57x57-b82ef058b133f3197df61c326fa7cd6d.png' },
-      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/regular.css' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css' }
     ]
   },
   /*

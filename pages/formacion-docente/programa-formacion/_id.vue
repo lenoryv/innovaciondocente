@@ -15,16 +15,21 @@
       <div class="row">
         <div class="col-lg-4">
           <img v-if="curso.poster"
-               :src="require('@/static/img/' + curso.poster)"
-               :alt="curso.poster">
+               v-lazy="require('@/static/img/' + curso.poster)"
+               alt="Imagen Curso">
           <a target="_blank"
+             rel="noopener"
              class="btn btn-large"
              v-bind:class="[
                 {'btn-outline-primary':curso.descarga},
                 {'btn-danger disabled':!curso.descarga}
               ]"
-             :href="curso.descarga">Contenidos del curso</a>
+             :href="curso.descarga">
+            <i class="far fa-file-pdf"></i>
+            Contenidos del curso
+          </a>
           <a target="_blank"
+             rel="noopener"
              class="btn btn-large"
              v-bind:class="[
                 {'btn-outline-primary':curso.descarga},

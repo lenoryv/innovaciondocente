@@ -80,7 +80,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3>Calendario Anual</h3>
+                        <h3>
+                            <i class="far fa-file-pdf"></i>
+                            Calendario Anual
+                        </h3>
                         <p>
                             El Programa de Formación se desarrolla por medio de la articulación de varios módulos, los cuales están
                             integrados por itinerarios. En esta estructura se reflejen las líneas de
@@ -98,7 +101,10 @@
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <h3>Valida tu formación Docente - Pedagógica</h3>
+                        <h3>
+                            <i class="far fa-file-pdf"></i>
+                            Valida tu formación Docente - Pedagógica
+                        </h3>
                         <p>
                             Intructivo para validar tus cursos del Programa de Formación Docente Pedagógica en el Sistema de Información
                             Académica Científica (SIAC)
@@ -107,7 +113,8 @@
                            href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf"
                     
                            target="_blank"
-                           rel="noopener">Intructivo para validar tus cursos</a>
+                           rel="noopener">
+                            Intructivo para validar tus cursos</a>
                     </div>
                 </div>
             </div>
