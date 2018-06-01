@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <figure>
-      <img :src="require('@/static/img/' + encuentro.img)"
+      <img v-lazy="require('@/static/img/' + encuentro.img)"
            :alt="encuentro.img">
     </figure>
     <h1>{{encuentro.tema}}</h1>

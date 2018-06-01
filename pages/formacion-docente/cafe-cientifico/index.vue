@@ -8,7 +8,7 @@
           <div class="col-md-4">
             <figure>
               <img v-lazy="require('@/static/img/' + ultimoEncuento.img)"
-                   :alt="ultimoEncuento.img">
+                   alt="Image Encuentro">
             </figure>
             <h2>Invitados</h2>
             <ul>
@@ -37,7 +37,7 @@
                      tag="div">
             <figure>
               <img v-lazy="require('@/static/img/' + encuentro.img)"
-                   :alt="encuentro.img">
+                   alt="Image Encuentros">
             </figure>
             <h4>{{encuentro.tema}}</h4>
           </nuxt-link>
