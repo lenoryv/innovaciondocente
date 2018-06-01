@@ -33,6 +33,7 @@ module.exports = {
       // { rel: 'apple-touch-icon', sizes: '57x57', href: '/Images/assets/icons/apple-icon-57x57-b82ef058b133f3197df61c326fa7cd6d.png' },
       // { rel: 'apple-touch-startup-image', sizes: '57x57', href: '/Images/assets/icons/apple-icon-57x57-b82ef058b133f3197df61c326fa7cd6d.png' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/solid.css' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/brands.css' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css' }
     ]
   },
