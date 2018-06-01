@@ -33,7 +33,7 @@
                     </nuxt-link>
                 </div>
                 <nuxt-link class="btn btn-primary btn-large"
-                           :to="{name: 'formacion-docente-programa-formacion-cursos'}">
+                           :to="{name: 'formacion-docente-programa-formacion-cursos-id'}">
                     Portafolio de Cursos
                 </nuxt-link>
             </div>
