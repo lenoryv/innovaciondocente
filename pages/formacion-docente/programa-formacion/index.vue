@@ -81,7 +81,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h3>
-                            <i class="far fa-file-pdf"></i>
+                            <i class="fas fa-file-pdf"></i>
                             Calendario Anual
                         </h3>
                         <p>
@@ -102,7 +102,7 @@
                     </div>
                     <div class="col-md-6">
                         <h3>
-                            <i class="far fa-file-pdf"></i>
+                            <i class="fas fa-file-pdf"></i>
                             Valida tu formación Docente - Pedagógica
                         </h3>
                         <p>

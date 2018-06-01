@@ -25,7 +25,7 @@
                 {'btn-danger disabled':!curso.descarga}
               ]"
              :href="curso.descarga">
-            <i class="far fa-file-pdf"></i>
+            <i class="fas fa-file-pdf"></i>
             Contenidos del curso
           </a>
           <a target="_blank"

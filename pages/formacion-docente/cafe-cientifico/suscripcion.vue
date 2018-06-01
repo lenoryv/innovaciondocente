@@ -7,7 +7,7 @@
           <label for="nombre">Nombre</label>
           <input v-model="forma.nombre"
                  type="text"
-                 name="nombre"
+                 id="nombre"
                  class="form-control"
                  placeholder="Nombre"
                  v-validate="'required'">
@@ -18,7 +18,7 @@
           <label for="apellido">Apellido</label>
           <input v-model="forma.apellido"
                  type="text"
-                 name="apellido"
+                 id="apellido"
                  class="form-control"
                  placeholder="Apellido"
                  v-validate="'required'">
@@ -30,7 +30,7 @@
         <label for="titulacion">Titulación</label>
         <input v-model="forma.titulacion"
                type="text"
-               name="titulacion"
+               id="titulacion"
                class="form-control"
                placeholder="Primer titulacion"
                v-validate="'required'">
@@ -41,7 +41,7 @@
         <label for="email">Correo Electronico</label>
         <input v-model="forma.email"
                class="form-control"
-               name="email"
+               id="email"
                type="text"
                placeholder="Email"
                v-validate="'required|email'">
@@ -52,7 +52,7 @@
         <label for="telefono">Teléfono Celular</label>
         <input v-model="forma.telefono"
                class="form-control"
-               name="telefono"
+               id="telefono"
                type="text"
                placeholder="Número de telefono"
                v-validate="'required|numeric'">
@@ -63,7 +63,7 @@
         <label for="universidad">Universidad</label>
         <input v-model="forma.universidad"
                class="form-control"
-               name="universidad"
+               id="universidad"
                type="text"
                placeholder="Universidad"
                v-validate="'required'">
