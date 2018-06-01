@@ -42,7 +42,7 @@
             <div class="container">
                 <h2>Tips de Expertos</h2>
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-xl-7 col-lg-8">
                         <h3>#InnovaciónenlaUTPL</h3>
                         <div class="embed-container">
                             <iframe src="https://www.youtube.com/embed/Fo6uuUi86F4"
@@ -58,7 +58,7 @@
                             Innovación Docente en YouTube
                         </a>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xl-5 col-lg-4">
                         <h3>{{video.title}}</h3>
                         <div class="embed-container">
                             <iframe :src="video.vid"
