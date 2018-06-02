@@ -299,7 +299,7 @@
           </button>
           <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores'}"
                      class="btn btn-large btn-outline-primary btn-sm">
-            Jornadas Anteriores
+            <i class="fas fa-folder"></i> Portafolio de Jornadas
           </nuxt-link>
         </form>
       </div>

@@ -10,7 +10,9 @@
               <img v-lazy="require('@/static/img/' + ultimoEncuento.img)"
                    alt="Imagen Encuentro">
             </figure>
-            <h2>Invitados</h2>
+            <h3>
+              <i class="fas fa-users"></i> Invitados
+            </h3>
             <ul>
               <li v-for="(invitado, index) in ultimoEncuento.invitados"
                   :key="index">{{ invitado.name }}</li>
@@ -27,8 +29,12 @@
           </div>
         </div>
       </div>
+    </section>
+    <section id="portafolio">
       <div class="container-fluid">
-        <h2>Portafolio de Encuentros</h2>
+        <h2>
+          Portafolio de Encuentros
+        </h2>
         <div class="row">
           <nuxt-link class="col-xl-3 col-sm-6"
                      v-for="(encuentro, i) in nuestrosEncuentos"
@@ -41,7 +47,7 @@
                      alt="Imagen Encuentros">
               </figure>
               <div class="card__desc">
-                <span>{{encuentro.tema}}</span>
+                <h4>{{encuentro.tema}}</h4>
               </div>
             </div>
           </nuxt-link>
@@ -88,6 +94,15 @@ export default {
 #suscripcion {
   background-color: $color-primary;
   color: $color-font-primary;
+}
+
+#portafolio {
+  color: $color-primary;
+  background-color: $color-warning;
+  .card {
+    color: $color-primary;
+    background-color: $color-warning;
+  }
 }
 
 .encuentro {

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="container">
     <h1>Suscribete a nuestro Café científico</h1>
     <form v-on:submit.prevent="onSubmit">
       <div class="form-row">
@@ -106,7 +106,7 @@
         </div>
       </div>
     </form>
-  </div>
+  </section>
 </template>
 
 <script>

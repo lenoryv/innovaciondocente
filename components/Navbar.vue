@@ -46,6 +46,7 @@
 
 <script>
 export default {
+  // TODO: disable scroll http://blog.luyu.rocks/2017/06/01/how-to-disable-prevent-scrolling-in-vue/
   methods: {
     toggleMenu() {
       let body = document.querySelector("body");
@@ -76,8 +77,8 @@ export default {
   width: $size;
   position: fixed;
   z-index: 2;
-  right: 50px;
-  top: 30px;
+  right: 40px;
+  top: 40px;
   filter: invert(1);
   cursor: pointer;
   &__line {
