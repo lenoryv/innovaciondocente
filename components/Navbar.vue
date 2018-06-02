@@ -126,7 +126,7 @@ export default {
     width: 100%;
     text-align: center;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 1.1em;
     ul {
       margin: 0;
       padding: 0;
@@ -218,6 +218,12 @@ export default {
       width: 100%;
       padding: 0;
     }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .nav__content {
+    font-size: 1.5em;
   }
 }
 </style>
