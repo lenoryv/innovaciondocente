@@ -10,7 +10,9 @@
               <img v-lazy="require('@/static/img/' + ultimoEncuento.img)"
                    alt="Imagen Encuentro">
             </figure>
-            <h2>Invitados</h2>
+            <h3>
+              <i class="fas fa-users"></i> Invitados
+            </h3>
             <ul>
               <li v-for="(invitado, index) in ultimoEncuento.invitados"
                   :key="index">{{ invitado.name }}</li>
@@ -27,19 +29,27 @@
           </div>
         </div>
       </div>
+    </section>
+    <section id="portafolio">
       <div class="container-fluid">
-        <h2>Portafolio de Encuentros</h2>
+        <h2>
+          Portafolio de Encuentros
+        </h2>
         <div class="row">
-          <nuxt-link class="col-lg-3 col-sm-6 encuentro"
+          <nuxt-link class="col-xl-3 col-sm-6"
                      v-for="(encuentro, i) in nuestrosEncuentos"
                      :key="i"
                      :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: i}}"
                      tag="div">
-            <figure>
-              <img v-lazy="require('@/static/img/' + encuentro.img)"
-                   alt="Imagen Encuentros">
-            </figure>
-            <h4>{{encuentro.tema}}</h4>
+            <div class="card card__two link">
+              <figure class="card__img">
+                <img v-lazy="require('@/static/img/' + encuentro.img)"
+                     alt="Imagen Encuentros">
+              </figure>
+              <div class="card__desc">
+                <h4>{{encuentro.tema}}</h4>
+              </div>
+            </div>
           </nuxt-link>
         </div>
       </div>
@@ -79,19 +89,28 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/card";
 
 #suscripcion {
   background-color: $color-primary;
   color: $color-font-primary;
 }
 
+#portafolio {
+  color: $color-primary;
+  background-color: $color-warning;
+  .card {
+    color: $color-primary;
+    background-color: $color-warning;
+  }
+}
+
 .encuentro {
   cursor: pointer;
 }
 figure {
-  width: 100%;
   overflow: hidden;
-  padding-bottom: 50%;
+  padding-bottom: 50% !important;
   height: 0;
   margin: 0;
 }

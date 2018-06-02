@@ -46,6 +46,7 @@
 
 <script>
 export default {
+  // TODO: disable scroll http://blog.luyu.rocks/2017/06/01/how-to-disable-prevent-scrolling-in-vue/
   methods: {
     toggleMenu() {
       let body = document.querySelector("body");
@@ -76,14 +77,15 @@ export default {
   width: $size;
   position: fixed;
   z-index: 2;
-  right: 50px;
-  top: 30px;
+  right: 40px;
+  top: 40px;
+  filter: invert(1);
   cursor: pointer;
   &__line {
     height: 2px;
     width: $size;
     display: block;
-    background-color: $color-font-primary;
+    background-color: $color-warning;
     margin-bottom: 4px;
     transition: transform 0.2s ease, background-color 0.5s ease;
   }
@@ -126,7 +128,7 @@ export default {
     width: 100%;
     text-align: center;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 1.1em;
     ul {
       margin: 0;
       padding: 0;
@@ -169,7 +171,6 @@ export default {
 .nav-active {
   .menu-icon {
     &__line {
-      background-color: $color-primary;
       transform: translateX(0px) rotate(-45deg);
     }
     &__line-left {
@@ -218,6 +219,12 @@ export default {
       width: 100%;
       padding: 0;
     }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .nav__content {
+    font-size: 1.5em;
   }
 }
 </style>

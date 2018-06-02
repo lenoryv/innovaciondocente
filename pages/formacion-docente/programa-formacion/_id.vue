@@ -7,6 +7,7 @@
       </div>
       <div class="alert alert-success"
            v-if="curso.fin_postulacion">
+        <i class="fas fa-calendar-alt"></i>
         {{curso.fin_postulacion}}
       </div>
       <h1>{{ curso.nombre }}</h1>

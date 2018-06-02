@@ -27,14 +27,14 @@
                             </figure>
                             <div class="card__desc">
                                 <h4>{{curso.nombre}}</h4>
-                                <small>{{curso.anio}} - {{curso.mes}} - {{curso.dia}}</small>
+                                <small><i class="fas fa-calendar-alt"></i> {{curso.anio}}/{{curso.mes}}/{{curso.dia}}</small>
                             </div>
                         </div>
                     </nuxt-link>
                 </div>
                 <nuxt-link class="btn btn-primary btn-large"
                            :to="{name: 'formacion-docente-programa-formacion-cursos-id'}">
-                    Portafolio de Cursos
+                    <i class="fas fa-folder"></i> Portafolio de Cursos
                 </nuxt-link>
             </div>
         </section>
