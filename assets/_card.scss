@@ -20,11 +20,11 @@
 ///      </div>
 ///  </div>
 $color-bg-card: $color-background;
-$card-padding: 10px;
-$grid-gutter: 15px;
+$card-padding: 15px;
+$margin-top: 15px;
 .card {
   position: relative;
-  margin: $grid-gutter 0;
+  margin: $margin-top 0;
   background: lighten($color-bg-card, 3%);
 }
 
@@ -40,10 +40,6 @@ $grid-gutter: 15px;
 }
 
 .card__desc {
-  padding: $card-padding;
-}
-
-.card__two .card__img {
   padding: $card-padding;
 }
 

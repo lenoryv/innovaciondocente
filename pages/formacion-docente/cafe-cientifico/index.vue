@@ -41,7 +41,7 @@
                      alt="Imagen Encuentros">
               </figure>
               <div class="card__desc">
-                <p>{{encuentro.tema}}</p>
+                <span>{{encuentro.tema}}</span>
               </div>
             </div>
           </nuxt-link>

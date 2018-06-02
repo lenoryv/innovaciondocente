@@ -78,12 +78,13 @@ export default {
   z-index: 2;
   right: 50px;
   top: 30px;
+  filter: invert(1);
   cursor: pointer;
   &__line {
     height: 2px;
     width: $size;
     display: block;
-    background-color: $color-font-primary;
+    background-color: $color-warning;
     margin-bottom: 4px;
     transition: transform 0.2s ease, background-color 0.5s ease;
   }
@@ -169,7 +170,6 @@ export default {
 .nav-active {
   .menu-icon {
     &__line {
-      background-color: $color-primary;
       transform: translateX(0px) rotate(-45deg);
     }
     &__line-left {
