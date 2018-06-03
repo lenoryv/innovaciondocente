@@ -1,16 +1,19 @@
 /* nuxt.config.js */
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/innovaciondocente/'
-  }
+  base: '/innovaciondocente/'
 } : {};
 
 module.exports = {
   /**
    * router base
    */
-  ...routerBase,
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    },
+    ...routerBase
+  },
   /*
   ** Headers of the page
   */
@@ -112,12 +115,7 @@ module.exports = {
     { src: '~/plugins/vee-validate.js', ssr: true },
     { src: '~/plugins/filters.js', ssr: true },
     { src: '~/plugins/lazyload.js', ssr: true }
-  ],
-  router: {
-    scrollBehavior: function (to, from, savedPosition) {
-      return { x: 0, y: 0 }
-    }
-  }
+  ]
 }
 
 
