@@ -17,9 +17,10 @@
 ///  }
 ///  
 ///  
+////////////////////////////////
 // disable parallax for small screens
-@media only screen and (max-device-width: 1366) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
+// @media only screen and (max-device-width: 1366) {
+//   .parallax {
+//     background-attachment: scroll;
+//   }
+// }
