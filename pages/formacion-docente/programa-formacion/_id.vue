@@ -70,6 +70,18 @@ export default {
     );
     curso = res.data;
     return { curso };
+  },
+  head() {
+    return {
+      title: this.curso.nombre + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.curso.finalidad
+        }
+      ]
+    };
   }
   // TODO: validate param
 };

@@ -18,12 +18,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Innovacion Docente',
+    title: 'Innovación Docente',
     nativeUI: true,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Página web de Innovacion Docente | UTPL' },
+      { hid: 'description', name: 'description', content: 'Página web de Innovación Docente | UTPL' },
       { name: 'msapplication-TileImage', content: '/icon.png' },
       { name: 'msapplication-TileColor', content: '#2a3e71' },
       { name: 'theme-color', content: '#2a3e71' },
