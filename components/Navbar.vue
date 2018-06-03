@@ -51,17 +51,23 @@ export default {
     toggleMenu() {
       let body = document.querySelector("body");
 
-      if (body.classList.contains("nav-active"))
+      if (body.classList.contains("nav-active")) {
         body.classList.remove("nav-active");
-      else body.classList.add("nav-active");
+        document.documentElement.style.overflow = "auto";
+      } else {
+        body.classList.add("nav-active");
+        document.documentElement.style.overflow = "hidden";
+      }
     }
   },
   watch: {
     $route: function() {
       let body = document.querySelector("body");
 
-      if (body.classList.contains("nav-active"))
+      if (body.classList.contains("nav-active")) {
         body.classList.remove("nav-active");
+        document.documentElement.style.overflow = "auto";
+      }
     }
   }
 };
