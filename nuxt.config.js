@@ -112,7 +112,12 @@ module.exports = {
     { src: '~/plugins/vee-validate.js', ssr: true },
     { src: '~/plugins/filters.js', ssr: true },
     { src: '~/plugins/lazyload.js', ssr: true }
-  ]
+  ],
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  }
 }
 
 
