@@ -60,10 +60,7 @@
           Suscribete a nuestro Café Científico
         </h2>
         <p>
-          Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan
-          y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar
-          opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior y que
-          ayuden a fomentar inquietudes que despierten una entretenida discusión.
+          {{description}}
         </p>
         <nuxt-link class="btn btn-inverse btn-large"
                    :to="{name: 'formacion-docente-cafe-cientifico-suscripcion'}">Suscribirse</nuxt-link>
@@ -82,7 +79,24 @@ export default {
     let ultimoEncuento = res.data.encuentros[0];
     let nuestrosEncuentos = res.data.encuentros.slice(0, 4);
     let banner = res.data.banner;
-    return { banner, nuestrosEncuentos, ultimoEncuento };
+    ////////////////////////////////
+    let description = `Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan
+          y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar
+          opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior y que
+          ayuden a fomentar inquietudes que despierten una entretenida discusión.`;
+    return { banner, nuestrosEncuentos, ultimoEncuento, description };
+  },
+  head() {
+    return {
+      title: "Café Científico | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
   }
 };
 </script>

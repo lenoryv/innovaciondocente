@@ -125,6 +125,11 @@ export default {
       forma
     };
   },
+  head() {
+    return {
+      title: "Suscripción Café Científico | Innovación Docente"
+    };
+  },
   methods: {
     validateBeforeSubmit(e) {
       this.$validator
