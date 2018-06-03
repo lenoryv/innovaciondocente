@@ -1,10 +1,12 @@
 @import 'assets/variables';
 @import "assets/button";
+@import "assets/parallax";
 @import "assets/lazyload";
 img {
   width: 100%;
 }
 
+///////document///////
 *,
 *::before,
 *::after {

@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-md-4">
             <figure>
-              <img v-lazy="require('@/static/img/' + ultimoEncuento.img)"
+              <img v-lazy="ultimoEncuento.img"
                    alt="Imagen Encuentro">
             </figure>
             <h3>
@@ -43,7 +43,7 @@
                      tag="div">
             <div class="card card__two link">
               <figure class="card__img">
-                <img v-lazy="require('@/static/img/' + encuentro.img)"
+                <img v-lazy="encuentro.img"
                      alt="Imagen Encuentros">
               </figure>
               <div class="card__desc">
@@ -100,6 +100,7 @@ export default {
   color: $color-primary;
   background-color: $color-warning;
   .card {
+    padding-bottom: 0;
     color: $color-primary;
     background-color: $color-warning;
   }
