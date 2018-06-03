@@ -1,86 +1,161 @@
 <template>
   <footer class="container">
-    <ul class="mb">
-      <li class="mr">© 2018
-        <a href="https://www.utpl.edu.ec/">UTPL</a>
-      </li>
-      <li class="mr">San Cayetano Alto</li>
-      <li>Loja - Ecuador</li>
-    </ul>
-    <a class="footer-heart"
-       href=""
-       title="With love by InDevelopmentCompany">
-      <i class="fas fa-heart" />
-    </a>
-    <ul>
-      <li class="mr">Contactos</li>
-      <li class="mr">1800 8875 8875</li>
-      <li>
-        <a href="mailto:vacademico@utpl.edu.ec">vacademico@utpl.edu.ec</a>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="col-md-6 footer-icons">
+        <ul class="social-networks square spin-icon">
+          <li><a href="" class="fab fa-facebook-f"></a></li>
+          <li><a href="" class="fab fa-twitter"></a></li>
+          <li><a href="" class="fab fa-youtube"></a></li>
+          <li><a href="" class="fab fa-instagram"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-6 footer-info">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4>Contáctanos</h4>
+            <p>Campus San Cayetano Alto.</p>
+            <p>Loja – Ecuador.</p>
+          </div>
+          <div class="col-sm-6">
+            <p>Teléfono: 370 1444 – Ext. 2316</p>
+            <p>Correo electrónico:</p>
+            <a href="mailto:vacademico@utpl.edu.ec">vacademico@utpl.edu.ec</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 footer-outro">
+      <ul class="mb">
+        <li class="mr">© 2018<a href="https://www.utpl.edu.ec/">UTPL</a></li>
+        <li>InDevelopmentCompany
+          <a class="footer-heart" href="" title="With love by InDevelopmentCompany">
+          <i class="fas fa-heart" />
+        </a> 
+        </li>
+        
+      </ul>
+    </div>
   </footer>
 </template>
 
 
 <style lang="scss" scoped>
 @import "assets/variables";
-footer {
-  display: flex;
-  border-top: 1px $color-font solid;
-  font-size: 0.7rem;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  position: relative;
-  justify-content: space-between !important;
+
+.social-networks {
+  margin: 1.5rem 0 35px;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    position: relative;
+    margin: 0 7px;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    text-decoration: none;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      margin-top: -50%;
+      margin-left: -50%;
+      border-radius: 100px;
+      background-color: #1f2027;
+      transition: all 400ms;
+    }
+
+    &:after {
+      position: relative;
+      display: block;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      color: #fff;
+      font-size: 15px;
+      line-height: 50px;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &.spin-icon a:hover:after,
+  &.spin-icon a:focus:after {
+    transition: transform 0.4s ease-out;
+    transform: rotateZ(360deg);
+  }
+
+  &.square a:hover:before,
+  &.square a:focus:before {
+    border-radius: 0;
+  }
+
+  $networks: facebook-f "\f39e" #3b5998, twitter "\f099" #00b0ed,
+    github "\eab1" #4183c4, instagram "\f16d" #3f729b, youtube "\f167" #cc2127;
+
+  @each $network in $networks {
+    .fa-#{nth($network, 1)} {
+      &:after {
+        content: "#{nth($network, 2)}";
+      }
+
+      &:hover:before,
+      &:focus:before {
+        background: nth($network, 3);
+      }
+    }
+  }
 }
 
-ul {
+.footer-icons {
+  border-top: 1px #e1e4e8 solid;
+}
+
+.contact {
+
+}
+
+footer {
+  height: 30vh;
+  color: #999999;
+}
+
+.footer-info {
+  padding: 1rem;
+  font-size: 80%;
+}
+
+.footer-outro {
+  border-top: 1px #e1e4e8 solid;
+  ul {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  color: $color-font;
-}
-
-.mr {
-  margin-right: 16px;
-}
-
-.footer-heart {
-  color: $color-font;
-}
-.footer-heart:hover {
-  color: $color-danger;
-}
-a {
-  text-decoration: none;
-  background-color: transparent;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-.heart {
-  vertical-align: text-bottom;
-}
-.heart {
-  display: inline-block;
-  vertical-align: text-top;
-  fill: currentColor;
-}
-@media (max-width: 768px) {
-  footer {
-    display: block;
-  }
-  .heart {
-    display: none;
-  }
-  footer > .mb {
-    padding-bottom: 15px;
+    justify-content: space-between !important;
+    a {
+      margin-left: .5rem;
+    }
+    li {
+      font-size: 80%;
+    }
   }
 }
 </style>
