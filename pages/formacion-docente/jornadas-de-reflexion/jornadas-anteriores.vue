@@ -28,6 +28,26 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: "Jornadas de Reflexión | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: `Consolidadas como instancias de diálogo, análisis y reflexión, las Jornadas de Reflexión son encuentros
+            centrados en temas en los que se conjugan ciencia y filosofía institucional, están dirigidos
+            al personal docente y administrativo, contando con una parte académica y otra humanística.`
+        }
+      ]
+    };
+  }
+};
+</script>
+
+
 <style lang="scss" scoped>
 @import "assets/variables";
 
