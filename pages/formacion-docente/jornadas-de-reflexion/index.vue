@@ -332,6 +332,11 @@ export default {
       forma
     };
   },
+  head() {
+    return {
+      title: "Jornadas de Reflexión | Innovación Docente"
+    };
+  },
   methods: {
     validateBeforeSubmit(e) {
       this.$validator

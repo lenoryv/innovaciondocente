@@ -43,6 +43,18 @@ export default {
     );
     return { encuentro: res.data };
   },
+  head() {
+    return {
+      title: this.encuentro.tema + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.encuentro.desc
+        }
+      ]
+    };
+  },
   validate({ params }) {
     // TODO: validate param
     return true;
