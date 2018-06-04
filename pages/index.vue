@@ -94,6 +94,8 @@
 
     <!-- Cafe Cientifico -->
     <section class="cafe-cientifico">
+      <div id="back"></div>
+      <div id="front"></div>
       <div class="container">
         <div class="row">
           <div>
@@ -179,6 +181,7 @@
       </div>
     </section>
 
+     <!-- Footer -->
     <footer>
       <div class="footer-commo container">
         <div class="cards-news">
@@ -198,25 +201,25 @@
         <div class="row">
           <div class="col-lg-9">
             <div class="list-vertical">
-              <h3>Innovación Docente</h3>
+              <nuxt-link class="link-footer-title" :to="{name: 'innovacion-docente'}"><h3>Innovación Docente</h3></nuxt-link>
               <ul>
-                <li>Convocatorias</li>
-                <li>Proyectos Actuales</li>
-                <li>Proyecto Mentores</li>
-                <li>Buenas Parcticas</li>
-                <li>Ayudante de Catedra</li>
+                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <h3>Formación Docente</h3>
+              <nuxt-link  class="link-footer-title" :to="{name: 'formacion-docente-programa-formacion'}"><h3>Formación Docente</h3></nuxt-link>
               <ul>
-                <li>Programa de Formacíon</li>
-                <li>Café Científico</li>
-                <li>Jornadas de Reflexión</li>
+                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <h3>Observatorio EduTendencias</h3>
+              <nuxt-link class="link-footer-title" :to="{name: 'observatorio-edutendencias'}"> <h3>Observatorio EduTencencias</h3></nuxt-link>
               <ul>
                 <li>Aula Divertida</li>
                 <li>Docentes del Futuro</li>
@@ -312,7 +315,7 @@ p {
   width: 100%;
   position: absolute;
   left: 0;
-  background: #0227499f;
+  background: rgba(20, 52, 106, 0.712);
   z-index: -1;
 }
 
@@ -504,15 +507,22 @@ p {
 }
 
 .cafe-cientifico {
-  background: #4080ff;
   color: #fff;
+  background: #0a4784;
+}
+
+.img-cafe {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 figure {
   margin-top: 1rem;
   width: 100%;
 }
-
 footer {
   line-height: 1.2;
   position: relative;
@@ -523,31 +533,25 @@ footer {
   color: #fff;
   text-align: center;
 }
-
 .cards-news {
   margin-bottom: 3rem;
 }
-
 .cards-news p {
   font-size: 1.5em;
 }
-
 .input-text {
   width: 300px;
   border: 1px solid #8996a0;
   border-radius: 2px;
   padding: 0.5em;
 }
-
 .form-row .btn {
   margin: 0 1em;
   vertical-align: initial;
 }
-
 .form-row {
   padding: 1.25em;
 }
-
 .label {
   bottom: 10%;
   left: 0;
@@ -555,11 +559,9 @@ footer {
   padding: 10px;
   transition: bottom 0.2s, opacity 0.2s;
 }
-
 .list-vertical {
   padding: 10px;
 }
-
 .list-vertical li {
   list-style: none;
   padding: 0;
@@ -567,16 +569,16 @@ footer {
   font-size: 100%;
   vertical-align: baseline;
 }
-
 .list-vertical h3 {
   font-weight: bold;
   text-align: left !important;
 }
-
+.link-footer-title {
+  color: $color-secondary;
+}
 .footer-copy p {
   text-align: left !important;
 }
-
 .footer-copy {
   display: flex;
   border-top: 1px $color-font-light solid;
@@ -587,7 +589,6 @@ footer {
   position: relative;
   justify-content: space-between !important;
 }
-
 footer ul {
   display: flex;
   list-style: none;
@@ -598,38 +599,16 @@ footer ul {
   margin-bottom: 0;
   color: $color-font-light;
 }
-
 footer li {
   margin-left: 1rem;
 }
-
-.mr {
+.link-footer {
+  padding-left: 10px;
+  margin-top: 0;
   margin-right: 16px;
-}
-
-.footer-heart {
+  margin-bottom: 0;
   color: $color-font-light;
 }
-
-.footer-heart:hover {
-  color: $color-danger;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-.heart {
-  vertical-align: text-bottom;
-}
-
-.heart {
-  display: inline-block;
-  vertical-align: text-top;
-  fill: currentColor;
-}
-
-
 .liid-info {
   padding: 1.5rem 1rem;
   height: 80vh;
@@ -637,15 +616,12 @@ svg:not(:root) {
   vertical-align: middle;
   text-align: center;
 }
-
 .border {
   border-top: 3px solid $color-section;
 }
-
 .liid-info img {
   height: 200px;
   width: 200px;
-  
 }
 
 .background-mustard {
@@ -663,7 +639,6 @@ svg:not(:root) {
     background: #00406f;
   }
 }
-
 @media (max-width: 768px) {
   .content {
     padding: 0 3rem 0 3rem;
