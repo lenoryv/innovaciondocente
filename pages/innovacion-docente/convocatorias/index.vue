@@ -1,7 +1,7 @@
 <template>
     <div>
       <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
         <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Actual</nuxt-link>
         <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'1'}}">Abril-Agosto 2018</nuxt-link>
         <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'2'}}">Octubre 2017-Febrero 2018</nuxt-link>
