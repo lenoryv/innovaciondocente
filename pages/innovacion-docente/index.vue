@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <div>
     <div class="container-fluid">
       <div class="row">
           <div class="col-lg-4 col-md-6">
@@ -35,7 +35,7 @@
           </div>
         </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
