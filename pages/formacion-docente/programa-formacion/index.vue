@@ -4,14 +4,11 @@
              alt="banner-formacion-docente">
         <section>
             <div class="container">
-                <h1>Programa de Formación Docente</h1>
+                <h1>
+                    {{title}}
+                </h1>
                 <p>
-                    “El Programa de Formación Docente de la universidad está orientado de forma prioritaria a facilitar y
-                    apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles
-                    de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias
-                    profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias
-                    profesionales y apoyar el desarrollo de dichas competencias desde la formación del
-                    profesorado y desde el enfoque de nuestra universidad.”
+                    {{description}}
                 </p>
                 <h2>Cursos Actuales</h2>
                 <div class="row">
@@ -27,14 +24,15 @@
                             </figure>
                             <div class="card__desc">
                                 <h4>{{curso.nombre}}</h4>
-                                <small>{{curso.anio}} - {{curso.mes}} - {{curso.dia}}</small>
+                                <small>
+                                    <i class="fas fa-calendar-alt"></i> {{curso.anio}}/{{curso.mes}}/{{curso.dia}}</small>
                             </div>
                         </div>
                     </nuxt-link>
                 </div>
                 <nuxt-link class="btn btn-primary btn-large"
                            :to="{name: 'formacion-docente-programa-formacion-cursos-id'}">
-                    Portafolio de Cursos
+                    <i class="fas fa-folder"></i> Portafolio de Cursos
                 </nuxt-link>
             </div>
         </section>
@@ -133,7 +131,24 @@ export default {
     let banner = res.data.banner;
     let cursos = res.data.cursos.slice(0, 4);
 
-    return { video, banner, cursos };
+    ////////page data///////////
+    let description =
+      "El Programa de Formación Docente de la universidad está orientado de forma prioritaria a facilitar y apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias profesionales y apoyar el desarrollo de dichas competencias desde la formación del profesorado y desde el enfoque de nuestra universidad.";
+    let title = "Programa de Formación Docente";
+
+    return { video, banner, cursos, description, title };
+  },
+  head() {
+    return {
+      title: this.title + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
   }
 };
 </script>

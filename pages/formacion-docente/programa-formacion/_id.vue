@@ -7,6 +7,7 @@
       </div>
       <div class="alert alert-success"
            v-if="curso.fin_postulacion">
+        <i class="fas fa-calendar-alt"></i>
         {{curso.fin_postulacion}}
       </div>
       <h1>{{ curso.nombre }}</h1>
@@ -69,6 +70,18 @@ export default {
     );
     curso = res.data;
     return { curso };
+  },
+  head() {
+    return {
+      title: this.curso.nombre + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.curso.finalidad
+        }
+      ]
+    };
   }
   // TODO: validate param
 };

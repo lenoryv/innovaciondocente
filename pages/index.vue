@@ -1,26 +1,7 @@
 <template>
   <div>
-    <!-- Navbar  -->
-    <div @click="toggleMenu()" class="menu-icon" id="menu-icon" >
-      <span class="menu-icon__line menu-icon__line-left"></span>
-      <span class="menu-icon__line"></span>
-      <span class="menu-icon__line menu-icon__line-right"></span>
-    </div>
-    <div class="nav" id="nav">
-      <div class="nav__content">
-        <ul class="nav__list">
-          <nuxt-link class="nav__list-item" :to="{name: 'innovacion-docente'}">INNOVACIÓN DOCENTE</nuxt-link>
-          <nuxt-link class="nav__list-item" :to="{name: 'formacion-docente-programa-formacion'}">FORMACIÓN DOCENTE</nuxt-link>
-          <nuxt-link class="nav__list-item" :to="{name: 'observatorio-edutendencias'}">OBSERVATORIO EDUTENDENCIAS</nuxt-link>
-          <a class="nav__list-item" target="_blank" href="https://radio.utpl.edu.ec">RADIO UTPL</a>
-        </ul>
-      </div>
-    </div>
+    <!-- Header  -->
     <header class="header">
-      <!--<div class="header-video">
-      <img class="background img-move" :src="require('@/static/imgIndex.jpg')" alt="">
-       <video :src="require('@/static/videos/Decide_ser_mas_en_la_UTPL.mp4')" alt="" autoplay loop muted></video> 
-    </div>-->
       <div class="header-overlay"></div>
       <div class="fondo">
         <img class="img-move"
@@ -88,9 +69,33 @@
       </div>
     </section>
 
+    <!-- LiiD -->
+    <div class="liid">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="liid-info border">
+              <img :src="require('~/static/example.png')">
+              <h2>LiiD UTPL</h2>
+              <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional.</p>
+              <button class="btn btn-large btn-primary">Leer Más</button>   
+            </div>
+          </div>
+          <div class="col-md-6 background-mustard">
+            <div class="liid-info">
+              <h2>Proyectos Actuales</h2>
+              <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos a explorar cada uno de los proyectos.</p>
+              <button class="btn btn-large btn-primary">Atrevete</button>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Cafe Cientifico -->
     <section class="cafe-cientifico">
-
+      <div id="back"></div>
+      <div id="front"></div>
       <div class="container">
         <div class="row">
           <div>
@@ -176,6 +181,7 @@
       </div>
     </section>
 
+     <!-- Footer -->
     <footer>
       <div class="footer-commo container">
         <div class="cards-news">
@@ -195,25 +201,25 @@
         <div class="row">
           <div class="col-lg-9">
             <div class="list-vertical">
-              <h3>Innovación Docente</h3>
+              <nuxt-link class="link-footer-title" :to="{name: 'innovacion-docente'}"><h3>Innovación Docente</h3></nuxt-link>
               <ul>
-                <li>Convocatorias</li>
-                <li>Proyectos Actuales</li>
-                <li>Proyecto Mentores</li>
-                <li>Buenas Parcticas</li>
-                <li>Ayudante de Catedra</li>
+                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <h3>Formación Docente</h3>
+              <nuxt-link  class="link-footer-title" :to="{name: 'formacion-docente-programa-formacion'}"><h3>Formación Docente</h3></nuxt-link>
               <ul>
-                <li>Programa de Formacíon</li>
-                <li>Café Científico</li>
-                <li>Jornadas de Reflexión</li>
+                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <h3>Observatorio EduTendencias</h3>
+              <nuxt-link class="link-footer-title" :to="{name: 'observatorio-edutendencias'}"> <h3>Observatorio EduTencencias</h3></nuxt-link>
               <ul>
                 <li>Aula Divertida</li>
                 <li>Docentes del Futuro</li>
@@ -234,230 +240,13 @@
           </div>
         </div>
       </div>
-      <div class="footer-copy">
-        <ul class="mb">
-          <li class="mr">© 2018
-            <a href="https://www.utpl.edu.ec/">UTPL</a>
-          </li>
-          <li class="mr">San Cayetano Alto</li>
-          <li>Loja - Ecuador</li>
-        </ul>
-        <a class="footer-heart"
-           href=""
-           title="With love by InDevelopmentCompany">
-          <svg class="heart"
-               width="16px"
-               height="16px"
-               viewBox="0 0 510 510">
-            <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55
-                C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"
-            />
-          </svg>
-
-        </a>
-        <ul>
-          <li class="mr">Contactos</li>
-          <li class="mr">1800 8875 8875</li>
-          <li>
-            <a href="mailto:vacademico@utpl.edu.ec">vacademico@utpl.edu.ec</a>
-          </li>
-        </ul>
-      </div>
     </footer>
 
   </div>
 </template>
 
-<script>
-export default {
-  layout: "empty",
-
-  data() {
-    return {
-      scrolled: false
-    };
-  },
-  methods: {
-    handleScroll() {
-      this.scrolled = window.scrollY > 690;
-    },
-    topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    },
-
-    toggleMenu() {
-      const app = (() => {
-        let body;
-        let menu;
-        let menuItems;
-
-        const init = () => {
-          body = document.querySelector("body");
-          menu = document.querySelector(".menu-icon");
-          menuItems = document.querySelectorAll(".nav__list-item");
-
-          applyListeners();
-        };
-
-        const applyListeners = () => {
-          menu.addEventListener("click", () => toggleClass(body, "nav-active"));
-        };
-
-        const toggleClass = (element, stringClass) => {
-          if (element.classList.contains(stringClass))
-            element.classList.remove(stringClass);
-          else element.classList.add(stringClass);
-        };
-
-        init();
-      })();
-    }
-  },
-  beforeMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-};
-</script>
-
 <style lang="scss" scoped>
 @import "assets/variables";
-
-$icon--color: #1e2023;
-$font--color: #ffffff;
-$font--color--active: #000000;
-$font--primary: "Fira Sans", sans-serif;
-$transition--length: 0.8;
-
-.menu-icon {
-  $size: 30px;
-  height: $size;
-  width: $size;
-  position: fixed;
-  z-index: 2;
-  left: 50px;
-  top: 30px;
-  cursor: pointer;
-  &__line {
-    height: 2px;
-    width: $size;
-    display: block;
-    background-color: $font--color;
-    margin-bottom: 4px;
-    transition: transform 0.2s ease, background-color 0.5s ease;
-  }
-  &__line-left {
-    width: $size / 2;
-  }
-  &__line-right {
-    width: $size / 2;
-    float: right;
-  }
-}
-
-.nav {
-  $width: 100vw;
-  $height: 100vh;
-  $font--size--calc: calc(2vw + 10px);
-  $transition--easing: cubic-bezier(0.77, 0, 0.175, 1);
-  position: fixed;
-  z-index: 1;
-  &:before,
-  &:after {
-    content: "";
-    position: fixed;
-    width: $width;
-    height: $height;
-    background: rgba(#eaeaea, 0.2);
-    z-index: -1;
-    transition: transform $transition--easing $transition--length + s;
-    transform: translateX(0%) translateY(-100%);
-  }
-  &:after {
-    background: rgba(#ffffff, 1);
-    transition-delay: 0s;
-  }
-  &:before {
-    transition-delay: 0.1s;
-  }
-  &__content {
-    position: fixed;
-    top: 50%;
-    transform: translate(0%, -50%);
-    width: 100%;
-    text-align: center;
-    font-size: $font--size--calc;
-    font-weight: 200;
-    cursor: pointer;
-  }
-  &__list-item {
-    position: relative;
-    display: inline-block;
-    transition-delay: $transition--length + s;
-    opacity: 0;
-    transform: translate(0%, 100%);
-    transition: opacity 0.2s ease, transform 0.3s ease;
-    margin-right: 25px;
-    &:before {
-      content: "";
-      position: absolute;
-      background: $font--color--active;
-      width: 20px;
-      height: 1px;
-      top: 100%;
-      transform: translate(0%, 0%);
-      transition: all 0.3s ease;
-      z-index: -1;
-    }
-    &:hover {
-      &:before {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.nav-active {
-  $menu--items--count: 4;
-  .menu-icon {
-    &__line {
-      background-color: #000;
-      transform: translateX(0px) rotate(-45deg);
-    }
-    &__line-left {
-      transform: translateX(1px) rotate(45deg);
-    }
-    &__line-right {
-      transform: translateX(-2px) rotate(45deg);
-    }
-  }
-  .nav {
-    visibility: visible;
-    &:before,
-    &:after {
-      transform: translateX(0%) translateY(0%);
-    }
-    &:after {
-      transition-delay: 0.1s;
-    }
-    &:before {
-      transition-delay: 0s;
-    }
-    &__list-item {
-      opacity: 1;
-      transform: translateX(0%);
-      transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
-      @for $i from 0 through $menu--items--count {
-        &:nth-child(#{$i}) {
-          transition-delay: $transition--length * $i / 8 + 0.5 + s;
-        }
-      }
-    }
-  }
-}
 
 h1 {
   color: $color-secondary;
@@ -466,6 +255,13 @@ h1 {
   text-transform: uppercase;
   font-size: 120px;
   letter-spacing: 5px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 p {
@@ -519,7 +315,7 @@ p {
   width: 100%;
   position: absolute;
   left: 0;
-  background: #0227499f;
+  background: rgba(20, 52, 106, 0.712);
   z-index: -1;
 }
 
@@ -623,13 +419,6 @@ p {
   }
 }
 
-.cafe-cientifico h2 {
-  text-align: center;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .notes-content {
   border-top: 4px solid $color-section;
 }
@@ -718,15 +507,22 @@ p {
 }
 
 .cafe-cientifico {
-  background: #4080ff;
   color: #fff;
+  background: #0a4784;
+}
+
+.img-cafe {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 figure {
   margin-top: 1rem;
   width: 100%;
 }
-
 footer {
   line-height: 1.2;
   position: relative;
@@ -737,31 +533,25 @@ footer {
   color: #fff;
   text-align: center;
 }
-
 .cards-news {
   margin-bottom: 3rem;
 }
-
 .cards-news p {
   font-size: 1.5em;
 }
-
 .input-text {
   width: 300px;
   border: 1px solid #8996a0;
   border-radius: 2px;
   padding: 0.5em;
 }
-
 .form-row .btn {
   margin: 0 1em;
   vertical-align: initial;
 }
-
 .form-row {
   padding: 1.25em;
 }
-
 .label {
   bottom: 10%;
   left: 0;
@@ -769,11 +559,9 @@ footer {
   padding: 10px;
   transition: bottom 0.2s, opacity 0.2s;
 }
-
 .list-vertical {
   padding: 10px;
 }
-
 .list-vertical li {
   list-style: none;
   padding: 0;
@@ -781,16 +569,16 @@ footer {
   font-size: 100%;
   vertical-align: baseline;
 }
-
 .list-vertical h3 {
   font-weight: bold;
   text-align: left !important;
 }
-
+.link-footer-title {
+  color: $color-secondary;
+}
 .footer-copy p {
   text-align: left !important;
 }
-
 .footer-copy {
   display: flex;
   border-top: 1px $color-font-light solid;
@@ -801,7 +589,6 @@ footer {
   position: relative;
   justify-content: space-between !important;
 }
-
 footer ul {
   display: flex;
   list-style: none;
@@ -812,35 +599,33 @@ footer ul {
   margin-bottom: 0;
   color: $color-font-light;
 }
-
 footer li {
   margin-left: 1rem;
 }
-
-.mr {
+.link-footer {
+  padding-left: 10px;
+  margin-top: 0;
   margin-right: 16px;
-}
-
-.footer-heart {
+  margin-bottom: 0;
   color: $color-font-light;
 }
-
-.footer-heart:hover {
-  color: $color-danger;
+.liid-info {
+  padding: 1.5rem 1rem;
+  height: 80vh;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.border {
+  border-top: 3px solid $color-section;
+}
+.liid-info img {
+  height: 200px;
+  width: 200px;
 }
 
-svg:not(:root) {
-  overflow: hidden;
-}
-
-.heart {
-  vertical-align: text-bottom;
-}
-
-.heart {
-  display: inline-block;
-  vertical-align: text-top;
-  fill: currentColor;
+.background-mustard {
+  background: $color-warning;
 }
 
 @media (max-width: 992px) {
@@ -854,7 +639,6 @@ svg:not(:root) {
     background: #00406f;
   }
 }
-
 @media (max-width: 768px) {
   .content {
     padding: 0 3rem 0 3rem;

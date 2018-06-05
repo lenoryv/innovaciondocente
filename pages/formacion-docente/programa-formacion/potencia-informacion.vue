@@ -1,11 +1,12 @@
 <template>
   <div>
     <section class="container">
-      <h1>¡Potencia tu formación docente!</h1>
+      <h1>
+        {{title}}
+      </h1>
+      <h3>¡Potencia tu formación docente!</h3>
       <p>
-        Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora
-        de su formación académica. Te presentamos los testimonios de los expertos que han visitado el
-        Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.
+        {{description}}
       </p>
     </section>
     <div class="container-fluid">
@@ -41,7 +42,22 @@ export default {
     let res = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
     );
-    return { videos: res.data };
+
+    let title = "Tips de Expertos";
+    let description = "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
+    return { videos: res.data, title, description};
+  },
+  head() {
+    return {
+      title: this.title + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
   }
 };
 </script>

@@ -1,31 +1,34 @@
 <template>
-  <div class="container">
-    <figure>
-      <img v-lazy="require('@/static/img/' + encuentro.img)"
-           :alt="encuentro.img">
-    </figure>
-    <h1>{{encuentro.tema}}</h1>
-    <small>{{encuentro.fecha}}</small>
-    <hr>
-    <p>{{encuentro.desc}}</p>
-    <h2>Invitados</h2>
-    <div class="row">
-      <div class="col-md-6"
-           v-for="(invitado, index) in encuentro.invitados"
-           :key="index">
-        <strong>{{invitado.name}}: </strong>
-        <p>{{invitado.desc}}</p>
+  <div>
+    <header class="parallax"
+            :style="'background-image: url('+encuentro.img+');'"></header>
+    <section class="container">
+      <h1>{{encuentro.tema}}</h1>
+      <small>
+        <i class="fas fa-calendar-alt"></i> {{encuentro.fecha}}</small>
+      <hr>
+      <p>{{encuentro.desc}}</p>
+      <h2>
+        <i class="fas fa-users"></i> Invitados
+      </h2>
+      <div class="row">
+        <div class="col-md-6"
+             v-for="(invitado, index) in encuentro.invitados"
+             :key="index">
+          <strong>{{invitado.name}}: </strong>
+          <p>{{invitado.desc}}</p>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <button @click="$router.go(-1)"
-                class="btn btn-outline-primary btn-large">Regresar</button>
+      <div class="row">
+        <div class="col-6">
+          <button @click="$router.go(-1)"
+                  class="btn btn-outline-primary btn-large">Regresar</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-primary btn-large">Incribete</button>
+        </div>
       </div>
-      <div class="col-6">
-        <button class="btn btn-primary btn-large">Incribete</button>
-      </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -40,6 +43,18 @@ export default {
     );
     return { encuentro: res.data };
   },
+  head() {
+    return {
+      title: this.encuentro.tema + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.encuentro.desc
+        }
+      ]
+    };
+  },
   validate({ params }) {
     // TODO: validate param
     return true;
@@ -48,15 +63,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-figure {
-  width: 100%;
-  overflow: hidden;
-  padding-bottom: 50%;
-  height: 0;
-  margin: 0;
-}
-figure img {
-  display: block;
-  width: 100%;
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

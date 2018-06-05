@@ -1,6 +1,8 @@
 <template>
-    <div class="container-fluid">
-        <h1>Portafolio de Cursos</h1>
+    <section>
+        <h1>
+            {{title}}
+        </h1>
         <div class="container">
             <form v-on:submit.prevent="onSubmit">
                 <div class="form-group">
@@ -11,6 +13,8 @@
                            placeholder="Nombre Curso">
                 </div>
             </form>
+        </div>
+        <div class="container-fluid">
             <div v-if="cursos">
                 <div class="alert alert-danger"
                      v-if="cursos.length == 0">
@@ -41,35 +45,42 @@
                 Regresar
             </button>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
 import axios from "axios";
 
 export default {
+  asyncData() {
+    let title = "Portafolio de Cursos";
+    return { title };
+  },
   data() {
     return {
       cursos: null
     };
   },
-  methods: {
-    async fetchData() {
-      let res = this.$route.params.id
-        ? await axios.get(
-            `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json`
-          )
-        : await axios.get(
-            "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json"
-          );
-      this.cursos = res.data;
-    }
+  head() {
+    return {
+      title: this.title + " | Innovación Docente"
+    };
+  },
+  mounted() {
+    this.fetchData();
   },
   watch: {
     $route: "fetchData"
   },
-  mounted() {
-    this.fetchData();
+  methods: {
+    async fetchData() {
+      let res = await axios.get(
+        `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos${
+          this.$route.params.id ? "/" + this.$route.params.id : ""
+        }.json`
+      );
+      this.cursos = res.data;
+    }
   }
 };
 </script>
