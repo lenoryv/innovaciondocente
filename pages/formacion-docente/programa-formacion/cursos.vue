@@ -1,13 +1,12 @@
 <template>
     <section>
-        <h1>
-            {{title}}
-        </h1>
+        <h1>Portafolio de Cursos</h1>
         <div class="container">
             <form v-on:submit.prevent="onSubmit">
                 <div class="form-group">
                     <label for="busqueda">Buscar Curso</label>
-                    <input type="text"
+                    <input v-model="query"
+                           type="text"
                            id="busqueda"
                            class="form-control"
                            placeholder="Nombre Curso">
@@ -15,6 +14,7 @@
             </form>
         </div>
         <div class="container-fluid">
+            <!--don't load courses on the server, fetch them from the client-->
             <div v-if="cursos">
                 <div class="alert alert-danger"
                      v-if="cursos.length == 0">
@@ -52,32 +52,24 @@
 import axios from "axios";
 
 export default {
-  asyncData() {
-    let title = "Portafolio de Cursos";
-    return { title };
-  },
   data() {
     return {
-      cursos: null
+      cursos: null,
+      query: ""
     };
   },
   head() {
     return {
-      title: this.title + " | Innovación Docente"
+      title: "Portafolio de Cursos | Innovación Docente"
     };
   },
   mounted() {
     this.fetchData();
   },
-  watch: {
-    $route: "fetchData"
-  },
   methods: {
     async fetchData() {
       let res = await axios.get(
-        `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos${
-          this.$route.params.id ? "/" + this.$route.params.id : ""
-        }.json`
+        `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json`
       );
       this.cursos = res.data;
     }

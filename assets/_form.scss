@@ -13,7 +13,6 @@
 ///    - invalid-feedback
 ///  TODO:
 ///    - add progress when submit
-///    - add valid feedback when success
 .form-row {
     display: -ms-flexbox;
     display: flex;
@@ -78,8 +77,4 @@
 .form-check-label {
     color: $color-font;
     margin-bottom: 0;
-}
-
-.invalid-feedback {
-    color: $color-danger;
 }

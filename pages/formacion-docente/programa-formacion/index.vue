@@ -31,7 +31,7 @@
                     </nuxt-link>
                 </div>
                 <nuxt-link class="btn btn-primary btn-large"
-                           :to="{name: 'formacion-docente-programa-formacion-cursos-id'}">
+                           :to="{name: 'formacion-docente-programa-formacion-cursos'}">
                     <i class="fas fa-folder"></i> Portafolio de Cursos
                 </nuxt-link>
             </div>
