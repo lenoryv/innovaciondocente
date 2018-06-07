@@ -1,54 +1,76 @@
 <template>
   <header>
-    <nav class="container">
-      <nuxt-link :to="{name: 'index'}"
-                 style="font-weight: 700;">
-        UTPL
-      </nuxt-link>
-      <!------Innovación Docente-------->
-      <div class="dropdown">
-        <nuxt-link :to="{name: 'innovacion-docente'}"
-                   class="dropbtn"
-                   tag="button">
-          Innovación Docente
-          <i class="fa fa-caret-down"></i>
+    <nav id="responsive">
+      <div class="container">
+        <nuxt-link :to="{name: 'index'}"
+                   style="font-weight: 700;">
+          UTPL
         </nuxt-link>
-        <div class="dropdown-content">
-          <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
-          <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
-          <nuxt-link :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
-          <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
-          <nuxt-link :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
-          <a target="_blank"
-             rel="noopener"
-             href="https://retos.utpl.edu.ec/">Retos</a>
+        <!------Innovación Docente-------->
+        <div class="dropdown">
+          <nuxt-link :to="{name: 'innovacion-docente'}"
+                     class="dropbtn"
+                     tag="button">
+            Innovación Docente
+            <i class="fa fa-caret-down"></i>
+          </nuxt-link>
+          <div class="dropdown-content">
+            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
+            <nuxt-link :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+            <a target="_blank"
+               rel="noopener"
+               href="https://retos.utpl.edu.ec/">Retos</a>
+          </div>
         </div>
-      </div>
-      <!------Formación Docente-------->
-      <div class="dropdown">
-        <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}"
-                   class="dropbtn"
-                   tag="button">
-          Formación Docente
-          <i class="fa fa-caret-down"></i>
+        <!------Formación Docente-------->
+        <div class="dropdown">
+          <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}"
+                     class="dropbtn"
+                     tag="button">
+            Formación Docente
+            <i class="fa fa-caret-down"></i>
+          </nuxt-link>
+          <div class="dropdown-content">
+            <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+            <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+            <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+          </div>
+        </div>
+        <!------Observatorio EduTencencias-------->
+        <nuxt-link :to="{name: 'observatorio-edutendencias'}">
+          Observatorio EduTencencias
         </nuxt-link>
-        <div class="dropdown-content">
-          <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
-          <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
-          <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
-        </div>
       </div>
-      <!------Observatorio EduTencencias-------->
-      <nuxt-link :to="{name: 'observatorio-edutendencias'}">
-        Observatorio EduTencencias
-      </nuxt-link>
       <a href="javascript:void(0);"
          style="font-size:15px;"
          class="icon"
-         onclick="myFunction()">&#9776;</a>
+         @click="toggleMenu">&#9776;</a>
     </nav>
   </header>
 </template>
+
+<script>
+export default {
+  methods: {
+    toggleMenu() {
+      let el = document.getElementById("responsive");
+      el.classList.toggle("responsive");
+    }
+  },
+  watch: {
+    $route: function() {
+      let body = document.getElementById("responsive");
+
+      if (body.classList.contains("responsive")) {
+        body.classList.remove("responsive");
+      }
+    }
+  }
+};
+</script>
 
 
 <style lang="scss" scoped>
@@ -56,16 +78,16 @@
 ///////options/////////
 $padding: 12px;
 
-//  @supports ((position: -webkit-sticky) or (position: sticky)) {
-//    header {
-//      position: -webkit-sticky;
-//      position: sticky;
-//      top: 0;
-//      z-index: 1020;
-//    }
-//  }
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
 
-header {
+nav {
   overflow: hidden;
   background-color: $color-primary;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
@@ -84,7 +106,6 @@ header {
 
 .nuxt-link-exact-active {
   font-weight: 500;
-  font-style: italic;
 }
 
 .dropdown {
@@ -127,7 +148,7 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-  header {
+  nav {
     a:not(:first-child),
     .dropdown .dropbtn {
       display: none;
@@ -140,7 +161,7 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-  header.responsive {
+  nav.responsive {
     position: relative;
     .icon {
       position: absolute;
