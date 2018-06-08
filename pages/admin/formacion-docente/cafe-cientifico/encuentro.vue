@@ -12,14 +12,14 @@
             class="alert alert-danger">Nombre es requerido</span>
     </div>
     <div class="form-group">
-      <label for="banner">Banner</label>
-      <input v-model="forma.banner"
+      <label for="img">Imagen</label>
+      <input v-model="forma.img"
              type="text"
-             name="banner"
+             name="img"
              class="form-control"
              v-validate="'required'">
-      <span v-show="errors.has('banner')"
-            class="alert alert-danger">Banner es requerido</span>
+      <span v-show="errors.has('img')"
+            class="alert alert-danger">Imagen es requerido</span>
     </div>
     <div class="form-group">
       <label for="contenido">Contenido</label>
@@ -103,7 +103,7 @@ export default {
   data() {
     let forma = {
       nombre: "",
-      banner: "",
+      img: "",
       contenido: "",
       fecha: "",
       invitados: [{ nombre: "", descripcion: "" }]

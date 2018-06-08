@@ -3,11 +3,11 @@
     <header class="parallax"
             :style="'background-image: url('+encuentro.img+');'"></header>
     <section class="container">
-      <h1>{{encuentro.tema}}</h1>
+      <h1>{{encuentro.nombre}}</h1>
       <small>
         <i class="fas fa-calendar-alt"></i> {{encuentro.fecha}}</small>
       <hr>
-      <p>{{encuentro.desc}}</p>
+      <p>{{encuentro.contenido}}</p>
       <h2>
         <i class="fas fa-users"></i> Invitados
       </h2>
@@ -15,8 +15,8 @@
         <div class="col-md-6"
              v-for="(invitado, index) in encuentro.invitados"
              :key="index">
-          <strong>{{invitado.name}}: </strong>
-          <p>{{invitado.desc}}</p>
+          <strong>{{invitado.nombre}}: </strong>
+          <p>{{invitado.descripcion}}</p>
         </div>
       </div>
       <div class="row">
@@ -46,12 +46,12 @@ export default {
   },
   head() {
     return {
-      title: this.encuentro.tema + " | Innovación Docente",
+      title: this.encuentro.nombre + " | Innovación Docente",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.encuentro.desc
+          content: this.encuentro.contenido
         }
       ]
     };
