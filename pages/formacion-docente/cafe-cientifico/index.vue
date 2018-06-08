@@ -70,21 +70,18 @@
 </template>
 
 <script>
-import axios from "axios";
+import { DB } from "@/services/fireinit.js";
 export default {
-  async asyncData({ params }) {
-    let res = await axios.get(
-      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json"
-    );
-    let ultimoEncuento = res.data.encuentros[0];
-    let nuestrosEncuentos = res.data.encuentros.slice(0, 4);
-    let banner = res.data.banner;
-    ////////////////////////////////
-    let description = `Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan
-          y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar
-          opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior y que
-          ayuden a fomentar inquietudes que despierten una entretenida discusión.`;
-    return { banner, nuestrosEncuentos, ultimoEncuento, description };
+  asyncData() {
+    let res;
+    let database = DB.ref(`formacion-docente/cafe-cientifico`);
+    database.on("value", snapshot => (res = snapshot.val()));
+    return {
+      ultimoEncuento: res.encuentros[0],
+      nuestrosEncuentos: res.encuentros.slice(0, 4),
+      banner: res.banner,
+      description: res.description
+    };
   },
   head() {
     return {
@@ -120,9 +117,6 @@ export default {
   }
 }
 
-.encuentro {
-  cursor: pointer;
-}
 figure {
   overflow: hidden;
   padding-bottom: 50% !important;
