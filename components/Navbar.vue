@@ -38,6 +38,11 @@
           <li class="nav__list-item">
             <nuxt-link :to="{name: 'observatorio-edutendencias'}">Observatorio EduTencencias</nuxt-link>
           </li>
+          <li class="nav__list-item">
+            <nuxt-link :to="{name: 'admin'}">
+              Admin
+            </nuxt-link>
+          </li>
         </ul>
       </div>
     </div>
@@ -205,7 +210,7 @@ export default {
 
       transform: translateX(0%);
       transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
-      @for $i from 0 through 4 {
+      @for $i from 0 through 6 {
         &:nth-child(#{$i}) {
           transition-delay: 0.8 * $i / 8 + 0.5 + s;
         }

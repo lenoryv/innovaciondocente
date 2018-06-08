@@ -12,7 +12,7 @@
                  placeholder="Nombre"
                  v-validate="'required'">
           <span v-show="errors.has('nombre')"
-                class="invalid-feedback">Nombre es requerido</span>
+                class="alert alert-danger">Nombre es requerido</span>
         </div>
         <div class="form-group col-md-6">
           <label for="apellido">Apellido</label>
@@ -23,7 +23,7 @@
                  placeholder="Apellido"
                  v-validate="'required'">
           <span v-show="errors.has('apellido')"
-                class="invalid-feedback">Apellido es requerido</span>
+                class="alert alert-danger">Apellido es requerido</span>
         </div>
       </div>
       <div class="form-group">
@@ -35,7 +35,7 @@
                placeholder="titulacion"
                v-validate="'required'">
         <span v-show="errors.has('titulacion')"
-              class="invalid-feedback">Titulación es requerido</span>
+              class="alert alert-danger">Titulación es requerido</span>
       </div>
       <div class="form-group">
         <label for="email">Correo Electronico</label>
@@ -46,7 +46,7 @@
                placeholder="Email"
                v-validate="'required|email'">
         <span v-show="errors.has('email')"
-              class="invalid-feedback">Tiene que ser un email valido</span>
+              class="alert alert-danger">Tiene que ser un email valido</span>
       </div>
       <div class="form-group">
         <label for="telefono">Teléfono Celular</label>
@@ -57,7 +57,7 @@
                placeholder="Número de telefono"
                v-validate="'required|numeric'">
         <span v-show="errors.has('telefono')"
-              class="invalid-feedback">Tiene que ser un número valido</span>
+              class="alert alert-danger">Tiene que ser un número valido</span>
       </div>
       <div class="form-group">
         <label for="universidad">Universidad</label>
@@ -68,7 +68,7 @@
                placeholder="Universidad"
                v-validate="'required'">
         <span v-show="errors.has('universidad')"
-              class="invalid-feedback">Universidad es requerido</span>
+              class="alert alert-danger">Universidad es requerido</span>
       </div>
       <div class="form-group">
         <label for="ciudad">Ciudad</label>
@@ -148,6 +148,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "assets/variables";
 @import "assets/form";
+@import "assets/alert";
 </style>

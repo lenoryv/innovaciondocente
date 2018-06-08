@@ -37,7 +37,9 @@ import axios from "axios";
 export default {
   async asyncData({ params }) {
     let res = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros/${
+        params.id
+      }.json`
     );
 
     return { encuentro: res.data };
