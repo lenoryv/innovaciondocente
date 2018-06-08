@@ -75,7 +75,7 @@
               <option value="Alta">Alta</option>
             </select>
             <span v-show="errors.has('preg_2')"
-                  class="invalid-feedback">Es requerido</span>
+                  class="alert alert-danger">Es requerido</span>
           </div>
           <div class="form-group">
             <label for="preg_2_1">2.1 ¿En que aspectos te resulta aplicable el tema?</label>
@@ -89,7 +89,7 @@
               <option value="Aspectos de vinculación con la sociedad">Aspectos de vinculación con la sociedad</option>
             </select>
             <span v-show="errors.has('preg_2_1')"
-                  class="invalid-feedback">Es requerido</span>
+                  class="alert alert-danger">Es requerido</span>
           </div>
           <div class="form-group">
             <label>3. Valore los siguientes aspectos contemplados en la jornada:</label>
@@ -282,7 +282,7 @@
                       class="form-control"
                       v-validate="'required'" />
             <span v-show="errors.has('preg_4')"
-                  class="invalid-feedback">Es requerido</span>
+                  class="alert alert-danger">Es requerido</span>
           </div>
           <div class="form-group">
             <label for="preg_5">5. Sugerencias</label>
@@ -355,6 +355,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/alert";
 @import "assets/form";
 
 .rating {
@@ -390,4 +391,3 @@ export default {
 }
 </style>
 
-    
