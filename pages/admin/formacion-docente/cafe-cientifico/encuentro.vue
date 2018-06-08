@@ -53,7 +53,7 @@
                class="form-control"
                v-validate="'required'">
         <span v-show="errors.has(`invitado${i}nombre`)"
-              class="alert alert-danger">Invitados es requerido</span>
+              class="alert alert-danger">Nombre es requerido</span>
       </div>
       <div class="form-group col-lg-8">
         <label :for="`invitado${i}contenido`">Descripcion</label>
@@ -63,7 +63,7 @@
                   class="form-control"
                   v-validate="'required'" />
         <span v-show="errors.has(`invitado${i}contenido`)"
-              class="alert alert-danger">Invitados es requerido</span>
+              class="alert alert-danger">Descripcion es requerido</span>
       </div>
     </div>
     <!--Invitados options-->
@@ -98,6 +98,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     let forma = {
@@ -120,8 +121,20 @@ export default {
       this.$validator
         .validateAll()
         .then(x => {
-          console.log(x);
-          console.log(this.forma);
+          if (x) {
+            // only if valid
+            axios
+              .post(
+                "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json",
+                this.forma
+              )
+              .then(function(response) {
+                console.log(response);
+              })
+              .catch(function(error) {
+                console.log(error);
+              });
+          }
         })
         .catch(e => {
           console.log(e);
@@ -136,4 +149,7 @@ export default {
 <style lang="scss" scoped>
 @import "assets/form";
 @import "assets/alert";
+textarea {
+  height: 160px;
+}
 </style>
