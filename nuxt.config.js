@@ -33,17 +33,11 @@ module.exports = {
       { name: 'apple-mobile-web-app-capable', content: 'yes' }
     ],
     link: [
-      // { rel: 'apple-touch-icon', href: '~/assets/images' },
-      // { rel: 'apple-touch-icon', sizes: '57x57', href: '/Images/assets/icons/apple-icon-57x57-b82ef058b133f3197df61c326fa7cd6d.png' },
-      // { rel: 'apple-touch-startup-image', sizes: '57x57', href: '/Images/assets/icons/apple-icon-57x57-b82ef058b133f3197df61c326fa7cd6d.png' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/solid.css' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/brands.css' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css' }
     ]
   },
-  /*
- ** Customize the progress bar color
- */
   loading: {
     color: '#e9ecef',
     height: '3px'
@@ -53,13 +47,7 @@ module.exports = {
     color: 'white',
     background: "#0D47A1"
   },
-  /**
-   * mode 'spa' or 'universal'
-   */
   mode: 'universal',
-  /**
-   * manifest
-   */
   manifest: {
     name: 'Innovación Docente',
     lang: 'es',
@@ -71,17 +59,7 @@ module.exports = {
     theme_color: "#2a3e71",
     description: "Pagina web de Innovación Docente de UTPL.",
   },
-  // workbox options
-  workbox: {
-
-  },
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** Run ESLint on save
-    */
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -101,13 +79,14 @@ module.exports = {
     vendor: [
       'vee-validate',
       'axios',
-      'vue-lazyload'
+      'vue-lazyload',
+      'firebase'
     ]
   },
   css: [
-    '@/assets/bootstrap/bootstrap-grid.scss',
+    '@/assets/style.scss',
     '@/assets/router-transition.scss',
-    '@/assets/style.scss'
+    '@/assets/bootstrap/bootstrap-grid.scss',
   ],
   modules: [
     '@nuxtjs/pwa'
@@ -115,7 +94,8 @@ module.exports = {
   plugins: [
     { src: '~/plugins/vee-validate.js', ssr: true },
     { src: '~/plugins/filters.js', ssr: true },
-    { src: '~/plugins/lazyload.js', ssr: true }
+    { src: '~/plugins/lazyload.js', ssr: true },
+    { src: '~/plugins/fireauth.js', ssr: true }
   ]
 }
 

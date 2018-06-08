@@ -117,9 +117,6 @@ export default {
   }
 }
 
-.encuentro {
-  cursor: pointer;
-}
 figure {
   overflow: hidden;
   padding-bottom: 50% !important;
