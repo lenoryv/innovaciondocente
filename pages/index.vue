@@ -33,38 +33,44 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <img class="notes-img"
-                 :src="require('~/static/img/innovacion/convocatorias.png')"
-                 alt="convocatoria">
-            <div class="notes-content"></div>
-            <div class="notes-text">
-              <h3>Noticia Reciente</h3>
-              <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
-              <button class="btn">Leer Más</button>
+            <div class="card card__one link">
+              <figure class="card__img">
+                <img :src="require('~/static/img/innovacion/convocatorias.png')" alt="">
+              </figure>
+              <div class="notes-content"></div>
+              <div class="card__desc">
+                <h3>Noticia Reciente</h3>
+                <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
+                <button class="btn">Leer Más</button>
+              </div>
             </div>
           </div>
           <div class="col-md-4">
-            <img class="notes-img"
-                 :src="require('~/static/img/innovacion/proyectos-actuales.png')"
-                 alt="proyectos-actuales">
-            <div class="notes-content"></div>
-            <div class="notes-text">
-              <h3>Curso Reciente</h3>
-              <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
-              <button class="btn btn">Leer Más</button>
+            <div class="card card__one link">
+              <figure class="card__img">
+                <img :src="require('~/static/img/innovacion/convocatorias.png')" alt="">
+              </figure>
+              <div class="notes-content"></div>
+              <div class="card__desc">
+                <h3>Noticia Reciente</h3>
+                <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
+                <button class="btn">Leer Más</button>
+              </div>
             </div>
           </div>
           <div class="col-md-4">
-            <img class="notes-img"
-                 :src="require('~/static/img/innovacion/proyecto-mentores.png')"
-                 alt="proyecto-mentores">
-            <div class="notes-content"></div>
-            <div class="notes-text">
-              <h3>Tip Reciente</h3>
-              <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
-              <button class="btn">Leer Más</button>
+            <div class="card card__one link">
+              <figure class="card__img">
+                <img :src="require('~/static/img/innovacion/convocatorias.png')" alt="">
+              </figure>
+              <div class="notes-content"></div>
+              <div class="card__desc">
+                <h3>Noticia Reciente</h3>
+                <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
+                <button class="btn">Leer Más</button>
+              </div>
             </div>
-          </div>
+          </div>  
         </div>
       </div>
     </section>
@@ -247,6 +253,7 @@
 
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/card";
 
 h1 {
   color: $color-secondary;
@@ -335,18 +342,6 @@ p {
   padding-bottom: 2rem;
 }
 
-.notes-text {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 100%;
-  padding: 15px 16px;
-  text-align: center;
-}
-
-.notes-text:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-}
-
 .col-md-4 {
   padding: 10px;
 }
@@ -417,10 +412,6 @@ p {
       opacity: 0;
     }
   }
-}
-
-.notes-content {
-  border-top: 4px solid $color-section;
 }
 
 .quienes-somos {
@@ -518,11 +509,6 @@ p {
   padding: 0;
   margin: 0;
 }
-
-figure {
-  margin-top: 1rem;
-  width: 100%;
-}
 footer {
   line-height: 1.2;
   position: relative;
@@ -532,12 +518,6 @@ footer {
   background: #3b3e43;
   color: #fff;
   text-align: center;
-}
-.cards-news {
-  margin-bottom: 3rem;
-}
-.cards-news p {
-  font-size: 1.5em;
 }
 .input-text {
   width: 300px;
@@ -572,9 +552,6 @@ footer {
 .list-vertical h3 {
   font-weight: bold;
   text-align: left !important;
-}
-.link-footer-title {
-  color: $color-secondary;
 }
 .footer-copy p {
   text-align: left !important;
@@ -627,18 +604,22 @@ footer li {
 .background-mustard {
   background: $color-warning;
 }
-
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @media (max-width: 992px) {
   .content {
     padding: 0 3rem 0 3rem;
-  }
-  .div1 {
-    display: none;
   }
   .quienes-somos {
     background: #00406f;
   }
 }
+
 @media (max-width: 768px) {
   .content {
     padding: 0 3rem 0 3rem;

@@ -29,7 +29,7 @@
         <li class="mr">© 2018<a href="https://www.utpl.edu.ec/">UTPL</a></li>
         <li>With
           <a class="footer-heart" href="" title="With love by InDevelopmentCompany">
-          <i class="fas fa-heart" /></a>InDevelopmentCompany
+          <i class="fas fa-heart" /></a>by InDevelopmentCompany
         </li>
       </ul>
     </div>
@@ -175,7 +175,7 @@ footer {
     }
   }
   .footer-icons {
-    height: 15vh;
+    height: 100px;
   }
 }
 
