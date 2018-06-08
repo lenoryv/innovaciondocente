@@ -30,9 +30,9 @@
         <li>InDevelopmentCompany
           <a class="footer-heart" href="" title="With love by InDevelopmentCompany">
           <i class="fas fa-heart" />
-        </a> 
+        </a>
         </li>
-        
+
       </ul>
     </div>
   </footer>
@@ -126,9 +126,6 @@
   border-top: 1px #e1e4e8 solid;
 }
 
-.contact {
-
-}
 
 footer {
   height: 30vh;

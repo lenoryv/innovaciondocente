@@ -5,5 +5,6 @@ export default function ({ store, redirect, route }) {
 
 function isAdminRoute(route) {
   if (route.matched.some(record => record.path == '/admin'))
-    return true;
+    //  return true;
+    return false;
 }

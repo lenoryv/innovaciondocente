@@ -43,6 +43,9 @@
         <nuxt-link :to="{name: 'observatorio-edutendencias'}">
           Observatorio EduTencencias
         </nuxt-link>
+        <nuxt-link :to="{name: 'admin'}">
+          Admin
+        </nuxt-link>
       </div>
       <a href="javascript:void(0);"
          style="font-size:15px;"
