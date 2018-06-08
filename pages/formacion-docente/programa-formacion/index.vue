@@ -120,22 +120,18 @@
 </template>
 
 <script>
-import { DB } from "@/services/fireinit.js";
+import axios from "axios";
 export default {
   async asyncData() {
-    let res;
-    let database = await DB.ref(`formacion-docente/programa-formacion`).on(
-      "value",
-      snapshot => (res = snapshot.val())
+    let res = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion.json`
     );
-
-    return {
-      video: res.videos[0],
-      banner: res.banner,
-      cursos: res.cursos.slice(0, 4),
-      description: res.description,
-      title: res.title
-    };
+    let video = res.data.videos[0];
+    let banner = res.data.banner;
+    let cursos = res.data.cursos.slice(0, 4);
+    let description = res.data.description;
+    let title = res.data.title;
+    return { video, banner, cursos, description, title };
   },
   head() {
     return {

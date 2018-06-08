@@ -47,21 +47,8 @@
 </template>
 
 <script>
-import { DB } from "@/services/fireinit.js";
-
 export default {
-  layout: "admin",
-  data() {
-    let dataRef = DB.ref(`formacion-docente/cafe-cientifico`);
-    return {
-      dataRef
-    };
-  },
-  created() {
-    this.dataRef.on("value", snapshot => {
-      console.log(snapshot.val());
-    });
-  }
+  layout: "admin"
 };
 </script>
 

@@ -70,17 +70,17 @@
 </template>
 
 <script>
-import { DB } from "@/services/fireinit.js";
+import axios from "axios";
 export default {
-  asyncData() {
-    let res;
-    let database = DB.ref(`formacion-docente/cafe-cientifico`);
-    database.on("value", snapshot => (res = snapshot.val()));
+  async asyncData() {
+    let res = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
+    );
     return {
-      ultimoEncuento: res.encuentros[0],
-      nuestrosEncuentos: res.encuentros.slice(0, 4),
-      banner: res.banner,
-      description: res.description
+      ultimoEncuento: res.data.encuentros[0],
+      nuestrosEncuentos: res.data.encuentros.slice(0, 4),
+      banner: res.data.banner,
+      description: res.data.description
     };
   },
   head() {
