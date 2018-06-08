@@ -72,9 +72,9 @@
 <script>
 import { DB } from "@/services/fireinit.js";
 export default {
-  async asyncData() {
+  asyncData() {
     let res;
-    let database = await DB.ref(`formacion-docente/cafe-cientifico`);
+    let database = DB.ref(`formacion-docente/cafe-cientifico`);
     database.on("value", snapshot => (res = snapshot.val()));
     return {
       ultimoEncuento: res.encuentros[0],
