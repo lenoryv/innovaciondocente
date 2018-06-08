@@ -2,7 +2,7 @@
 //////////how to use//////////
 ///
 ///  BASIC EXAMPLE FOR USING alert
-///  
+///
 ///  required class        alert
 ///  for tittle of alert   alert-heading
 ///  for links in alert    alert-link
@@ -34,6 +34,7 @@
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+  display: block;
 }
 
 .alert-heading {
