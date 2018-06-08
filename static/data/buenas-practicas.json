@@ -1,12 +1,12 @@
 [
     {
-        "id": 1,
-        "area": "Área Biologíca",
+        "area": "biologica",
         "repositorio":[
             {
                 "id": 2,
                 "titulo": "Implementación de técnicas de control biológico en cultivos de ciclo corto en la finca UTPL",
-                "practica": [
+                "html": ""
+                ,"practica": [
                     {
                         "infografia": "",
                         "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Desarrollo%20de%20procesos%20cognitivos%20superiores.pdf"
@@ -96,8 +96,7 @@
         ]
     },
     {
-        "id": 11,
-        "area": "Área Técnica",
+        "area": "tecnica",
         "repositorio":[
             {
                 "id": 12,
@@ -212,8 +211,7 @@
         ]
     },
     {
-        "id": 23,
-        "area": "Área Socio-Humanística",
+        "area": "social",
         "repositorio":[
             {
                 "id": 24,
@@ -328,7 +326,6 @@
         ]
     },
     {
-        "id": 4,
-        "area": "Área Administrativa"
+        "area": "admin"
     }
 ]

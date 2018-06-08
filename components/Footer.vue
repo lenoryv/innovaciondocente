@@ -12,13 +12,13 @@
       <div class="col-md-6 footer-info">
         <div class="row">
           <div class="col-sm-6">
-            <h4>Contáctanos</h4>
+            <h4>Contáctanos :</h4>
             <p>Campus San Cayetano Alto.</p>
             <p>Loja – Ecuador.</p>
           </div>
           <div class="col-sm-6">
-            <p>Teléfono: 370 1444 – Ext. 2316</p>
-            <p>Correo electrónico:</p>
+            <p><strong>Teléfono:</strong> 370 1444 – Ext. 2316</p>
+            <p><strong>Correo electrónico:</strong></p>
             <a href="mailto:vacademico@utpl.edu.ec">vacademico@utpl.edu.ec</a>
           </div>
         </div>
@@ -27,12 +27,10 @@
     <div class="col-md-12 footer-outro">
       <ul class="mb">
         <li class="mr">© 2018<a href="https://www.utpl.edu.ec/">UTPL</a></li>
-        <li>InDevelopmentCompany
+        <li>With
           <a class="footer-heart" href="" title="With love by InDevelopmentCompany">
-          <i class="fas fa-heart" />
-        </a>
+          <i class="fas fa-heart" /></a>InDevelopmentCompany
         </li>
-
       </ul>
     </div>
   </footer>
@@ -43,11 +41,11 @@
 @import "assets/variables";
 
 .social-networks {
-  margin: 1.5rem 0 35px;
   padding: 0;
   font-size: 0;
   text-align: center;
-
+  margin: 0;
+  
   li {
     display: inline-block;
   }
@@ -124,35 +122,61 @@
 
 .footer-icons {
   border-top: 1px #e1e4e8 solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
 footer {
-  height: 30vh;
   color: #999999;
 }
 
 .footer-info {
-  padding: 1rem;
+  padding: 1rem;  
   font-size: 80%;
+  border-top: 1px #e1e4e8 solid;
+  p {
+    margin: 5px 0;
+  }
+  h4 {
+    margin-top: 5px;
+  }
 }
 
 .footer-outro {
   border-top: 1px #e1e4e8 solid;
+  margin-bottom: 1.5rem;
   ul {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
   padding-left: 0;
-  margin-top: 0;
+  margin-top: 0.2rem;
   margin-bottom: 0;
     justify-content: space-between !important;
     a {
-      margin-left: .5rem;
+      margin-left: .2rem;
+      margin-right: .3rem   
     }
     li {
       font-size: 80%;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .footer-info {
+    text-align: center;
+    border-top: none;
+    padding-top: 0;
+    margin-bottom: 10px;
+    p {
+      text-align: center; 
+    }
+  }
+  .footer-icons {
+    height: 15vh;
+  }
+}
+
 </style>

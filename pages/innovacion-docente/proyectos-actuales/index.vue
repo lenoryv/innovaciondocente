@@ -1,71 +1,110 @@
 <template>
-    <section>
-        <div class="container">
-            <h1>Proyectos Actuales</h1>
-            <div class="row">
-                <section>
-                    <div class="embed-container">
-                        <div class="col-lg-4">
-                            <iframe src="https://www.youtube.com/embed/dqRxi9vvIGw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <h3>Clase invertida apoyada en el software NB</h3>
-                        <p>Esta buena práctica consiste en utilizar la clase invertida apoyándose en el programa NB como un recurso para mejorar el proceso de enseñanza-aprendizaje que contempla tres fases: diagnóstico, aplicación de la práctica y verificación de resultados.</p>
-                    </div>
-                </section>
-                <section>
-                    <div class="col-lg-8">
-                        <h3>Partiendo desde la realidad, conozco y actuo- convive con los ríos </h3>
-                        <p>Partiendo desde la realidad, conozco y actuo, es una práctica que se integra dentro del proyecto de vinculación denominado “Convive con los ríos”, abarca 5 comunidades e involucra a estudiantes de Gestión Ambiental y Biología, guiados por tutores para plasmar desde la realidad social, soluciones viables afianzadas en el conocimiento adquirido. La metodología se basa en Flipped Classroom de manera cooperativo como herramienta de aprendizaje para trabajar con comunidades rurales. Los objetivos logrados son la implicación social y el diseño de herramientas estratégicas aplicadas como base para la formulación de propuestas enfocadas al manejo y conservación de los recursos naturales.</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <iframe src="https://www.youtube.com/embed/M8NPO3qEZeQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </section>
-                <section>
-                    <div class="col-lg-4">
-                        <iframe src="https://www.youtube.com/embed/McFhVxNc8yM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-lg-8">
-                        <h3> Historia del arte mediante infografía</h3>
-                        <p>Los aspectos positivos del trabajo han demostrado que el aprendizaje mediante la generación de un objeto de diseño comunicacional (infografía), desarrolla en los educandos competencias específicas como la de un incremento en el manejo de lenguaje claro y eficientemente comunicacional para el fin buscado.</p>
-                    </div>
-                </section>
-                <section>
-                    <div class="col-lg-8">
-                        <h3>Aprendizaje basado en objetos: uso de juegos lúdicos como una estrategia didáctica para la enseñanza de la matemática</h3>
-                        <p>El objetivo principal de este trabajo es el uso de juegos matemáticos en el aula para reforzar el aprendizaje de los contenidos teóricos mediante actividades lúdicas. Con el fin de llevar a la práctica esta metodología docente, se desarrollaron juegos lúdicos en aulas a nivel superior durante el semestre Octubre 2017- Febrero 2018, una experiencia basada en el aprendizaje-enseñanza de las matemáticas y el cálculo con alumnos de diferentes titulaciones. Los resultados de las encuestas y promedio de calificaciones demuestran la motivación y el entusiasmo del alumno por el estudio de la matemática mediante esta estrategia.</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <iframe src="https://www.youtube.com/embed/Tqgj5urDopw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </section>
+  <section class="container">
+    <h1>¡Proyectos Actuales!</h1>
+    <div class="contenedor">
+          <div class="card" id = "cards">
+            <div class="front">
+              <iframe class="video" width="300" height="150" src="https://www.youtube.com/embed/c6-EfveplnA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
+            <div class="back">
+              <h3>Scott Pilgrim</h3>
+              <div @click="card">video</div>
+          <p></p>
+          </div>
         </div>
-    </section>
+      </div>
+    <div class="row">
+    </div>
+  </section>
 </template>
 
+<script>
+import axios from "axios";
+import Vue from 'vue';
+
+
+export default {
+  async asyncData({ params }) {
+    let res = await axios.get(
+      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
+    );
+    return { videos: res.data };
+  }
+};
+</script>
+
 <style lang="scss" scoped>
-.col-lg-4 {
-  margin: 0;
-  padding: 0px;
+@import "assets/variables";
+.boton{
+  position: absolute;
+  width: 300px;
+  height: 50%;
+  top: 150px;
 }
-.col-lg-8 {
-  margin: 0;
-  padding: 0px;
-}
-.embed-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-.embed-container iframe {
+.video{
   position: absolute;
   top: 0;
-  left: 0;
+}
+
+.contenedor {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  -webkit-perspective: 800px;
+  -ms-perspective: 800px;
+  perspective: 800px;
+  border-radius: 4px;
+}
+.card {
   width: 100%;
   height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+.card div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  background: $color-primary;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -o-box-pack: center;
+  justify-content: center;
+  -o-box-align: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+}
+.card .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.card.flipped {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 </style>
+
+<script>
+export default {
+  methods:{
+  card() {
+    let card = document.getElementById("cards");
+    card.classList.toggle("flipped")
+  }
+  }
+
+}
+</script>
+
+
