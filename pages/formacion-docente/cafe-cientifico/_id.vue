@@ -33,16 +33,14 @@
 </template>
 
 <script>
-import { DB } from "@/services/fireinit.js";
+import axios from "axios";
 export default {
   async asyncData({ params }) {
-    let res;
-    let database = await DB.ref(
-      `formacion-docente/cafe-cientifico/encuentros/${params.id}`
+    let res = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
     );
-    database.on("value", snapshot => (res = snapshot.val()));
 
-    return { encuentro: res };
+    return { encuentro: res.data };
   },
   head() {
     return {
