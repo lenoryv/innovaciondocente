@@ -5,6 +5,7 @@
     </h1>
     <section>
       <h2>Banner</h2>
+      <hr>
       <div class="row">
         <div class="col-md-6">
           <img src=""
@@ -18,8 +19,12 @@
     </section>
     <section>
       <h3>Portafolio de Encuentros</h3>
+      <hr>
+      <nuxt-link :to="{name : 'admin-formacion-docente-cafe-cientifico-encuentro'}"
+                 class="btn btn-outline-success btn-sm">
+        Agregar Nuevo Encuentro
+      </nuxt-link>
       <div style="overflow-x:auto;">
-        <!--
         <table>
           <tr>
             <th>Nombre</th>
@@ -34,14 +39,13 @@
             <td>50</td>
           </tr>
         </table>
-        -->
       </div>
     </section>
     <section>
       <h2>
         Suscriptores
       </h2>
-      Generar archivo
+      <hr> Generar archivo
     </section>
   </div>
 </template>

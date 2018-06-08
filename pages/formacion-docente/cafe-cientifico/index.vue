@@ -1,53 +1,54 @@
 <template>
   <div>
-    <img v-lazy="banner"
+    <img v-lazy="banner.data"
          alt="banner-cafe-cientifico">
     <section>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <figure>
-              <img v-lazy="ultimoEncuento.img"
+              <img v-lazy="ultimoEncuento.data.img"
                    alt="Imagen Encuentro">
             </figure>
             <h3>
               <i class="fas fa-users"></i> Invitados
             </h3>
             <ul>
-              <li v-for="(invitado, index) in ultimoEncuento.invitados"
-                  :key="index">{{ invitado.name }}</li>
+              <li v-for="(invitado, index) in ultimoEncuento.data.invitados"
+                  :key="index">{{ invitado.nombre }}</li>
             </ul>
           </div>
           <div class="col-md-8">
-            <h1>{{ultimoEncuento.tema}}</h1>
-            <small>{{ultimoEncuento.fecha}}</small>
-            <p>{{ultimoEncuento.desc | slice(0,500)}}</p>
+            <h1>{{ultimoEncuento.data.nombre}}</h1>
+            <small>{{ultimoEncuento.data.fecha}}</small>
+            <p>{{ultimoEncuento.data.contenido | slice(0,500)}}</p>
             <nuxt-link class="btn btn-primary"
-                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: 0}}">
+                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.key}}">
               Leer más
             </nuxt-link>
           </div>
         </div>
       </div>
     </section>
-    <section id="portafolio">
+    <section id="portafolio"
+             v-if="encuentros.length>0">
       <div class="container-fluid">
         <h2>
           Portafolio de Encuentros
         </h2>
         <div class="row">
           <nuxt-link class="col-xl-3 col-sm-6"
-                     v-for="(encuentro, i) in nuestrosEncuentos"
-                     :key="i"
-                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: i}}"
+                     v-for="(encuentro, k) in encuentros"
+                     :key="k"
+                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.key}}"
                      tag="div">
             <div class="card card__two link">
               <figure class="card__img">
-                <img v-lazy="encuentro.img"
+                <img v-lazy="encuentro.data.img"
                      alt="Imagen Encuentros">
               </figure>
               <div class="card__desc">
-                <h4>{{encuentro.tema}}</h4>
+                <h4>{{encuentro.data.nombre}}</h4>
               </div>
             </div>
           </nuxt-link>
@@ -60,7 +61,7 @@
           Suscribete a nuestro Café Científico
         </h2>
         <p>
-          {{description}}
+          {{description.data}}
         </p>
         <nuxt-link class="btn btn-inverse btn-large"
                    :to="{name: 'formacion-docente-cafe-cientifico-suscripcion'}">Suscribirse</nuxt-link>
@@ -73,14 +74,29 @@
 import axios from "axios";
 export default {
   async asyncData() {
-    let res = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
+    let banner = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/banner.json`
     );
+    let description = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/description.json`
+    );
+
+    let rawEncuentros = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json?orderBy="$key"&limitToLast=5`
+    );
+
+    let allEncuentros = [];
+    for (var key in rawEncuentros.data) {
+      allEncuentros.push({ key: key, data: rawEncuentros.data[key] });
+    }
+
+    let ultimoEncuento = allEncuentros[0];
+    let encuentros = allEncuentros.slice(1, 5);
     return {
-      ultimoEncuento: res.data.encuentros[0],
-      nuestrosEncuentos: res.data.encuentros.slice(0, 4),
-      banner: res.data.banner,
-      description: res.data.description
+      ultimoEncuento,
+      encuentros,
+      banner,
+      description
     };
   },
   head() {
@@ -90,7 +106,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.description
+          content: this.description.data
         }
       ]
     };
