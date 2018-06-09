@@ -8,7 +8,7 @@
         <i class="fas fa-calendar-alt"></i> {{encuentro.fecha}}</small>
       <hr>
       <p>{{encuentro.contenido}}</p>
-      <h2>
+      <h2 v-if="encuentro.invitados">
         <i class="fas fa-users"></i> Invitados
       </h2>
       <div class="row">
@@ -64,8 +64,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "assets/variables";
 .parallax {
   height: 100vh;
+  background-color: $color-primary;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

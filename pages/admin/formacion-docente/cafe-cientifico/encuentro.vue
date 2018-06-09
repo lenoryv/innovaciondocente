@@ -129,10 +129,15 @@ export default {
                 this.forma
               )
               .then(function(response) {
-                console.log(response);
+                alert("Completado");
+                // TODO: fix router
+                //  this.$router.push({
+                //    name: "formacion-docente-cafe-cientifico-id",
+                //    params: { id: response.data.name }
+                //  });
               })
               .catch(function(error) {
-                console.log(error);
+                alert("HA OCURRIDO UN ERROR, VUELVE A INTENTARLO");
               });
           }
         })
