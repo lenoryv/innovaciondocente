@@ -2,7 +2,7 @@
   <div>
     <img v-lazy="banner.data"
          alt="banner-cafe-cientifico">
-    <section>
+    <section v-if="ultimoEncuento">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -82,7 +82,13 @@ export default {
     );
 
     let rawEncuentros = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json?orderBy="$key"&limitToLast=5`
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json`,
+      {
+        params: {
+          orderBy: '"$key"',
+          limitToLast: 5
+        }
+      }
     );
 
     let allEncuentros = [];

@@ -32,6 +32,7 @@
             <th>Opciones</th>
           </tr>
           <tr v-for="(encuentro, key) in data.encuentros"
+              v-if="encuentro"
               :key="key">
             <td>
               <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id:key}}">
@@ -44,10 +45,10 @@
                          class="btn btn-large btn-outline-dark btn-sm">
                 modificar
               </nuxt-link>
-              <nuxt-link :to="{}"
-                         class="btn btn-large btn-danger btn-sm">
+              <button v-on:click="remove(key)"
+                      class="btn btn-large btn-danger btn-sm">
                 eliminar
-              </nuxt-link>
+              </button>
             </td>
           </tr>
         </table>
@@ -77,6 +78,15 @@ export default {
           `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
         )
         .then(res => (this.data = res.data));
+    },
+    remove(key) {
+      axios
+        .delete(
+          `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros/${key}.json`
+        )
+        .then(res => console.log(res))
+        .catch(e => console.log(e));
+      this.data.encuentros[key] = 0;
     }
   },
   mounted() {
