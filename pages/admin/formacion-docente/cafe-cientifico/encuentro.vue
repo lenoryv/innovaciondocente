@@ -80,10 +80,10 @@
     <!--Bbuttons forma-->
     <div class="form-row">
       <div class="col-6">
-        <nuxt-link class="btn btn-outline-danger btn-large"
-                   :to="{name: 'formacion-docente-cafe-cientifico'}">
-          Cancelar
-        </nuxt-link>
+        <button @click="$router.go(-1)"
+                class="btn btn-outline-primary btn-large">
+          Regresar
+        </button>
       </div>
       <div class="col-6">
         <button @click="submit"
@@ -129,10 +129,13 @@ export default {
                 this.forma
               )
               .then(function(response) {
-                console.log(response);
+                alert("Completado");
+                // TODO: fix router
+                window.$nuxt.$router.go(-1);
               })
               .catch(function(error) {
                 console.log(error);
+                alert("HA OCURRIDO UN ERROR, VUELVE A INTENTARLO");
               });
           }
         })

@@ -2,7 +2,7 @@
   <div>
     <img v-lazy="banner.data"
          alt="banner-cafe-cientifico">
-    <section>
+    <section v-if="ultimoEncuento">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -81,6 +81,7 @@ export default {
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/description.json`
     );
 
+    // TODO: order by fecha
     let rawEncuentros = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json?orderBy="$key"&limitToLast=5`
     );
@@ -89,6 +90,7 @@ export default {
     for (var key in rawEncuentros.data) {
       allEncuentros.push({ key: key, data: rawEncuentros.data[key] });
     }
+    allEncuentros.reverse();
 
     let ultimoEncuento = allEncuentros[0];
     let encuentros = allEncuentros.slice(1, 5);
