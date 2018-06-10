@@ -41,10 +41,13 @@
             </td>
             <td>{{encuentro.fecha}}</td>
             <td>
-              <nuxt-link :to="{}"
+              <!--
+                TODO: add modify
+              <nuxt-link :to="{name: 'admin-formacion-docente-cafe-cientifico-encuentro', query: {id:key}}"
                          class="btn btn-large btn-outline-dark btn-sm">
                 modificar
               </nuxt-link>
+              -->
               <button v-on:click="remove(key)"
                       class="btn btn-large btn-danger btn-sm">
                 eliminar
@@ -84,8 +87,7 @@ export default {
         .delete(
           `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros/${key}.json`
         )
-        .then(res => console.log(res))
-        .catch(e => console.log(e));
+        .catch(e => alert("No se pudo eliminar"));
       this.data.encuentros[key] = 0;
     }
   },

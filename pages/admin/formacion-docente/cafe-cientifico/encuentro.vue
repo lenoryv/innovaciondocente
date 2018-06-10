@@ -131,10 +131,7 @@ export default {
               .then(function(response) {
                 alert("Completado");
                 // TODO: fix router
-                window.$nuxt.$router.push({
-                  name: "formacion-docente-cafe-cientifico-id",
-                  params: { id: response.data.name }
-                });
+                window.$nuxt.$router.go(-1);
               })
               .catch(function(error) {
                 console.log(error);

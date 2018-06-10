@@ -81,20 +81,16 @@ export default {
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/description.json`
     );
 
+    // TODO: order by fecha
     let rawEncuentros = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json`,
-      {
-        params: {
-          orderBy: '"$key"',
-          limitToLast: 5
-        }
-      }
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json?orderBy="$key"&limitToLast=5`
     );
 
     let allEncuentros = [];
     for (var key in rawEncuentros.data) {
       allEncuentros.push({ key: key, data: rawEncuentros.data[key] });
     }
+    allEncuentros.reverse();
 
     let ultimoEncuento = allEncuentros[0];
     let encuentros = allEncuentros.slice(1, 5);
