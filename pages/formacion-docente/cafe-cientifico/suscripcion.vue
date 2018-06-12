@@ -1,13 +1,12 @@
 <template>
   <section class="container">
     <h1>Suscribete a nuestro Café científico</h1>
-    <form v-on:submit.prevent="onSubmit">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="nombre">Nombre</label>
           <input v-model="forma.nombre"
                  type="text"
-                 id="nombre"
+                 name="nombre"
                  class="form-control"
                  placeholder="Nombre"
                  v-validate="'required'">
@@ -18,7 +17,7 @@
           <label for="apellido">Apellido</label>
           <input v-model="forma.apellido"
                  type="text"
-                 id="apellido"
+                 name="apellido"
                  class="form-control"
                  placeholder="Apellido"
                  v-validate="'required'">
@@ -30,7 +29,7 @@
         <label for="titulacion">Titulación</label>
         <input v-model="forma.titulacion"
                type="text"
-               id="titulacion"
+               name="titulacion"
                class="form-control"
                placeholder="titulacion"
                v-validate="'required'">
@@ -41,7 +40,7 @@
         <label for="email">Correo Electronico</label>
         <input v-model="forma.email"
                class="form-control"
-               id="email"
+               name="email"
                type="text"
                placeholder="Email"
                v-validate="'required|email'">
@@ -52,7 +51,7 @@
         <label for="telefono">Teléfono Celular</label>
         <input v-model="forma.telefono"
                class="form-control"
-               id="telefono"
+               name="telefono"
                type="text"
                placeholder="Número de telefono"
                v-validate="'required|numeric'">
@@ -63,7 +62,7 @@
         <label for="universidad">Universidad</label>
         <input v-model="forma.universidad"
                class="form-control"
-               id="universidad"
+               name="universidad"
                type="text"
                placeholder="Universidad"
                v-validate="'required'">
@@ -74,7 +73,7 @@
         <label for="ciudad">Ciudad</label>
         <select v-model="forma.ciudad"
                 class="form-control"
-                id="ciudad">
+                name="ciudad">
           <option value="Loja">Loja</option>
           <option value="Cuenca">Cuenca</option>
           <option value="Guayaquil">Guayaquil</option>
@@ -85,7 +84,7 @@
         <input v-model="forma.whatsapp"
                type="checkbox"
                class="form-check-input"
-               id="whatsapp">
+               name="whatsapp">
         <label class="form-check-label"
                for="whatsapp">¿Desearías que la información de los eventos de formación e innovación docente te lleguen por
           medio de WhatsApp?</label>
@@ -105,7 +104,6 @@
           </button>
         </div>
       </div>
-    </form>
   </section>
 </template>
 
