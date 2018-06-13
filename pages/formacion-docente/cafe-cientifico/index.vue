@@ -1,13 +1,14 @@
 <template>
   <div>
-    <img v-lazy="banner.data"
+    <img v-lazy="banner"
          alt="banner-cafe-cientifico">
+         <!--
     <section v-if="ultimoEncuento">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <figure>
-              <img v-lazy="ultimoEncuento.data.img"
+              <img v-lazy="ultimoEncuento.img"
                    alt="Imagen Encuentro">
             </figure>
             <h3>
@@ -30,25 +31,29 @@
         </div>
       </div>
     </section>
+         -->
+    <pre>
+      {{ultimoEncuentro}}
+    </pre>
     <section id="portafolio"
-             v-if="encuentros.length>0">
+             v-if="encuentros">
       <div class="container-fluid">
         <h2>
           Portafolio de Encuentros
         </h2>
         <div class="row">
           <nuxt-link class="col-xl-3 col-sm-6"
-                     v-for="(encuentro, k) in encuentros"
-                     :key="k"
-                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.key}}"
+                     v-for="(encuentro, key) in encuentros"
+                     :key="key"
+                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
                      tag="div">
             <div class="card card__two link">
               <figure class="card__img">
-                <img v-lazy="encuentro.data.img"
+                <img v-lazy="encuentro.img"
                      alt="Imagen Encuentros">
               </figure>
               <div class="card__desc">
-                <h4>{{encuentro.data.nombre}}</h4>
+                <h4>{{encuentro.nombre}}</h4>
               </div>
             </div>
           </nuxt-link>
@@ -61,7 +66,7 @@
           Suscribete a nuestro Café Científico
         </h2>
         <p>
-          {{description.data}}
+          {{description}}
         </p>
         <nuxt-link class="btn btn-inverse btn-large"
                    :to="{name: 'formacion-docente-cafe-cientifico-suscripcion'}">Suscribirse</nuxt-link>
@@ -74,32 +79,21 @@
 import axios from "axios";
 export default {
   async asyncData() {
-    let banner = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/banner.json`
+    let { data } = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
     );
-    let description = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/description.json`
-    );
-
-    // TODO: order by fecha
-    let rawEncuentros = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json?orderBy="$key"&limitToLast=5`
-    );
-
-    let allEncuentros = [];
-    for (var key in rawEncuentros.data) {
-      allEncuentros.push({ key: key, data: rawEncuentros.data[key] });
-    }
-    allEncuentros.reverse();
-
-    let ultimoEncuento = allEncuentros[0];
-    let encuentros = allEncuentros.slice(1, 5);
     return {
-      ultimoEncuento,
-      encuentros,
-      banner,
-      description
+      encuentros: data.encuentros,
+      banner: data.banner,
+      description: data.description
     };
+  },
+  computed: {
+    ultimoEncuentro(encuentros){
+      let vm = this;
+      console.log(vm.encuentros);
+      return{};
+    }
   },
   head() {
     return {
