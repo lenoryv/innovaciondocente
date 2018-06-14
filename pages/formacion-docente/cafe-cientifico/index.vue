@@ -1,29 +1,29 @@
 <template>
   <div>
-    <img v-lazy="banner.data"
+    <img v-lazy="banner"
          alt="banner-cafe-cientifico">
-    <section v-if="ultimoEncuento">
+    <section v-if="ultimoEncuentro">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <figure>
-              <img v-lazy="ultimoEncuento.data.img"
+              <img v-lazy="ultimoEncuentro.data.img"
                    alt="Imagen Encuentro">
             </figure>
             <h3>
               <i class="fas fa-users"></i> Invitados
             </h3>
             <ul>
-              <li v-for="(invitado, index) in ultimoEncuento.data.invitados"
+              <li v-for="(invitado, index) in ultimoEncuentro.data.invitados"
                   :key="index">{{ invitado.nombre }}</li>
             </ul>
           </div>
           <div class="col-md-8">
-            <h1>{{ultimoEncuento.data.nombre}}</h1>
-            <small>{{ultimoEncuento.data.fecha}}</small>
-            <p>{{ultimoEncuento.data.contenido | slice(0,500)}}</p>
+            <h1>{{ultimoEncuentro.data.nombre}}</h1>
+            <small>{{ultimoEncuentro.data.fecha}}</small>
+            <p>{{ultimoEncuentro.data.contenido | slice(0,500)}}</p>
             <nuxt-link class="btn btn-primary"
-                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.key}}">
+                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}">
               Leer más
             </nuxt-link>
           </div>
@@ -31,24 +31,24 @@
       </div>
     </section>
     <section id="portafolio"
-             v-if="encuentros.length>0">
+             v-if="encuentros">
       <div class="container-fluid">
         <h2>
           Portafolio de Encuentros
         </h2>
         <div class="row">
           <nuxt-link class="col-xl-3 col-sm-6"
-                     v-for="(encuentro, k) in encuentros"
-                     :key="k"
-                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.key}}"
+                     v-for="(encuentro, key) in encuentros"
+                     :key="key"
+                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
                      tag="div">
             <div class="card card__two link">
               <figure class="card__img">
-                <img v-lazy="encuentro.data.img"
+                <img v-lazy="encuentro.img"
                      alt="Imagen Encuentros">
               </figure>
               <div class="card__desc">
-                <h4>{{encuentro.data.nombre}}</h4>
+                <h4>{{encuentro.nombre}}</h4>
               </div>
             </div>
           </nuxt-link>
@@ -61,7 +61,7 @@
           Suscribete a nuestro Café Científico
         </h2>
         <p>
-          {{description.data}}
+          {{description}}
         </p>
         <nuxt-link class="btn btn-inverse btn-large"
                    :to="{name: 'formacion-docente-cafe-cientifico-suscripcion'}">Suscribirse</nuxt-link>
@@ -74,32 +74,35 @@
 import axios from "axios";
 export default {
   async asyncData() {
-    let banner = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/banner.json`
+    const { data } = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
     );
-    let description = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/description.json`
-    );
-
-    // TODO: order by fecha
-    let rawEncuentros = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json?orderBy="$key"&limitToLast=5`
-    );
-
-    let allEncuentros = [];
-    for (var key in rawEncuentros.data) {
-      allEncuentros.push({ key: key, data: rawEncuentros.data[key] });
+    return { data };
+  },
+  computed: {
+    ultimoEncuentro() {
+      // TODO: return last item date
+      let res = null;
+      for (const key in this.data.encuentros) {
+        if (!res) {
+          res = { key: key, data: this.data.encuentros[key] };
+          continue;
+        }
+        if (this.data.encuentros[key].fecha > res.fecha)
+          res = this.data.encuentros[key];
+      }
+      return res;
+    },
+    encuentros() {
+      // TODO: sort by date
+      return this.data.encuentros;
+    },
+    banner() {
+      return this.data.banner;
+    },
+    description() {
+      return this.data.description;
     }
-    allEncuentros.reverse();
-
-    let ultimoEncuento = allEncuentros[0];
-    let encuentros = allEncuentros.slice(1, 5);
-    return {
-      ultimoEncuento,
-      encuentros,
-      banner,
-      description
-    };
   },
   head() {
     return {
@@ -108,7 +111,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.description.data
+          content: this.description
         }
       ]
     };
