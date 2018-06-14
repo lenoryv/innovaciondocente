@@ -2,39 +2,34 @@
   <div>
     <img v-lazy="banner"
          alt="banner-cafe-cientifico">
-         <!--
-    <section v-if="ultimoEncuento">
+    <section v-if="ultimoEncuentro">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <figure>
-              <img v-lazy="ultimoEncuento.img"
+              <img v-lazy="ultimoEncuentro.data.img"
                    alt="Imagen Encuentro">
             </figure>
             <h3>
               <i class="fas fa-users"></i> Invitados
             </h3>
             <ul>
-              <li v-for="(invitado, index) in ultimoEncuento.data.invitados"
+              <li v-for="(invitado, index) in ultimoEncuentro.data.invitados"
                   :key="index">{{ invitado.nombre }}</li>
             </ul>
           </div>
           <div class="col-md-8">
-            <h1>{{ultimoEncuento.data.nombre}}</h1>
-            <small>{{ultimoEncuento.data.fecha}}</small>
-            <p>{{ultimoEncuento.data.contenido | slice(0,500)}}</p>
+            <h1>{{ultimoEncuentro.data.nombre}}</h1>
+            <small>{{ultimoEncuentro.data.fecha}}</small>
+            <p>{{ultimoEncuentro.data.contenido | slice(0,500)}}</p>
             <nuxt-link class="btn btn-primary"
-                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuento.key}}">
+                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}">
               Leer más
             </nuxt-link>
           </div>
         </div>
       </div>
     </section>
-         -->
-    <pre>
-      {{ultimoEncuentro}}
-    </pre>
     <section id="portafolio"
              v-if="encuentros">
       <div class="container-fluid">
@@ -79,20 +74,34 @@
 import axios from "axios";
 export default {
   async asyncData() {
-    let { data } = await axios.get(
+    const { data } = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
     );
-    return {
-      encuentros: data.encuentros,
-      banner: data.banner,
-      description: data.description
-    };
+    return { data };
   },
   computed: {
-    ultimoEncuentro(encuentros){
-      let vm = this;
-      console.log(vm.encuentros);
-      return{};
+    ultimoEncuentro() {
+      // TODO: return last item date
+      let res = null;
+      for (const key in this.data.encuentros) {
+        if (!res) {
+          res = { key: key, data: this.data.encuentros[key] };
+          continue;
+        }
+        if (this.data.encuentros[key].fecha > res.fecha)
+          res = this.data.encuentros[key];
+      }
+      return res;
+    },
+    encuentros() {
+      // TODO: sort by date
+      return this.data.encuentros;
+    },
+    banner() {
+      return this.data.banner;
+    },
+    description() {
+      return this.data.description;
     }
   },
   head() {
@@ -102,7 +111,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.description.data
+          content: this.description
         }
       ]
     };
