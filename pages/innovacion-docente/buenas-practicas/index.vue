@@ -22,6 +22,7 @@
 
 <style lang="scss">
 @import "assets/variables";
+@import "assets/card";
 .menu {
   position: sticky;
 }

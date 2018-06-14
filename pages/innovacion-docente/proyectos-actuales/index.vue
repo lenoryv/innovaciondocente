@@ -1,110 +1,133 @@
 <template>
-  <section class="container">
+  <section class="container"
+           @click="click_ventana">
     <h1>¡Proyectos Actuales!</h1>
-    <div class="contenedor">
-          <div class="card" id = "cards">
-            <div class="front">
-              <iframe class="video" width="300" height="150" src="https://www.youtube.com/embed/c6-EfveplnA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="back">
-              <h3>Scott Pilgrim</h3>
-              <div @click="card">video</div>
-          <p></p>
-          </div>
+    <div v-for="(video, index) in videos"
+         :key="index">
+      <div class="card card__one link">
+        <figure class="card__img">
+          <img class="img"
+               @click="click_boton"
+               src="~/static/img/banner-formacion-docente.jpg"
+               alt="imagen-div">
+        </figure>
+        <div class="card__desc">
+          <h3>{{video.title}}</h3>
+          <p>{{video.desc}}</p>
         </div>
       </div>
-    <div class="row">
+    </div>
+    <div v-for="(video, index) in videos"
+         :key="index">
+      <div id="myModal"
+           class="modal">
+        <div class="modal-content">
+          <span class="close"
+                @click="click_span">&times;</span>
+          <iframe width="854"
+                  height="480"
+                  :src="video.vid"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
+<style lang="scss">
+@import "assets/card";
+.img {
+  height: 211px !important;
+  width: 100% !important;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 0;
+  width: 65%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
 <script>
 import axios from "axios";
-import Vue from 'vue';
-
 
 export default {
   async asyncData({ params }) {
     let res = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
     );
-    return { videos: res.data };
+
+    let title = "Proyectos Actuales";
+    let description =
+      "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
+    return { videos: res.data, title, description };
+  },
+  head() {
+    return {
+      title: this.title + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
+  },
+  methods: {
+    // When the user clicks on the button, open the modal
+    click_boton() {
+      let modal = document.getElementById("myModal");
+      modal.style.display = "block";
+    },
+
+    // When the user clicks on <span> (x), close the modal
+    click_span() {
+      let modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    },
+
+    // When the user clicks anywhere outside of the modal, close it
+    click_ventana(event) {
+      let modal = document.getElementById("myModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
   }
 };
 </script>
 
-<style lang="scss" scoped>
-@import "assets/variables";
-.boton{
-  position: absolute;
-  width: 300px;
-  height: 50%;
-  top: 150px;
-}
-.video{
-  position: absolute;
-  top: 0;
-}
-
-.contenedor {
-  width: 300px;
-  height: 200px;
-  position: relative;
-  -webkit-perspective: 800px;
-  -ms-perspective: 800px;
-  perspective: 800px;
-  border-radius: 4px;
-}
-.card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-radius: 6px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  cursor: pointer;
-}
-.card div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 6px;
-  background: $color-primary;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -o-box-pack: center;
-  justify-content: center;
-  -o-box-align: center;
-  align-items: center;
-  -webkit-font-smoothing: antialiased;
-}
-.card .back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-.card.flipped {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-</style>
-
-<script>
-export default {
-  methods:{
-  card() {
-    let card = document.getElementById("cards");
-    card.classList.toggle("flipped")
-  }
-  }
-
-}
-</script>
 
 
