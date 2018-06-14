@@ -1,12 +1,11 @@
 <template>
   <div class="container"
        v-if="data">
+    <h1>
+      Café Científico
+    </h1>
     <section>
-      <h1>
-        Café Científico
-      </h1>
       <h2>Banner</h2>
-      <hr>
       <div class="row">
         <div class="col-md-8">
           <img :src="data.banner"
@@ -19,7 +18,6 @@
       </div>
       <br>
       <h3>Portafolio de Encuentros</h3>
-      <hr>
       <nuxt-link :to="{name : 'admin-formacion-docente-cafe-cientifico-encuentro'}"
                  class="btn btn-success btn-sm">
         Agregar Nuevo Encuentro
@@ -60,7 +58,7 @@
       <h2>
         Suscriptores
       </h2>
-      <hr> Generar archivo
+      Generar archivo
     </section>
   </div>
 </template>

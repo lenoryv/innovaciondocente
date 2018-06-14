@@ -57,15 +57,15 @@
             </a>
           </div>
           <div class="col-xl-5 col-lg-4">
-            <h3>{{video.title}}</h3>
+            <h3>{{video.nombre}}</h3>
             <div class="embed-container">
-              <iframe :src="video.vid"
+              <iframe :src="video.link"
                       frameborder="0"
                       allow="encrypted-media"
                       title="video"
                       allowfullscreen></iframe>
             </div>
-            <p>{{video.desc|slice(0,250)}}</p>
+            <p>{{video.descripcion|slice(0,250)}}</p>
             <router-link class="btn btn-inverse btn-large"
                          :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">
               Tips de expertos
@@ -123,15 +123,49 @@
 import axios from "axios";
 export default {
   async asyncData() {
-    let res = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion.json`
+    let cursosRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json`
     );
-    let video = res.data.videos[0];
-    let banner = res.data.banner;
-    let cursos = res.data.cursos.slice(0, 4);
-    let description = res.data.description;
-    let title = res.data.title;
-    return { video, banner, cursos, description, title };
+    let bannerRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/banner.json`
+    );
+    let titleRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/title.json`
+    );
+    let descriptionRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/description.json`
+    );
+    let videoRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json?orderBy=%22$key%22&limitToLast=1`
+    );
+
+    return {
+      cursosRes,
+      bannerRes,
+      titleRes,
+      descriptionRes,
+      videoRes
+    };
+  },
+  computed: {
+    video() {
+      // TODO: fix return unique video
+      for (const key in this.videoRes.data) {
+        return this.videoRes.data[key];
+      }
+    },
+    description() {
+      return this.descriptionRes.data;
+    },
+    banner() {
+      return this.bannerRes.data;
+    },
+    title() {
+      return this.titleRes.data;
+    },
+    cursos() {
+      return this.cursosRes.data;
+    }
   },
   head() {
     return {
