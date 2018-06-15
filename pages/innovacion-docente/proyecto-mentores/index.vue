@@ -1,14 +1,11 @@
 <template>
   <div>
-    <img src="~/static/img/mentores.jpg"
-         alt="mentores">
-
+    <header class="parallax"></header>
     <section class="container">
-
       <h1>Proyecto Mentores</h1>
       <hr>
       <p>El ingreso a la vida universitaria trae consigo nuevos retos, pues supone la adaptación a nuevos
-        entornos, conocer nuevas personas y adecuarse a nuevos ritmos de trabajo.El Vicerrectorado Académico
+        entornos, conocer nuevas personas y adecuarse a nuevos ritmos de trabajo. El Vicerrectorado Académico
         de la UTPL propone el Proyecto Mentores como un aporte para la inserción saludable de los nuevos
         estudiantes a nuestra casa de estudios.</p>
       <h3>¿Cuál es el objetivo fundamental del Proyecto Mentores en la UTPL?</h3>
@@ -49,10 +46,21 @@
 </template>
 
 <style lang="scss" scoped>
+@import "assets/variables";
 h4 {
   text-align: center !important;
 }
 .enlace{
     text-align: center;
+}
+
+.parallax {
+  height: 100vh;
+  background-color: $color-primary;
+  background-image: url("~/static/img/mentores.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

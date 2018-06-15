@@ -1,8 +1,6 @@
 <template>
     <div>
-        <img src="~/static/img/banner-ayudante-catedra.jpg"
-             alt="mentores">
-
+        <header class="parallax"></header>
         <section class="container">
 
             <h1>Proyecto Ayudante de Catedra</h1>
@@ -58,11 +56,21 @@
 </template>
 
 <style lang="scss" scoped>
+@import "assets/variables";
 h4 {
   text-align: center !important;
 }
 .enlace{
     text-align: center;
+}
+.parallax {
+  height: 100vh;
+  background-color: $color-primary;
+  background-image: url("~/static/img/banner-ayudante-catedra.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
 
