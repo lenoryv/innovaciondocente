@@ -213,7 +213,7 @@
                 <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
                 <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
                 <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
