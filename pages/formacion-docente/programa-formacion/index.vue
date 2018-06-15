@@ -13,19 +13,19 @@
         <h2>Cursos Actuales</h2>
         <div class="row">
           <nuxt-link class="col-lg-6"
-                     v-for="(curso, i) in cursos"
-                     :key="i"
-                     :to="{name: 'formacion-docente-programa-formacion-id', params: {id: i}}"
+                     v-for="curso in cursos"
+                     :key="curso.key"
+                     :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.key}}"
                      tag="div">
             <div class="card card__one link">
               <figure class="card__img">
-                <img v-lazy="require('@/static/img/' + curso.poster)"
+                <img v-lazy="curso.data.img"
                      alt="imagen curso">
               </figure>
               <div class="card__desc">
-                <h4>{{curso.nombre}}</h4>
+                <h4>{{curso.data.nombre}}</h4>
                 <small>
-                  <i class="fas fa-calendar-alt"></i> {{curso.anio}}/{{curso.mes}}/{{curso.dia}}</small>
+                  <i class="fas fa-calendar-alt"></i> {{curso.data.fecha}}</small>
               </div>
             </div>
           </nuxt-link>
@@ -124,7 +124,7 @@ import axios from "axios";
 export default {
   async asyncData() {
     let cursosRes = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json`
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json?orderBy=%22$key%22&limitToLast=4`
     );
     let bannerRes = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/banner.json`
@@ -164,7 +164,12 @@ export default {
       return this.titleRes.data;
     },
     cursos() {
-      return this.cursosRes.data;
+      // TODO: sort cursos
+      let res = [];
+      for (const key in this.cursosRes.data) {
+        res.push({ key: key, data: this.cursosRes.data[key] });
+      }
+      return res;
     }
   },
   head() {

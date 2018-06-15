@@ -102,11 +102,11 @@ import axios from "axios";
 export default {
   data() {
     let forma = {
-      nombre: "",
-      img: "",
-      contenido: "",
-      fecha: "",
-      invitados: [{ nombre: "", descripcion: "" }]
+      nombre: null,
+      img: null,
+      contenido: null,
+      fecha: null,
+      invitados: [{ nombre: null, descripcion: null }]
     };
     return { forma };
   },
@@ -152,7 +152,4 @@ export default {
 <style lang="scss" scoped>
 @import "assets/form";
 @import "assets/alert";
-textarea {
-  height: 160px;
-}
 </style>

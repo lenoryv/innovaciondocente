@@ -2,55 +2,83 @@
   <section>
     <div class="container">
       <div class="alert alert-danger"
-           v-if="!curso.fin_postulacion">
+           v-if="!data.postulacion">
+        <!--TODO: validate fin postulacion-->
         Este curso ha finalizado
       </div>
       <div class="alert alert-success"
-           v-if="curso.fin_postulacion">
+           v-else>
         <i class="fas fa-calendar-alt"></i>
-        {{curso.fin_postulacion}}
+        Postula hasta el
+        <b>{{data.postulacion}}</b>
       </div>
-      <h1>{{ curso.nombre }}</h1>
-      <small v-if="curso.fecha">Fecha: {{ curso.fecha }}</small>
+      <h1>{{ data.nombre }}</h1>
+      <h4>Fecha: {{ data.fecha }}</h4>
       <hr>
       <div class="row">
-        <div class="col-lg-4">
-          <img v-if="curso.poster"
-               v-lazy="require('@/static/img/' + curso.poster)"
+        <div class="col-md-3">
+          <img v-lazy="data.img"
                alt="Imagen Curso">
           <a target="_blank"
              rel="noopener"
              class="btn btn-large"
              v-bind:class="[
-                {'btn-outline-primary':curso.descarga},
-                {'btn-danger disabled':!curso.descarga}
+                {'btn-outline-primary':data.urlContenido},
+                {'btn-danger disabled':!data.urlContenido}
               ]"
-             :href="curso.descarga">
+             :href="data.urlContenido">
+            <!--TODO: add if data.postulacion-->
             <i class="fas fa-file-pdf"></i>
-            Contenidos del curso
+            Contenido
           </a>
           <a target="_blank"
              rel="noopener"
              class="btn btn-large"
              v-bind:class="[
-                {'btn-outline-primary':curso.descarga},
-                {'btn-danger disabled':!curso.descarga}
+                {'btn-outline-primary':data.link_postulacion},
+                {'btn-danger disabled':!data.link_postulacion}
               ]"
-             :href="curso.url_postulacion">Postular</a>
+             :href="data.link_postulacion">
+            <!--TODO: add if data.postulacion-->
+            Postular
+          </a>
           <button @click="$router.go(-1)"
                   class="btn btn-primary btn-large">Regresar</button>
         </div>
-        <div class="col-lg-8">
-          <p v-if="curso.instructor">
-            <b>Instructores:</b> {{ curso.instructor }}</p>
-          <p v-if="curso.duracion">
-            <b>Duración:</b> {{ curso.duracion }}</p>
-          <p v-if="curso.modulo">
-            <b>Módulo:</b> {{curso.modulo}}</p>
-          <p v-if="curso.dirigido">
-            <b>Dirigido:</b> {{curso.dirigido}}</p>
-          <p v-if="curso.finalidad">
-            <b>Finalidades la Formación:</b> {{curso.finalidad}}</p>
+        <div class="col-md-9">
+          <span v-if="data.instructores">
+            <b>Instructor:</b>
+            <ul>
+              <li v-for="(instructor, i) in data.instructores"
+                  :key="i">
+                {{instructor.nombre}}
+                <small v-if="instructor.small">({{instructor.small}})</small>
+              </li>
+            </ul>
+          </span>
+          <p>
+            <b>Duración:</b>
+            {{ data.duracionSemanas }} Semanas - {{ data.duracionHoras }} Horas
+          </p>
+          <p>
+            <b>Módulo:</b>
+            {{data.modulo}}
+          </p>
+          <p>
+            <b>Horario:</b>
+            {{data.horario}}
+          </p>
+          <p v-if="data.dirigido">
+            <b>Dirigido:</b> {{data.dirigido}}</p>
+          <span v-if="data.finalidades">
+            <b>Finalidades:</b>
+            <ul>
+              <li v-for="(finalidad, i) in data.finalidades"
+                  :key="i">
+                {{finalidad.nombre}}
+              </li>
+            </ul>
+          </span>
         </div>
       </div>
     </div>
@@ -62,23 +90,21 @@ import axios from "axios";
 
 export default {
   async asyncData({ params }) {
-    let curso = null;
-    let res = await axios.get(
+    let { data } = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos/${
         params.id
       }.json`
     );
-    curso = res.data;
-    return { curso };
+    return { data };
   },
   head() {
     return {
-      title: this.curso.nombre + " | Innovación Docente",
+      title: this.data.nombre + " | Innovación Docente",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.curso.finalidad
+          content: this.data.finalidad
         }
       ]
     };
