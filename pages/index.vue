@@ -13,15 +13,15 @@
         <p>Proyecto Ascendere</p>
         <button href="#"
                 class="btn btn-primary">GO TO COURSE</button>
-        <a href="#"
+        <a href="#index"
            class="arrow arrow-1">
           <span></span>
         </a>
-        <a href="#"
+        <a href="#index"
            class="arrow arrow-2">
           <span></span>
         </a>
-        <a href="#"
+        <a href="#index"
            class="arrow arrow-3">
           <span></span>
         </a>
@@ -29,13 +29,15 @@
     </header>
 
     <!-- Noticia, Curso, tip -->
+    <a name="index"></a>
     <section>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <div class="card card__one link">
               <figure class="card__img">
-                <img :src="require('~/static/img/innovacion/convocatorias.png')" alt="">
+                <img :src="require('~/static/img/innovacion/convocatorias.png')"
+                     alt="">
               </figure>
               <div class="notes-content"></div>
               <div class="card__desc">
@@ -48,7 +50,8 @@
           <div class="col-md-4">
             <div class="card card__one link">
               <figure class="card__img">
-                <img :src="require('~/static/img/innovacion/convocatorias.png')" alt="">
+                <img :src="require('~/static/img/innovacion/convocatorias.png')"
+                     alt="">
               </figure>
               <div class="notes-content"></div>
               <div class="card__desc">
@@ -61,7 +64,8 @@
           <div class="col-md-4">
             <div class="card card__one link">
               <figure class="card__img">
-                <img :src="require('~/static/img/innovacion/convocatorias.png')" alt="">
+                <img :src="require('~/static/img/innovacion/convocatorias.png')"
+                     alt="">
               </figure>
               <div class="notes-content"></div>
               <div class="card__desc">
@@ -70,7 +74,7 @@
                 <button class="btn">Leer Más</button>
               </div>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </section>
@@ -83,15 +87,18 @@
             <div class="liid-info border">
               <img :src="require('~/static/example.png')">
               <h2>LiiD UTPL</h2>
-              <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional.</p>
-              <button class="btn btn-large btn-primary">Leer Más</button>   
+              <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado
+                al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional.</p>
+              <button class="btn btn-large btn-primary">Leer Más</button>
             </div>
           </div>
           <div class="col-md-6 background-mustard">
             <div class="liid-info">
               <h2>Proyectos Actuales</h2>
-              <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos a explorar cada uno de los proyectos.</p>
-              <button class="btn btn-large btn-primary">Atrevete</button>  
+              <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas
+                areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos
+                a explorar cada uno de los proyectos.</p>
+              <button class="btn btn-large btn-primary">Atrevete</button>
             </div>
           </div>
         </div>
@@ -165,29 +172,29 @@
               <img class="img-avatar"
                    :src="require('@/static/avatar-icom.png')"
                    alt="Avatar">
-              <h3>Mgtr. Andrea Loaiza</h3>
-              <h4>Dirección de Planificación y Desarrollo Curricular</h4>
+              <h3>Ing. Nuve Briceño</h3>
+              <h4>Formación Docente</h4>
             </div>
             <div class="col-md-3 avatar">
               <img class="img-avatar"
                    :src="require('@/static/avatar-icom.png')"
                    alt="Avatar">
-              <h3>Mgtr. Paola Andrade</h3>
-              <h4>Coordinación General</h4>
+              <h3>Mgtr. Angela Salazar</h3>
+              <h4>Innovación Docente</h4>
             </div>
             <div class="col-md-3 avatar">
               <img class="img-avatar"
                    :src="require('@/static/avatar-icom.png')"
                    alt="Avatar">
-              <h3>Mgtr. Natalia Lutsak</h3>
-              <h4>Dirección de Posgrados</h4>
+              <h3>Mgtr. Lourdes Cueva</h3>
+              <h4>Evaluación Docente</h4>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer>
       <div class="footer-commo container">
         <div class="cards-news">
@@ -207,25 +214,42 @@
         <div class="row">
           <div class="col-lg-9">
             <div class="list-vertical">
-              <nuxt-link class="link-footer-title" :to="{name: 'innovacion-docente'}"><h3>Innovación Docente</h3></nuxt-link>
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'innovacion-docente'}">
+                <h3>Innovación Docente</h3>
+              </nuxt-link>
               <ul>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <nuxt-link  class="link-footer-title" :to="{name: 'formacion-docente-programa-formacion'}"><h3>Formación Docente</h3></nuxt-link>
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'formacion-docente-programa-formacion'}">
+                <h3>Formación Docente</h3>
+              </nuxt-link>
               <ul>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <nuxt-link class="link-footer-title" :to="{name: 'observatorio-edutendencias'}"> <h3>Observatorio EduTencencias</h3></nuxt-link>
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'observatorio-edutendencias'}">
+                <h3>Observatorio EduTencencias</h3>
+              </nuxt-link>
               <ul>
                 <li>Aula Divertida</li>
                 <li>Docentes del Futuro</li>

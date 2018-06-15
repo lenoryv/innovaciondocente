@@ -14,11 +14,11 @@
             <i class="fa fa-caret-down"></i>
           </nuxt-link>
           <div class="dropdown-content">
+            <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-proyecto-mentores'}">Proyecto Mentores</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
-            <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
             <a target="_blank"
                rel="noopener"
                href="https://retos.utpl.edu.ec/">Retos</a>
