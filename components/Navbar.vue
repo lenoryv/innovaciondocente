@@ -207,11 +207,11 @@ nav {
           <li class="nav__list-item ">
             <nuxt-link :to="{name: 'innovacion-docente'}">Innovación Docente</nuxt-link>
             <ul>
+              <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
               <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+              <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Portafolio de Buenas Prácticas</nuxt-link>
               <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
               <nuxt-link :to="{name: 'innovacion-docente-proyecto-mentores'}">Proyecto Mentores</nuxt-link>
-              <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Repositorio de Buenas Prácticas</nuxt-link>
-              <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
               <a target="_blank"
                  rel="noopener"
                  href="https://retos.utpl.edu.ec/">Retos</a>
@@ -226,7 +226,11 @@ nav {
             </ul>
           </li>
           <li class="nav__list-item">
-            <nuxt-link :to="{name: 'observatorio-edutendencias'}">Observatorio EduTencencias</nuxt-link>
+            <nuxt-link :to="{name: 'observatorio-edutendencias'}">Observatorio EduTendencias</nuxt-link>
+            <ul>
+              <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion-aula-divertida'}">Tips de Innovación</nuxt-link>
+              <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion-podcast'}">Podcast</nuxt-link>
+            </ul>
           </li>
           <li class="nav__list-item">
             <nuxt-link :to="{name: 'admin'}">

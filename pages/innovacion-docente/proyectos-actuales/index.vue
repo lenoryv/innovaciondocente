@@ -8,7 +8,7 @@
         <figure class="card__img">
           <img class="img"
                @click="click_boton"
-               src="~/static/img/banner-formacion-docente.jpg"
+               :src="video.img"
                alt="imagen-div">
         </figure>
         <div class="card__desc">
@@ -42,28 +42,25 @@
   height: 211px !important;
   width: 100% !important;
 }
-/* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none; 
+  position: fixed; 
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4); 
 }
 
-/* Modal Content/Box */
 .modal-content {
-  margin: 5% auto; /* 15% from the top and centered */
+  margin: 5% auto; 
   padding: 0;
-  width: 65%; /* Could be more or less, depending on screen size */
+  width: 65%; 
 }
 
-/* The Close Button */
 .close {
   color: #aaa;
   float: right;
