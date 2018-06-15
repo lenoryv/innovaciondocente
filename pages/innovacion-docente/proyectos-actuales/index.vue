@@ -2,6 +2,7 @@
   <section class="container"
            @click="click_ventana">
     <h1>¡Proyectos Actuales!</h1>
+    <div class="row">
     <div v-for="(video, index) in videos"
          :key="index">
       <div class="card card__one link">
@@ -12,10 +13,11 @@
                alt="imagen-div">
         </figure>
         <div class="card__desc">
-          <h3>{{video.title}}</h3>
-          <p>{{video.desc}}</p>
+          <h3 class="titulo">{{video.nombre}}</h3>
+          <p>{{video.descripcion}}</p>
         </div>
       </div>
+    </div>
     </div>
     <div v-for="(video, index) in videos"
          :key="index">
@@ -26,7 +28,7 @@
                 @click="click_span">&times;</span>
           <iframe width="854"
                   height="480"
-                  :src="video.vid"
+                  :src="video.link"
                   frameborder="0"
                   allow="autoplay; encrypted-media"
                   allowfullscreen></iframe>
@@ -37,7 +39,11 @@
 </template>
 
 <style lang="scss">
+@import "assets/variables";
 @import "assets/card";
+.titulo{
+  color: $color-warning-dark !important;
+}
 .img {
   height: 211px !important;
   width: 100% !important;
@@ -103,19 +109,16 @@ export default {
     };
   },
   methods: {
-    // When the user clicks on the button, open the modal
     click_boton() {
       let modal = document.getElementById("myModal");
       modal.style.display = "block";
     },
 
-    // When the user clicks on <span> (x), close the modal
     click_span() {
       let modal = document.getElementById("myModal");
       modal.style.display = "none";
     },
 
-    // When the user clicks anywhere outside of the modal, close it
     click_ventana(event) {
       let modal = document.getElementById("myModal");
       if (event.target == modal) {

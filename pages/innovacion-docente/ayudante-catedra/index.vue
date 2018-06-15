@@ -37,17 +37,17 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <a class="enlace" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%201%20PLANIFICACIO%CC%81N%20DE%20ACTIVIDADES%20(1).docx">
-                        <i class="fas fa-file-word"></i>Planificación de actividades de Ayudante de Cátedra (Anexo I)
+                        <i class="fas fa-file-word"></i> Planificación de actividades de Ayudante de Cátedra (Anexo I)
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <a class="enlace" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%202%20EVALUACIO%CC%81N%20DE%20DESEMPEN%CC%83O%20DEL%20AYUDANTE%20DE%20CA%CC%81TEDRA(1).docx">
-                        <i class="fas fa-file-word"></i>Planificación de actividades de Ayudante de Cátedra (Anexo 2)
+                        <i class="fas fa-file-word"></i> Planificación de actividades de Ayudante de Cátedra (Anexo 2)
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <a class="enlace" target="_blank" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20ayudante%20de%20ca%CC%81tedra%20abril-agosto%202018.pdf">
-                        <i class="fas fa-file-pdf"></i>Conoce el proyecto completo
+                        <i class="fas fa-file-pdf"></i> Conoce el proyecto completo
                     </a>
                 </div>
             </div>
@@ -71,6 +71,9 @@ h4 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+i{
+  color: $color-warning-dark;
 }
 </style>
 
