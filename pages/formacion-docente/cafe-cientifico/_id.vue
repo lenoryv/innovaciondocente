@@ -3,20 +3,20 @@
     <header class="parallax"
             :style="'background-image: url('+encuentro.img+');'"></header>
     <section class="container">
-      <h1>{{encuentro.tema}}</h1>
+      <h1>{{encuentro.nombre}}</h1>
       <small>
         <i class="fas fa-calendar-alt"></i> {{encuentro.fecha}}</small>
       <hr>
-      <p>{{encuentro.desc}}</p>
-      <h2>
+      <p>{{encuentro.contenido}}</p>
+      <h2 v-if="encuentro.invitados">
         <i class="fas fa-users"></i> Invitados
       </h2>
       <div class="row">
         <div class="col-md-6"
              v-for="(invitado, index) in encuentro.invitados"
              :key="index">
-          <strong>{{invitado.name}}: </strong>
-          <p>{{invitado.desc}}</p>
+          <strong>{{invitado.nombre}}: </strong>
+          <p>{{invitado.descripcion}}</p>
         </div>
       </div>
       <div class="row">
@@ -37,19 +37,21 @@ import axios from "axios";
 export default {
   async asyncData({ params }) {
     let res = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros/${
+        params.id
+      }.json`
     );
 
     return { encuentro: res.data };
   },
   head() {
     return {
-      title: this.encuentro.tema + " | Innovación Docente",
+      title: this.encuentro.nombre + " | Innovación Docente",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.encuentro.desc
+          content: this.encuentro.contenido
         }
       ]
     };
@@ -62,8 +64,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "assets/variables";
 .parallax {
   height: 100vh;
+  background-color: $color-primary;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
