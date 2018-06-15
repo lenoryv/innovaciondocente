@@ -112,12 +112,12 @@ import axios from "axios";
 export default {
   data() {
     let forma = {
-      nombre: "",
-      apellido: "",
+      nombre: null,
+      apellido: null,
       ciudad: "Loja",
-      telefono: 0,
-      whatsapp: true,
-      titulacion: "",
+      telefono: null,
+      whatsapp: null,
+      titulacion: null,
       universidad: "UTPL"
     };
     return {
