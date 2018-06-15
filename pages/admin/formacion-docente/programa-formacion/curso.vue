@@ -12,15 +12,15 @@
       <span v-show="errors.has('nombre')"
             class="alert alert-danger">Nombre es requerido</span>
     </div>
-    <!--link-->
+    <!--img-->
     <div class="form-group">
-      <label for="link">Link de la imagen</label>
-      <input v-model="forma.link"
+      <label for="img">Link de la imagen</label>
+      <input v-model="forma.img"
              type="text"
-             name="link"
+             name="img"
              class="form-control"
              v-validate="'required'">
-      <span v-show="errors.has('link')"
+      <span v-show="errors.has('img')"
             class="alert alert-danger">Imagen es requerido</span>
     </div>
     <!--fecha-->
@@ -142,10 +142,7 @@
       <input v-model="forma.dirigido"
              type="text"
              name="dirigido"
-             class="form-control"
-             v-validate="'required'">
-      <span v-show="errors.has('dirigido')"
-            class="alert alert-danger">Dirigido es requerido</span>
+             class="form-control">
     </div>
     <!--urlContenido-->
     <div class="form-group">
@@ -208,7 +205,7 @@ export default {
   data() {
     let forma = {
       nombre: null,
-      link: null,
+      imgW: null,
       fecha: null,
       instructores: [{ nombre: null, small: null }],
       postulacion: null,
