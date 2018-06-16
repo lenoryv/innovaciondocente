@@ -11,19 +11,18 @@
       <div class="header-content">
         <h1>Decide ser más</h1>
         <p>Proyecto Ascendere</p>
-        <button href="#"
-                class="btn btn-primary">GO TO COURSE</button>
+        <button href="#" class="btn btn-primary">GO TO COURSE</button>
         <a href="#"
            class="arrow arrow-1">
-          <span></span>
+          <span @click="pageScroll()"></span>
         </a>
         <a href="#"
            class="arrow arrow-2">
-          <span></span>
+          <span @click="pageScroll()"></span>
         </a>
         <a href="#"
            class="arrow arrow-3">
-          <span></span>
+          <span @click="pageScroll()"></span>
         </a>
       </div>
     </header>
@@ -327,6 +326,19 @@
 
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    pageScroll() {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+      });
+    }
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 @import "assets/variables";
