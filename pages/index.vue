@@ -32,45 +32,102 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <div class="card card__one link">
-              <figure class="card__img">
-                <img :src="require('~/static/img/innovacion/convocatorias.png')" alt="">
-              </figure>
-              <div class="notes-content"></div>
-              <div class="card__desc">
-                <h3>Noticia Reciente</h3>
-                <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
-                <button class="btn">Leer Más</button>
+          <div class="col-lg-4 col-md-6">
+            <div class="card_4">
+              <div class="card_4__thumb">
+                <a href="#"><img src="https://images.unsplash.com/photo-1512466699224-9d8217244131?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4b6f389eb54cb8e27ee8ee5d4040a5d7&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"></a>
+              </div>
+              <div class="card_4__date">
+                <span class="card_4__date__day">23</span>
+                <span class="card_4__date__month">Mai</span>
+              </div>
+              <div class="card_4__body">
+                <div class="card_4__category">
+                  <a href="#">Category</a>
+                </div>
+                <div class="card_4__title">
+                  <a href="#">Vivamus elementum semper nisivi troscup</a>
+                </div>
+                <div class="card_4__subtitle">Donec posuere vulputate</div>
+                <div class="card_4__description">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inv</p>
+                </div>
+                <div class="card_4__footer">
+                  <nuxt-link class=""
+                             :to="{name: ''}">
+                    Leer más +
+                  </nuxt-link>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card card__one link">
-              <figure class="card__img">
-                <img :src="require('~/static/img/innovacion/convocatorias.png')" alt="">
-              </figure>
-              <div class="notes-content"></div>
-              <div class="card__desc">
-                <h3>Noticia Reciente</h3>
-                <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
-                <button class="btn">Leer Más</button>
+          <div class="col-lg-4 col-md-6">
+            <div class="card_4">
+              <div class="card_4__thumb">
+                <a href="#"><img src="https://images.unsplash.com/photo-1512466699224-9d8217244131?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4b6f389eb54cb8e27ee8ee5d4040a5d7&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"></a>
+              </div>
+              <div class="card_4__date">
+                <span class="card_4__date__day">23</span>
+                <span class="card_4__date__month">Mai</span>
+              </div>
+              <div class="card_4__body">
+                <div class="card_4__category">
+                  <a href="#">Category</a>
+                </div>
+                <div class="card_4__title">
+                  <a href="#">Vivamus elementum semper nisivi troscup</a>
+                </div>
+                <div class="card_4__subtitle">Donec posuere vulputate</div>
+                <div class="card_4__description">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inv</p>
+                </div>
+                <div class="card_4__footer">
+                  <nuxt-link class=""
+                             :to="{name: ''}">
+                    Leer más +
+                  </nuxt-link>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card card__one link">
-              <figure class="card__img">
-                <img :src="require('~/static/img/innovacion/convocatorias.png')" alt="">
-              </figure>
-              <div class="notes-content"></div>
-              <div class="card__desc">
-                <h3>Noticia Reciente</h3>
-                <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
-                <button class="btn">Leer Más</button>
+          <div class="col-lg-4 col-md-12">
+            <div class="card_4">
+              <div class="card_4__thumb">
+                <a href="#"><img src="https://images.unsplash.com/photo-1512466699224-9d8217244131?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4b6f389eb54cb8e27ee8ee5d4040a5d7&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"></a>
+              </div>
+              <div class="card_4__date">
+                <span class="card_4__date__day">23</span>
+                <span class="card_4__date__month">Mai</span>
+              </div>
+              <div class="card_4__body">
+                <div class="card_4__category">
+                  <a href="#">Category</a>
+                </div>
+                <div class="card_4__title">
+                  <a href="#">Vivamus elementum semper nisivi troscup</a>
+                </div>
+                <div class="card_4__subtitle">Donec posuere vulputate</div>
+                <div class="card_4__description">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit</p>
+                </div>
+                <div class="card_4__footer">
+                  <nuxt-link class=""
+                             :to="{name: ''}">
+                    Leer más +
+                  </nuxt-link>
+                </div>
               </div>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </section>
@@ -83,15 +140,18 @@
             <div class="liid-info border">
               <img :src="require('~/static/example.png')">
               <h2>LiiD UTPL</h2>
-              <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional.</p>
-              <button class="btn btn-large btn-primary">Leer Más</button>   
+              <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado
+                al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional.</p>
+              <button class="btn btn-large btn-primary">Leer Más</button>
             </div>
           </div>
           <div class="col-md-6 background-mustard">
             <div class="liid-info">
               <h2>Proyectos Actuales</h2>
-              <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos a explorar cada uno de los proyectos.</p>
-              <button class="btn btn-large btn-primary">Atrevete</button>  
+              <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas
+                areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos
+                a explorar cada uno de los proyectos.</p>
+              <button class="btn btn-large btn-primary">Atrevete</button>
             </div>
           </div>
         </div>
@@ -187,10 +247,10 @@
       </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer>
       <div class="footer-commo container">
-        <div class="cards-news">
+        <div class="card_4s-news">
           <p>Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada.</p>
           <div class="form-row">
             <label class="label">
@@ -207,25 +267,42 @@
         <div class="row">
           <div class="col-lg-9">
             <div class="list-vertical">
-              <nuxt-link class="link-footer-title" :to="{name: 'innovacion-docente'}"><h3>Innovación Docente</h3></nuxt-link>
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'innovacion-docente'}">
+                <h3>Innovación Docente</h3>
+              </nuxt-link>
               <ul>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <nuxt-link  class="link-footer-title" :to="{name: 'formacion-docente-programa-formacion'}"><h3>Formación Docente</h3></nuxt-link>
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'formacion-docente-programa-formacion'}">
+                <h3>Formación Docente</h3>
+              </nuxt-link>
               <ul>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <nuxt-link class="link-footer-title" :to="{name: 'observatorio-edutendencias'}"> <h3>Observatorio EduTencencias</h3></nuxt-link>
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'observatorio-edutendencias'}">
+                <h3>Observatorio EduTencencias</h3>
+              </nuxt-link>
               <ul>
                 <li>Aula Divertida</li>
                 <li>Docentes del Futuro</li>
@@ -497,10 +574,10 @@ footer {
   color: #fff;
   text-align: center;
 }
-.cards-news {
+.card_4s-news {
   margin-bottom: 3rem;
 }
-.cards-news p {
+.card_4s-news p {
   font-size: 1.5em;
 }
 .input-text {
