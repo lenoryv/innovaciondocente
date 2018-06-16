@@ -22,7 +22,7 @@
 $color-bg-card: $color-background;
 $card-padding: 15px;
 $margin-top: 15px;
-.card {
+.card{
   position: relative;
   margin: $margin-top 0;
   background: lighten($color-bg-card, 3%);
@@ -132,4 +132,184 @@ $margin-top: 15px;
 
 .link {
   cursor: pointer;
+}
+
+
+$bg: #d8e0e5;
+$blanc: #fff;
+$noir: #000;
+$text: #666c74;
+$footer: #a3a9ab;
+$duration: 0.3s;
+
+$heightimg: 200px;
+
+$heighthoverimg: 145px;
+$heightbody: 185px;
+
+.card_4 {
+  width: 100%;
+  background: $blanc;
+  box-shadow: 0 0 20px rgba($noir, 0.1);
+  transition: box-shadow $duration;
+  margin-bottom: 1rem;
+  &:hover {
+    box-shadow: 0 0 50px rgba($noir, 0.3);
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.card_4__date {
+  background: $color-primary;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: $blanc;
+  text-align: center;
+  line-height: 13px;
+  font-weight: bold;
+  padding-top: 10px;
+  &__day {
+    display: block;
+    font-size: 14px;
+  }
+  &__month {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+}
+
+.card_4__thumb {
+  height: $heightimg;
+  overflow: hidden;
+  background-color: $noir;
+  transition: height $duration;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: $heightimg;
+    display: block;
+    opacity: 1;
+    transition: opacity $duration, transform $duration;
+    transform: scale(1);
+  }
+  .card_4:hover & img {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+  .card_4:hover & {
+    height: $heightimg - $heighthoverimg;
+  }
+}
+
+.card_4__body {
+  position: relative;
+  padding: 20px;
+  height: $heightbody;
+  transition: height $duration;
+  .card_4:hover & {
+    height: $heightbody + $heighthoverimg;
+  }
+}
+
+.card_4__category {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  height: 25px;
+  padding: 0 15px;
+  background: $color-primary;
+  color: $blanc;
+  font-size: 11px;
+  line-height: 25px;
+  a {
+    color: $blanc;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.card_4__title {
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 22px;
+  color: $noir;
+  font-weight: bold;
+  .card_4:hover & {
+    animation: titleBlur $duration;
+  }
+}
+
+.card_4__subtitle {
+  margin: 0;
+  padding: 0 0 10px 0;
+  color: $color-primary;
+  font-size: 19px;
+  .card_4:hover & {
+    animation: subtitleBlur $duration;
+  }
+}
+
+.card_4__description {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 65px;
+  overflow: auto;
+  height: $heighthoverimg - 15;
+  padding: 0 0 0 0;
+
+  color: $text;
+  font-size: 14px;
+  line-height: 27px;
+
+  opacity: 0;
+  transition: opacity $duration - 0.1s, transform $duration - 0.1s;
+  transition-delay: 0s;
+  transform: translateY(25px);
+  .card_4:hover & {
+    opacity: 1;
+    transition-delay: 0.1s;
+    transform: translateY(0);
+  }
+}
+
+.card_4__footer {
+  padding: 0 0 10px 0;
+  margin: 0;
+  position: absolute;
+  color: $footer;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-size: 11px;
+}
+
+@keyframes titleBlur {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba($noir, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px rgba($noir, 0);
+  }
+}
+
+@keyframes subtitleBlur {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba($color-primary, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px rgba($color-primary, 0);
+  }
 }
