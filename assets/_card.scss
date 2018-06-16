@@ -21,7 +21,8 @@
 ///  </div>
 
 ///  card-5
-///  <div class="card-5">
+///     <section>
+///       <div class="card-5" or class"card-5 alt">
 ///        <img class="photo"
 ///             src="">
 ///        <div class="description">
@@ -30,21 +31,10 @@
 ///          <div class="border"></div>
 ///          <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati
 ///            enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-///          <a href="#">Read More</a>
+///          <a href="#">Leer más +</a>
 ///        </div>
 ///      </div>
-///      <div class="card-5 alt">
-///        <img class="photo"
-///             src="">
-///        <div class="description">
-///          <h1>Mastering the Language asfsfsdfsdfsd d</h1>
-///          <h2>Java is not the same as JavaScript</h2>
-///          <div class="border-alt"></div>
-///          <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati
-///            enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-///          <a href="#">Read More</a>
-///        </div>
-///      </div>
+///     </section>
       
 $color-bg-card: $color-background;
 $card-padding: 15px;
@@ -395,14 +385,12 @@ $heightbody: 185px;
     position: relative;
     height: 200px;
     h1 {
-      font-family: "Roboto";
       line-height: 1em;
       margin: 0 0 10px 0;
     }
 
     h2 {
       color: #333 / 1.5;
-      font-family: "Open Sans";
       line-height: 1.2em;
       text-transform: uppercase;
       font-size: 1em;
