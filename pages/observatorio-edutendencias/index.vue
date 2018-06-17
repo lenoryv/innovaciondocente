@@ -5,28 +5,28 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="overlay"></div>
-                <img src="@/static/img/1.jpg" alt="aula-divertida" class="image">
+                <img src="@/static/img/aula.jpg" alt="aula-divertida" class="image">
                 <div class="middle">
                     <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-primary">Ver mas</a>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="overlay"></div>
-                <img src="@/static/img/2.jpg" alt="docentes-futuro" class="image">
+                <img src="@/static/img/docente2.jpg" alt="docentes-futuro" class="image">
                 <div class="middle">
                      <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-primary">Ver mas</a>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="overlay"></div>
-                <img src="@/static/img/1.jpg" alt="podcast" class="image">
+                <img src="@/static/img/podcast.jpg" alt="podcast" class="image">
                 <div class="middle">
                      <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-primary">Ver mas</a>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="overlay"></div>
-                <img src="@/static/img/2.jpg" alt="videos" class="image">
+                <img src="@/static/img/videos.jpg" alt="videos" class="image">
                 <div class="middle">
                      <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-primary">Ver mas</a>
                 </div>
@@ -42,6 +42,7 @@
   padding: 0;
   margin: 0;
   height: 100vh;
+  width: 100vw;
 }
 
 .middle {
