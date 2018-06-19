@@ -12,7 +12,6 @@ module.exports = {
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 }
     },
-    middleware: 'router-auth',
     ...routerBase
   },
   /*
@@ -79,8 +78,7 @@ module.exports = {
     vendor: [
       'vee-validate',
       'axios',
-      'vue-lazyload',
-      'firebase'
+      'vue-lazyload'
     ]
   },
   css: [
@@ -94,8 +92,7 @@ module.exports = {
   plugins: [
     { src: '~/plugins/vee-validate.js', ssr: true },
     { src: '~/plugins/filters.js', ssr: true },
-    { src: '~/plugins/lazyload.js', ssr: true },
-    { src: '~/plugins/fireauth.js', ssr: true }
+    { src: '~/plugins/lazyload.js', ssr: true }
   ]
 }
 

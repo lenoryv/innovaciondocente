@@ -5,7 +5,7 @@
       <div class="header-overlay"></div>
       <div class="fondo">
         <img class="img-move"
-             :src="require('@/static/imgIndex.jpg')"
+             :src="require('@/static/index.jpg')"
              alt="">
       </div>
       <div class="header-content">
@@ -13,56 +13,120 @@
         <p>Proyecto Ascendere</p>
         <button href="#"
                 class="btn btn-primary">GO TO COURSE</button>
-        <a href="#"
+        <a href="#index"
            class="arrow arrow-1">
-          <span></span>
+          <span @click="pageScroll()"></span>
         </a>
-        <a href="#"
+        <a href="#index"
            class="arrow arrow-2">
-          <span></span>
+          <span @click="pageScroll()"></span>
         </a>
-        <a href="#"
+        <a href="#index"
            class="arrow arrow-3">
-          <span></span>
+          <span @click="pageScroll()"></span>
         </a>
       </div>
     </header>
 
     <!-- Noticia, Curso, tip -->
+    <a name="index"></a>
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <img class="notes-img"
-                 :src="require('~/static/img/innovacion/convocatorias.png')"
-                 alt="convocatoria">
-            <div class="notes-content"></div>
-            <div class="notes-text">
-              <h3>Noticia Reciente</h3>
-              <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
-              <button class="btn">Leer Más</button>
+          <div class="col-lg-4 col-md-6">
+            <div class="card_4">
+              <div class="card_4__thumb">
+                <a href="#"><img src="https://images.unsplash.com/photo-1512466699224-9d8217244131?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4b6f389eb54cb8e27ee8ee5d4040a5d7&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"></a>
+              </div>
+              <div class="card_4__date">
+                <span class="card_4__date__day">23</span>
+                <span class="card_4__date__month">Mai</span>
+              </div>
+              <div class="card_4__body">
+                <div class="card_4__category">
+                  <a href="#">Category</a>
+                </div>
+                <div class="card_4__title">
+                  <a href="#">Vivamus elementum semper nisivi troscup</a>
+                </div>
+                <div class="card_4__subtitle">Donec posuere vulputate</div>
+                <div class="card_4__description">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inv</p>
+                </div>
+                <div class="card_4__footer">
+                  <nuxt-link class=""
+                             :to="{name: ''}">
+                    Leer más +
+                  </nuxt-link>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <img class="notes-img"
-                 :src="require('~/static/img/innovacion/proyectos-actuales.png')"
-                 alt="proyectos-actuales">
-            <div class="notes-content"></div>
-            <div class="notes-text">
-              <h3>Curso Reciente</h3>
-              <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
-              <button class="btn btn">Leer Más</button>
+          <div class="col-lg-4 col-md-6">
+            <div class="card_4">
+              <div class="card_4__thumb">
+                <a href="#"><img src="https://images.unsplash.com/photo-1512466699224-9d8217244131?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4b6f389eb54cb8e27ee8ee5d4040a5d7&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"></a>
+              </div>
+              <div class="card_4__date">
+                <span class="card_4__date__day">23</span>
+                <span class="card_4__date__month">Mai</span>
+              </div>
+              <div class="card_4__body">
+                <div class="card_4__category">
+                  <a href="#">Category</a>
+                </div>
+                <div class="card_4__title">
+                  <a href="#">Vivamus elementum semper nisivi troscup</a>
+                </div>
+                <div class="card_4__subtitle">Donec posuere vulputate</div>
+                <div class="card_4__description">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inv</p>
+                </div>
+                <div class="card_4__footer">
+                  <nuxt-link class=""
+                             :to="{name: ''}">
+                    Leer más +
+                  </nuxt-link>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <img class="notes-img"
-                 :src="require('~/static/img/innovacion/proyecto-mentores.png')"
-                 alt="proyecto-mentores">
-            <div class="notes-content"></div>
-            <div class="notes-text">
-              <h3>Tip Reciente</h3>
-              <p>Rajoy ha presidido este viernes la reunión del Consejo de Ministros, a la... </p>
-              <button class="btn">Leer Más</button>
+          <div class="col-lg-4 col-md-12">
+            <div class="card_4">
+              <div class="card_4__thumb">
+                <a href="#"><img src="https://images.unsplash.com/photo-1512466699224-9d8217244131?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4b6f389eb54cb8e27ee8ee5d4040a5d7&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"></a>
+              </div>
+              <div class="card_4__date">
+                <span class="card_4__date__day">23</span>
+                <span class="card_4__date__month">Mai</span>
+              </div>
+              <div class="card_4__body">
+                <div class="card_4__category">
+                  <a href="#">Category</a>
+                </div>
+                <div class="card_4__title">
+                  <a href="#">Vivamus elementum semper nisivi troscup</a>
+                </div>
+                <div class="card_4__subtitle">Donec posuere vulputate</div>
+                <div class="card_4__description">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit, illum itaque minus inventore, omnis et nisi rem facere.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente doloremque
+                    recusandae, modi dolore velit</p>
+                </div>
+                <div class="card_4__footer">
+                  <nuxt-link class=""
+                             :to="{name: ''}">
+                    Leer más +
+                  </nuxt-link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -75,17 +139,20 @@
         <div class="row">
           <div class="col-md-6">
             <div class="liid-info border">
-              <img :src="require('~/static/example.png')">
+              <img :src="require('~/static/ascendere.png')">
               <h2>LiiD UTPL</h2>
-              <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional.</p>
-              <button class="btn btn-large btn-primary">Leer Más</button>   
+              <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado
+                al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional.</p>
+              <button class="btn btn-large btn-primary">Leer Más</button>
             </div>
           </div>
           <div class="col-md-6 background-mustard">
             <div class="liid-info">
               <h2>Proyectos Actuales</h2>
-              <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos a explorar cada uno de los proyectos.</p>
-              <button class="btn btn-large btn-primary">Atrevete</button>  
+              <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas
+                areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos
+                a explorar cada uno de los proyectos.</p>
+              <button class="btn btn-large btn-primary">Atrevete</button>
             </div>
           </div>
         </div>
@@ -131,7 +198,7 @@
     </section>
 
     <!-- Quienes somos-->
-    <section class="quienes-somos">
+    <section class="quienes-somos quienes-overlay">
       <div class="quienes-content">
         <h2>QUIENES SOMOS</h2>
         <p class="section-text-center">A través de iniciativas como
@@ -159,32 +226,32 @@
               <img class="img-avatar"
                    :src="require('@/static/avatar-icom.png')"
                    alt="Avatar">
-              <h3>Mgtr. Andrea Loaiza</h3>
-              <h4>Dirección de Planificación y Desarrollo Curricular</h4>
+              <h3>Ing. Nuve Briceño</h3>
+              <h4>Formación Docente</h4>
             </div>
             <div class="col-md-3 avatar">
               <img class="img-avatar"
                    :src="require('@/static/avatar-icom.png')"
                    alt="Avatar">
-              <h3>Mgtr. Paola Andrade</h3>
-              <h4>Coordinación General</h4>
+              <h3>Mgtr. Angela Salazar</h3>
+              <h4>Innovación Docente</h4>
             </div>
             <div class="col-md-3 avatar">
               <img class="img-avatar"
                    :src="require('@/static/avatar-icom.png')"
                    alt="Avatar">
-              <h3>Mgtr. Natalia Lutsak</h3>
-              <h4>Dirección de Posgrados</h4>
+              <h3>Mgtr. Lourdes Cueva</h3>
+              <h4>Evaluación Docente</h4>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer>
       <div class="footer-commo container">
-        <div class="cards-news">
+        <div class="card_4s-news">
           <p>Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada.</p>
           <div class="form-row">
             <label class="label">
@@ -201,25 +268,44 @@
         <div class="row">
           <div class="col-lg-9">
             <div class="list-vertical">
-              <nuxt-link class="link-footer-title" :to="{name: 'innovacion-docente'}"><h3>Innovación Docente</h3></nuxt-link>
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'innovacion-docente'}">
+                <h3>Innovación Docente</h3>
+              </nuxt-link>
               <ul>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <nuxt-link  class="link-footer-title" :to="{name: 'formacion-docente-programa-formacion'}"><h3>Formación Docente</h3></nuxt-link>
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'formacion-docente-programa-formacion'}">
+                <h3>Formación Docente</h3>
+              </nuxt-link>
               <ul>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
-                <nuxt-link class="link-footer" :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
               </ul>
             </div>
             <div class="list-vertical">
-              <nuxt-link class="link-footer-title" :to="{name: 'observatorio-edutendencias'}"> <h3>Observatorio EduTencencias</h3></nuxt-link>
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'observatorio-edutendencias'}">
+                <h3>Observatorio EduTencencias</h3>
+              </nuxt-link>
               <ul>
                 <li>Aula Divertida</li>
                 <li>Docentes del Futuro</li>
@@ -244,9 +330,23 @@
 
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    pageScroll() {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+      });
+    }
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/card";
 
 h1 {
   color: $color-secondary;
@@ -256,20 +356,17 @@ h1 {
   font-size: 120px;
   letter-spacing: 5px;
 }
-
 h2 {
   text-align: center;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 p {
   text-align: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-
 .header {
   object-fit: cover;
   overflow: hidden;
@@ -280,7 +377,6 @@ p {
   color: $color-secondary;
   text-align: center;
 }
-
 .fondo {
   left: 0;
   width: 100%;
@@ -290,7 +386,6 @@ p {
   position: absolute;
   z-index: -2;
 }
-
 .img-move {
   object-fit: cover;
   width: 100%;
@@ -309,48 +404,31 @@ p {
     }
   }
 }
-
 .header-overlay {
   height: 100vh;
   width: 100%;
   position: absolute;
   left: 0;
-  background: rgba(20, 52, 106, 0.712);
+  background: $color-section;
+  opacity: 0.4;
   z-index: -1;
 }
-
 .header-content {
   margin: auto;
   text-align: center;
 }
-
 .header-content h1 {
   font-size: 50px;
   margin-bottom: 0;
 }
-
 .header-content p {
   font-size: 1.5rem;
   display: block;
   padding-bottom: 2rem;
 }
-
-.notes-text {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 100%;
-  padding: 15px 16px;
-  text-align: center;
-}
-
-.notes-text:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-}
-
 .col-md-4 {
   padding: 10px;
 }
-
 .header-content a {
   position: absolute;
   bottom: 20px;
@@ -365,19 +443,15 @@ p {
   text-decoration: none;
   transition: opacity 0.3s;
 }
-
 .arrow {
   padding-top: 70px;
 }
-
 .arrow-1 {
   padding-top: 60px;
 }
-
 .arrow-2 {
   padding-top: 50px;
 }
-
 .arrow span {
   position: absolute;
   top: 0;
@@ -418,24 +492,20 @@ p {
     }
   }
 }
-
 .notes-content {
   border-top: 4px solid $color-section;
 }
-
 .quienes-somos {
   height: 100%;
   width: 100%;
   align-items: center;
   color: $color-secondary;
 }
-
 .quienes-content {
   padding: 50px;
   text-align: center;
   align-items: center;
 }
-
 .img-avatar {
   vertical-align: middle;
   width: 70px;
@@ -443,7 +513,6 @@ p {
   border-radius: 50%;
   margin: 10px;
 }
-
 .img-background {
   object-fit: cover;
   width: 100%;
@@ -453,25 +522,21 @@ p {
   opacity: 1;
   z-index: -1;
 }
-
 .avatar {
   text-align: center;
   padding: 10px;
 }
-
 .avatar h3 {
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .avatar h4 {
   font-weight: normal;
   font-style: italic;
   letter-spacing: 1px;
   color: #777;
 }
-
 .section-text-center {
   font-size: 22px;
   width: 80%;
@@ -482,35 +547,32 @@ p {
   letter-spacing: 0.02em;
   font-weight: 200;
 }
-
 .section-text p {
   text-align: left;
   padding: 10px;
 }
-
 .section-text h3 {
   text-align: left;
   padding: 10px;
 }
-
 .avatar:hover {
   .img-avatar {
     transition: transform ease-in-out 0.25s;
     transform: scale(1.1);
   }
 }
-
 .quienes-somos {
-  background-image: url("../static/team-bg.jpg");
+  background-image: url("../static/quienes-somos.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: cover;
+  background-position: center center;
+  display: block;
 }
-
 .cafe-cientifico {
   color: #fff;
   background: #0a4784;
 }
-
 .img-cafe {
   object-fit: cover;
   height: 100%;
@@ -518,7 +580,6 @@ p {
   padding: 0;
   margin: 0;
 }
-
 figure {
   margin-top: 1rem;
   width: 100%;
@@ -533,10 +594,10 @@ footer {
   color: #fff;
   text-align: center;
 }
-.cards-news {
+.card_4s-news {
   margin-bottom: 3rem;
 }
-.cards-news p {
+.card_4s-news p {
   font-size: 1.5em;
 }
 .input-text {
@@ -610,7 +671,7 @@ footer li {
   color: $color-font-light;
 }
 .liid-info {
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
   height: 80vh;
   display: table-cell;
   vertical-align: middle;
@@ -623,11 +684,23 @@ footer li {
   height: 200px;
   width: 200px;
 }
-
 .background-mustard {
   background: $color-warning;
 }
-
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin: 1rem 0 1rem;
+  height: 0;
+  overflow: hidden;
+}
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 992px) {
   .content {
     padding: 0 3rem 0 3rem;

@@ -1,43 +1,60 @@
 <template>
-  <div class="container">
+  <div class="container"
+       v-if="data">
     <h1>
       Café Científico
     </h1>
     <section>
       <h2>Banner</h2>
       <div class="row">
-        <div class="col-md-6">
-          <img src=""
+        <div class="col-md-8">
+          <img :src="data.banner"
                alt="Banner">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <h3>Nuevo Banner</h3>
 
         </div>
       </div>
-    </section>
-    <section>
+      <br>
       <h3>Portafolio de Encuentros</h3>
+      <nuxt-link :to="{name : 'admin-formacion-docente-cafe-cientifico-encuentro'}"
+                 class="btn btn-success btn-sm">
+        Agregar Nuevo Encuentro
+      </nuxt-link>
       <div style="overflow-x:auto;">
-        <!--
         <table>
           <tr>
             <th>Nombre</th>
             <th>Fecha</th>
-            <th>Descripcion</th>
             <th>Opciones</th>
           </tr>
-          <tr>
-            <td>Will</td>
-            <td>Smith</td>
-            <td>50</td>
-            <td>50</td>
+          <tr v-for="(encuentro, key) in data.encuentros"
+              v-if="encuentro"
+              :key="key">
+            <td>
+              <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id:key}}">
+                {{encuentro.nombre | slice(0,70) | capitalize}}
+              </nuxt-link>
+            </td>
+            <td>{{encuentro.fecha}}</td>
+            <td>
+              <!--
+                TODO: add modify
+              <nuxt-link :to="{name: 'admin-formacion-docente-cafe-cientifico-encuentro', query: {id:key}}"
+                         class="btn btn-large btn-outline-dark btn-sm">
+                modificar
+              </nuxt-link>
+              -->
+              <button v-on:click="remove(key)"
+                      class="btn btn-large btn-danger btn-sm">
+                eliminar
+              </button>
+            </td>
           </tr>
         </table>
-        -->
       </div>
-    </section>
-    <section>
+      <br>
       <h2>
         Suscriptores
       </h2>
@@ -47,20 +64,33 @@
 </template>
 
 <script>
-import { DB } from "@/services/fireinit.js";
-
+import axios from "axios";
 export default {
   layout: "admin",
   data() {
-    let dataRef = DB.ref(`formacion-docente/cafe-cientifico`);
     return {
-      dataRef
+      data: null
     };
   },
-  created() {
-    this.dataRef.on("value", snapshot => {
-      console.log(snapshot.val());
-    });
+  methods: {
+    loadData() {
+      axios
+        .get(
+          `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
+        )
+        .then(res => (this.data = res.data));
+    },
+    remove(key) {
+      axios
+        .delete(
+          `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros/${key}.json`
+        )
+        .catch(e => alert("No se pudo eliminar"));
+      this.data.encuentros[key] = 0;
+    }
+  },
+  mounted() {
+    this.loadData();
   }
 };
 </script>

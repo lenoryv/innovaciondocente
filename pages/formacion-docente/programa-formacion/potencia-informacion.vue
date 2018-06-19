@@ -11,19 +11,18 @@
     </section>
     <div class="container-fluid">
       <div class="row">
-        <div v-for="(video, index) in videos"
-             :key="index"
-             class="col-xl-4 col-md-6"
-             v-bind:style="{'background-color: red': (index % 2 == 0)}">
+        <div v-for="(video, key) in videos"
+             :key="key"
+             class="col-xl-4 col-md-6">
           <div class="embed-container">
-            <iframe :src="video.vid"
+            <iframe :src="video.link"
                     frameborder="0"
                     title="video"
                     allow="autoplay; encrypted-media"
                     allowfullscreen></iframe>
           </div>
-          <h3>{{video.title}}</h3>
-          <p>{{video.desc}}</p>
+          <h3>{{video.nombre}}</h3>
+          <p>{{video.description}}</p>
         </div>
       </div>
       <router-link class="btn btn-outline-primary btn-large btn-sm"
@@ -39,13 +38,14 @@ import axios from "axios";
 
 export default {
   async asyncData({ params }) {
-    let res = await axios.get(
+    let { data } = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
     );
 
     let title = "Tips de Expertos";
-    let description = "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
-    return { videos: res.data, title, description};
+    let description =
+      "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
+    return { videos: data, title, description };
   },
   head() {
     return {

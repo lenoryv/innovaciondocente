@@ -1,7 +1,26 @@
 [
     {
-        "desc":"Ramón Ferreiro, experto que ha colaborado en la UTPL con 2 ediciones del curso Aprendizaje Colaborativo - Método ELI (Enseñanza Libre de Improvisación) nos da 5 tips para una enseñanza planificada que permita obtener buenos resultados en la formación universitaria.",
-        "title":"#5TipsPara: enseñanza libre de improvisación",
-        "vid":"https://www.youtube.com/embed/0_FzDP1fkis"
+        "desc": "Esta buena práctica consiste en utilizar la clase invertida apoyándose en el programa NB como un recurso para mejorar el proceso de enseñanza-aprendizaje que contempla tres fases: diagnóstico, aplicación de la práctica y verificación de resultados.",
+        "title": "Clase invertida apoyada en el software NB",
+        "vid": "https://www.youtube.com/embed/dqRxi9vvIGw?rel=0&autoplay=1",
+        "img": ""
+    },
+    {
+        "desc": "Partiendo desde la realidad, conozco y actuo, es una práctica que se integra dentro del proyecto de vinculación denominado “Convive con los ríos”, abarca 5 comunidades e involucra a estudiantes de Gestión Ambiental y Biología, guiados por tutores para plasmar desde la realidad social, soluciones viables afianzadas en el conocimiento adquirido. La metodología se basa en Flipped Classroom de manera cooperativo como herramienta de aprendizaje para trabajar con comunidades rurales. Los objetivos logrados son la implicación social y el diseño de herramientas estratégicas aplicadas como base para la formulación de propuestas enfocadas al manejo y conservación de los recursos naturales.",
+        "title": "Partiendo desde la realidad, conozco y actuo- convive con los ríos",
+        "vid": "https://www.youtube.com/embed/M8NPO3qEZeQ?rel=0&autoplay=1",
+        "img": ""
+    },
+    {
+        "desc": "Los aspectos positivos del trabajo han demostrado que el aprendizaje mediante la generación de un objeto de diseño comunicacional (infografía), desarrolla en los educandos competencias específicas como la de un incremento en el manejo de lenguaje claro y eficientemente comunicacional para el fin buscado.",
+        "title": "Historia del arte mediante infografía",
+        "vid": "https://www.youtube.com/embed/McFhVxNc8yM?rel=0&autoplay=1",
+        "img": ""
+    },
+    {
+        "desc": "El objetivo principal de este trabajo es el uso de juegos matemáticos en el aula para reforzar el aprendizaje de los contenidos teóricos mediante actividades lúdicas. Con el fin de llevar a la práctica esta metodología docente, se desarrollaron juegos lúdicos en aulas a nivel superior durante el semestre Octubre 2017- Febrero 2018, una experiencia basada en el aprendizaje-enseñanza de las matemáticas y el cálculo con alumnos de diferentes titulaciones. Los resultados de las encuestas y promedio de calificaciones demuestran la motivación y el entusiasmo del alumno por el estudio de la matemática mediante esta estrategia.",
+        "title": "Aprendizaje basado en objetos: uso de juegos lúdicos como una estrategia didáctica para la enseñanza de la matemática",
+        "vid": "https://www.youtube.com/embed/Tqgj5urDopw?rel=0&autoplay=1",
+        "img": ""
     }
 ]

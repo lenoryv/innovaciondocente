@@ -1,110 +1,133 @@
 <template>
-  <section class="container">
+  <section class="container"
+           @click="click_ventana">
     <h1>¡Proyectos Actuales!</h1>
-    <div class="contenedor">
-          <div class="card" id = "cards">
-            <div class="front">
-              <iframe class="video" width="300" height="150" src="https://www.youtube.com/embed/c6-EfveplnA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="back">
-              <h3>Scott Pilgrim</h3>
-              <div @click="card">video</div>
-          <p></p>
-          </div>
+    <div class="row">
+    <div v-for="(video, index) in videos"
+         :key="index">
+      <div class="card card__one link">
+        <figure class="card__img">
+          <img class="img"
+               @click="click_boton"
+               :src="video.img"
+               alt="imagen-div">
+        </figure>
+        <div class="card__desc">
+          <h3 class="titulo">{{video.nombre}}</h3>
+          <p>{{video.descripcion}}</p>
         </div>
       </div>
-    <div class="row">
+    </div>
+    </div>
+    <div v-for="(video, index) in videos"
+         :key="index">
+      <div id="myModal"
+           class="modal">
+        <div class="modal-content">
+          <span class="close"
+                @click="click_span">&times;</span>
+          <iframe width="854"
+                  height="480"
+                  :src="video.link"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
+<style lang="scss">
+@import "assets/variables";
+@import "assets/card";
+.titulo{
+  color: $color-warning-dark !important;
+}
+.img {
+  height: 211px !important;
+  width: 100% !important;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+  margin: 5% auto; 
+  padding: 0;
+  width: 65%; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
 <script>
 import axios from "axios";
-import Vue from 'vue';
-
 
 export default {
   async asyncData({ params }) {
     let res = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
     );
-    return { videos: res.data };
+
+    let title = "Proyectos Actuales";
+    let description =
+      "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
+    return { videos: res.data, title, description };
+  },
+  head() {
+    return {
+      title: this.title + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
+  },
+  methods: {
+    click_boton() {
+      let modal = document.getElementById("myModal");
+      modal.style.display = "block";
+    },
+
+    click_span() {
+      let modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    },
+
+    click_ventana(event) {
+      let modal = document.getElementById("myModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
   }
 };
 </script>
 
-<style lang="scss" scoped>
-@import "assets/variables";
-.boton{
-  position: absolute;
-  width: 300px;
-  height: 50%;
-  top: 150px;
-}
-.video{
-  position: absolute;
-  top: 0;
-}
-
-.contenedor {
-  width: 300px;
-  height: 200px;
-  position: relative;
-  -webkit-perspective: 800px;
-  -ms-perspective: 800px;
-  perspective: 800px;
-  border-radius: 4px;
-}
-.card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-radius: 6px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  cursor: pointer;
-}
-.card div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 6px;
-  background: $color-primary;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -o-box-pack: center;
-  justify-content: center;
-  -o-box-align: center;
-  align-items: center;
-  -webkit-font-smoothing: antialiased;
-}
-.card .back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-.card.flipped {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-</style>
-
-<script>
-export default {
-  methods:{
-  card() {
-    let card = document.getElementById("cards");
-    card.classList.toggle("flipped")
-  }
-  }
-
-}
-</script>
 
 

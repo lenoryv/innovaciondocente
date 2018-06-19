@@ -13,19 +13,19 @@
         <h2>Cursos Actuales</h2>
         <div class="row">
           <nuxt-link class="col-lg-6"
-                     v-for="(curso, i) in cursos"
-                     :key="i"
-                     :to="{name: 'formacion-docente-programa-formacion-id', params: {id: i}}"
+                     v-for="curso in cursos"
+                     :key="curso.key"
+                     :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.key}}"
                      tag="div">
             <div class="card card__one link">
               <figure class="card__img">
-                <img v-lazy="require('@/static/img/' + curso.poster)"
+                <img v-lazy="curso.data.img"
                      alt="imagen curso">
               </figure>
               <div class="card__desc">
-                <h4>{{curso.nombre}}</h4>
+                <h4>{{curso.data.nombre}}</h4>
                 <small>
-                  <i class="fas fa-calendar-alt"></i> {{curso.anio}}/{{curso.mes}}/{{curso.dia}}</small>
+                  <i class="fas fa-calendar-alt"></i> {{curso.data.fecha}}</small>
               </div>
             </div>
           </nuxt-link>
@@ -57,15 +57,15 @@
             </a>
           </div>
           <div class="col-xl-5 col-lg-4">
-            <h3>{{video.title}}</h3>
+            <h3>{{video.nombre}}</h3>
             <div class="embed-container">
-              <iframe :src="video.vid"
+              <iframe :src="video.link"
                       frameborder="0"
                       allow="encrypted-media"
                       title="video"
                       allowfullscreen></iframe>
             </div>
-            <p>{{video.desc|slice(0,250)}}</p>
+            <p>{{video.descripcion|slice(0,250)}}</p>
             <router-link class="btn btn-inverse btn-large"
                          :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">
               Tips de expertos
@@ -120,22 +120,57 @@
 </template>
 
 <script>
-import { DB } from "@/services/fireinit.js";
+import axios from "axios";
 export default {
   async asyncData() {
-    let res;
-    let database = await DB.ref(`formacion-docente/programa-formacion`).on(
-      "value",
-      snapshot => (res = snapshot.val())
+    let cursosRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json?orderBy=%22$key%22&limitToLast=4`
+    );
+    let bannerRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/banner.json`
+    );
+    let titleRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/title.json`
+    );
+    let descriptionRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/description.json`
+    );
+    let videoRes = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json?orderBy=%22$key%22&limitToLast=1`
     );
 
     return {
-      video: res.videos[0],
-      banner: res.banner,
-      cursos: res.cursos.slice(0, 4),
-      description: res.description,
-      title: res.title
+      cursosRes,
+      bannerRes,
+      titleRes,
+      descriptionRes,
+      videoRes
     };
+  },
+  computed: {
+    video() {
+      // TODO: fix return unique video
+      for (const key in this.videoRes.data) {
+        return this.videoRes.data[key];
+      }
+    },
+    description() {
+      return this.descriptionRes.data;
+    },
+    banner() {
+      return this.bannerRes.data;
+    },
+    title() {
+      return this.titleRes.data;
+    },
+    cursos() {
+      // TODO: sort cursos
+      let res = [];
+      for (const key in this.cursosRes.data) {
+        res.push({ key: key, data: this.cursosRes.data[key] });
+      }
+      return res;
+    }
   },
   head() {
     return {

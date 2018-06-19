@@ -19,10 +19,40 @@
 ///          <p>HELLO WORLD</p>
 ///      </div>
 ///  </div>
+
+///  card-5
+///     <section>
+///       <div class="card-5" or class"card-5 alt">
+///        <img class="photo"
+///             src="">
+///        <div class="description">
+///          <h1>Learning to Code</h1>
+///          <h2>Opening a door to the future</h2>
+///          <div class="border"></div>
+///          <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati
+///            enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+///          <a href="#">Leer más +</a>
+///        </div>
+///      </div>
+///     </section>
+
+///  card-6
+///     <div class="flip flip-vertical" or class="flip flip-vertical" >
+///       <div class="front"
+///            style="background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+///         <h2>Aqui todo el contenido de adelante</h2>
+///       </div>
+///       <div class="back">
+///         <h2>Angular</h2>
+///         <p>Good tools make application development quicker and easier to maintain than if you did everything
+///           by hand..</p>
+///       </div>
+///     </div>
+      
 $color-bg-card: $color-background;
 $card-padding: 15px;
 $margin-top: 15px;
-.card {
+.card{
   position: relative;
   margin: $margin-top 0;
   background: lighten($color-bg-card, 3%);
@@ -132,4 +162,401 @@ $margin-top: 15px;
 
 .link {
   cursor: pointer;
+}
+
+
+$bg: #d8e0e5;
+$blanc: #fff;
+$noir: #000;
+$text: #666c74;
+$footer: #a3a9ab;
+$duration: 0.3s;
+
+$heightimg: 200px;
+
+$heighthoverimg: 145px;
+$heightbody: 185px;
+
+.card_4 {
+  width: 100%;
+  background: $blanc;
+  box-shadow: 0 0 20px rgba($noir, 0.1);
+  transition: box-shadow $duration;
+  margin-bottom: 1rem;
+  &:hover {
+    box-shadow: 0 0 50px rgba($noir, 0.3);
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.card_4__date {
+  background: $color-primary;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: $blanc;
+  text-align: center;
+  line-height: 13px;
+  font-weight: bold;
+  padding-top: 10px;
+  &__day {
+    display: block;
+    font-size: 14px;
+  }
+  &__month {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+}
+
+.card_4__thumb {
+  height: $heightimg;
+  overflow: hidden;
+  background-color: $noir;
+  transition: height $duration;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: $heightimg;
+    display: block;
+    opacity: 1;
+    transition: opacity $duration, transform $duration;
+    transform: scale(1);
+  }
+  .card_4:hover & img {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+  .card_4:hover & {
+    height: $heightimg - $heighthoverimg;
+  }
+}
+
+.card_4__body {
+  position: relative;
+  padding: 20px;
+  height: $heightbody;
+  transition: height $duration;
+  .card_4:hover & {
+    height: $heightbody + $heighthoverimg;
+  }
+}
+
+.card_4__category {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  height: 25px;
+  padding: 0 15px;
+  background: $color-primary;
+  color: $blanc;
+  font-size: 11px;
+  line-height: 25px;
+  a {
+    color: $blanc;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.card_4__title {
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 22px;
+  color: $noir;
+  font-weight: bold;
+  .card_4:hover & {
+    animation: titleBlur $duration;
+  }
+}
+
+.card_4__subtitle {
+  margin: 0;
+  padding: 0 0 10px 0;
+  color: $color-primary;
+  font-size: 19px;
+  .card_4:hover & {
+    animation: subtitleBlur $duration;
+  }
+}
+
+.card_4__description {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 65px;
+  overflow: auto;
+  height: $heighthoverimg - 15;
+  padding: 0 0 0 0;
+
+  color: $text;
+  font-size: 14px;
+  line-height: 27px;
+
+  opacity: 0;
+  transition: opacity $duration - 0.1s, transform $duration - 0.1s;
+  transition-delay: 0s;
+  transform: translateY(25px);
+  .card_4:hover & {
+    opacity: 1;
+    transition-delay: 0.1s;
+    transform: translateY(0);
+  }
+}
+
+.card_4__footer {
+  padding: 0 0 10px 0;
+  margin: 0;
+  position: absolute;
+  color: $footer;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-size: 11px;
+}
+
+@keyframes titleBlur {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba($noir, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px rgba($noir, 0);
+  }
+}
+
+@keyframes subtitleBlur {
+  0% {
+    opacity: 0.6;
+    text-shadow: 0px 5px 5px rgba($color-primary, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 5px 5px rgba($color-primary, 0);
+  }
+}
+
+@mixin transition($dur, $prop: all) {
+  transition: $prop $dur ease;
+  -webkit-transition: $prop $dur ease;
+}
+
+.card-5 {
+  @include transition(0.3s, height);
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.45em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .photo {
+    height: 200px;
+    position: relative;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+  }
+
+  .details {
+    @include transition(0.3s);
+
+    background: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    color: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 10px 15px;
+    height: 200px;
+  }
+
+  .border {
+    border-top: 2px solid $color-section;
+    margin: 10px 0px 10px 100px;
+  }
+  .border-alt {
+    border-top: 2px solid $color-section;
+    margin: 10px 100px 10px 0px;
+  }
+
+  .description {
+    padding: 12px;
+    box-sizing: border-box;
+    position: relative;
+    height: 200px;
+    h1 {
+      line-height: 1em;
+      margin: 0 0 10px 0;
+    }
+
+    h2 {
+      color: #333 / 1.5;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 400;
+      margin: 1.2% 0;
+    }
+
+    p {
+      position: relative;
+      margin: 0;
+    }
+
+    a {
+      color: $color-primary;
+      margin: 0 10px;
+      float: right;
+
+      &:hover:after {
+        margin-left: 5px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-5 {
+    height: 200px;
+    max-width: 90%;
+    margin: 0 auto 1.6%;
+
+    &:hover {
+      .photo {
+        transform: rotate(5deg) scale(1.3);
+      }
+
+      &.alt .photo {
+        transform: rotate(-5deg) scale(1.3);
+      }
+    }
+
+    &.alt {
+      .description {
+        float: right;
+
+        &:before {
+          transform: skewX(5deg);
+          right: -15px;
+          left: inherit;
+        }
+      }
+      .photo {
+        float: right;
+      }
+    }
+
+    .photo {
+      @include transition(0.5s);
+      overflow: hidden;
+      float: left;
+      height: 200px;
+      width: 44%;
+    }
+    .summary {
+      height: 70px;
+      overflow: auto;
+    }
+    .description {
+      float: left;
+      width: 56%;
+      z-index: 0;
+
+      &:before {
+        transform: skewX(-5deg);
+        content: "";
+        background: #fff;
+        width: 200px;
+        z-index: -1;
+        position: absolute;
+        left: -15px;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.flip {
+  position: relative;
+  .front,
+  .back {
+    display: block;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 0.5s;
+    transition-property: transform, opacity;
+  }
+  .front {
+    transform: rotateY(0deg);
+  }
+  .back {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+  }
+  &:hover {
+    .front {
+      transform: rotateY(180deg);
+    }
+    .back {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+  }
+  &.flip-vertical {
+    .back {
+      transform: rotateX(-180deg);
+    }
+    &:hover {
+      .front {
+        transform: rotateX(180deg);
+      }
+      .back {
+        transform: rotateX(0deg);
+      }
+    }
+  }
+}
+
+.flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 400px;
+  .front,
+  .back {
+    display: block;
+    color: white;
+    width: inherit;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 220px;
+    padding: 1em 2em;
+    background: #313131;
+    border-radius: 10px;
+    p {
+      font-size: 0.9125rem;
+      line-height: 160%;
+      color: #999;
+    }
+  }
 }
