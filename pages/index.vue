@@ -5,7 +5,7 @@
       <div class="header-overlay"></div>
       <div class="fondo">
         <img class="img-move"
-             :src="require('@/static/imgIndex.jpg')"
+             :src="require('@/static/index.jpg')"
              alt="">
       </div>
       <div class="header-content">
@@ -15,15 +15,15 @@
                 class="btn btn-primary">GO TO COURSE</button>
         <a href="#"
            class="arrow arrow-1">
-          <span></span>
+          <span @click="pageScroll()"></span>
         </a>
         <a href="#"
            class="arrow arrow-2">
-          <span></span>
+          <span @click="pageScroll()"></span>
         </a>
         <a href="#"
            class="arrow arrow-3">
-          <span></span>
+          <span @click="pageScroll()"></span>
         </a>
       </div>
     </header>
@@ -138,7 +138,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="liid-info border">
-              <img :src="require('~/static/example.png')">
+              <img :src="require('~/static/ascendere.png')">
               <h2>LiiD UTPL</h2>
               <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado
                 al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional.</p>
@@ -148,9 +148,18 @@
           <div class="col-md-6 background-mustard">
             <div class="liid-info">
               <h2>Proyectos Actuales</h2>
+              <div class="col-lg-12">
+                <div class="embed-container">
+                  <iframe src="https://www.youtube.com/embed/8lp20JFiB4s"
+                          frameborder="0"
+                          allow="encrypted-media"
+                          allowfullscreen></iframe>
+                </div>
+              </div>
               <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas
                 areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos
                 a explorar cada uno de los proyectos.</p>
+
               <button class="btn btn-large btn-primary">Atrevete</button>
             </div>
           </div>
@@ -197,7 +206,7 @@
     </section>
 
     <!-- Quienes somos-->
-    <section class="quienes-somos">
+    <section class="quienes-somos quienes-overlay">
       <div class="quienes-content">
         <h2>QUIENES SOMOS</h2>
         <p class="section-text-center">A través de iniciativas como
@@ -327,6 +336,19 @@
 
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    pageScroll() {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+      });
+    }
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 @import "assets/variables";
@@ -393,7 +415,8 @@ p {
   width: 100%;
   position: absolute;
   left: 0;
-  background: rgba(20, 52, 106, 0.712);
+  background: $color-section;
+  opacity: 0.4;
   z-index: -1;
 }
 .header-content {
@@ -545,9 +568,12 @@ p {
   }
 }
 .quienes-somos {
-  background-image: url("../static/team-bg.jpg");
+  background-image: url("../static/quienes-somos.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: cover;
+  background-position: center center;
+  display: block;
 }
 .cafe-cientifico {
   color: #fff;
@@ -651,7 +677,7 @@ footer li {
   color: $color-font-light;
 }
 .liid-info {
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
   height: 80vh;
   display: table-cell;
   vertical-align: middle;
@@ -666,6 +692,20 @@ footer li {
 }
 .background-mustard {
   background: $color-warning;
+}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin: 1rem 0 1rem;
+  height: 0;
+  overflow: hidden;
+}
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 992px) {
   .content {
