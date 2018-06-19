@@ -1,16 +1,10 @@
 <template>
     <div>
-        <parallax>
-            <img src="~/static/img/mentores.jpg"
-                 alt="mentores">
-        </parallax>
-
+        <header class="parallax"></header>
         <section class="container">
 
             <h1>Proyecto Ayudante de Catedra</h1>
             <hr>
-            <small>
-                ¿Quieres fortalecer el vinculo docente - estudiante?</small>
             <p>La necesidad de apoyo al profesorado en la UTPL conlleva a que los estudiantes de pregrado
                 puedan realizar tareas de soporte a la docencia en calidad de Ayudantes de Cátedra. Con
                 estos proyectos se pretende contribuir a la formación de estudiantes que tienen un perfil
@@ -38,21 +32,52 @@
                 beca de Responsabilidad Universitaria, cuyo porcentaje va del 40% al 70%, la misma que
                 será acreditada en el semestre siguiente previa evaluación positiva de su desempeño como
                 ayudante de cátedra.</p>
+            <hr>
+            <h4>¿Quieres fortalecer el vinculo docente - estudiante?</h4>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <a class="enlace" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%201%20PLANIFICACIO%CC%81N%20DE%20ACTIVIDADES%20(1).docx">
+                        <i class="fas fa-file-word"></i> Planificación de actividades de Ayudante de Cátedra (Anexo I)
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a class="enlace" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%202%20EVALUACIO%CC%81N%20DE%20DESEMPEN%CC%83O%20DEL%20AYUDANTE%20DE%20CA%CC%81TEDRA(1).docx">
+                        <i class="fas fa-file-word"></i> Planificación de actividades de Ayudante de Cátedra (Anexo 2)
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a class="enlace" target="_blank" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20ayudante%20de%20ca%CC%81tedra%20abril-agosto%202018.pdf">
+                        <i class="fas fa-file-pdf"></i> Conoce el proyecto completo
+                    </a>
+                </div>
+            </div>
         </section>
     </div>
 </template>
 
 <style lang="scss" scoped>
+@import "assets/variables";
+h4 {
+  text-align: center !important;
+}
+.enlace{
+    text-align: center;
+}
+.parallax {
+  height: 100vh;
+  background-color: $color-primary;
+  background-image: url("~/static/img/banner-ayudante-catedra.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+i{
+  color: $color-warning-dark;
+}
 </style>
 
-<script>
-import Parallax from "vue-parallaxy";
-export default {
-  components: {
-    parallax
-  }
-};
-</script>
+
 
 
 
