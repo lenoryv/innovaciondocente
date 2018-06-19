@@ -226,16 +226,13 @@ nav {
             </ul>
           </li>
           <li class="nav__list-item">
-            <nuxt-link :to="{name: 'observatorio-edutendencias'}">Observatorio EduTendencias</nuxt-link>
+            <nuxt-link :to="{name: 'observatorio-edutendencias'}">Observatorio EduTencencias</nuxt-link>
             <ul>
-              <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion-aula-divertida'}">Tips de Innovación</nuxt-link>
-              <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion-podcast'}">Podcast</nuxt-link>
+              <nuxt-link :to="{name: 'observatorio-edutendencias'}">Tips de Innovación</nuxt-link>
+              <nuxt-link :to="{name: 'observatorio-edutendencias-disenio-desarrollo'}">Diseño y Desarrollo de mi Asiganatura</nuxt-link>
+              <nuxt-link :to="{name: 'observatorio-edutendencias-disenio-desarrollo-recursos-digitales'}">Recursos Digitales</nuxt-link>
+              <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion-aula-divertidad'}">Aula Divertidad</nuxt-link>
             </ul>
-          </li>
-          <li class="nav__list-item">
-            <nuxt-link :to="{name: 'admin'}">
-              Admin
-            </nuxt-link>
           </li>
         </ul>
       </div>
