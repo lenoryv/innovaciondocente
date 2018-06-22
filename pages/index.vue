@@ -17,11 +17,11 @@
            class="arrow arrow-1">
           <span @click="pageScroll()"></span>
         </a>
-        <a href="#"
+        <a href="#index"
            class="arrow arrow-2">
           <span @click="pageScroll()"></span>
         </a>
-        <a href="#"
+        <a href="#index"
            class="arrow arrow-3">
           <span @click="pageScroll()"></span>
         </a>
@@ -29,6 +29,7 @@
     </header>
 
     <!-- Noticia, Curso, tip -->
+    <a name="index"></a>
     <section>
       <div class="container">
         <div class="row">
@@ -153,14 +154,6 @@
           <div class="col-md-6 background-mustard">
             <div class="liid-info">
               <h2>Proyectos Actuales</h2>
-              <div class="col-lg-12">
-                <div class="embed-container">
-                  <iframe src="https://www.youtube.com/embed/8lp20JFiB4s"
-                          frameborder="0"
-                          allow="encrypted-media"
-                          allowfullscreen></iframe>
-                </div>
-              </div>
               <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas
                 areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos
                 a explorar cada uno de los proyectos.</p>
@@ -234,22 +227,22 @@
               <img class="img-avatar"
                    :src="require('@/static/avatar-icom.png')"
                    alt="Avatar">
-              <h3>Mgtr. Andrea Loaiza</h3>
-              <h4>Dirección de Planificación y Desarrollo Curricular</h4>
+              <h3>Ing. Nuve Briceño</h3>
+              <h4>Formación Docente</h4>
             </div>
             <div class="col-md-3 avatar">
               <img class="img-avatar"
                    :src="require('@/static/avatar-icom.png')"
                    alt="Avatar">
-              <h3>Mgtr. Paola Andrade</h3>
-              <h4>Coordinación General</h4>
+              <h3>Mgtr. Angela Salazar</h3>
+              <h4>Innovación Docente</h4>
             </div>
             <div class="col-md-3 avatar">
               <img class="img-avatar"
                    :src="require('@/static/avatar-icom.png')"
                    alt="Avatar">
-              <h3>Mgtr. Natalia Lutsak</h3>
-              <h4>Dirección de Posgrados</h4>
+              <h3>Mgtr. Lourdes Cueva</h3>
+              <h4>Evaluación Docente</h4>
             </div>
           </div>
         </div>
@@ -281,6 +274,8 @@
                 <h3>Innovación Docente</h3>
               </nuxt-link>
               <ul>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
                 <nuxt-link class="link-footer"
                            :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
                 <nuxt-link class="link-footer"
@@ -373,7 +368,6 @@ h1 {
   color: $color-secondary;
   font-size: 60px;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  text-transform: uppercase;
   font-size: 120px;
   letter-spacing: 5px;
 }

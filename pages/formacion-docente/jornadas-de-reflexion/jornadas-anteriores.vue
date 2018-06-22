@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-lg-3">
         <section class="sticky">
           <nuxt-link class="btn btn-outline-dark btn-large"
                      :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores'}">
-            JORNADAS DE REFLEXIÓN
+            JORNADAS <br> DE REFLEXIÓN
           </nuxt-link>
           <nuxt-link class="btn btn-outline-dark btn-large"
                      :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2018}}">
@@ -21,7 +21,7 @@
           </nuxt-link>
         </section>
       </div>
-      <section class="col-md-9">
+      <section class="col-lg-9">
         <nuxt-child />
       </section>
     </div>

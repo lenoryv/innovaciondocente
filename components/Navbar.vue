@@ -14,11 +14,11 @@
             <i class="fa fa-caret-down"></i>
           </nuxt-link>
           <div class="dropdown-content">
+            <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Prácticas</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
-            <nuxt-link :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
-            <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
-            <nuxt-link :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-proyecto-mentores'}">Proyecto Mentores</nuxt-link>
             <a target="_blank"
                rel="noopener"
                href="https://retos.utpl.edu.ec/">Retos</a>
@@ -38,7 +38,7 @@
           </div>
         </div>
         <nuxt-link :to="{name: 'observatorio-edutendencias'}">
-          Observatorio EduTencencias
+          Observatorio EduTendencias
         </nuxt-link>
         <nuxt-link :to="{name: 'admin'}">
           Admin
@@ -226,16 +226,13 @@ nav {
             </ul>
           </li>
           <li class="nav__list-item">
-            <nuxt-link :to="{name: 'observatorio-edutendencias'}">Observatorio EduTendencias</nuxt-link>
+            <nuxt-link :to="{name: 'observatorio-edutendencias'}">Observatorio EduTencencias</nuxt-link>
             <ul>
-              <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion-aula-divertida'}">Tips de Innovación</nuxt-link>
-              <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion-podcast'}">Podcast</nuxt-link>
+              <nuxt-link :to="{name: 'observatorio-edutendencias'}">Tips de Innovación</nuxt-link>
+              <nuxt-link :to="{name: 'observatorio-edutendencias-disenio-desarrollo'}">Diseño y Desarrollo de mi Asiganatura</nuxt-link>
+              <nuxt-link :to="{name: 'observatorio-edutendencias-disenio-desarrollo-recursos-digitales'}">Recursos Digitales</nuxt-link>
+              <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion-aula-divertidad'}">Aula Divertidad</nuxt-link>
             </ul>
-          </li>
-          <li class="nav__list-item">
-            <nuxt-link :to="{name: 'admin'}">
-              Admin
-            </nuxt-link>
           </li>
         </ul>
       </div>

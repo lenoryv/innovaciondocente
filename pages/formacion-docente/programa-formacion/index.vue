@@ -1,18 +1,21 @@
 <template>
   <div>
-    <img v-lazy="banner"
-         alt="banner-formacion-docente">
-    <section>
-      <div class="container">
+    <header class="parallax"
+            :style="'background-image: url('+banner+');'">
+      <div class="header-content">
         <h1>
           {{title}}
         </h1>
-        <p>
+        <p class="container">
           {{description}}
         </p>
+      </div>
+    </header>
+    <section>
+      <div class="container">
         <h2>Cursos Actuales</h2>
         <div class="row">
-          <nuxt-link class="col-lg-6"
+          <nuxt-link class="col-md-4 col-sm-6"
                      v-for="curso in cursos"
                      :key="curso.key"
                      :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.key}}"
@@ -190,6 +193,30 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/card";
+@import "assets/variables";
+header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.header-content {
+  text-align: center;
+  h1 {
+    color: $color-font-primary;
+    font-weight: 400;
+    font-size: 300%;
+    letter-spacing: 0.5em;
+  }
+  margin: auto;
+  p {
+    text-align: center;
+    color: $color-font-primary;
+  }
+}
+h2 {
+  text-align: center;
+}
 
 #video {
   background-color: $color-primary;
