@@ -65,12 +65,5 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
-.parallax {
-  height: 100vh;
-  background-color: $color-primary;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+@import 'assets/parallax';
 </style>
