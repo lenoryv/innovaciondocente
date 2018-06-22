@@ -104,7 +104,7 @@
     height: 35px;
     right: -17px;
     background-color:white;
-    border: 4px solid #FF9F55;
+    border: 4px solid rgba(245, 228, 0, 0.897);
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -156,7 +156,7 @@
 /* The actual content */
 .content {
     padding: 20px 30px;
-    background-color:  #0554ca5b;
+    background-color:  #d4d8dd5b;
     position: relative;
     border-radius: 6px;
 }
