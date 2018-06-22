@@ -193,7 +193,6 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/card";
-@import "assets/variables";
 header {
   height: 100vh;
   width: 100%;
@@ -205,8 +204,6 @@ header {
   h1 {
     color: $color-font-primary;
     font-weight: 400;
-    font-size: 300%;
-    letter-spacing: 0.5em;
   }
   margin: auto;
   p {
@@ -214,6 +211,16 @@ header {
     color: $color-font-primary;
   }
 }
+@media screen and (min-width: 768px) {
+  .header-content {
+    text-align: center;
+    h1 {
+      font-size: 300%;
+      letter-spacing: 0.5em;
+    }
+  }
+}
+
 h2 {
   text-align: center;
 }

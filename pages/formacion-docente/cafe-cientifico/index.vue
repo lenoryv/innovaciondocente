@@ -6,10 +6,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <figure>
-              <img v-lazy="ultimoEncuentro.data.img"
-                   alt="Imagen Encuentro">
-            </figure>
+            <figure :style="'background-image: url('+ultimoEncuentro.data.img+');'"></figure>
             <h3>
               <i class="fas fa-users"></i> Invitados
             </h3>
@@ -43,9 +40,8 @@
                      :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
                      tag="div">
             <div class="card card__two link">
-              <figure class="card__img">
-                <img v-lazy="encuentro.img"
-                     alt="Imagen Encuentros">
+              <figure class="card__img"
+                      :style="'background-image: url('+encuentro.img+');'">
               </figure>
               <div class="card__desc">
                 <h4>{{encuentro.nombre}}</h4>
@@ -143,9 +139,7 @@ figure {
   padding-bottom: 50% !important;
   height: 0;
   margin: 0;
-}
-figure img {
-  display: block;
-  width: 100%;
+  background-color: $color-primary;
+  background-size: cover;
 }
 </style>
