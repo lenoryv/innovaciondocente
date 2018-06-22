@@ -1,94 +1,46 @@
 <template>
-    <div>
-      <div id="mySidenav" class="sidenav">
-        
-        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Actual</nuxt-link>
-        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'1'}}">Abril-Agosto 2018</nuxt-link>
-        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'2'}}">Octubre 2017-Febrero 2018</nuxt-link>
-        <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'3'}}">Abril-Agosto 2017</nuxt-link>
-        <button class="btn btn-large" @click="closeNav()">Cerrar</button>
-      </div>
-      <section id="main">
-        <div class="container">
-          <button class="btn" @click="openNav()">Otras Convocatorias</button>
-          <div>
-            <h1>Convocatoria de Proyectos de Innovación Docente</h1>  
-            <nuxt-child/>
-          </div>
+  <div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <section class="sticky">
+            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index'}">Actual</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'1'}}">Abril-Agosto 2018</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'2'}}">Octubre 2017-Febrero 2018</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'3'}}">Abril-Agosto 2017</nuxt-link>
+          </section>
         </div>
-      </section>
+        <section class="col-md-9">
+          <h1>Convocatoria de Proyectos de Innovación Docente</h1>
+          <nuxt-child/>
+        </section>
+      </div>
     </div>
+  </div>
 </template>
-<script>
-export default {
-  methods: {
-    openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-    },
-
-    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-    closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
-    }
-  }
-};
-</script>
-
 
 <style lang="scss">
 @import "assets/variables";
-.sidenav {
-  height: 100%;
-  width: 0; 
-  position: fixed; 
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  background-color: $color-primary-light;
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  color: $color-font-primary;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: $color-warning;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
+.nuxt-link-exact-active {
+  color: $color-font-primary !important;
+  background-color: $color-primary !important;
+  border-color: $color-dark !important;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.2s all ease;
   }
 }
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
+}
+
+
 .embed-container {
   position: relative;
   padding-bottom: 100%;
@@ -103,5 +55,4 @@ export default {
   width: 100%;
   height: 100%;
 }
-
 </style>
