@@ -37,7 +37,7 @@
           Portafolio de Encuentros
         </h2>
         <div class="row">
-          <nuxt-link class="col-xl-3 col-sm-6"
+          <nuxt-link class="col-lg-3 col-sm-6"
                      v-for="(encuentro, key) in encuentros"
                      :key="key"
                      :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"

@@ -352,7 +352,6 @@ h1 {
   color: $color-secondary;
   font-size: 60px;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  text-transform: uppercase;
   font-size: 120px;
   letter-spacing: 5px;
 }
