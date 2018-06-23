@@ -5,19 +5,7 @@
       Café Científico
     </h1>
     <section>
-      <h2>Banner</h2>
-      <div class="row">
-        <div class="col-md-8">
-          <img :src="data.banner"
-               alt="Banner">
-        </div>
-        <div class="col-md-4">
-          <h3>Nuevo Banner</h3>
-
-        </div>
-      </div>
-      <br>
-      <h3>Portafolio de Encuentros</h3>
+      <h2>Portafolio de Encuentros</h2>
       <nuxt-link :to="{name : 'admin-formacion-docente-cafe-cientifico-encuentro'}"
                  class="btn btn-success btn-sm">
         Agregar Nuevo Encuentro

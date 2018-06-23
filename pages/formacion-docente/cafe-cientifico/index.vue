@@ -38,21 +38,21 @@
           Portafolio de Encuentros
         </h2>
         <div class="row encuentros">
-          <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
-                     v-for="(encuentro, key) in encuentros"
-                     :key="key"
-                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
-                     tag="div">
-            <div class="card card__two link">
-              <figure class="card__img"
-                      :style="'background-image: url('+encuentro.img+');'">
-              </figure>
-              <div class="card__desc">
-                <h4>{{encuentro.nombre}}</h4>
+            <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
+                       v-for="(encuentro, key) in encuentros"
+                       :key="key"
+                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
+                       tag="div">
+              <div class="card card__two link">
+                <figure class="card__img"
+                        :style="'background-image: url('+encuentro.img+');'">
+                </figure>
+                <div class="card__desc">
+                  <h4>{{encuentro.nombre}}</h4>
+                </div>
               </div>
-            </div>
-          </nuxt-link>
-        </div>
+            </nuxt-link>
+          </div>
       </div>
     </section>
     <section id="suscripcion">
@@ -96,9 +96,6 @@ export default {
     encuentros() {
       // TODO: sort by date
       return this.data.encuentros;
-    },
-    banner() {
-      return this.data.banner;
     },
     description() {
       return this.data.description;
