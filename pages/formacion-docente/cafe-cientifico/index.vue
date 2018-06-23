@@ -1,13 +1,20 @@
 <template>
   <div>
-    <header v-if="ultimoEncuentro"
-            class="parallax"
-            :style="'background-image: url('+ultimoEncuentro.data.img+');'">
+    <header class="header"
+            v-if="ultimoEncuentro">
       <div class="header-overlay"></div>
-      <div class="header-content">
-        <div class="container">
+      <div class="background-banner">
+        <img :src="ultimoEncuentro.data.img"
+             alt="img-background">
+      </div>
+      <div class="container">
+        <div class="header-content">
+          <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}">
+            <h1>{{ultimoEncuentro.data.nombre}}</h1>
+          </nuxt-link>
+          <small>{{ultimoEncuentro.data.fecha}}</small>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4">
               <figure :style="'background-image: url('+ultimoEncuentro.data.img+');'"></figure>
               <h3>
                 <i class="fas fa-users"></i> Invitados
@@ -17,14 +24,8 @@
                     :key="index">{{ invitado.nombre }}</li>
               </ul>
             </div>
-            <div class="col-md-8">
-              <h1>{{ultimoEncuentro.data.nombre}}</h1>
-              <small>{{ultimoEncuentro.data.fecha}}</small>
+            <div class="col-lg-8">
               <p>{{ultimoEncuentro.data.contenido | slice(0,500)}}</p>
-              <nuxt-link class="btn btn-primary"
-                         :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}">
-                Leer más
-              </nuxt-link>
             </div>
           </div>
         </div>
@@ -37,21 +38,21 @@
           Portafolio de Encuentros
         </h2>
         <div class="row encuentros">
-          <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
-                     v-for="(encuentro, key) in encuentros"
-                     :key="key"
-                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
-                     tag="div">
-            <div class="card card__two link">
-              <figure class="card__img"
-                      :style="'background-image: url('+encuentro.img+');'">
-              </figure>
-              <div class="card__desc">
-                <h4>{{encuentro.nombre}}</h4>
+            <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
+                       v-for="(encuentro, key) in encuentros"
+                       :key="key"
+                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
+                       tag="div">
+              <div class="card card__two link">
+                <figure class="card__img"
+                        :style="'background-image: url('+encuentro.img+');'">
+                </figure>
+                <div class="card__desc">
+                  <h4>{{encuentro.nombre}}</h4>
+                </div>
               </div>
-            </div>
-          </nuxt-link>
-        </div>
+            </nuxt-link>
+          </div>
       </div>
     </section>
     <section id="suscripcion">
@@ -96,9 +97,6 @@ export default {
       // TODO: sort by date
       return this.data.encuentros;
     },
-    banner() {
-      return this.data.banner;
-    },
     description() {
       return this.data.description;
     }
@@ -121,29 +119,55 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/card";
-@import "assets/parallax";
 
-header {
+.header {
+  object-fit: cover;
+  overflow: hidden;
   height: 100vh;
   width: 100%;
   display: flex;
+  align-items: center;
+  color: $color-secondary;
+  text-align: center;
 }
+.background-banner {
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
 
+  z-index: -2;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    position: relative;
+  }
+}
 .header-overlay {
   height: 100vh;
   width: 100%;
   position: absolute;
   left: 0;
   background: $color-primary;
-  opacity: 0.6;
+  opacity: 0.5;
+  z-index: -1;
 }
-
 .header-content {
-  text-align: center;
   margin: auto;
-  color: $color-font-primary !important;
+  text-align: center;
   h1 {
-    color: $color-font-primary !important
+    color: $color-font-primary !important;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+  ul {
+    list-style: none;
   }
 }
 
