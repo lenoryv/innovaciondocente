@@ -1,7 +1,6 @@
 @import 'assets/variables';
-
 .parallax {
-  height: 100vh;
+  min-height: 100vh;
   background-color: $color-primary;
   background-attachment: fixed;
   background-position: center;

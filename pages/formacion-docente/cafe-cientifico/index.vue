@@ -16,10 +16,10 @@
           <div class="row">
             <div class="col-lg-4">
               <figure :style="'background-image: url('+ultimoEncuentro.data.img+');'"></figure>
-              <h3>
-                <i class="fas fa-users"></i> Invitados
-              </h3>
               <ul>
+                <h3>
+                  <i class="fas fa-users"></i> Invitados
+                </h3>
                 <li v-for="(invitado, index) in ultimoEncuentro.data.invitados"
                     :key="index">{{ invitado.nombre }}</li>
               </ul>
@@ -38,21 +38,21 @@
           Portafolio de Encuentros
         </h2>
         <div class="row encuentros">
-            <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
-                       v-for="(encuentro, key) in encuentros"
-                       :key="key"
-                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
-                       tag="div">
-              <div class="card card__two link">
-                <figure class="card__img"
-                        :style="'background-image: url('+encuentro.img+');'">
-                </figure>
-                <div class="card__desc">
-                  <h4>{{encuentro.nombre}}</h4>
-                </div>
+          <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
+                     v-for="(encuentro, key) in encuentros"
+                     :key="key"
+                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
+                     tag="div">
+            <div class="card card__two link">
+              <figure class="card__img"
+                      :style="'background-image: url('+encuentro.img+');'">
+              </figure>
+              <div class="card__desc">
+                <h4>{{encuentro.nombre}}</h4>
               </div>
-            </nuxt-link>
-          </div>
+            </div>
+          </nuxt-link>
+        </div>
       </div>
     </section>
     <section id="suscripcion">
@@ -123,7 +123,7 @@ export default {
 .header {
   object-fit: cover;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -133,34 +133,34 @@ export default {
 .background-banner {
   left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   text-align: center;
   position: absolute;
 
   z-index: -2;
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
+  -webkit-filter: blur(2px);
+  filter: blur(25px);
   img {
     object-fit: cover;
     width: 100%;
     height: 100vh;
     opacity: 1;
     position: relative;
+    overflow: hidden;
   }
 }
 .header-overlay {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   position: absolute;
   left: 0;
-  background: $color-primary;
-  opacity: 0.5;
+  background: $color-dark;
+  opacity: 0.6;
   z-index: -1;
 }
 .header-content {
   margin: auto;
-  text-align: center;
   h1 {
     color: $color-font-primary !important;
     text-decoration: underline;
@@ -168,6 +168,7 @@ export default {
   }
   ul {
     list-style: none;
+    padding: 0;
   }
 }
 
@@ -177,6 +178,7 @@ export default {
 }
 #encuentros {
   overflow: auto;
+  background-color: $color-font-primary;
   .row {
     display: -webkit-box;
     flex-wrap: nowrap;
