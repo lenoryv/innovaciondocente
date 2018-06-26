@@ -11,7 +11,7 @@
     </section>
     <div class="container-fluid">
       <div class="row">
-        <div v-for="(video, key) in videos"
+        <div v-for="(video, key) in data"
              :key="key"
              class="col-xl-4 col-md-6">
           <div class="embed-container">
@@ -22,7 +22,7 @@
                     allowfullscreen></iframe>
           </div>
           <h3>{{video.nombre}}</h3>
-          <p>{{video.description}}</p>
+          <p>{{video.descripcion}}</p>
         </div>
       </div>
       <router-link class="btn btn-outline-primary btn-large btn-sm"
@@ -45,7 +45,7 @@ export default {
     let title = "Tips de Expertos";
     let description =
       "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
-    return { videos: data, title, description };
+    return { data, title, description };
   },
   head() {
     return {
