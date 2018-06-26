@@ -28,7 +28,7 @@
               <div class="card__desc">
                 <h4>{{curso.data.nombre}}</h4>
                 <small>
-                  <i class="fas fa-calendar-alt"></i> {{curso.data.fecha}}</small>
+                  <i class="fas fa-calendar-alt"></i> {{curso.data.fecha | date}}</small>
               </div>
             </div>
           </nuxt-link>
@@ -132,12 +132,8 @@ export default {
     let bannerRes = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/banner.json`
     );
-    let titleRes = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/title.json`
-    );
-    let descriptionRes = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/description.json`
-    );
+    const title = "Programa de Formación Docente";
+    const description = "El Programa de Formación Docente de la universidad está orientado de forma prioritaria a facilitar y apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias profesionales y apoyar el desarrollo de dichas competencias desde la formación del profesorado y desde el enfoque de nuestra universidad."
     let videoRes = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json?orderBy=%22$key%22&limitToLast=1`
     );
@@ -145,9 +141,9 @@ export default {
     return {
       cursosRes,
       bannerRes,
-      titleRes,
-      descriptionRes,
-      videoRes
+      videoRes,
+      title,
+      description
     };
   },
   computed: {
@@ -157,14 +153,8 @@ export default {
         return this.videoRes.data[key];
       }
     },
-    description() {
-      return this.descriptionRes.data;
-    },
     banner() {
       return this.bannerRes.data;
-    },
-    title() {
-      return this.titleRes.data;
     },
     cursos() {
       // TODO: sort cursos

@@ -12,9 +12,8 @@
           <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}">
             <h1>{{ultimoEncuentro.data.nombre}}</h1>
           </nuxt-link>
-          <small>{{ultimoEncuentro.data.fecha}}</small>
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
               <figure :style="'background-image: url('+ultimoEncuentro.data.img+');'"></figure>
               <ul>
                 <h3>
@@ -24,14 +23,15 @@
                     :key="index">{{ invitado.nombre }}</li>
               </ul>
             </div>
-            <div class="col-lg-8">
-              <p>{{ultimoEncuentro.data.contenido | slice(0,500)}}</p>
+            <div class="col-lg-7">
+              <small>{{ultimoEncuentro.data.fecha | date}}</small>
+              <p>{{ultimoEncuentro.data.contenido | slice(0,800)}}</p>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <section v-if="encuentros"
+    <section v-if="data.encuentros"
              id="encuentros">
       <div class="container-fluid">
         <h2>
@@ -39,16 +39,16 @@
         </h2>
         <div class="row encuentros">
           <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
-                     v-for="(encuentro, key) in encuentros"
-                     :key="key"
-                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: key}}"
+                     v-for="encuentro in encuentros"
+                     :key="encuentro.key"
+                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.key}}"
                      tag="div">
             <div class="card card__two link">
               <figure class="card__img"
-                      :style="'background-image: url('+encuentro.img+');'">
+                      :style="'background-image: url('+encuentro.data.img+');'">
               </figure>
               <div class="card__desc">
-                <h4>{{encuentro.nombre}}</h4>
+                <h4>{{encuentro.data.nombre}}</h4>
               </div>
             </div>
           </nuxt-link>
@@ -77,29 +77,30 @@ export default {
     const { data } = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
     );
-    return { data };
+    const description =
+      "Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior y que ayuden a fomentar inquietudes que despierten una entretenida discusión.";
+    return { data, description };
   },
   computed: {
     ultimoEncuentro() {
-      // TODO: return last item date
+      // TODO: optimize
       let res = null;
       for (const key in this.data.encuentros) {
-        if (!res) {
-          res = { key: key, data: this.data.encuentros[key] };
-          continue;
-        }
-        if (this.data.encuentros[key].fecha > res.fecha)
-          res = this.data.encuentros[key];
+        res = { key: key, data: this.data.encuentros[key] };
       }
       return res;
     },
     encuentros() {
       // TODO: sort by date
-      return this.data.encuentros;
+      let cursos = [];
+      for (const key in this.data.encuentros) {
+        cursos.push({ key: key, data: this.data.encuentros[key] });
+      }
+      cursos.sort(function(a, b) {
+        return ("" + b.key).localeCompare(a.key);
+      });
+      return cursos;
     },
-    description() {
-      return this.data.description;
-    }
   },
   head() {
     return {
@@ -139,8 +140,8 @@ export default {
   position: absolute;
 
   z-index: -2;
-  -webkit-filter: blur(2px);
-  filter: blur(25px);
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
   img {
     object-fit: cover;
     width: 100%;

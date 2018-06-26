@@ -10,10 +10,9 @@
            v-else>
         <i class="fas fa-calendar-alt"></i>
         Postula hasta el
-        <b>{{data.postulacion}}</b>
+        <b>{{data.postulacion | date}}</b>
       </div>
       <h1>{{ data.nombre }}</h1>
-      <h4>Fecha: {{ data.fecha }}</h4>
       <hr>
       <div class="row">
         <div class="col-md-3">
@@ -56,6 +55,10 @@
               </li>
             </ul>
           </span>
+          <p>
+            <b>Fecha:</b>
+            {{ data.fecha | date}}
+          </p>
           <p>
             <b>Duración:</b>
             {{ data.duracionSemanas }} Semanas - {{ data.duracionHoras }} Horas
