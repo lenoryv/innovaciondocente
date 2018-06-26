@@ -333,7 +333,7 @@ $heightbody: 185px;
   -moz-osx-font-smoothing: grayscale;
 
   .photo {
-    height: 200px;
+    height: 300px;
     position: relative;
     background-size: cover;
     object-fit: cover;
@@ -350,7 +350,7 @@ $heightbody: 185px;
     list-style: none;
     margin: 0;
     padding: 10px 15px;
-    height: 200px;
+    height: 300px;
   }
 
   .border {
@@ -366,7 +366,7 @@ $heightbody: 185px;
     padding: 12px;
     box-sizing: border-box;
     position: relative;
-    height: 200px;
+    height: 300px;
     h1 {
       line-height: 1em;
       margin: 0 0 10px 0;
@@ -401,7 +401,7 @@ $heightbody: 185px;
 
 @media screen and (min-width: 768px) {
   .card-5 {
-    height: 200px;
+    height: 250px;
     max-width: 90%;
     margin: 0 auto 1.6%;
 
@@ -434,7 +434,7 @@ $heightbody: 185px;
       @include transition(0.5s);
       overflow: hidden;
       float: left;
-      height: 200px;
+      height: 250px;
       width: 44%;
     }
     .summary {
