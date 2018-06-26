@@ -24,7 +24,7 @@
               </ul>
             </div>
             <div class="col-lg-7">
-              <small>{{ultimoEncuentro.data.fecha}}</small>
+              <small>{{ultimoEncuentro.data.fecha | date}}</small>
               <p>{{ultimoEncuentro.data.contenido | slice(0,800)}}</p>
             </div>
           </div>

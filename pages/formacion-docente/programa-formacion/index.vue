@@ -28,7 +28,7 @@
               <div class="card__desc">
                 <h4>{{curso.data.nombre}}</h4>
                 <small>
-                  <i class="fas fa-calendar-alt"></i> {{curso.data.fecha}}</small>
+                  <i class="fas fa-calendar-alt"></i> {{curso.data.fecha | date}}</small>
               </div>
             </div>
           </nuxt-link>
