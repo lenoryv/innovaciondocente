@@ -138,6 +138,7 @@ export default {
   overflow: hidden;
   text-align: center;
   position: absolute;
+  background-color: $color-primary;
 
   z-index: -2;
   -webkit-filter: blur(20px);
