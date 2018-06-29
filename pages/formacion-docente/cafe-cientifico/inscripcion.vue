@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Suscribete a nuestro Café científico</h1>
+    <h1>Inscribete a _nombre curso_</h1>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="nombre">Nombre</label>

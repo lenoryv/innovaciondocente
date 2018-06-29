@@ -25,7 +25,8 @@
                   class="btn btn-outline-primary btn-large">Regresar</button>
         </div>
         <div class="col-6">
-          <button class="btn btn-primary btn-large">Incribete</button>
+          <nuxt-link class="btn btn-primary btn-large"
+                     :to="{name: 'formacion-docente-cafe-cientifico-inscripcion'}">Incribete</nuxt-link>
         </div>
       </div>
     </section>
