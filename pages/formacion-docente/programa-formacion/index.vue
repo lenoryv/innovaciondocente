@@ -1,18 +1,21 @@
 <template>
   <div>
-    <img v-lazy="banner"
-         alt="banner-formacion-docente">
-    <section>
-      <div class="container">
+    <header class="parallax"
+            :style="'background-image: url('+banner+');'">
+      <div class="header-content">
         <h1>
           {{title}}
         </h1>
-        <p>
+        <p class="container">
           {{description}}
         </p>
+      </div>
+    </header>
+    <section>
+      <div class="container">
         <h2>Cursos Actuales</h2>
         <div class="row">
-          <nuxt-link class="col-lg-6"
+          <nuxt-link class="col-md-4 col-sm-6"
                      v-for="curso in cursos"
                      :key="curso.key"
                      :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.key}}"
@@ -25,7 +28,7 @@
               <div class="card__desc">
                 <h4>{{curso.data.nombre}}</h4>
                 <small>
-                  <i class="fas fa-calendar-alt"></i> {{curso.data.fecha}}</small>
+                  <i class="fas fa-calendar-alt"></i> {{curso.data.fecha | date}}</small>
               </div>
             </div>
           </nuxt-link>
@@ -129,12 +132,8 @@ export default {
     let bannerRes = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/banner.json`
     );
-    let titleRes = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/title.json`
-    );
-    let descriptionRes = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/description.json`
-    );
+    const title = "Programa de Formación Docente";
+    const description = "El Programa de Formación Docente de la universidad está orientado de forma prioritaria a facilitar y apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias profesionales y apoyar el desarrollo de dichas competencias desde la formación del profesorado y desde el enfoque de nuestra universidad."
     let videoRes = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json?orderBy=%22$key%22&limitToLast=1`
     );
@@ -142,9 +141,9 @@ export default {
     return {
       cursosRes,
       bannerRes,
-      titleRes,
-      descriptionRes,
-      videoRes
+      videoRes,
+      title,
+      description
     };
   },
   computed: {
@@ -154,14 +153,8 @@ export default {
         return this.videoRes.data[key];
       }
     },
-    description() {
-      return this.descriptionRes.data;
-    },
     banner() {
       return this.bannerRes.data;
-    },
-    title() {
-      return this.titleRes.data;
     },
     cursos() {
       // TODO: sort cursos
@@ -190,6 +183,37 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/card";
+header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.header-content {
+  text-align: center;
+  h1 {
+    color: $color-font-primary;
+    font-weight: 400;
+  }
+  margin: auto;
+  p {
+    text-align: center;
+    color: $color-font-primary;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-content {
+    text-align: center;
+    h1 {
+      font-size: 300%;
+      letter-spacing: 0.5em;
+    }
+  }
+}
+
+h2 {
+  text-align: center;
+}
 
 #video {
   background-color: $color-primary;

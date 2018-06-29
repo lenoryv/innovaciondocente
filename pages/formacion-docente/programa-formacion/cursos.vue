@@ -35,7 +35,7 @@
               <div class="card__desc">
                 <h4>{{curso.nombre}}</h4>
                 <small>
-                  <i class="fas fa-calendar-alt"></i> {{curso.fecha}}</small>
+                  <i class="fas fa-calendar-alt"></i> {{curso.fecha | date}}</small>
               </div>
             </div>
           </nuxt-link>
