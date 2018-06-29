@@ -34,8 +34,8 @@ export default {
           // only if valid
           axios
             .post(
-              "https://innovaciondocente-utpl.firebaseio.com/suscripcion.json",
-              this.forma
+              "https://innovaciondocente-utpl.firebaseio.com/suscripcion/suscripciones.json",
+              this.email
             )
             .then(function(response) {
               alert("Te has suscribido");
