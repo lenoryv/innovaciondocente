@@ -8,10 +8,11 @@
              alt="img-background">
       </div>
       <div class="header-content">
-        <div class="container">
-          <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}">
-            <h1>{{ultimoEncuentro.data.nombre}}</h1>
-          </nuxt-link>
+        <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}"
+                   tag="div"
+                   class="container"
+                   style="cursor:pointer">
+          <h1>{{ultimoEncuentro.data.nombre}}</h1>
           <div class="row">
             <div class="col-lg-5 no-mobile">
               <figure :style="'background-image: url('+ultimoEncuentro.data.img+');'"></figure>
@@ -29,7 +30,7 @@
               <p class="no-desktop">{{ultimoEncuentro.data.contenido | slice(0,300)}}</p>
             </div>
           </div>
-        </div>
+        </nuxt-link>
       </div>
     </header>
     <section v-if="data.encuentros"
@@ -64,8 +65,7 @@
         <p>
           {{description}}
         </p>
-        <nuxt-link class="btn btn-inverse btn-large"
-                   :to="{name: 'formacion-docente-cafe-cientifico-suscripcion'}">Suscribirse</nuxt-link>
+        <a class="btn btn-inverse btn-large">Suscribirse</a>
       </div>
     </section>
   </div>
