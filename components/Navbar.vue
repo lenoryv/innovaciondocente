@@ -37,9 +37,17 @@
             <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
           </div>
         </div>
-        <nuxt-link :to="{name: 'observatorio-edutendencias'}">
-          Observatorio EduTendencias
-        </nuxt-link>
+        <div class="dropdown">
+          <nuxt-link :to="{name: 'observatorio-edutendencias'}"
+                     class="dropbtn"
+                     tag="button">
+            Observatorio EduTendencias
+            <i class="fa fa-caret-down"></i>
+          </nuxt-link>
+          <div class="dropdown-content">
+            <nuxt-link :to="{name: 'observatorio-edutendencias-disenio-desarrollo'}">Diseño y Desarollo de mi Asigantura</nuxt-link>
+          </div>
+        </div>
         <nuxt-link :to="{name: 'admin'}">
           Admin
         </nuxt-link>
