@@ -9,6 +9,15 @@
                 puedan realizar tareas de soporte a la docencia en calidad de Ayudantes de Cátedra. Con
                 estos proyectos se pretende contribuir a la formación de estudiantes que tienen un perfil
                 profesional de investigación, docencia y que podrían contribuir en el futuro como docentes.</p>
+            <p>El proyecto tomó vida a partir del año 2014 como un recurso para el desarrollo de las competencias
+                de liderazgo de los estudiantes y como una herramienta de apoyo al profesorado. Una de
+                las bases más importantes de esta actividad es el rol de los estudiantes, mediante el
+                cual aportan al proyecto pedagógico del docente. </p>
+            <p>El estudiante que decide incursar en esta actividad académica tiene la oportunidad de aprender
+                y experimentar la práctica docente de primera mano, sin embargo, cabe recalcar que por
+                medio del trabajo en equipo que ejerce tanto el alumno tutor como el docente, resulta
+                en la mejora del proceso de enseñanza-aprendizaje, siendo un beneficio para todos los
+                involucrados.</p>
             <h3>¿Quién es el ayudante de cátedra?</h3>
             <p>El ayudante de cátedra es un estudiante que por sus méritos académicos será seleccionado
                 para cumplir funciones concretas y específicas relacionadas con actividades de docencia,
@@ -32,21 +41,86 @@
                 beca de Responsabilidad Universitaria, cuyo porcentaje va del 40% al 70%, la misma que
                 será acreditada en el semestre siguiente previa evaluación positiva de su desempeño como
                 ayudante de cátedra.</p>
+            <h3>Experiencias</h3>
+            <p>La estudiante María Gabriela Suqui Morocho de la titulación de Derecho es ayudante de cátedra
+                de la materia de Investigación Jurídica, ella nos da su punto de vista sobre su experiencia:
+                “Lo que realmente me inspiró, fue el deseo de compartir los conocimientos que he adquirido,
+                así como también el hecho de poder reforzar en temas que han resultado dificultosos para
+                ellos; y a decir verdad, hasta el momento me ha sido placentero y enriquecedor ejercer
+                mi papel”.</p>
+            <p>La Mgtr. Ángela Salazar, coordinadora del proyecto nos comparte su experiencia desde el punto
+                de vista docente y nos comenta lo gratificante que significa para ella la coordinación
+                del proyecto. “Con el fin de brindar apoyo a los docentes nace el proyecto de “Ayudantes
+                de cátedra”, donde los estudiantes de pregrado participan y se constituyen en un apoyo
+                académico que tiene un profesor en su labor docente. Este proyecto es una oportunidad
+                para que los estudiantes sean seleccionados por sus méritos académicos para cumplir funciones
+                concretas y específicas relacionadas con las actividades de docencia, así como también
+                fomentar el trabajo en equipo. Así mismo, este proyecto se enfoca a contribuir con la
+                formación de los estudiantes que evidencian una orientación vocacional por la docencia
+                e investigación y que podrían perfilarse como futuros profesores de la UTPL. La experiencia
+                de los docentes que han tenido ayudantes de cátedra en sus asignaturas indican que, los
+                ayudantes comparten conocimiento y ayudan a sus compañeros en el proceso de aprendizaje
+                aportando dinamismo en las clases y/o tutorías”.</p>
+            <p>Los estudiantes que actualmente se encuentran siendo parte de este proyecto han tenido una
+                experiencia positiva y enriquecedora, siendo su presencia un aporte necesario al progreso
+                de la academia.</p>
+            <hr>
+            <h4>Titulaciones involucradas</h4>
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Área Administrativa</h5>
+                    <ul>
+                        <li>Administración de Empresas</li>
+                        <li>Administración en Banca y Finanzas</li>
+                        <li>Contabilidad y Auditoría</li>
+                        <li>Economía</li>
+                        <li>Hotelería y Turismo</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Área Socio humanística</h5>
+                    <ul>
+                        <li>Derecho</li>
+                        <li>Psicología</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Área Biológica y Biomédica</h5>
+                    <ul>
+                        <li>Bioquímica y Farmacia</li>
+                        <li>Enfermería</li>
+                        <li>Gestión Ambiental</li>
+                        <li>Ingeniería Agropecuaria</li>
+                        <li>Ingeniería en Alimentos</li>
+                        <li>Ingeniería Industrial</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Área Técnica</h5>
+                    <ul>
+                        <li>Electrónica y Telecomunicaciones</li>
+                        <li>Geología y Minas</li>
+                        <li>Ingeniería Civil</li>
+                    </ul>
+                </div>
+            </div>
             <hr>
             <h4>¿Quieres fortalecer el vinculo docente - estudiante?</h4>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <a class="enlace" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%201%20PLANIFICACIO%CC%81N%20DE%20ACTIVIDADES%20(1).docx">
+                    <a href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%201%20PLANIFICACIO%CC%81N%20DE%20ACTIVIDADES%20(1).docx">
                         <i class="fas fa-file-word"></i> Planificación de actividades de Ayudante de Cátedra (Anexo I)
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <a class="enlace" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%202%20EVALUACIO%CC%81N%20DE%20DESEMPEN%CC%83O%20DEL%20AYUDANTE%20DE%20CA%CC%81TEDRA(1).docx">
+                    <a href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%202%20EVALUACIO%CC%81N%20DE%20DESEMPEN%CC%83O%20DEL%20AYUDANTE%20DE%20CA%CC%81TEDRA(1).docx">
                         <i class="fas fa-file-word"></i> Planificación de actividades de Ayudante de Cátedra (Anexo 2)
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <a class="enlace" target="_blank" href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20ayudante%20de%20ca%CC%81tedra%20abril-agosto%202018.pdf">
+                    <a target="_blank"
+                       href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20ayudante%20de%20ca%CC%81tedra%20abril-agosto%202018.pdf">
                         <i class="fas fa-file-pdf"></i> Conoce el proyecto completo
                     </a>
                 </div>
@@ -60,8 +134,8 @@
 h4 {
   text-align: center !important;
 }
-.enlace{
-    text-align: center;
+a {
+  text-align: center !important;
 }
 .parallax {
   height: 100vh;
@@ -72,7 +146,7 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-i{
+i {
   color: $color-warning-dark;
 }
 </style>
