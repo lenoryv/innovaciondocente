@@ -14,7 +14,7 @@
       <h1>{{ data.nombre }}</h1>
       <hr>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-4">
           <img v-lazy="data.img"
                alt="Imagen Curso">
           <a target="_blank"
@@ -40,7 +40,7 @@
           <button @click="$router.go(-1)"
                   class="btn btn-primary btn-large">Regresar</button>
         </div>
-        <div class="col-md-9">
+        <div class="col-lg-9 col-md-8">
           <span v-if="data.instructores">
             <b>Instructor:</b>
             <ul>
