@@ -5,30 +5,42 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="overlay"></div>
-                <img src="@/static/img/aula.jpg" alt="aula-divertida" class="image">
+                <img src="@/static/img/fun.jpg" alt="aula-divertida" class="image">
                 <div class="middle">
-                    <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-primary">Ver mas</a>
+                    <div>
+                    <h2 class="text">AULA DIVERTIDA</h2>
+                </div>
+                    <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-dark">Ver mas</a>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="overlay"></div>
-                <img src="@/static/img/docente2.jpg" alt="docentes-futuro" class="image">
+                <img src="@/static/img/docfut.jpg" alt="docentes-futuro" class="image">
                 <div class="middle">
-                     <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-primary">Ver mas</a>
+                    <div>
+                    <h2 class="text">DOCENTES DEL FUTURO</h2>
+                </div>
+                     <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-dark">Ver mas</a>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="overlay"></div>
-                <img src="@/static/img/podcast.jpg" alt="podcast" class="image">
+                <img src="@/static/img/pod.jpg" alt="podcast" class="image">
                 <div class="middle">
-                     <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-primary">Ver mas</a>
+                    <div>
+                    <h2 class="text">PODCAST</h2>
+                </div>
+                     <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-dark">Ver mas</a>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="overlay"></div>
-                <img src="@/static/img/videos.jpg" alt="videos" class="image">
+                <img src="@/static/img/video.jpg" alt="videos" class="image">
                 <div class="middle">
-                     <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-primary">Ver mas</a>
+                    <div>
+                    <h2 class="text">VIDEOS</h2>
+                </div>
+                     <a href="https://www.youtube.com/watch?v=_GaXvp4EB-E" target="_blank" class="btn btn-outline-dark">Ver mas</a>
                 </div>
             </div>
         </div>
@@ -37,11 +49,12 @@
 </template>
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/style";
 
 .col-lg-3 {
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 87vh;
   width: 100vw;
 }
 
@@ -67,15 +80,18 @@
   transition: .5s ease;
   background: black;
 }
+.text{
+    color: $col-mustard-light;
+}
 
 .col-lg-3:hover .overlay {
-  opacity: 0.9;
+  opacity: 0.4;
 }
 .col-lg-3:hover .middle {
   display: block;
 }
 .image {
-  width: 100%;
+
   height: 100%;
 }
 .menu{
