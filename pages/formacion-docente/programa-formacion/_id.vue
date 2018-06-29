@@ -22,7 +22,6 @@
              class="btn btn-outline-primary btn-large"
              v-if="canPostulate"
              :href="data.link_postulacion">
-            <!--TODO: add if data.postulacion-->
             Postular
           </a>
           <a target="_blank"
@@ -33,7 +32,6 @@
                 {'btn-danger disabled':!data.urlContenido}
               ]"
              :href="data.urlContenido">
-            <!--TODO: add if data.postulacion-->
             <i class="fas fa-file-pdf"></i>
             Contenido
           </a>
