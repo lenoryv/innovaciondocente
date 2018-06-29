@@ -7,13 +7,13 @@
         <img :src="ultimoEncuentro.data.img"
              alt="img-background">
       </div>
-      <div class="container">
-        <div class="header-content">
+      <div class="header-content">
+        <div class="container">
           <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}">
             <h1>{{ultimoEncuentro.data.nombre}}</h1>
           </nuxt-link>
           <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-5 no-mobile">
               <figure :style="'background-image: url('+ultimoEncuentro.data.img+');'"></figure>
               <ul>
                 <h3>
@@ -25,7 +25,8 @@
             </div>
             <div class="col-lg-7">
               <small>{{ultimoEncuentro.data.fecha | date}}</small>
-              <p>{{ultimoEncuentro.data.contenido | slice(0,800)}}</p>
+              <p class="no-mobile">{{ultimoEncuentro.data.contenido | slice(0,700)}}</p>
+              <p class="no-desktop">{{ultimoEncuentro.data.contenido | slice(0,300)}}</p>
             </div>
           </div>
         </div>
@@ -100,7 +101,7 @@ export default {
         return ("" + b.key).localeCompare(a.key);
       });
       return cursos;
-    },
+    }
   },
   head() {
     return {
@@ -121,10 +122,21 @@ export default {
 @import "assets/variables";
 @import "assets/card";
 
+@media (max-width: 767px) {
+  .no-mobile {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .no-desktop {
+    display: none;
+  }
+}
+
 .header {
   object-fit: cover;
   overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -164,7 +176,6 @@ export default {
   margin: auto;
   h1 {
     color: $color-font-primary !important;
-    text-decoration: underline;
     font-weight: 400;
   }
   ul {
