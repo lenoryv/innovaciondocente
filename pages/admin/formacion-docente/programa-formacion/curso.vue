@@ -85,7 +85,7 @@
                name="postulacion"
                class="form-control"
                v-validate="'required'">
-        <span v-show="errors.has('postulacion')"
+        <span v-show="errors.has('link_postulacion')"
               class="alert alert-danger">Link de Postulaciones es requerido</span>
 
       </div>
