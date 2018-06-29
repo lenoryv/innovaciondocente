@@ -248,24 +248,13 @@
         </div>
       </div>
     </section>
-
+    <!--Suscripcion-->
+    <section>
+      <Suscripcion></Suscripcion>
+    </section>
     <!-- Footer -->
     <footer>
       <div class="footer-commo container">
-        <div class="card_4s-news">
-          <p>Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada.</p>
-          <div class="form-row">
-            <label class="label">
-              Your Email:
-            </label>
-            <input type="email"
-                   name="email"
-                   class="input-text"
-                   placeholder="your_email@email.com">
-            <button class="btn btn-secondary">Suscribite</button>
-          </div>
-        </div>
-
         <div class="row">
           <div class="col-lg-9">
             <div class="list-vertical">
@@ -332,6 +321,7 @@
   </div>
 </template>
 <script>
+import Suscripcion from "@/components/Suscripcion";
 import axios from "axios";
 
 export default {
@@ -355,6 +345,9 @@ export default {
         behavior: "smooth"
       });
     }
+  },
+  components: {
+    Suscripcion
   }
 };
 </script>

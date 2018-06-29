@@ -138,7 +138,7 @@ export default {
             // only if valid
             axios
               .post(
-                "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/suscripcion.json",
+                "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/inscripcion.json",
                 this.forma
               )
               .then(function(response) {

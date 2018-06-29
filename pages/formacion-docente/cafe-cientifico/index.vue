@@ -16,7 +16,7 @@
           <div class="row">
             <div class="col-lg-5 no-mobile">
               <figure :style="'background-image: url('+ultimoEncuentro.data.img+');'"></figure>
-              <ul>
+              <ul v-if="ultimoEncuentro.data.invitados">
                 <h3>
                   <i class="fas fa-users"></i> Invitados
                 </h3>
