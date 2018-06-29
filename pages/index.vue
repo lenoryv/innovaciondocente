@@ -9,11 +9,11 @@
              alt="">
       </div>
       <div class="header-content">
-        <h1>Decide ser más</h1>
-        <p>Proyecto Ascendere</p>
-        <button href="#"
-                class="btn btn-primary">GO TO COURSE</button>
-        <a href="#index"
+        <h1>Proyecto Ascendere</h1>
+        <p>Innovación
+          <span>|</span> Formación
+          <span>|</span> Evaluación</p>
+        <a href="#"
            class="arrow arrow-1">
           <span @click="pageScroll()"></span>
         </a>
@@ -139,11 +139,16 @@
         <div class="row">
           <div class="col-md-6">
             <div class="liid-info border">
-              <img :src="require('~/static/ascendere.png')">
-              <h2>LiiD UTPL</h2>
+              <img :src="require('~/static/iconLiiD.png')">
               <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado
                 al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional.</p>
-              <button class="btn btn-large btn-primary">Leer Más</button>
+              <p>Con el trabajo del Vicerrectorado Académico, Vicerrectorado de Modalidad Abierta y a Distancia,
+                Vicerrectorado de Investigación, Departamento de Ciencias de la Educación, Departamento
+                de Ciencias de la Computación y el Departamento de Ciencias de la Comunicación, se pretende
+                fortalecer la actividad de los grupos de innovación e investigación en temas de tecnología
+                educativa; además de identificar diferentes prácticas de innovación educativa que se
+                suceden en el campus, en relación al uso de nuevas tecnologías y ambientes de aprendizaje.
+              </p>
             </div>
           </div>
           <div class="col-md-6 background-mustard">
@@ -152,7 +157,8 @@
               <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas
                 areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos
                 a explorar cada uno de los proyectos.</p>
-              <button class="btn btn-large btn-primary">Atrevete</button>
+              <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}"
+                         class="btn btn-large btn-primary">Atrevete</nuxt-link>
             </div>
           </div>
         </div>
@@ -174,24 +180,18 @@
           </div>
           <div class="col-md-6 section-text">
             <hr>
-            <h3>TRANSFORMACIÓN DIGITAL: ESTRATEGIA PARA GESTIÓN DEL CAMBIO DE LA TECNOLOGÍA Y DISRUPCIÓN
-              DIGITAL
-            </h3>
-            <p>Organizaciones de todos tipos y tamaños tradicionalmente han dependido de su habilidad para
-              reaccionar rápidamente a los retos cambiantes que van de la mano del avance tecnológico,
-              a la disrupción digital, las demandas del mercado y otros tipos de eventos disruptivos.
-              La agilidad con la que pueden afrontar estos cambios es fundamental para que las organizaciones
-              no se vean abocadas a largos procesos de planificación que no van de la mano con la era
-              de aceleración disruptiva (tecnológica - digita...</p>
-            <nuxt-link class="btn btn-large btn-primary"
-                       :to="{name: ''}">
-              Leer más
-            </nuxt-link>
+            <h3>{{cafecientifico.nombre}}</h3>
+            <p>{{cafecientifico.contenido | slice(0,500) }}</p>
+
           </div>
           <div class="col-md-6">
             <figure>
-              <img :src="require('~/static/img/familia.jpg')">
+              <img :src="cafecientifico.img">
             </figure>
+            <nuxt-link class="btn btn-large btn-inverse"
+                       :to="{name: ''}">
+              Leer más
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -199,6 +199,7 @@
 
     <!-- Quienes somos-->
     <section class="quienes-somos quienes-overlay">
+      <div class="vignette"></div>
       <div class="quienes-content">
         <h2>QUIENES SOMOS</h2>
         <p class="section-text-center">A través de iniciativas como
@@ -331,7 +332,22 @@
   </div>
 </template>
 <script>
+import axios from "axios";
+
 export default {
+  async asyncData({ params }) {
+    let { data } = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json?orderBy=%22$key%22&limitToLast=1`
+    );
+    return { data };
+  },
+  computed: {
+    cafecientifico() {
+      for (const key in this.data) {
+        return this.data[key];
+      }
+    }
+  },
   methods: {
     pageScroll() {
       window.scrollTo({
@@ -352,20 +368,21 @@ h1 {
   color: $color-secondary;
   font-size: 60px;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  text-transform: uppercase;
   font-size: 120px;
   letter-spacing: 5px;
 }
 h2 {
   text-align: center;
-  font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: 45px;
 }
 p {
   text-align: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+p span {
+  color: $color-warning;
 }
 .header {
   object-fit: cover;
@@ -410,7 +427,7 @@ p {
   position: absolute;
   left: 0;
   background: $color-section;
-  opacity: 0.4;
+  opacity: 0.6;
   z-index: -1;
 }
 .header-content {
@@ -548,11 +565,11 @@ p {
   font-weight: 200;
 }
 .section-text p {
-  text-align: left;
+  text-align: justify;
   padding: 10px;
 }
 .section-text h3 {
-  text-align: left;
+  text-align: center;
   padding: 10px;
 }
 .avatar:hover {
@@ -569,9 +586,15 @@ p {
   background-position: center center;
   display: block;
 }
+.vignette {
+  background: rgba(0, 0, 0, 0.815);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
 .cafe-cientifico {
   color: #fff;
-  background: #0a4784;
+  background: $color-primary;
 }
 .img-cafe {
   object-fit: cover;
@@ -581,7 +604,14 @@ p {
   margin: 0;
 }
 figure {
-  margin-top: 1rem;
+  overflow: hidden;
+  padding-top: 2rem;
+  padding-bottom: 50% !important;
+  height: 0;
+  margin: 0;
+}
+figure img {
+  display: block;
   width: 100%;
 }
 footer {
@@ -672,18 +702,22 @@ footer li {
 }
 .liid-info {
   padding: 2rem 1rem;
-  height: 80vh;
+  height: 105vh;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  h2 {
+    color: $color-primary;
+  }
+  img {
+    height: 200px;
+    width: 300px;
+  }
 }
 .border {
   border-top: 3px solid $color-section;
 }
-.liid-info img {
-  height: 200px;
-  width: 200px;
-}
+
 .background-mustard {
   background: $color-warning;
 }

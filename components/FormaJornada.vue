@@ -3,6 +3,7 @@
     <h3>Valora la jornada:</h3>
     <div class="form-group">
       <label for="preg_1">1. En relación a la jornada ¿Qué valoración le daría?</label>
+      <br>
       <fieldset class="rating"
                 name="preg_1">
         <input type="radio"
@@ -56,6 +57,7 @@
           <i class="fas fa-star"></i>
         </label>
       </fieldset>
+      <br>
     </div>
     <div class="form-group">
       <label for="preg_2">2. Valore la aplicabilidad del tema: Desarrollo de competencias transversales en el aula de clases:
@@ -92,6 +94,7 @@
         <label for="preg_3_1">
           3.1 Valore el contenido, metodología y organización general de la Jornada
         </label>
+        <br>
         <fieldset class="rating"
                   name="preg_3_1">
           <input type="radio"
@@ -145,11 +148,13 @@
             <i class="fas fa-star"></i>
           </label>
         </fieldset>
+        <br>
       </div>
       <div class="form-group">
         <label for="preg_3_2">
           3.2 Valore el contenido y metodología de la charla magistral "Un docente aprendiendo"
         </label>
+        <br>
         <fieldset class="rating"
                   name="preg_3_2">
           <input type="radio"
@@ -203,11 +208,13 @@
             <i class="fas fa-star"></i>
           </label>
         </fieldset>
+        <br>
       </div>
       <div class="form-group">
         <label for="preg_3_3">
           3.3 Valore el taller práctico"ADN Innovador".
         </label>
+        <br>
         <fieldset class="rating"
                   name="preg_3_3">
           <input type="radio"
@@ -261,6 +268,7 @@
             <i class="fas fa-star"></i>
           </label>
         </fieldset>
+        <br>
       </div>
     </div>
     <div class="form-group">

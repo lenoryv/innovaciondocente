@@ -1,11 +1,11 @@
 <template>
   <section class="container">
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <FormaJornada></FormaJornada>
         <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores'}"
                    class="btn btn-large btn-outline-primary btn-sm">
-          <i class="fas fa-folder"></i> Portafolio de Jornadas
+          <i class="fas fa-folder"></i> Portafolio <br> de Jornadas
         </nuxt-link>
       </div>
       <div class="col-lg-8">

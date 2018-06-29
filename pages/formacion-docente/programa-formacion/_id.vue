@@ -1,24 +1,30 @@
 <template>
   <section>
     <div class="container">
-      <div class="alert alert-danger"
-           v-if="!data.postulacion">
-        <!--TODO: validate fin postulacion-->
-        Este curso ha finalizado
-      </div>
       <div class="alert alert-success"
-           v-else>
+           v-if="canPostulate">
         <i class="fas fa-calendar-alt"></i>
         Postula hasta el
-        <b>{{data.postulacion}}</b>
+        <b>{{data.postulacion | date}}</b>
+      </div>
+      <div class="alert alert-danger"
+           v-else>
+        Este curso ha finalizado
       </div>
       <h1>{{ data.nombre }}</h1>
-      <h4>Fecha: {{ data.fecha }}</h4>
       <hr>
       <div class="row">
         <div class="col-md-3">
           <img v-lazy="data.img"
                alt="Imagen Curso">
+          <a target="_blank"
+             rel="noopener"
+             class="btn btn-outline-primary btn-large"
+             v-if="canPostulate"
+             :href="data.link_postulacion">
+            <!--TODO: add if data.postulacion-->
+            Postular
+          </a>
           <a target="_blank"
              rel="noopener"
              class="btn btn-large"
@@ -30,17 +36,6 @@
             <!--TODO: add if data.postulacion-->
             <i class="fas fa-file-pdf"></i>
             Contenido
-          </a>
-          <a target="_blank"
-             rel="noopener"
-             class="btn btn-large"
-             v-bind:class="[
-                {'btn-outline-primary':data.link_postulacion},
-                {'btn-danger disabled':!data.link_postulacion}
-              ]"
-             :href="data.link_postulacion">
-            <!--TODO: add if data.postulacion-->
-            Postular
           </a>
           <button @click="$router.go(-1)"
                   class="btn btn-primary btn-large">Regresar</button>
@@ -56,6 +51,10 @@
               </li>
             </ul>
           </span>
+          <p>
+            <b>Fecha:</b>
+            {{ data.fecha | date}}
+          </p>
           <p>
             <b>Duración:</b>
             {{ data.duracionSemanas }} Semanas - {{ data.duracionHoras }} Horas
@@ -95,7 +94,10 @@ export default {
         params.id
       }.json`
     );
-    return { data };
+    // validate date
+    let fecha_postulacion = new Date(data.postulacion);
+    let canPostulate = fecha_postulacion.getTime() >= new Date().getTime();
+    return { data, canPostulate };
   },
   head() {
     return {

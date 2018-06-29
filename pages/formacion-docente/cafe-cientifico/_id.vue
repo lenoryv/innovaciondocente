@@ -5,7 +5,7 @@
     <section class="container">
       <h1>{{encuentro.nombre}}</h1>
       <small>
-        <i class="fas fa-calendar-alt"></i> {{encuentro.fecha}}</small>
+        <i class="fas fa-calendar-alt"></i> {{encuentro.fecha | date}}</small>
       <hr>
       <p>{{encuentro.contenido}}</p>
       <h2 v-if="encuentro.invitados">
@@ -65,12 +65,5 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
-.parallax {
-  height: 100vh;
-  background-color: $color-primary;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+@import "assets/parallax";
 </style>
