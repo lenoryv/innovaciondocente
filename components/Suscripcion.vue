@@ -53,5 +53,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/form";
+.container {
+  background-color: white;
+}
 </style>
 
