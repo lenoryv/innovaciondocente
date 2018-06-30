@@ -1,23 +1,29 @@
 <template>
   <section>
     <div class="container">
-      <div class="alert alert-danger"
-           v-if="!data.postulacion">
-        <!--TODO: validate fin postulacion-->
-        Este curso ha finalizado
-      </div>
       <div class="alert alert-success"
-           v-else>
+           v-if="canPostulate">
         <i class="fas fa-calendar-alt"></i>
         Postula hasta el
         <b>{{data.postulacion | date}}</b>
       </div>
+      <div class="alert alert-danger"
+           v-else>
+        Este curso ha finalizado
+      </div>
       <h1>{{ data.nombre }}</h1>
       <hr>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-4">
           <img v-lazy="data.img"
                alt="Imagen Curso">
+          <a target="_blank"
+             rel="noopener"
+             class="btn btn-outline-primary btn-large"
+             v-if="canPostulate"
+             :href="data.link_postulacion">
+            Postular
+          </a>
           <a target="_blank"
              rel="noopener"
              class="btn btn-large"
@@ -26,25 +32,13 @@
                 {'btn-danger disabled':!data.urlContenido}
               ]"
              :href="data.urlContenido">
-            <!--TODO: add if data.postulacion-->
             <i class="fas fa-file-pdf"></i>
             Contenido
-          </a>
-          <a target="_blank"
-             rel="noopener"
-             class="btn btn-large"
-             v-bind:class="[
-                {'btn-outline-primary':data.link_postulacion},
-                {'btn-danger disabled':!data.link_postulacion}
-              ]"
-             :href="data.link_postulacion">
-            <!--TODO: add if data.postulacion-->
-            Postular
           </a>
           <button @click="$router.go(-1)"
                   class="btn btn-primary btn-large">Regresar</button>
         </div>
-        <div class="col-md-9">
+        <div class="col-lg-9 col-md-8">
           <span v-if="data.instructores">
             <b>Instructor:</b>
             <ul>
@@ -98,7 +92,10 @@ export default {
         params.id
       }.json`
     );
-    return { data };
+    // validate date
+    let fecha_postulacion = new Date(data.postulacion);
+    let canPostulate = fecha_postulacion.getTime() >= new Date().getTime();
+    return { data, canPostulate };
   },
   head() {
     return {

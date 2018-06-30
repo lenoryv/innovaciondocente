@@ -1,7 +1,6 @@
 [
     {
         "area": "biologica",
-        "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
         "repositorio": [
             {
                 "titulo": "Implementación de técnicas de control biológico en cultivos de ciclo corto en la finca UTPL",
@@ -10,6 +9,7 @@
                     "Jacqueline Elizabeth Rojas Rojas",
                     "Jessica Andrea Ordóñez Cuenca"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
                 "infografia": "",
                 "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Desarrollo%20de%20procesos%20cognitivos%20superiores.pdf"
             },
@@ -19,6 +19,7 @@
                 "docentes": [
                     "Yuliana del Cisne Jiménez Gaona"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Aprendizaje%20basado%20en%20objetos.pdf",
                 "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20ABO-ilovepdf-compressed.pdf"
             },
@@ -28,6 +29,7 @@
                 "docentes": [
                     "Natacha del Cisne Fierro Jaramillo "
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Edificaci%C3%B3n%20del%20conocimiento%20en%20colectivo%20Natacha%20Fierro.pdf",
                 "url": ""
             },
@@ -37,6 +39,7 @@
                 "docentes": [
                     "Luis Alberto Cuenca Macas"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
                 "infografia": "",
                 "url": ""
             },
@@ -47,6 +50,7 @@
                     "Darwin Patricio Castillo Malla",
                     "Luis Alberto Cuenca Macas"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
                 "infografia": "",
                 "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20Fortalecimiento%20de%20los%20conocimientos%20y%20competencias.pdf"
             },
@@ -54,6 +58,7 @@
                 "titulo": "Enseñanza de la matemática universitaria mediante la estrategia didáctica de proyectos II",
                 "titulacion": "Ingeniería Química",
                 "docentes": "",
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
                 "infografia": "",
                 "url": ""
             },
@@ -61,6 +66,7 @@
                 "titulo": "Integración de un equipo de salud para el estudio del uso e impacto de un medicamento veterinario como terapia alternativa cntra el cáncer en Loja-Ecuador",
                 "titulacion": "Bioquímica y Farmacia Medicina",
                 "docentes": "",
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
                 "infografia": "",
                 "url": ""
             },
@@ -71,6 +77,7 @@
                     "Gustavo Viñamagua",
                     "José Delgado"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Aplicaciones%20de%20derivadas%20e%20integrales(1).pdf",
                 "url": ""
             },
@@ -80,6 +87,7 @@
                 "docentes": [
                     "Jorge Geovanny Figueroa"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Aprendizaje%20activo%20ense%C3%B1anza%20por%20pares%20Geovanny%20Figueroa.pdf",
                 "url": ""
             }
@@ -87,7 +95,6 @@
     },
     {
         "area": "tecnica",
-        "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
         "repositorio": [
             {
                 "titulo": "Murales exteriores y juegos interactivos para el aula en la escuela 18 de noviembre de la ciudad de Loja",
@@ -95,6 +102,7 @@
                 "docentes": [
                     "Diego Baltazar Espinosa León"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "",
                 "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Development%20of%20projects%20of%20Internet%20of%20Things(1).pdf"
             },
@@ -104,6 +112,7 @@
                 "docentes": [
                     "Carlos Byron Bermeo León"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Dise%C3%B1o%20Web.pdf",
                 "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20laboratorio%20remoto%20ense%C3%B1anza%20de%20la%20f%C3%ADsica%20con%20pr%C3%A1cticas%20experimentales.pdf"
             },
@@ -113,6 +122,7 @@
                 "docentes": [
                     "Alexandra del Rosario Moncayo Vega"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "",
                 "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Development%20of%20projects%20of%20Internet%20of%20Things(1).pdf"
             },
@@ -123,13 +133,17 @@
                     "Alexandra Cristina González Eras",
                     "Celia Paola Sarango Lapo"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "",
                 "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20laboratorio%20remoto%20ense%C3%B1anza%20de%20la%20f%C3%ADsica%20con%20pr%C3%A1cticas%20experimentales.pdf"
             },
             {
                 "titulo": "Festival internacional de Artes Vivas (OFF)",
                 "titulacion": "",
-                "docentes": "",
+                "docentes": [
+                    "María Gabriela Punín Burneo"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "",
                 "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/INFORME%20FINAL%20BUENAS%20P_%20ESC_%2018%20DE%20NOV_%202017_%20ARQUITECTURA%20AM.pdf"
             },
@@ -137,17 +151,29 @@
                 "titulo": "Historia del arte mediante infografía",
                 "titulacion": "Artes Plásticas y Diseño",
                 "docentes": [
-                    "María Gabriela Punín Burneo"
+                    "Silvia Elena Malo Martínez"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/HISTORIA%20DEL%20ARTE%20ELENA%20MALO.pdf",
                 "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20Historia%20del%20arte%20mediante%20Infograf%C3%ADa.pdf"
+            },
+            {
+                "titulo": "Narrativas ilustradas: Una selección tomada de la literatura lojana",
+                "titulacion": "Artes Plásticas y Diseño",
+                "docentes":[
+                    "Claudia Paola Cartuche Flores"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
+                "infografia":"https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Narrativas%20ilustradas%20Claudia%20Cartuche-ilovepdf-compressed.pdf",
+                "url": ""
             },
             {
                 "titulo": "Artesanía identitatia de Cera",
                 "titulacion": "Artes Plásticas y Diseño",
                 "docentes": [
-                    "Silvia Elena Malo Martínez"
+                    "Marlon Antonio Chamba Toledo"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "",
                 "url": ""
             },
@@ -155,120 +181,185 @@
                 "titulo": "Creación de hologramas aplicados al ámbito cultural y educativo",
                 "titulacion": "Lengua y Literatura Psicología",
                 "docentes": [
-                    "Claudia Paola Cartuche Flores"
+                    "Verónica Elizabeth González Rentería",
+                    "Rosa Elizabeth Medina Alvarado"
                 ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/infografia%20hologramas.pdf",
                 "url": ""
             },
             {
                 "titulo": "Evaluación de aprendizajes basado en talleres, proyectos y control de lectura en el contexto de Redes de Datos ( Evaluation of project-based learning and reading control inthe context of data Networks)",
                 "titulacion": "",
-                "docentes": "",
+                "docentes": [
+                    "Carlos Bermeo León",
+                    "Fernanda Soto",
+                    "Ramiro Ramirez"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "",
                 "url": ""
             },
             {
                 "titulo": "Flipped Classroom, una nueva metodología de aprendizaje significativo y uso de herramientas colaborativas en el componente de Redes de Datos",
-                "titulacion": "",
-                "docentes": "",
+                "titulacion": "Sistemas Informátios y Computación",
+                "docentes": [
+                    "Liliana Enciso Quispe"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Captura%20de%20pantalla%202018-04-09%20a%20las%2011_48_54.pdf",
                 "url": ""
             },
             {
                 "titulo": "Rúbricas para la evaluación del trabajo técnico y sustentación oral como parte del examen complexivo de la Maestría en Ordenamiento Territorial y Diseño Urbano OTDU-Primera Cohorte",
-                "titulacion": "",
-                "docentes": "",
+                "titulacion": "Arquitectura",
+                "docentes": [
+                    "Claudia González",
+                    "Galina Segarra",
+                    "Katherine Soto",
+                    "Mercedes Torres"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/TE%CC%81CNICAweb.png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Infograf%C3%ADa_R%C3%BAbricas%20OTDU_Arquitectura.pdf",
                 "url": ""
             }
         ]
     },
     {
-        "comentario": "aun le falta de modificar desde social a administracion",
         "area": "socio",
-        "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
         "repositorio": [
             {
-                "titulo": "Murales exteriores y juegos interactivos para el aula en la escuela 18 de noviembre de la ciudad de Loja",
-                "titulacion": "",
-                "docentes": "",
+                "titulo": "Retroalimentación académica a través de la herramienta \"Blackboard Collaborate\"",
+                "titulacion": "Artes Plásticas y Diseño",
+                "docentes": [
+                    "Elsa Liria Morocho Cuenca"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
                 "infografia": "",
-                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Development%20of%20projects%20of%20Internet%20of%20Things(1).pdf"
+                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Implementing%20formative%20assessment%20through(1).pdf"
             },
             {
-                "titulo": "Diseño Web, lo híbrido entre el arte y la programación",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Dise%C3%B1o%20Web.pdf",
-                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20laboratorio%20remoto%20ense%C3%B1anza%20de%20la%20f%C3%ADsica%20con%20pr%C3%A1cticas%20experimentales.pdf"
+                "titulo": "Proyecto Mundos Virtuales: Simulación de audiencias de Derecho Civil II  con la ayuda de Mundos Virtuales inmersivos",
+                "titulacion": "Sistemas Informáticos y Computación",
+                "docentes": [
+                    "María Alejandra Cueva Guzmán",
+                    "Paúl Javier Moreno Quizhpe",
+                    "Eduardo Xavier Castillo Martínez",
+                    "José Alejandro León Fernández"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
+                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Mundos%20virtuales%20simulaci%C3%B3n%20de%20audiencias.pdf",
+                "url": ""
             },
             {
-                "titulo": "Práctica de diseño y construcción participativa sinergia entre Titulaciones",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "",
-                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Development%20of%20projects%20of%20Internet%20of%20Things(1).pdf"
+                "titulo": "Proyecto laboratorio remoto: Enseñanza de la física con prácticas experimentales",
+                "titulacion": "Artes Plásticas y Diseño - Arquitectura",
+                "docentes": [
+                    "Henry Antonio Quezada Ochoa",
+                    "Celia Paola Sarango Lapo",
+                    "Martha Vanessa Agila Palacios",
+                    "Dunia Inés Jara Roa",
+                    "Jairo Antonio Contreras Mendiera"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
+                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Laboratorio%20remoto.pdf",
+                "url": ""
             },
             {
-                "titulo": "Desarrollo de recursos educativos abiertos (REAS) interactivos para la enseñanza de las Matemáticas Discretas",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "",
-                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20laboratorio%20remoto%20ense%C3%B1anza%20de%20la%20f%C3%ADsica%20con%20pr%C3%A1cticas%20experimentales.pdf"
+                "titulo": "Clase invertida apoyada en el software NB",
+                "titulacion": "Sistemas Informáticos y Computación",
+                "docentes": [
+                    "Carmen Delia Benítez Correa"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
+                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/CLASE%20INVERTIDA%20CARMEN%20BEN%C3%8DTEZ.pdf",
+                "url": ""
             },
             {
-                "titulo": "Festival internacional de Artes Vivas (OFF)",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "",
-                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/INFORME%20FINAL%20BUENAS%20P_%20ESC_%2018%20DE%20NOV_%202017_%20ARQUITECTURA%20AM.pdf"
+                "titulo": "Extensive and intensive listening activities for EFL learners: A case study to improve listening and speaking skills",
+                "titulacion": "Artes Plásticas y Diseño ",
+                "docentes": [
+                    "Eva Ulehlova"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
+                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Extensive%20and%20intensive%20listening%20activities%20for%20EFL%20learners%20INFOGRAPHICS.pdf",
+                "url": ""
             },
             {
-                "titulo": "Historia del arte mediante infografía",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/HISTORIA%20DEL%20ARTE%20ELENA%20MALO.pdf",
-                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20Historia%20del%20arte%20mediante%20Infograf%C3%ADa.pdf"
-            },
-            {
-                "titulo": "Artesanía identitatia de Cera",
-                "titulacion": "",
-                "docentes": "",
+                "titulo": "Proyecto Realidad Aumentada (RA): Reconocer el sistema óseo, regiones, planos anatómicos y tipo de muertes (autopsias) de los informes médico legales a través del uso de un aplicativo con realidad aumentada (RA).",
+                "titulacion": "Sistemas Informáticos y de Computación - Artes Plásticas y Diseño ",
+                "docentes": [
+                    "René Fausto Cueva Ludeña",
+                    "Juan Carlos Ramón",
+                    "Martha Vanessa Agila Palacios",
+                    "Marco Salgado",
+                    "Jenifer Samaniego",
+                    "Dunia Inés Jara Roa",
+                    "Celia Paola Sarango Lapo"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
                 "infografia": "",
                 "url": ""
             },
             {
-                "titulo": "Creación de hologramas aplicados al ámbito cultural y educativo",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/infografia%20hologramas.pdf",
-                "url": ""
-            },
-            {
-                "titulo": "Evaluación de aprendizajes basado en talleres, proyectos y control de lectura en el contexto de Redes de Datos ( Evaluation of project-based learning and reading control inthe context of data Networks)",
-                "titulacion": "",
-                "docentes": "",
+                "titulo": "Implementación de un asistente tutor para dar respuesta a preguntas relacionadas con un componente académico de la Modalidad a Distancia de la UTPL",
+                "titulacion": "Artes Plásticas y Diseño - Lengua y Literatura - Psicología",
+                "docentes": [
+                    "Franco Olivio Guamán Bastidas"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
                 "infografia": "",
                 "url": ""
             },
             {
-                "titulo": "Flipped Classroom, una nueva metodología de aprendizaje significativo y uso de herramientas colaborativas en el componente de Redes de Datos",
+                "titulo": "Fototeca digital colaborativa del Patrimonio Fotográfico de la UTPL",
+                "titulacion": "Artes Plásticas y Diseño - Sistemas Informáticos y de Computación",
+                "docentes": [
+                    "Ana María Beltrán Flandoli",
+                    "Carlos Ortíz León",
+                    "Ramiro Ramírez"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
+                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/FOTOTECA%20DIGITAL%20CARLOS%20ORT%C3%8DZ.pdf",
+                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20fototeca%20final%20-ilovepdf-compressed.pdf"
+            },
+            {
+                "titulo": "Uso de organizadores gráficos como estrategia de aprendizaje significativo.",
+                "titulacion": "Comunicación Social - Arquitectura",
+                "docentes": [
+                    "Grethy Del Rocío Quezada Lozano"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
+                "infografia": "",
+                "url": ""
+            },
+            {
+                "titulo": "Experimentación y  evaluación de las competencias para la TFT",
                 "titulacion": "",
-                "docentes": "",
+                "docentes": [
+                    "Lucy Deyanira Andrade Vargas"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Captura%20de%20pantalla%202018-04-09%20a%20las%2011_48_54.pdf",
                 "url": ""
             },
             {
-                "titulo": "Rúbricas para la evaluación del trabajo técnico y sustentación oral como parte del examen complexivo de la Maestría en Ordenamiento Territorial y Diseño Urbano OTDU-Primera Cohorte",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Infograf%C3%ADa_R%C3%BAbricas%20OTDU_Arquitectura.pdf",
-                "url": ""
+                "titulo": "Autoevaluación de ensayos con el uso de rúbricas",
+                "titulacion": "Sistemas Informáticos y Computación",
+                "docentes": [
+                    "Verónica Soledad Espinoza Celi"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
+                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Autoevaluaci%C3%B3n%20de%20ensayos%20con%20el%20uso%20de%20r%C3%BAbricas.pdf",
+                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Informe%20Autoevaluaci%C3%B3n%20de%20ensayos.pdf"
             },
             {
-                "titulo": "Rúbricas para la evaluación del trabajo técnico y sustentación oral como parte del examen complexivo de la Maestría en Ordenamiento Territorial y Diseño Urbano OTDU-Primera Cohorte",
-                "titulacion": "",
-                "docentes": "",
+                "titulo": "Proyecto orientado al uso de rúbricas para la evaluación de los aprendizajes",
+                "titulacion": "Arquitectura",
+                "docentes": [
+                    "Hernán Serafín Bustillos Ronquillo"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/SOCIOHUMANITICA.png",
                 "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Infograf%C3%ADa_R%C3%BAbricas%20OTDU_Arquitectura.pdf",
                 "url": ""
             }
@@ -276,41 +367,68 @@
     },
     {
         "area": "administrativa",
-        "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/A%CC%81REA%20ADMINISTRATIVA.png",
         "repositorio": [
             {
-                "titulo": "",
-                "titulacion": "",
-                "docentes": "",
+                "titulo": "Micro 2.0. La experimentación y enseñanza-aprendizaje en las aulas de Micro economía",
+                "titulacion": "Economía",
+                "docentes": [
+                    "Jessica Andrea Ordóñez Cuenca",
+                    "Diana Encalada",
+                    "Katty Vanessa Celi Sánchez",
+                    "María del Cisne Tituaña",
+                    "Luis Alfonso Rojas"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/A%CC%81REA%20ADMINISTRATIVA.png",
+                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/liviano_MICRO%202_0_%20JESSICA%20ORDO%C4%9BN%C5%A2EZ.pdf",
+                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Investigaci%C3%B3n%202_0.pdf"
+            },
+            {
+                "titulo": "El uso de entornos personales de aprendizaje en educación superior",
+                "titulacion": "Administración de Empresas - Contabilidad y Auditoría",
+                "docentes": [
+                    "Magali Laura Chamba Rueda"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/A%CC%81REA%20ADMINISTRATIVA.png",
+                "infografia": "",
+                "url": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/LA%20FOTOGRAF%C3%8DA.pdf"
+            },
+            {
+                "titulo": "Proyecto MOOC-UTPL: Resultados de aprendizaje logrados a través de MOOCs autoinstruccionales",
+                "titulacion": "Todas las titulaciones",
+                "docentes": [
+                    "Martha Vanessa Agila Palacios"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/A%CC%81REA%20ADMINISTRATIVA.png",
                 "infografia": "",
                 "url": ""
             },
             {
-                "titulo": "",
-                "titulacion": "",
-                "docentes": "",
+                "titulo": "Elaboración del MOOC: Asesoría en Educación a Distancia para la formación docente",
+                "titulacion": "Todas las titulaciones",
+                "docentes": [
+                    "Carlos Anibal Correa Granda",
+                    "Diego Vinicio Alvarado Astudillo",
+                    "Ruth Minga  Vallejo",
+                    "Carmen Belén Valarezo",
+                    "Andrea Quezada"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/A%CC%81REA%20ADMINISTRATIVA.png",
                 "infografia": "",
                 "url": ""
             },
             {
-                "titulo": "",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "",
-                "url": ""
-            },
-            {
-                "titulo": "",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "",
-                "url": ""
-            },
-            {
-                "titulo": "",
-                "titulacion": "",
-                "docentes": "",
-                "infografia": "",
+                "titulo": "Tecnologías de simulación para fortalecer habilidades y destrezas en el equipo de salud integral",
+                "titulacion": "Enfermería Medicina Bioquímica y Farmacia",
+                "docentes": [
+                    "Yuliana del Cisne Jiménez Gaona",
+                    "María Irene Carrillo Mayanquer",
+                    "María Estefanía Bautista Valarezo",
+                    "Darwin Patricio Castillo Malla",
+                    "Dennis Emanuel Feijoo Blacio",
+                    "Oscar Amable Vivanco Galván"
+                ],
+                "img": "https://innovaciondocente.utpl.edu.ec/sites/default/files/images/A%CC%81REA%20ADMINISTRATIVA.png",
+                "infografia": "https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Simulation%20technology%20Juliana%20Jim%C3%A9nez.pdf",
                 "url": ""
             }
         ]

@@ -7,8 +7,6 @@ Vue.filter('date', val => {
 
   let mes;
 
-  console.log(typeof (parts[1]));
-
   switch (parseInt(parts[1])) {
     case 1: { mes = "Enero"; break; }
     case 2: { mes = "Febrero"; break; }

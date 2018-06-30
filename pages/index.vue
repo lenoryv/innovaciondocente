@@ -251,10 +251,79 @@
         </div>
       </div>
     </section>
-
+    <!--Suscripcion-->
+    <section>
+      <Suscripcion></Suscripcion>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-commo container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="list-vertical">
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'innovacion-docente'}">
+                <h3>Innovación Docente</h3>
+              </nuxt-link>
+              <ul>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-poyecto-mentores'}">Proyecto Mentores</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Practicas</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+              </ul>
+            </div>
+            <div class="list-vertical">
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'formacion-docente-programa-formacion'}">
+                <h3>Formación Docente</h3>
+              </nuxt-link>
+              <ul>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+                <nuxt-link class="link-footer"
+                           :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
+              </ul>
+            </div>
+            <div class="list-vertical">
+              <nuxt-link class="link-footer-title"
+                         :to="{name: 'observatorio-edutendencias'}">
+                <h3>Observatorio EduTencencias</h3>
+              </nuxt-link>
+              <ul>
+                <li>Aula Divertida</li>
+                <li>Docentes del Futuro</li>
+                <li>Videos</li>
+                <li>Podcast</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="list-vertical">
+              <h3>Acerca de Nosotros</h3>
+              <ul>
+                <li>Quienes Somos</li>
+                <li>Nuestro Equipo</li>
+                <li>Nuestros Servicios</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 <script>
+import Suscripcion from "@/components/Suscripcion";
 import axios from "axios";
 
 export default {
@@ -280,6 +349,9 @@ export default {
         behavior: "smooth"
       });
     }
+  },
+  components: {
+    Suscripcion
   }
 };
 </script>

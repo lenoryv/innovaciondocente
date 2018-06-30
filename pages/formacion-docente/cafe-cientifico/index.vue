@@ -7,15 +7,16 @@
         <img :src="ultimoEncuentro.data.img"
              alt="img-background">
       </div>
-      <div class="container">
-        <div class="header-content">
-          <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}">
-            <h1>{{ultimoEncuentro.data.nombre}}</h1>
-          </nuxt-link>
+      <div class="header-content">
+        <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}"
+                   tag="div"
+                   class="container"
+                   style="cursor:pointer">
+          <h1>{{ultimoEncuentro.data.nombre}}</h1>
           <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-5 no-mobile">
               <figure :style="'background-image: url('+ultimoEncuentro.data.img+');'"></figure>
-              <ul>
+              <ul v-if="ultimoEncuentro.data.invitados">
                 <h3>
                   <i class="fas fa-users"></i> Invitados
                 </h3>
@@ -25,10 +26,11 @@
             </div>
             <div class="col-lg-7">
               <small>{{ultimoEncuentro.data.fecha | date}}</small>
-              <p>{{ultimoEncuentro.data.contenido | slice(0,800)}}</p>
+              <p class="no-mobile">{{ultimoEncuentro.data.contenido | slice(0,700)}}</p>
+              <p class="no-desktop">{{ultimoEncuentro.data.contenido | slice(0,300)}}</p>
             </div>
           </div>
-        </div>
+        </nuxt-link>
       </div>
     </header>
     <section v-if="data.encuentros"
@@ -63,8 +65,7 @@
         <p>
           {{description}}
         </p>
-        <nuxt-link class="btn btn-inverse btn-large"
-                   :to="{name: 'formacion-docente-cafe-cientifico-suscripcion'}">Suscribirse</nuxt-link>
+        <a class="btn btn-inverse btn-large">Suscribirse</a>
       </div>
     </section>
   </div>
@@ -100,7 +101,7 @@ export default {
         return ("" + b.key).localeCompare(a.key);
       });
       return cursos;
-    },
+    }
   },
   head() {
     return {
@@ -121,10 +122,21 @@ export default {
 @import "assets/variables";
 @import "assets/card";
 
+@media (max-width: 767px) {
+  .no-mobile {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .no-desktop {
+    display: none;
+  }
+}
+
 .header {
   object-fit: cover;
   overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -165,7 +177,6 @@ export default {
   margin: auto;
   h1 {
     color: $color-font-primary !important;
-    text-decoration: underline;
     font-weight: 400;
   }
   ul {
