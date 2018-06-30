@@ -198,6 +198,7 @@ nav {
       &-content {
         position: relative;
         background-color: $color-font-primary;
+        border-left: 2px solid $color-font-primary;
         box-shadow: none;
         a {
           background-color: $color-primary;
