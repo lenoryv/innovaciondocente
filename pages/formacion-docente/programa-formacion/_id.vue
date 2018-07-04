@@ -14,7 +14,7 @@
       <h1>{{ data.nombre }}</h1>
       <hr>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-4">
           <img v-lazy="data.img"
                alt="Imagen Curso">
           <a target="_blank"
@@ -22,7 +22,6 @@
              class="btn btn-outline-primary btn-large"
              v-if="canPostulate"
              :href="data.link_postulacion">
-            <!--TODO: add if data.postulacion-->
             Postular
           </a>
           <a target="_blank"
@@ -33,14 +32,13 @@
                 {'btn-danger disabled':!data.urlContenido}
               ]"
              :href="data.urlContenido">
-            <!--TODO: add if data.postulacion-->
             <i class="fas fa-file-pdf"></i>
             Contenido
           </a>
           <button @click="$router.go(-1)"
                   class="btn btn-primary btn-large">Regresar</button>
         </div>
-        <div class="col-md-9">
+        <div class="col-lg-9 col-md-8">
           <span v-if="data.instructores">
             <b>Instructor:</b>
             <ul>

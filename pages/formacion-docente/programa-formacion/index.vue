@@ -13,7 +13,7 @@
     </header>
     <section>
       <div class="container">
-        <h2>Cursos Actuales</h2>
+        <h2>Ultimos Cursos</h2>
         <div class="row">
           <nuxt-link class="col-md-4 col-sm-6"
                      v-for="curso in cursos"
@@ -33,10 +33,16 @@
             </div>
           </nuxt-link>
         </div>
-        <nuxt-link class="btn btn-primary btn-large"
+        <nuxt-link class="btn btn-sm btn-primary btn-large"
                    :to="{name: 'formacion-docente-programa-formacion-cursos'}">
           <i class="fas fa-folder"></i> Portafolio de Cursos
         </nuxt-link>
+        <a class="btn btn-outline-primary btn-sm btn-large"
+           href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf"
+           rel="noopener"
+           target="_blank">
+          <i class="fas fa-calendar-alt"></i> Programa de Formación Docente
+        </a>
       </div>
     </section>
     <section id="video">
@@ -83,26 +89,6 @@
           <div class="col-md-6">
             <h3>
               <i class="fas fa-file-pdf"></i>
-              Calendario Anual
-            </h3>
-            <p>
-              El Programa de Formación se desarrolla por medio de la articulación de varios módulos, los cuales están
-              integrados por itinerarios. En esta estructura se reflejen las líneas de capacitación de
-              toda la comunidad universitaria. De acuerdo a los ejes formativos: académia e investigación,
-              e identidad y excelencia, se podrán ordenar el tipo de capacitación requerida por módulos
-              e itinerarios, garantizando que el alcance de una formación, cumpla los objetivos deseados.
-            </p>
-            <a class="btn btn-outline-primary btn-large"
-               href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf"
-
-               rel="noopener"
-               target="_blank">
-              Programa de Formación Docente
-            </a>
-          </div>
-          <div class="col-md-6">
-            <h3>
-              <i class="fas fa-file-pdf"></i>
               Valida tu formación Docente - Pedagógica
             </h3>
             <p>
@@ -115,6 +101,16 @@
                target="_blank"
                rel="noopener">
               Intructivo para validar tus cursos</a>
+          </div>
+          <div class="col-md-6">
+            <h3>
+              <i class="fas fa-file-pdf"></i>
+              Como hacer un curso
+            </h3>
+            <a class="btn btn-outline-primary btn-large"
+               target="_blank"
+               rel="noopener">
+              TODO</a>
           </div>
         </div>
       </div>
@@ -133,7 +129,8 @@ export default {
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/banner.json`
     );
     const title = "Programa de Formación Docente";
-    const description = "El Programa de Formación Docente de la universidad está orientado de forma prioritaria a facilitar y apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias profesionales y apoyar el desarrollo de dichas competencias desde la formación del profesorado y desde el enfoque de nuestra universidad."
+    const description =
+      "El Programa de Formación Docente de la universidad está orientado de forma prioritaria a facilitar y apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias profesionales y apoyar el desarrollo de dichas competencias desde la formación del profesorado y desde el enfoque de nuestra universidad.";
     let videoRes = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json?orderBy=%22$key%22&limitToLast=1`
     );
@@ -206,7 +203,7 @@ header {
     text-align: center;
     h1 {
       font-size: 300%;
-      letter-spacing: 0.5em;
+      letter-spacing: 0.3em;
     }
   }
 }
