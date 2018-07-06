@@ -1,0 +1,56 @@
+[
+  {
+      "titulo":"Aula Divertida",
+      "descripcion":"",
+      "cards":[
+          {
+            "titulo": "Nuestras aulas, un viaje al pasado.",
+            "descripcion": "Te presentamos este post sobre la perspectiva de los adultos mayores acerca de la educación tradicional a la educación moderna y sus fallas en cuanto a la tecnología.",
+              "img":"https://innovacioneducativa.files.wordpress.com/2017/01/aula-do.png",
+              "url":"https://innovacioneducativa.wordpress.com/2017/01/11/nuestras-aulas-un-viaje-al-pasado/"
+          },
+          {
+              "titulo": "Martín Fierro, interactivo, un sitio web que reúne recursos digitales",
+              "descripcion": "Se trata de una propuesta multimedia de la Biblioteca Nacional Mariano Moreno. Además de presentar el libro en formato digital, reúne recursos digitales y materiales para explorar los procesos que dierón origen a la obra.",
+              "img":"https://imagenes.educ.ar/repositorio/Imagen/ver?image_id=f99fe90e-129d-457f-8c13-0d85bc61d3e3",
+              "url":"https://www.educ.ar/noticias/131887/martin-fierro-interactivo-un-sitio-web-que-reune-recursos-digitales"
+          },
+          {
+              "titulo": "¿Sabemos lo que significa competencia en educación?",
+              "descripcion": "Conseguir que un alumno/a sea competente, significa que sea capaz de llevar a cabo una determinada tarea, en este blog sobre la competencia en educación descubriremos los resultados de este nuevo método innovador.",
+              "img":"http://www.educablog.es/wp-content/uploads/2016/05/shutterstock_126150599-Copyright_Jesus_Sanz__small.jpg",
+              "url":"http://organizacionyescuela.blogspot.com/2016/11/sabemos-lo-que-significa-competencia-en.html"
+          },
+          {
+              "titulo": "Perdón, generosidad y compasión: el camino a la alegría",
+              "descripcion": "En el siguiente post se hace presente el compromiso y la aceptación de un nuevo año tomando en cuenta la presencia de Dios para buen inicio del año pues es importante no dejar de lado el pensamiento espiritual.",
+              "img":"https://franjodar.com/wp-content/uploads/2016/12/image2.png",
+              "url":"https://franjodar.com/2016/12/31/perdon-generosidad-y-compasion-el-camino-a-la-alegria/"
+          },
+          {
+              "titulo": "Si tienes una idea, este es un camino hacia el éxito.",
+              "descripcion": "Conóce este artículo sobre Iñaki Berenguer este emprendedor que nos relata los pasos que lo llevaron a la gloria y sus consejos para ser un gran emprendedor y friunfar en el ámbito empresarial.",
+              "img":"https://ep01.epimg.net/elpais/imagenes/2016/12/12/talento_digital/1481547350_933395_1481560566_noticia_normal_recorte1.jpg",
+              "url":"https://elpais.com/elpais/2016/12/12/talento_digital/1481547350_933395.html"
+          },
+          {
+              "titulo": "Balara un portal con actividades interactivas para estudiantes",
+              "descripcion": "Te mostramos un innovador portal web Balara que es un portal web creado por Balbino de Oro y Araceli Martín, maestros  de  educación con la finalidad de presentar actividades para el desarrollo de la atención y percepción visual en educación.",
+              "img":"https://yoprofesor.org/wp-content/uploads/2016/10/balara_portal_web_con_actividades_para_la_educacion_infantil-copia.jpg",
+              "url":"https://yoprofesor.org/2016/10/26/balara-un-portal-con-actividades-interactivas-para-estudiantes/"
+          },
+          {
+              "titulo": "Celly tu WhatsApp educativo para estudiantes y docentes",
+              "descripcion": "Celly es una aplicación por mensajes de texto enfocada en particular a la educación, ya que extrema las medidas de seguridad a la hora de tratar con información personal. La aplicación es gratuita y la puedes utlilizar con WhatsApp.",
+              "img":"https://yoprofesor.org/wp-content/uploads/2016/07/celly-copia.jpg",
+              "url":"https://yoprofesor.org/2016/07/12/celly-tu-whatsapp-educativo-para-estudiantes-y-docentes/"
+          },
+          {
+            "titulo": "Las universidades más innovadoras: un enfoque alternativo para la clasificación",
+            "descripcion": "Muchas universidades de investigación modernos demandan ser innovador o empresarial. Pero ¿qué significa eso? Y podemos realmente capturar esos grandes conceptos? lee el siguiente artículo y descubrelo.",
+            "img":"https://www.blogeduca.com/wp-content/uploads/2015/11/universidades-mas-innovadoras-blogeduca.jpg",
+            "url":"https://www.timeshighereducation.com/blog/most-innovative-universities-alternative-approach-ranking"
+        }
+      ]
+  }
+]
