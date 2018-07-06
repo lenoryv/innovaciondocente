@@ -11,7 +11,7 @@
           <div class="card card__one link">
             <figure class="card__img">
               <div class="embed-container">
-                <iframe :src="video.link"
+                <iframe :src="video.vid"
                         frameborder="0"
                         title="video"
                         allow="autoplay; encrypted-media"
@@ -19,8 +19,8 @@
               </div>
             </figure>
             <div class="card__desc">
-              <h3>{{video.nombre}}</h3>
-              <p>{{video.descripcion}}</p>
+              <h3>{{video.title}}</h3>
+              <p>{{video.desc}}</p>
             </div>
           </div>
         </div>
@@ -35,13 +35,9 @@ import axios from "axios";
 export default {
   async asyncData({ params }) {
     let { data } = await axios.get(
-      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
+      "https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/proyectos-actuales.json"
     );
-
-    let title = "Tips de Expertos";
-    let description =
-      "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
-    return { data, title, description };
+    return { data };
   }
 };
 </script>
@@ -62,7 +58,6 @@ export default {
   width: 100%;
   height: 100%;
 }
-h3 {  
-  color: $col-mustard-dark !important;
-}
+
+
 </style>

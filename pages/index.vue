@@ -189,6 +189,13 @@
           <div class="col-md-6 background-mustard">
             <div class="liid-info">
               <h2>Proyectos Actuales</h2>
+              <div class="embed-container">
+                <iframe src="https://www.youtube.com/embed/r6uPLUhc1cA"
+                        frameborder="0"
+                        title="video"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
+              </div>
               <p>Ascendere crea y motiva a las nuevas generaciones a poner en práctica, explorar nuevas
                 areas con el fin de crear cosas simples pero asombrosas, tienes dudas pues te invitamos
                 a explorar cada uno de los proyectos.</p>
@@ -294,6 +301,13 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/card";
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 h1 {
   color: $color-secondary;

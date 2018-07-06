@@ -4,11 +4,16 @@
       <div class="row">
         <div class="col-lg-2">
           <section class="sticky">
-            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-buenas-practicas-index'}">Inicio</nuxt-link>
-            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'biologia'}}">A. Biológica</nuxt-link>
-            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'administrativa'}}">A. Administrativa </nuxt-link>
-            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'tecnica'}}">A. Técnica</nuxt-link>
-            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'socio'}}">A. Socio Humanística</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large"
+                       :to="{name: 'innovacion-docente-buenas-practicas-index'}">Inicio</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large"
+                       :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'0'}}">A. Biológica</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large"
+                       :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'1'}}">A. Técnica</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large"
+                       :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'2'}}">A. Socio Humanística</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large"
+                       :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'3'}}">A. Administrativa </nuxt-link>
           </section>
         </div>
         <section class="col-lg-9">
@@ -41,6 +46,5 @@
     z-index: 3;
   }
 }
-
 </style>
 
