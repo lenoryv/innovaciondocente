@@ -87,7 +87,7 @@ header {
     color: $color-font-primary;
   }
   margin: auto;
-  p {
+  .col-lg-6 p {
     text-align: justify;
     padding-top: 100px;
     color: $color-font-primary;

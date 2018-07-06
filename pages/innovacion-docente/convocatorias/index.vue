@@ -5,9 +5,9 @@
         <div class="col-md-3">
           <section class="sticky">
             <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index'}">Actual</nuxt-link>
-            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'1'}}">Abril-Agosto 2018</nuxt-link>
-            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'2'}}">Octubre 2017-Febrero 2018</nuxt-link>
-            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'3'}}">Abril-Agosto 2017</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'0'}}">Abril-Agosto 2018</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'1'}}">Octubre 2017-Febrero 2018</nuxt-link>
+            <nuxt-link class="btn btn-outline-dark btn-large" :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:'2'}}">Abril-Agosto 2017</nuxt-link>
           </section>
         </div>
         <section class="col-md-9">
