@@ -241,7 +241,6 @@ input[type="checkbox"] {
   display: grid;
   grid-auto-rows: $size;
   grid-auto-flow: row dense;
-  vertical-align: center;
   grid-template-columns: repeat(auto-fit, minmax($size, 1fr));
   grid-gap: 5px;
 }
@@ -252,16 +251,28 @@ input[type="checkbox"] {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     &:nth-child(1) {
-      grid-column-end: span 3;
-      grid-row-end: span 2;
-    }
-    &:nth-child(5n + 0) {
       grid-column-end: span 2;
     }
-    &:nth-child(11n + 0) {
+    &:nth-child(5n + 0) {
       grid-row-end: span 2;
+    }
+  }
+  @media (min-width: 768px) {
+    &:nth-child(1) {
+      grid-row-end: span 2;
+    }
+    &:nth-child(8n + 0) {
+      grid-column-end: span 2;
+    }
+  }
+  @media (min-width: 992px) {
+    &:nth-child(1) {
+      grid-column-end: span 3;
+    }
+    &:nth-child(10n + 0) {
+      grid-column-end: span 3;
     }
   }
   .overlay {
