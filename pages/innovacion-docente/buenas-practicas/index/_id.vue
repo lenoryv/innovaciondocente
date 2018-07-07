@@ -1,32 +1,39 @@
 <template>
     <div>
-       <div class="card-5">
+       <div class="card-5" v-for="(repositorio, i) in data.repositorio" :key="i" >
         <img class="photo"
-             src="https://innovaciondocente.utpl.edu.ec/sites/default/files/images/BIOLO%CC%81GICA%20(1).png">
+             :src="repositorio.img">
         <div class="description">
-          <h1>Implementación de técnicas de control biológico en cultivos de ciclo corto en la finca UTPL</h1>
-          <h2>Ingeniería Agropecuaria</h2>
+          <h3>{{repositorio.titulo}}</h3>
+          <h4>{{repositorio.titulacion}}</h4>
           <div class="border"></div>
           <div class="summary">
-              <p>Docente:  </p>
+              <p>Docentes:  </p>
           <ul>
               <!--v-for="(nombre,i)in datos.docentes" :key="i"-->
-              <li>Jacqueline Elizabeth Rojas Rojas</li>
+              <li v-for="(nombre,i) in repositorio.docentes" :key="i">{{nombre}}</li>
           </ul>
           </div>
-          
-          
-          <a href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Desarrollo%20de%20procesos%20cognitivos%20superiores.pdf"><i class="fas fa-file-pdf fa-2x"></i>        </a>
-          <a href=""><i class="fas fa-file-alt fa-2x"></i></a>
+          <a target="_blank" :href="repositorio.url"><i class="fas fa-file-pdf fa-2x"></i></a>
+          <a target="_blank" :href="repositorio.infografia"><i class="fas fa-file-alt fa-2x"></i></a>
         </div>
       </div>
     </div>
 </template>
+<script>
+import axios from "axios";
+
+export default {
+  async asyncData({ params }) {
+    let { data } = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${params.id}.json` 
+    );
+    return { data };
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 @import "assets/card";
 
 </style>
-
-
-
