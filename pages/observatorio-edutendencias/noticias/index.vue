@@ -6,9 +6,12 @@
     <div class="container">
       <div class="content"
            v-for="(d, i) in tempData"
-           :key="i"
+           :key="'el'+i"
            :style="'background-image: url('+d.img+');'">
-        <div class="overlay">
+        <input type="checkbox"
+               :id="i">
+        <label class="overlay"
+               :for="i">
           <div class="data">
             <h3>Titulo -
               <span>{{i}}</span>
@@ -19,7 +22,7 @@
               iusto architecto veritatis fugiat? Est.
             </p>
           </div>
-        </div>
+        </label>
       </div>
     </div>
   </section>
@@ -230,15 +233,19 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 $size: 250px;
+
+input[type="checkbox"] {
+  display: none;
+}
 .container {
   display: grid;
   grid-auto-rows: $size;
   grid-auto-flow: row dense;
   vertical-align: center;
   grid-template-columns: repeat(auto-fit, minmax($size, 1fr));
+  grid-gap: 5px;
 }
 .content {
-  background-color: $color-primary;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -257,26 +264,17 @@ $size: 250px;
       grid-row-end: span 2;
     }
   }
-  &:hover {
-    cursor: pointer;
-    .overlay {
-      background: rgba($color-dark, 0.7);
-      .data {
-        p {
-          display: inline;
-        }
-      }
-    }
-  }
   .overlay {
+    cursor: pointer;
     position: relative;
     height: 100%;
     width: 100%;
     color: $color-font-primary;
     background: linear-gradient(
       to bottom,
-      rgba(255, 0, 0, 0),
-      rgba(255, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
       $color-dark
     );
     .data {
@@ -289,6 +287,14 @@ $size: 250px;
       p {
         display: none;
       }
+    }
+  }
+}
+input[type="checkbox"]:checked ~ .overlay {
+  background: rgba($color-dark, 0.7);
+  .data {
+    p {
+      display: inline;
     }
   }
 }
