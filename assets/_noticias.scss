@@ -1,0 +1,9 @@
+@import 'assets/variables';
+.html {
+  /deep/ img {
+    width: 100%;
+    padding: 1em 2em;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
