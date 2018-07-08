@@ -36,7 +36,7 @@
       <textarea v-model="forma.html"
                 type="text"
                 name="html"
-                class="form-control"
+                class="form-control code"
                 v-validate="'required'" />
       <span v-show="errors.has('html')"
             class="alert alert-danger">Html Markup es requerido</span>
@@ -112,4 +112,7 @@ export default {
 @import "assets/form";
 @import "assets/alert";
 @import "assets/noticias";
+.code {
+  font-family: monospace
+}
 </style>

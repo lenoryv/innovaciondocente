@@ -17,11 +17,12 @@
                        tag="h3">
               {{noticia.data.nombre | capitalize}}
             </nuxt-link>
-            <p>{{noticia.data.description}}</p>
-            <br>
-            <nuxt-link :to="{name: 'observatorio-edutendencias-noticias-id', params: {id:noticia.key}}">
-              Leer más...
-            </nuxt-link>
+            <p>{{noticia.data.description}}
+              <br>
+              <nuxt-link :to="{name: 'observatorio-edutendencias-noticias-id', params: {id:noticia.key}}">
+                Leer más...
+              </nuxt-link>
+            </p>
           </div>
         </label>
       </div>
@@ -45,10 +46,15 @@ export default {
         resp.push({ key: key, data: this.data[key] });
       }
       resp.sort(function(a, b) {
-        return ("" + a.key).localeCompare(b.key);
+        return ("" + b.key).localeCompare(a.key);
       });
       return resp;
     }
+  },
+  head() {
+    return {
+      title: "Noticias | Innovación Docente"
+    };
   }
 };
 </script>
@@ -117,23 +123,25 @@ input[type="checkbox"] {
       max-width: 100%;
       max-height: 100%;
       overflow: auto;
+      text-align: justify;
       h3:hover {
         text-decoration: underline;
       }
       p,
-      br,
       a {
         display: none;
         color: $color-font-primary;
+      }
+      a {
+        float: right;
       }
     }
   }
 }
 input[type="checkbox"]:checked ~ .overlay {
-  background: rgba($color-dark, 0.7);
+  background: rgba($color-dark, 0.8);
   .data {
     p,
-    br,
     a {
       display: inline;
     }

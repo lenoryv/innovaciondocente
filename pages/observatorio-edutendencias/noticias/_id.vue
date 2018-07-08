@@ -3,6 +3,8 @@
     <h1>{{data.nombre}}</h1>
     <div v-html="data.html"
          class="html"></div>
+    <button @click="$router.go(-1)"
+            class="btn btn-outline-primary btn-large">Regresar</button>
   </section>
 </template>
 
