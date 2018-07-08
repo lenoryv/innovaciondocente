@@ -18,6 +18,7 @@
               {{noticia.data.nombre | capitalize}}
             </nuxt-link>
             <p>{{noticia.data.description}}</p>
+            <br>
             <nuxt-link :to="{name: 'observatorio-edutendencias-noticias-id', params: {id:noticia.key}}">
               Leer más...
             </nuxt-link>
@@ -44,7 +45,7 @@ export default {
         resp.push({ key: key, data: this.data[key] });
       }
       resp.sort(function(a, b) {
-        return ("" + b.key).localeCompare(a.key);
+        return ("" + a.key).localeCompare(b.key);
       });
       return resp;
     }
@@ -120,6 +121,7 @@ input[type="checkbox"] {
         text-decoration: underline;
       }
       p,
+      br,
       a {
         display: none;
         color: $color-font-primary;
@@ -131,6 +133,7 @@ input[type="checkbox"]:checked ~ .overlay {
   background: rgba($color-dark, 0.7);
   .data {
     p,
+    br,
     a {
       display: inline;
     }
