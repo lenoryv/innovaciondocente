@@ -16,7 +16,7 @@
             <th>Opciones</th>
           </tr>
           <tr v-for="(noticia, key) in noticias"
-              v-if="noticias"
+              v-if="noticia"
               :key="key">
             <td>
               <nuxt-link :to="{name: 'observatorio-edutendencias-noticias-id', params: {id:key}}">
