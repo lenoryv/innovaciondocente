@@ -12,6 +12,14 @@
           </li>
         </ul>
       </li>
+      <li>
+        Observatorio EduTendencias
+        <ul>
+          <li>
+            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
+          </li>
+        </ul>
+      </li>
     </ul>
   </div>
 </template>
