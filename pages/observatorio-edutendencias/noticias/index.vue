@@ -88,20 +88,12 @@ input[type="checkbox"] {
       grid-row-end: span 2;
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     &:nth-child(1) {
       grid-row-end: span 2;
     }
     &:nth-child(5n + 0) {
       grid-column-end: span 2;
-    }
-  }
-  @media (min-width: 992px) {
-    &:nth-child(1) {
-      grid-column-end: span 3;
-    }
-    &:nth-child(10n + 0) {
-      grid-column-end: span 3;
     }
   }
   .overlay {
@@ -138,7 +130,8 @@ input[type="checkbox"] {
     }
   }
 }
-input[type="checkbox"]:checked ~ .overlay {
+input[type="checkbox"]:checked ~ .overlay,
+.overlay:hover {
   background: rgba($color-dark, 0.8);
   .data {
     p,
