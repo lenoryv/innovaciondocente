@@ -39,21 +39,34 @@
         <h2>
           Portafolio de Encuentros
         </h2>
-        <div class="row encuentros">
-          <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
-                     v-for="encuentro in encuentros"
-                     :key="encuentro.key"
-                     :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.key}}"
-                     tag="div">
-            <div class="card card__two link">
-              <figure class="card__img"
-                      :style="'background-image: url('+encuentro.data.img+');'">
-              </figure>
-              <div class="card__desc">
-                <h4>{{encuentro.data.nombre}}</h4>
+        <div class="encuentros">
+          <div class="row"
+               id="scroll">
+            <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
+                       v-for="encuentro in encuentros"
+                       :key="encuentro.key"
+                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.key}}"
+                       tag="div">
+              <div class="card card__two link">
+                <figure class="card__img"
+                        :style="'background-image: url('+encuentro.data.img+');'">
+                </figure>
+                <div class="card__desc">
+                  <h4>{{encuentro.data.nombre}}</h4>
+                </div>
               </div>
-            </div>
-          </nuxt-link>
+            </nuxt-link>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <button class="btn btn-large btn-sm btn-outline-primary"
+                    @click="scrollLeft">&#60;&#61;</button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-large btn-sm btn-outline-primary"
+                    @click="scrollRight">&#61;&#62;</button>
+          </div>
         </div>
       </div>
     </section>
@@ -82,9 +95,18 @@ export default {
       "Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior y que ayuden a fomentar inquietudes que despierten una entretenida discusión.";
     return { data, description };
   },
+  methods: {
+    scrollLeft() {
+      const el = document.getElementById("scroll");
+      el.scrollLeft -= document.getElementById("encuentros").offsetWidth * 0.5;
+    },
+    scrollRight() {
+      const el = document.getElementById("scroll");
+      el.scrollLeft += document.getElementById("encuentros").offsetWidth * 0.5;
+    }
+  },
   computed: {
     ultimoEncuentro() {
-      // TODO: optimize
       let res = null;
       for (const key in this.data.encuentros) {
         res = { key: key, data: this.data.encuentros[key] };
@@ -92,7 +114,6 @@ export default {
       return res;
     },
     encuentros() {
-      // TODO: sort by date
       let cursos = [];
       for (const key in this.data.encuentros) {
         cursos.push({ key: key, data: this.data.encuentros[key] });
@@ -190,11 +211,14 @@ export default {
   color: $color-font-primary;
 }
 #encuentros {
-  overflow: auto;
   background-color: $color-font-primary;
   .row {
+    overflow: auto;
     display: -webkit-box;
     flex-wrap: nowrap;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
