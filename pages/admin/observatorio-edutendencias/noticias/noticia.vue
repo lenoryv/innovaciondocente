@@ -12,6 +12,13 @@
             class="alert alert-danger">Nombre es requerido</span>
     </div>
     <div class="form-group">
+      <label for="autor">Autor</label>
+      <input v-model="forma.autor"
+             type="text"
+             name="autor"
+             class="form-control">
+    </div>
+    <div class="form-group">
       <label for="img">Imagen</label>
       <input v-model="forma.img"
              type="text"
@@ -43,6 +50,13 @@
     </div>
     <div class="html">
       <h1>{{forma.nombre}}</h1>
+      <small v-if="forma.autor">
+        <i class="fas fa-user"></i> {{forma.autor}}
+      </small>
+      <small v-if="forma.fecha">
+        <br>
+        <i class="fas fa-calendar-alt"></i> {{forma.fecha}}
+      </small>
       <span v-html="forma.html"></span>
     </div>
     <!--Buttons forma-->
@@ -73,7 +87,9 @@ export default {
       nombre: null,
       img: null,
       description: null,
-      html: null
+      html: null,
+      autor: null,
+      date: null
     };
     return { forma };
   },
@@ -83,6 +99,7 @@ export default {
         .validateAll()
         .then(x => {
           if (x) {
+            this.forma.date = Date.now();
             axios
               .post(
                 "https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/noticias.json",
@@ -113,6 +130,6 @@ export default {
 @import "assets/alert";
 @import "assets/noticias";
 .code {
-  font-family: monospace
+  font-family: monospace;
 }
 </style>
