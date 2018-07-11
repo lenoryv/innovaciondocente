@@ -1,6 +1,14 @@
 <template>
   <section class="container">
     <h1>{{data.nombre}}</h1>
+    <small v-if="data.autor">
+      <i class="fas fa-user"></i> {{data.autor}}
+    </small>
+    <small v-if="data.date">
+      <br>
+      <i class="fas fa-calendar-alt"></i> {{data.date | date}}
+    </small>
+    <hr>
     <div v-html="data.html"
          class="html"></div>
     <button @click="$router.go(-1)"
