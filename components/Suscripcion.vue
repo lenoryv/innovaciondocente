@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="container">
     <h2>Suscribete</h2>
     <p>Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada.</p>
     <div class="form-group">
@@ -16,7 +16,7 @@
             type="submit">
       Suscribirse
     </button>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -57,4 +57,3 @@ export default {
   background-color: white;
 }
 </style>
-
