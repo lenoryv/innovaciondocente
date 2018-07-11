@@ -5,13 +5,13 @@
     </section>
     <div class="container-fluid">
       <div class="row">
-        <div v-for="(video, key) in data"
+        <div v-for="(video, key) in proyectos"
              :key="key"
              class="col-xl-4 col-md-6">
           <div class="card card__one link">
             <figure class="card__img">
               <div class="embed-container">
-                <iframe :src="video.vid"
+                <iframe :src="video.data.vid"
                         frameborder="0"
                         title="video"
                         allow="autoplay; encrypted-media"
@@ -19,8 +19,8 @@
               </div>
             </figure>
             <div class="card__desc">
-              <h3>{{video.title}}</h3>
-              <p>{{video.desc}}</p>
+              <h3>{{video.data.title}}</h3>
+              <p>{{video.data.desc}}</p>
             </div>
           </div>
         </div>
@@ -38,6 +38,19 @@ export default {
       "https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/proyectos-actuales.json"
     );
     return { data };
+  },
+  computed:{
+    proyectos() {
+      // TODO: sort by date
+      let proyecto = [];
+      for (const key in this.data) {
+        proyecto.push({key:key, data:this.data[key] });
+      }
+      proyecto.sort(function(a, b) {
+        return ("" + b.key).localeCompare(a.key);
+      });
+      return proyecto;
+    }
   }
 };
 </script>
@@ -57,6 +70,13 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.card__one{
+  p{
+    height: 130px !important;
+      overflow-x: scroll !important;
+  }
+
 }
 
 
