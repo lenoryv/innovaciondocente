@@ -57,6 +57,7 @@
         <br>
         <i class="fas fa-calendar-alt"></i> {{forma.fecha}}
       </small>
+      <hr>
       <span v-html="forma.html"></span>
     </div>
     <!--Buttons forma-->
@@ -99,7 +100,8 @@ export default {
         .validateAll()
         .then(x => {
           if (x) {
-            this.forma.date = Date.now();
+            let d = new Date()
+            this.forma.date = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
             axios
               .post(
                 "https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/noticias.json",

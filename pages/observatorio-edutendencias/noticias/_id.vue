@@ -4,9 +4,9 @@
     <small v-if="data.autor">
       <i class="fas fa-user"></i> {{data.autor}}
     </small>
-    <small v-if="data.fecha">
+    <small v-if="data.date">
       <br>
-      <i class="fas fa-calendar-alt"></i> {{data.fecha}}
+      <i class="fas fa-calendar-alt"></i> {{data.date | date}}
     </small>
     <hr>
     <div v-html="data.html"
