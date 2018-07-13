@@ -512,11 +512,11 @@ $heightbody: 185px;
   display: inline-block;
   margin-right: 2px;
   margin-bottom: 1em;
-  width: 400px;
+  width: 100%;
   .front,
   .back {
     display: block;
-    color: white;
+    color: black;
     width: inherit;
     background-size: cover !important;
     background-position: center !important;

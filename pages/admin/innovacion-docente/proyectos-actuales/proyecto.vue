@@ -12,13 +12,6 @@
             class="alert alert-danger">Titulo es requerido</span>
     </div>
     <div class="form-group">
-      <label for="img">Imagen</label>
-      <input v-model="forma.img"
-             type="text"
-             name="img"
-             class="form-control">
-    </div>
-    <div class="form-group">
       <label for="vid">Video</label>
       <input v-model="forma.vid"
              type="text"
@@ -64,7 +57,6 @@ export default {
   data() {
     let forma = {
       title: null,
-      img: null,
       desc: null,
       vid: null
     };
