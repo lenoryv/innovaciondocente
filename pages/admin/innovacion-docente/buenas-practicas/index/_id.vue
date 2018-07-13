@@ -1,38 +1,28 @@
 <template>
   <div class="container"
        v-if="data">
-       <pre>{{data}}</pre>
     <section>
       <h2></h2>
-      <nuxt-link :to="{name : 'admin-formacion-docente-cafe-cientifico-encuentro'}"
+      <nuxt-link :to="{name : 'admin-innovacion-docente-buenas-practicas-practica'}"
                  class="btn btn-success btn-sm">
         Agregar Nuevo Encuentro
       </nuxt-link>
       <div style="overflow-x:auto;">
         <table>
           <tr>
-            <th>Nombre</th>
-            <th>Fecha</th>
+            <th>Titulo</th>
             <th>Opciones</th>
           </tr>
-          <tr v-for="(encuentro, key) in data.encuentros"
-              v-if="encuentro"
+          <tr v-for="(practicas, key) in data.repositorio"
+              v-if="practicas"
               :key="key">
             <td>
-              <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id:key}}">
-                {{encuentro.nombre | slice(0,70) | capitalize}}
+              <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index-id', params: {id : key}}">
+                {{practicas.titulo}}
               </nuxt-link>
             </td>
-            <td>{{encuentro.fecha}}</td>
             <td>
-              <!--
-                TODO: add modify
-              <nuxt-link :to="{name: 'admin-formacion-docente-cafe-cientifico-encuentro', query: {id:key}}"
-                         class="btn btn-large btn-outline-dark btn-sm">
-                modificar
-              </nuxt-link>
-              -->
-              <button v-on:click="remove(key)"
+              <button v-on:click="remove($params.id.key, key)"
                       class="btn btn-large btn-danger btn-sm">
                 eliminar
               </button>
@@ -40,11 +30,6 @@
           </tr>
         </table>
       </div>
-      <br>
-      <h2>
-        Suscriptores
-      </h2>
-      Generar archivo
     </section>
   </div>
 </template>
@@ -57,6 +42,26 @@ export default {
       `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${params.id}.json` 
     );
     return { data };
+  },
+  methods: {
+    loadData(key) {
+      axios
+        .get(
+          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${key}.json`
+        )
+        .then(res => (this.data = res.data));
+    },
+    remove(key, indice) {
+      axios
+        .delete(
+          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${key}/repositorio/${indice}.json`
+        )
+        .catch(e => alert("No se pudo eliminar"));
+      this.data.encuentros[key] = 0;
+    }
+  },
+  mounted() {
+    this.loadData();
   }
 };
 </script>

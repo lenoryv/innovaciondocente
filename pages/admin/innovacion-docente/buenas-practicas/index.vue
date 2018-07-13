@@ -61,7 +61,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "assets/variables";
 .nuxt-link-exact-active {
   color: $color-font-primary !important;
