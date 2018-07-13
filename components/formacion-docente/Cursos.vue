@@ -26,10 +26,9 @@
       <i class="fas fa-folder"></i> Portafolio de Cursos
     </nuxt-link>
     <a class="btn btn-outline-primary btn-sm btn-large"
-       href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf"
-
        rel="noopener"
-       target="_blank">
+       target="_blank"
+       href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf?alt=media&token=d35f6a47-9a76-4b2e-87d8-120041bdea4f">
       <i class="fas fa-calendar-alt"></i> Programa de Formación Docente
     </a>
   </section>
