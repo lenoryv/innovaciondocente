@@ -299,6 +299,7 @@
 
 
 <script>
+import axios from "axios";
 export default {
   data() {
     let forma = {
@@ -315,12 +316,27 @@ export default {
       forma
     };
   },
+  props: ["LinkKey"],
   methods: {
     validateBeforeSubmit(e) {
       this.$validator
         .validateAll()
         .then(x => {
-          console.log(x);
+          // push to firebase
+          axios
+            .post(
+              `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/jornadas-de-reflexion/${
+                this.LinkKey
+              }/valoraciones.json`,
+              this.forma
+            )
+            .then(function(response) {
+              alert("Completado");
+            })
+            .catch(function(error) {
+              console.log(error);
+              alert("HA OCURRIDO UN ERROR, VUELVE A INTENTARLO");
+            });
         })
         .catch(e => {
           console.log(e);
