@@ -1,31 +1,39 @@
 <template>
-  <div>
-    <div class="burger">
-    <div class="burger__patty"></div>
-    <div class="burger__patty"></div>
-    <div class="burger__patty"></div>
-  </div>
+  <div class="container">
+    <section>
+    <div class="row">
+      <div class="col-lg-4"
+           v-for="(card,i) in aulas[0].cards"
+           :key="i">
+        <div class="flip flip-vertical" :style="'background-color: #333;'">
+          <div class="front" :style="'background-image: url('+card.img+');'">
+            <h3>{{card.titulo}}</h3>
+          </div>
+          <div class="back">
+            <p>{{card.descripcion}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
   </div>
 </template>
+
 <style lang="scss" scoped>
-.burger {
-  position: absolute;
-  z-index: 10;
-  right: 25px;
-  top: 25px;
-  cursor: pointer;
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+@import "assets/card";
+
+.front{
+background-color: aqua;
 }
+
 </style>
 <script>
+import aulas from "@/static/data/aula-divertida.json";
 export default {
-  methods: {
-    Var 
-    
+  asyncData() {
+    return { aulas };
   }
-}
+};
 </script>
 
 
