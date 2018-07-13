@@ -18,7 +18,7 @@
               v-if="jornada"
               :key="key">
             <td>
-              <nuxt-link :to="{name: '', params: {id:key}}">
+              <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:key}}">
                 {{jornada.nombre | capitalize}}
               </nuxt-link>
             </td>
