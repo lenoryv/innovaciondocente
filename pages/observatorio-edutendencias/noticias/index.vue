@@ -8,10 +8,7 @@
            v-for="(noticia, i) in noticias"
            :key="i"
            :style="'background-image: url('+noticia.data.img+');'">
-        <input type="checkbox"
-               :id="noticia.key">
-        <label class="overlay"
-               :for="noticia.key">
+        <div class="overlay">
           <div class="data">
             <nuxt-link :to="{name: 'observatorio-edutendencias-noticias-id', params: {id:noticia.key}}"
                        tag="h3">
@@ -24,7 +21,7 @@
               </nuxt-link>
             </p>
           </div>
-        </label>
+        </div>
       </div>
     </div>
   </section>
@@ -63,9 +60,6 @@ export default {
 @import "assets/variables";
 $size: 250px;
 
-input[type="checkbox"] {
-  display: none;
-}
 .container {
   display: grid;
   grid-auto-rows: $size;
@@ -80,24 +74,25 @@ input[type="checkbox"] {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  @media (min-width: 576px) {
-    &:nth-child(1) {
-      grid-column-end: span 2;
-    }
-    &:nth-child(8n + 0) {
-      grid-row-end: span 2;
-    }
+  &:nth-child(1) {
+    grid-column-end: span 2;
   }
-  @media (min-width: 992px) {
+  &:nth-child(8n + 0) {
+    grid-row-end: span 2;
+  }
+  &:nth-child(5n + 0) {
+    grid-column-end: span 2;
+  }
+  @media (min-width: 540px) {
     &:nth-child(1) {
       grid-row-end: span 2;
+      grid-column-end: span 3;
     }
-    &:nth-child(5n + 0) {
-      grid-column-end: span 2;
+    &:nth-child(10n + 0) {
+      grid-column-end: span 3;
     }
   }
   .overlay {
-    cursor: pointer;
     position: relative;
     height: 100%;
     width: 100%;
@@ -117,6 +112,7 @@ input[type="checkbox"] {
       overflow: auto;
       text-align: justify;
       h3:hover {
+        cursor: pointer;
         text-decoration: underline;
       }
       p,
@@ -130,7 +126,6 @@ input[type="checkbox"] {
     }
   }
 }
-input[type="checkbox"]:checked ~ .overlay,
 .overlay:hover {
   background: rgba($color-dark, 0.8);
   .data {
