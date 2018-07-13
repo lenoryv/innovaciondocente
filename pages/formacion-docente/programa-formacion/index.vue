@@ -29,10 +29,9 @@
               Académica Científica (SIAC)
             </p>
             <a class="btn btn-outline-primary btn-large"
-               href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf"
-
                target="_blank"
-               rel="noopener">
+               rel="noopener"
+               href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf?alt=media&token=af3a7338-fbb8-43aa-a5fe-386d06a0ef36">
               Intructivo para validar tus cursos</a>
           </div>
           <div class="col-md-6">
