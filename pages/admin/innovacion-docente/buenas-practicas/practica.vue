@@ -1,5 +1,6 @@
 <template>
   <section class="container">
+
     <h1>Nueva Práctica</h1>
     <div class="form-group">
       <label for="titulo">Titulo</label>
@@ -10,6 +11,16 @@
              v-validate="'required'">
       <span v-show="errors.has('titulo')"
             class="alert alert-danger">Titulo es requerido</span>
+    </div>
+    <div class="form-group">
+      <label for="titulacion">Titulación</label>
+      <input v-model="forma.titulacion"
+             type="text"
+             name="titulacion"
+             class="form-control"
+             v-validate="'required'">
+      <span v-show="errors.has('titulacion')"
+            class="alert alert-danger">Titulación es requerida</span>
     </div>
     <div class="form-group">
       <label for="img">Imagen</label>
@@ -24,10 +35,10 @@
     <div class="form-group">
       <label for="infografia">Infografía(url)</label>
       <input v-model="forma.infografia"
-                type="text"
-                name="infografia"
-                class="form-control"
-                v-validate="'required'" />
+             type="text"
+             name="infografia"
+             class="form-control"
+             v-validate="'required'" />
       <span v-show="errors.has('infografia')"
             class="alert alert-danger">Infografía es requerida</span>
     </div>
@@ -42,17 +53,18 @@
             class="alert alert-danger">PDF es requerido</span>
     </div>
     <h3>Docentes involucrados</h3>
-    
-      <div class="form-group"  v-for="(docente, i) in forma.docentes"
+
+    <div class="form-group"
+         v-for="(docente, i) in forma.docentes"
          :key="i">
-        <label :for="`docente${i}`">Nombre del Docente</label>
-        <input type="text"
-               v-model="forma.docentes[i]"
-               :name="`docente${i}`"
-               class="form-control"
-               v-validate="'required'">
-        <span v-show="errors.has(`docente${i}`)"
-              class="alert alert-danger">Nombre es requerido</span>
+      <label :for="`docente${i}`">Nombre del Docente</label>
+      <input type="text"
+             v-model="forma.docentes[i]"
+             :name="`docente${i}`"
+             class="form-control"
+             v-validate="'required'">
+      <span v-show="errors.has(`docente${i}`)"
+            class="alert alert-danger">Nombre es requerido</span>
     </div>
     <!--Docentes options-->
     <div class="form-row">
@@ -88,9 +100,13 @@
 <script>
 import axios from "axios";
 export default {
+  asyncData({ query }) {
+    return { key: query.id };
+  },
   data() {
     let forma = {
       titulo: null,
+      titulacion: null,
       img: null,
       infografia: null,
       url: null,
@@ -113,7 +129,9 @@ export default {
             // only if valid
             axios
               .post(
-                "https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/0/repositorio.json",
+                `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${
+                  this.key
+                }/repositorio.json`,
                 this.forma
               )
               .then(function(response) {

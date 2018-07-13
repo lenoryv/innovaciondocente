@@ -2,8 +2,7 @@
   <div class="container"
        v-if="data">
     <section>
-      <h2></h2>
-      <nuxt-link :to="{name : 'admin-innovacion-docente-buenas-practicas-practica'}"
+      <nuxt-link :to="{name : 'admin-innovacion-docente-buenas-practicas-practica', query:{id:parametro}}"
                  class="btn btn-success btn-sm">
         Agregar Nuevo Encuentro
       </nuxt-link>
@@ -17,12 +16,12 @@
               v-if="practicas"
               :key="key">
             <td>
-              <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index-id', params: {id : key}}">
+              <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index-id', params: parametro}">
                 {{practicas.titulo}}
               </nuxt-link>
             </td>
             <td>
-              <button v-on:click="remove($params.id.key, key)"
+              <button v-on:click="remove(parametro, key)"
                       class="btn btn-large btn-danger btn-sm">
                 eliminar
               </button>
@@ -39,9 +38,11 @@ import axios from "axios";
 export default {
   async asyncData({ params }) {
     let { data } = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${params.id}.json` 
+      `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${
+        params.id
+      }.json`
     );
-    return { data };
+    return { data, parametro: params.id };
   },
   methods: {
     loadData(key) {
@@ -52,6 +53,8 @@ export default {
         .then(res => (this.data = res.data));
     },
     remove(key, indice) {
+      console.log(key);
+      console.log(indice);
       axios
         .delete(
           `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${key}/repositorio/${indice}.json`
@@ -69,4 +72,24 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid $color-primary;
+}
+th {
+  background-color: $color-primary;
+  color: $color-font-primary;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
 </style>
