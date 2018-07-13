@@ -31,6 +31,9 @@
           <li>
             <nuxt-link :to="{name: 'admin-observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
           </li>
+          <li>
+            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-tips-innovacion'}">Aula Divertida</nuxt-link>
+          </li>
         </ul>
       </li>
     </ul>

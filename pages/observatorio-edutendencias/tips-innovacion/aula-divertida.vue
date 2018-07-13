@@ -5,7 +5,7 @@
       <div class="col-lg-4"
            v-for="(card,i) in aulas[0].cards"
            :key="i">
-        <div class="flip flip-vertical" :style="'background-color: #333;'">
+        <div class="flip flip-vertical" :style="'background-color:'">
           <div class="front" :style="'background-image: url('+card.img+');'">
             <h3>{{card.titulo}}</h3>
           </div>
