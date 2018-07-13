@@ -5,13 +5,13 @@
     </section>
     <div class="container-fluid">
       <div class="row">
-        <div v-for="(video, key) in data"
+        <div v-for="(video, key) in proyectos"
              :key="key"
              class="col-xl-4 col-md-6">
           <div class="card card__one link">
             <figure class="card__img">
               <div class="embed-container">
-                <iframe :src="video.link"
+                <iframe :src="video.data.vid"
                         frameborder="0"
                         title="video"
                         allow="autoplay; encrypted-media"
@@ -19,8 +19,8 @@
               </div>
             </figure>
             <div class="card__desc">
-              <h3>{{video.nombre}}</h3>
-              <p>{{video.descripcion}}</p>
+              <h3>{{video.data.title}}</h3>
+              <p>{{video.data.desc}}</p>
             </div>
           </div>
         </div>
@@ -35,13 +35,22 @@ import axios from "axios";
 export default {
   async asyncData({ params }) {
     let { data } = await axios.get(
-      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
+      "https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/proyectos-actuales.json"
     );
-
-    let title = "Tips de Expertos";
-    let description =
-      "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
-    return { data, title, description };
+    return { data };
+  },
+  computed:{
+    proyectos() {
+      // TODO: sort by date
+      let proyecto = [];
+      for (const key in this.data) {
+        proyecto.push({key:key, data:this.data[key] });
+      }
+      proyecto.sort(function(a, b) {
+        return ("" + b.key).localeCompare(a.key);
+      });
+      return proyecto;
+    }
   }
 };
 </script>
@@ -62,7 +71,13 @@ export default {
   width: 100%;
   height: 100%;
 }
-h3 {  
-  color: $col-mustard-dark !important;
+.card__one{
+  p{
+    height: 130px !important;
+      overflow-x: scroll !important;
+  }
+
 }
+
+
 </style>

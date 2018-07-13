@@ -56,10 +56,6 @@ export default {
         }
       ]
     };
-  },
-  validate({ params }) {
-    // TODO: validate param
-    return true;
   }
 };
 </script>

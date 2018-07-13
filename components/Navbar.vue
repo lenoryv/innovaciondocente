@@ -46,6 +46,7 @@
           </nuxt-link>
           <div class="dropdown-content">
             <nuxt-link :to="{name: 'observatorio-edutendencias-disenio-desarrollo'}">Diseño y Desarollo de mi Asigantura</nuxt-link>
+            <nuxt-link :to="{name: 'observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
           </div>
         </div>
         <nuxt-link :to="{name: 'admin'}">
