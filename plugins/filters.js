@@ -6,6 +6,8 @@ Vue.filter('date', val => {
   let parts = val.split('-');
 
   let mes;
+  // 2018-01-11
+  //  
 
   switch (parseInt(parts[1])) {
     case 1: { mes = "Enero"; break; }
