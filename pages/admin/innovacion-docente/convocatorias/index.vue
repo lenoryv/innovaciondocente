@@ -1,11 +1,11 @@
 <template>
     <div class="container" v-if="data">
-        <h1>Proyectos Actuales</h1>
+        <h1>Convocatorias</h1>
         <section>
-      <h2>Portafolio de Proyectos</h2>
-      <nuxt-link :to="{name : 'admin-innovacion-docente-proyectos-actuales-proyecto'}"
+      <h2>Portafolio de Convocatorias</h2>
+      <nuxt-link :to="{name : 'admin-innovacion-docente-convocatorias-convocatoria'}"
                  class="btn btn-success btn-sm">
-        Agregar Nuevo Proyecto
+        Agregar Nueva Convocatoria
       </nuxt-link>
       <div style="overflow-x:auto;">
         <table>
@@ -13,12 +13,12 @@
             <th>Titulo</th>
             <th>Opciones</th>
           </tr>
-          <tr v-for="(proyecto, key) in data"
-              v-if="proyecto"
+          <tr v-for="(convocatoria, key) in data"
+              v-if="convocatoria"
               :key="key">
             <td>
-              <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">
-                {{proyecto.title}}
+              <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id', params: {id:key}}">
+                {{convocatoria.fecha}}
               </nuxt-link>
             </td>
             <td>
@@ -48,14 +48,14 @@ export default {
     loadData() {
       axios
         .get(
-          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/proyectos-actuales.json`
+          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/convocatorias.json`
         )
         .then(res => (this.data = res.data));
     },
     remove(key) {
       axios
         .delete(
-          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/proyectos-actuales/${key}.json`
+          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/convocatorias/${key}.json`
         )
         .catch(e => alert("No se pudo eliminar"));
       this.data.encuentros[key] = 0;
