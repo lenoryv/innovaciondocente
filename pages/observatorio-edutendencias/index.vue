@@ -27,7 +27,8 @@
         <a tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-3 img-container"
-                   target="_blank" href="https://www.ivoox.com/academia-utpl-equipo-del-vicerrectorado-academico-audios-mp3_rf_23948832_1.html?autoplay=true">
+                   target="_blank"
+                   href="https://www.ivoox.com/podcast-academia-utpl_sq_f1507318_1.html">
           <div class="title">
             <h2>PODCAST</h2>
           </div>

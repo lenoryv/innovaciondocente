@@ -7,29 +7,29 @@
                  class="btn btn-success btn-sm">
         Agregar Nueva Convocatoria
       </nuxt-link>
-      <div style="overflow-x:auto;">
-        <table>
-          <tr>
-            <th>Titulo</th>
-            <th>Opciones</th>
-          </tr>
-          <tr v-for="(convocatoria, key) in data"
-              v-if="convocatoria"
-              :key="key">
-            <td>
-              <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id', params: {id:key}}">
-                {{convocatoria.fecha}}
-              </nuxt-link>
-            </td>
-            <td>
-              <button v-on:click="remove(key)"
-                      class="btn btn-large btn-danger btn-sm">
-                eliminar
-              </button>
-            </td>
-          </tr>
-        </table>
-      </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <tr>
+              <th>Titulo</th>
+              <th>Opciones</th>
+            </tr>
+            <tr v-for="(convocatoria, key) in data"
+                v-if="convocatoria"
+                :key="key">
+              <td>
+                <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index-id', params: {id:key}}">
+                  {{convocatoria.fecha}}
+                </nuxt-link>
+              </td>
+              <td>
+                <button v-on:click="remove(key)"
+                        class="btn btn-large btn-danger btn-sm">
+                  eliminar
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
       <br>
     </section>
     </div>

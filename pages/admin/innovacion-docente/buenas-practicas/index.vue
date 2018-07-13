@@ -1,6 +1,5 @@
 <template>
-  <div class="container"
-       v-if="data">
+  <div class="container">
     <h1>
       Portafolio de Buenas Prácticas
     </h1>
@@ -24,7 +23,7 @@
                        :to="{name: 'admin-innovacion-docente-buenas-practicas-index-id',params:{id:'3'}}">A. Administrativa </nuxt-link>
           </div>
       </div>      
-            <nuxt-child/>
+      <nuxt-child/>
     </section>
   </div>
 </template>
@@ -38,26 +37,6 @@ export default {
       data: null
     };
   },
-  methods: {
-    loadData() {
-      axios
-        .get(
-          `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
-        )
-        .then(res => (this.data = res.data));
-    },
-    remove(key) {
-      axios
-        .delete(
-          `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros/${key}.json`
-        )
-        .catch(e => alert("No se pudo eliminar"));
-      this.data.encuentros[key] = 0;
-    }
-  },
-  mounted() {
-    this.loadData();
-  }
 };
 </script>
 
@@ -71,26 +50,5 @@ export default {
     opacity: 0.8;
     transition: 0.2s all ease;
   }
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid $color-primary;
-}
-th {
-  background-color: $color-primary;
-  color: $color-font-primary;
-}
-
-th,
-td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #ddd;
 }
 </style>
