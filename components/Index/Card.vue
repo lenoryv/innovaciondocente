@@ -6,8 +6,8 @@
                 <a href="#"><img :src="nota.img"></a>
             </div>
             <div class="card_4__date">
-                <span class="card_4__date__day">05</span>
-                <span class="card_4__date__month">{{nota.date.mes | formatMes}}</span>
+                <span class="card_4__date__day">{{nota.date.dia}}</span>
+                <span class="card_4__date__month">{{nota.date.full | date | slice(3,"")}}</span>
             </div>
             <div class="card_4__body">
                 <div class="card_4__category">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="card_4__title"
                      v-if="nota.title">
-                    <a href="#">{{nota.title | slice(50,"...") }}</a>
+                    <a href="#">{{nota.title | slice(50,"...")}}</a>
                 </div>
                 <div class="card_4__description">
                     <p>{{nota.description}}</p>
@@ -38,24 +38,6 @@ export default {
       if (text.length > length) return text.substring(0, length) + suffix;
       else return text;
     },
-    formatMes: function(mes) {
-        switch (mes) {
-            case 1: { mes = "Ene"; break; }
-            case 2: { mes = "Feb"; break; }
-            case 3: { mes = "Mar"; break; }
-            case 4: { mes = "Abr"; break; }
-            case 5: { mes = "May"; break; }
-            case 6: { mes = "Jun"; break; }
-            case 7: { mes = "Jul"; break; }
-            case 8: { mes = "Ago"; break; }
-            case 9: { mes = "Sep"; break; }
-            case 10: { mes = "Oct"; break; }
-            case 11: { mes = "Nov"; break; }
-            case 12: { mes = "Dic"; break; }
-        }
-        console.log(mes);
-        return `${mes}`;
-    }
   }
 };
 </script>

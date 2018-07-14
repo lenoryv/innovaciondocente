@@ -23,13 +23,13 @@ export default {
       type: "Noticia",
       title: null,
       date: {
-        dia: null,
-        mes: null
+        dia: "",
+        full: null
       },
       description: null,
       img: null,
       key: {
-        name: "formacion-docente-programa-formacion-id",
+        name: 'observatorio-edutendencias-noticias-id',
         id: null
       }
     };
@@ -37,8 +37,8 @@ export default {
       type: "Curso",
       title: null,
       date: {
-        dia: null,
-        mes: null,
+        dia: "",
+        mes: "",
         full: null
       },
       description: null,
@@ -52,8 +52,8 @@ export default {
       type: "Tips",
       title: null,
       date: {
-        dia: null,
-        mes: null
+        dia: "",
+        mes: ""   
       },
       description: null,
       img: null,
@@ -78,9 +78,10 @@ export default {
           this.noticia.title = res.data[key].nombre;
           let tempDate = res.data[key].date.split("-");
           this.noticia.date.dia = tempDate[2];
-          this.noticia.date.mes = tempDate[1];
+          this.noticia.date.full = res.data[key].date;
           this.noticia.description = res.data[key].description;
           this.noticia.img = res.data[key].img;
+          this.noticia.key.id = key;
           return;
         }
       });
@@ -90,7 +91,6 @@ export default {
       )
       .then(res => {
         for (const key in res.data) {
-          console.log(res.data);
           this.curso.title = res.data[key].nombre;
           this.curso.date.full = res.data[key].fecha;
           let tempDate = res.data[key].fecha.split("-");
