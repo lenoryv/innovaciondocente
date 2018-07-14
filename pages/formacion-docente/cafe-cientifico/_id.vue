@@ -20,13 +20,14 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-6">
+        <div :class="[{'col-6': canIncribe}, {'col-12': !canIncribe}]">
           <button @click="$router.go(-1)"
                   class="btn btn-outline-primary btn-large">Regresar</button>
         </div>
-        <div class="col-6">
+        <div class="col-6"
+             v-if="canIncribe">
           <nuxt-link class="btn btn-primary btn-large"
-                     :to="{name: 'formacion-docente-cafe-cientifico-inscripcion'}">Incribete</nuxt-link>
+                     :to="{name: 'formacion-docente-cafe-cientifico-inscripcion', query: {id: key}}">Incribete</nuxt-link>
         </div>
       </div>
     </section>
@@ -42,8 +43,10 @@ export default {
         params.id
       }.json`
     );
-
-    return { encuentro: res.data };
+    // validate date
+    let fecha = new Date(res.data.postulacion);
+    let canIncribe = fecha.getTime() >= new Date().getTime();
+    return { encuentro: res.data, canIncribe, key: params.id };
   },
   head() {
     return {
@@ -56,10 +59,6 @@ export default {
         }
       ]
     };
-  },
-  validate({ params }) {
-    // TODO: validate param
-    return true;
   }
 };
 </script>

@@ -8,12 +8,10 @@
             JORNADAS <br> DE REFLEXIÓN
           </nuxt-link>
           <nuxt-link class="btn btn-outline-dark btn-large"
-                     :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2018}}">
-            Jornada 2018
-          </nuxt-link>
-          <nuxt-link class="btn btn-outline-dark btn-large"
-                     :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:2016}}">
-            Jornada 2016
+                     v-for="(jornada, key) in data"
+                     :key="key"
+                     :to="{name: 'formacion-docente-jornadas-de-reflexion-jornadas-anteriores-id', params: {id:key}}">
+            {{jornada.periodo}}
           </nuxt-link>
           <nuxt-link class="btn btn-primary btn-large"
                      :to="{name: 'formacion-docente-jornadas-de-reflexion'}">
@@ -29,23 +27,17 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  head() {
-    return {
-      title: "Jornadas de Reflexión | Innovación Docente",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: `Consolidadas como instancias de diálogo, análisis y reflexión, las Jornadas de Reflexión son encuentros
-            centrados en temas en los que se conjugan ciencia y filosofía institucional, están dirigidos
-            al personal docente y administrativo, contando con una parte académica y otra humanística.`
-        }
-      ]
-    };
+  async asyncData() {
+    let { data } = await axios.get(
+      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/jornadas-de-reflexion.json"
+    );
+    return { data };
   }
 };
 </script>
+
 
 
 <style lang="scss" scoped>

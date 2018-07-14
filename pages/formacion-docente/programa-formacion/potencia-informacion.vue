@@ -11,24 +11,22 @@
     </section>
     <div class="container-fluid">
       <div class="row">
-        <div v-for="(video, key) in data"
-             :key="key"
+        <div v-for="video in videos"
+             :key="video.key"
              class="col-xl-4 col-md-6">
           <div class="embed-container">
-            <iframe :src="video.link"
+            <iframe :src="video.data.link"
                     frameborder="0"
                     title="video"
                     allow="autoplay; encrypted-media"
                     allowfullscreen></iframe>
           </div>
-          <h3>{{video.nombre}}</h3>
-          <p>{{video.descripcion}}</p>
+          <h3>{{video.data.nombre}}</h3>
+          <p>{{video.data.descripcion}}</p>
         </div>
       </div>
-      <router-link class="btn btn-outline-primary btn-large btn-sm"
-                   :to="{name: 'formacion-docente-programa-formacion'}">
-        Regresar a Programa Formación
-      </router-link>
+      <button @click="$router.go(-1)"
+              class="btn btn-outline-primary btn-large btn-sm">Regresar</button>
     </div>
   </div>
 </template>
@@ -38,14 +36,20 @@ import axios from "axios";
 
 export default {
   async asyncData({ params }) {
-    let { data } = await axios.get(
-      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
-    );
-
     let title = "Tips de Expertos";
     let description =
       "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
-    return { data, title, description };
+    // get all vids
+    let videos = [];
+    let { data } = await axios.get(
+      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
+    );
+    for (const key in data) {
+      videos.push({ key: key, data: data[key] });
+    }
+    videos.sort((a, b) => ("" + b.key).localeCompare(a.key));
+
+    return { title, description, videos };
   },
   head() {
     return {

@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Inscribete a _nombre curso_</h1>
+    <h1>Inscribete al Curso</h1>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="nombre">Nombre</label>
@@ -91,16 +91,15 @@
     </div>
     <div class="form-row">
       <div class="col-6">
-        <nuxt-link class="btn btn-outline-danger btn-large"
-                   :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
-
+        <button class="btn btn-outline-danger btn-large"
+                @click="$router.go(-1)">Cancelar</button>
       </div>
       <div class="col-6">
         <button @click="submit"
                 class="btn btn-success btn-large"
                 type="submit"
                 v-bind:class="{ disabled: errors.items.length > 0 }">
-          Suscribirse
+          Inscribete
         </button>
       </div>
     </div>
@@ -110,6 +109,9 @@
 <script>
 import axios from "axios";
 export default {
+  asyncData({ query }) {
+    return { key: query.id };
+  },
   data() {
     let forma = {
       nombre: null,
@@ -138,7 +140,9 @@ export default {
             // only if valid
             axios
               .post(
-                "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/inscripcion.json",
+                `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros/${
+                  this.key
+                }/inscripciones.json`,
                 this.forma
               )
               .then(function(response) {

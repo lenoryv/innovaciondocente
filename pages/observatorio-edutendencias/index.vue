@@ -24,17 +24,18 @@
           <div class="nav-img">
           </div>
         </nuxt-link>
-        <nuxt-link tag="div"
+        <a tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-3 img-container"
-                   :to="{}">
+                   target="_blank"
+                   href="https://www.ivoox.com/podcast-academia-utpl_sq_f1507318_1.html">
           <div class="title">
             <h2>PODCAST</h2>
           </div>
           <div class="overlay"></div>
           <div class="nav-img">
           </div>
-        </nuxt-link>
+        </a>
         <nuxt-link tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-4 img-container"

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section class="container">
     <h1>{{data.nombre}}</h1>
     <small v-if="data.autor">
       <i class="fas fa-user"></i> {{data.autor}}
@@ -11,7 +11,9 @@
     <hr>
     <div v-html="data.html"
          class="html"></div>
-  </div>
+    <button @click="$router.go(-1)"
+            class="btn btn-outline-primary btn-large">Regresar</button>
+  </section>
 </template>
 
 <script>
@@ -19,7 +21,7 @@ import axios from "axios";
 export default {
   async asyncData({ params }) {
     let { data } = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/jornadas-de-reflexion/${
+      `https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/noticias/${
         params.id
       }.json`
     );

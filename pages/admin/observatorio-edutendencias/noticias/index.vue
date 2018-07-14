@@ -1,24 +1,26 @@
 <template>
-    <div class="container" v-if="data">
-        <h1>Proyectos Actuales</h1>
-        <section>
-      <h2>Portafolio de Proyectos</h2>
-      <nuxt-link :to="{name : 'admin-innovacion-docente-proyectos-actuales-proyecto'}"
+  <div class="container">
+    <h1>
+      Noticias
+    </h1>
+    <section>
+      <nuxt-link :to="{name : 'admin-observatorio-edutendencias-noticias-noticia'}"
                  class="btn btn-success btn-sm">
-        Agregar Nuevo Proyecto
+        Agregar Nueva Noticia
       </nuxt-link>
-      <div style="overflow-x:auto;">
+      <div style="overflow-x:auto;"
+           v-if="noticias">
         <table>
           <tr>
-            <th>Titulo</th>
+            <th>Nombre</th>
             <th>Opciones</th>
           </tr>
-          <tr v-for="(proyecto, key) in data"
-              v-if="proyecto"
+          <tr v-for="(noticia, key) in noticias"
+              v-if="noticia"
               :key="key">
             <td>
-              <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">
-                {{proyecto.title}}
+              <nuxt-link :to="{name: 'observatorio-edutendencias-noticias-id', params: {id:key}}">
+                {{noticia.nombre | capitalize}}
               </nuxt-link>
             </td>
             <td>
@@ -30,9 +32,8 @@
           </tr>
         </table>
       </div>
-      <br>
     </section>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -41,24 +42,24 @@ export default {
   layout: "admin",
   data() {
     return {
-      data: null
+      noticias: null
     };
   },
   methods: {
     loadData() {
       axios
         .get(
-          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/proyectos-actuales.json`
+          `https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/noticias.json`
         )
-        .then(res => (this.data = res.data));
+        .then(res => (this.noticias = res.data));
     },
     remove(key) {
       axios
         .delete(
-          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/proyectos-actuales/${key}.json`
+          `https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/noticias/${key}.json`
         )
         .catch(e => alert("No se pudo eliminar"));
-      this.data.encuentros[key] = 0;
+      this.noticias[key] = 0;
     }
   },
   mounted() {
@@ -66,6 +67,7 @@ export default {
   }
 };
 </script>
+
 <style lang="scss" scoped>
 @import "assets/variables";
 
@@ -90,4 +92,3 @@ tr:nth-child(even) {
   background-color: #ddd;
 }
 </style>
-
