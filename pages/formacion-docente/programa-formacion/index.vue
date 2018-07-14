@@ -31,7 +31,7 @@
             <a class="btn btn-outline-primary btn-large"
                target="_blank"
                rel="noopener"
-               href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/Instructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf?alt=media&token=af3a7338-fbb8-43aa-a5fe-386d06a0ef36">
+               href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/formacion-docente%2Fprograma-formacion%2Fprograma-formacion%2FInstructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf?alt=media&token=816f02a3-4f2d-4b54-9bca-6b8005614b68">
               Intructivo para validar tus cursos</a>
           </div>
           <div class="col-md-6">

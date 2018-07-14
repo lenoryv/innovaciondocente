@@ -28,7 +28,7 @@
     <a class="btn btn-outline-primary btn-sm btn-large"
        rel="noopener"
        target="_blank"
-       href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/Resumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf?alt=media&token=d35f6a47-9a76-4b2e-87d8-120041bdea4f">
+       href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/formacion-docente%2Fprograma-formacion%2Fprograma-formacion%2FResumen%20del%20programa%20de%20formacio%CC%81n%202018%20(FINAL)%20(1).pdf?alt=media&token=cc2fa206-7118-4c4b-ac58-9ba918a16892">
       <i class="fas fa-calendar-alt"></i> Programa de Formación Docente
     </a>
   </section>
