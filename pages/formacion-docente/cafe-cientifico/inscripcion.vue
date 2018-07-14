@@ -91,8 +91,8 @@
     </div>
     <div class="form-row">
       <div class="col-6">
-        <nuxt-link class="btn btn-outline-danger btn-large"
-                   :to="{name: 'formacion-docente-cafe-cientifico'}">Cancelar</nuxt-link>
+        <button class="btn btn-outline-danger btn-large"
+                @click="$router.go(-1)">Cancelar</button>
       </div>
       <div class="col-6">
         <button @click="submit"
