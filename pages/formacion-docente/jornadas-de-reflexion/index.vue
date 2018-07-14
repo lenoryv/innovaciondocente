@@ -9,7 +9,7 @@
         </nuxt-link>
       </div>
       <div class="col-lg-8">
-        <h1>{{encuentro.data.nombre}}</h1>
+        <h1>Jornada de Reflexión Académica</h1>
         <small v-if="encuentro.data.autor">
           <i class="fas fa-user"></i> {{encuentro.data.autor}}
         </small>

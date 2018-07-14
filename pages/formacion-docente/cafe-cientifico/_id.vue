@@ -46,7 +46,7 @@ export default {
     // validate date
     let fecha = new Date(res.data.postulacion);
     let canIncribe = fecha.getTime() >= new Date().getTime();
-    return { encuentro: res.data, canIncribe: true, key: params.id };
+    return { encuentro: res.data, canIncribe, key: params.id };
   },
   head() {
     return {
