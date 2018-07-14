@@ -1,38 +1,27 @@
 <template>
   <div class="container"
        v-if="data">
-       <pre>{{data}}</pre>
     <section>
-      <h2></h2>
-      <nuxt-link :to="{name : 'admin-formacion-docente-cafe-cientifico-encuentro'}"
+      <nuxt-link :to="{name : 'admin-innovacion-docente-buenas-practicas-practica', query:{id:parametro}}"
                  class="btn btn-success btn-sm">
         Agregar Nuevo Encuentro
       </nuxt-link>
       <div style="overflow-x:auto;">
         <table>
           <tr>
-            <th>Nombre</th>
-            <th>Fecha</th>
+            <th>Titulo</th>
             <th>Opciones</th>
           </tr>
-          <tr v-for="(encuentro, key) in data.encuentros"
-              v-if="encuentro"
+          <tr v-for="(practicas, key) in data.repositorio"
+              v-if="practicas"
               :key="key">
             <td>
-              <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id:key}}">
-                {{encuentro.nombre | slice(0,70) | capitalize}}
+              <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index-id', params: parametro}">
+                {{practicas.titulo}}
               </nuxt-link>
             </td>
-            <td>{{encuentro.fecha}}</td>
             <td>
-              <!--
-                TODO: add modify
-              <nuxt-link :to="{name: 'admin-formacion-docente-cafe-cientifico-encuentro', query: {id:key}}"
-                         class="btn btn-large btn-outline-dark btn-sm">
-                modificar
-              </nuxt-link>
-              -->
-              <button v-on:click="remove(key)"
+              <button v-on:click="remove(parametro, key)"
                       class="btn btn-large btn-danger btn-sm">
                 eliminar
               </button>
@@ -40,11 +29,6 @@
           </tr>
         </table>
       </div>
-      <br>
-      <h2>
-        Suscriptores
-      </h2>
-      Generar archivo
     </section>
   </div>
 </template>
@@ -54,9 +38,33 @@ import axios from "axios";
 export default {
   async asyncData({ params }) {
     let { data } = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${params.id}.json` 
+      `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${
+        params.id
+      }.json`
     );
-    return { data };
+    return { data, parametro: params.id };
+  },
+  methods: {
+    loadData(key) {
+      axios
+        .get(
+          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${key}.json`
+        )
+        .then(res => (this.data = res.data));
+    },
+    remove(key, indice) {
+      console.log(key);
+      console.log(indice);
+      axios
+        .delete(
+          `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/buenas-practicas/${key}/repositorio/${indice}.json`
+        )
+        .catch(e => alert("No se pudo eliminar"));
+      this.data.encuentros[key] = 0;
+    }
+  },
+  mounted() {
+    this.loadData();
   }
 };
 </script>
@@ -64,4 +72,24 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid $color-primary;
+}
+th {
+  background-color: $color-primary;
+  color: $color-font-primary;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
 </style>
