@@ -1,5 +1,8 @@
 <template>
   <section class="container">
+    <pre>
+      {{forma}}
+    </pre>
     <h1>Nuevo Encuentro</h1>
     <!--nombre-->
     <div class="form-group">
@@ -11,6 +14,18 @@
              v-validate="'required'">
       <span v-show="errors.has('nombre')"
             class="alert alert-danger">Nombre es requerido</span>
+    </div>
+    <!--description-->
+    <div class="form-group">
+      <label for="description">Description del curso</label>
+      <textarea v-model="forma.description"
+                type="text"
+                name="description"
+                class="form-control"
+                v-validate="'required'">
+      </textarea>
+      <span v-show="errors.has('description')"
+            class="alert alert-danger">Description es requerido</span>
     </div>
     <!--img-->
     <div class="form-group">
@@ -43,7 +58,6 @@
         <label>Nombre</label>
         <input v-model="forma.instructores[i].nombre"
                type="text"
-               :name="`instructor${i}nombre`"
                class="form-control"
                v-validate="'required'">
         <span v-show="errors.has(`instructor${i}nombre`)"
@@ -205,7 +219,8 @@ export default {
   data() {
     let forma = {
       nombre: null,
-      imgW: null,
+      description: null,
+      img: null,
       fecha: null,
       instructores: [{ nombre: null, small: null }],
       postulacion: null,
@@ -222,13 +237,13 @@ export default {
   },
   methods: {
     addInstructor() {
-      this.forma.instructores.push({ nombre: "", small: "" });
+      this.forma.instructores.push({ nombre: null, small: null });
     },
     delInstructor() {
       this.forma.instructores.pop();
     },
     addFinalidad() {
-      this.forma.finalidades.push({ nombre: "" });
+      this.forma.finalidades.push({ nombre: null });
     },
     delFinalidad() {
       this.forma.finalidades.pop();
