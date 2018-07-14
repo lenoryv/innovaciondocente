@@ -11,7 +11,7 @@
             <h3>Acerca de Nosotros</h3>
             <ul>
               <li><nuxt-link class="nav" :to="{name: 'acerca-nosotros'}">Quienes Somos</nuxt-link></li>
-              <li><nuxt-link class="nav" :to="{name: ''}">Nuestro Equipo</nuxt-link></li>
+              <li><nuxt-link class="nav" :to="{name: 'acerca-nosotros-nuestro-equipo'}">Nuestro Equipo</nuxt-link></li>
               <li><nuxt-link class="nav" :to="{name: 'acerca-nosotros-nuestros-servicios'}">Servicios</nuxt-link></li>
             </ul>
           </div>
