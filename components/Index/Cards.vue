@@ -24,7 +24,7 @@ export default {
       title: null,
       date: {
         dia: "",
-        full: null
+        full: ""
       },
       description: null,
       img: null,
