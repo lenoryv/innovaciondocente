@@ -6,24 +6,24 @@
                 <a href="#"><img :src="nota.img"></a>
             </div>
             <div class="card_4__date">
-                <span class="card_4__date__day">23</span>
-                <span class="card_4__date__month">Mai</span>
+                <span class="card_4__date__day">{{nota.date.dia}}</span>
+                <span class="card_4__date__month" v-if="nota.date.full">{{nota.date.full | date | slice(5,9,"")}}</span>
             </div>
             <div class="card_4__body">
                 <div class="card_4__category">
                     <a href="#">{{nota.type}}</a>
                 </div>
-                <div class="card_4__title">
-                    <a href="#">{{nota.title}}</a>
+                <div class="card_4__title"
+                     v-if="nota.title">
+                    <a href="#">{{nota.title | slice(0,40,"...")}}</a>
                 </div>
-                <div class="card_4__subtitle">{{nota.subtitle}}</div>
                 <div class="card_4__description">
                     <p>{{nota.description}}</p>
                 </div>
-                <div class="card_4__footer">
+                <div class="card_4__footer" v-if="nota.key.id">
                     <nuxt-link class=""
-                               :to="{name: ''}">
-                        Leer más +
+                               :to="{name: nota.key.name, params: {id: nota.key.id}}">
+                        Leer más
                     </nuxt-link>
                 </div>
             </div>
@@ -32,8 +32,14 @@
 </template>
 <script>
 export default {
-  props: ["nota"]
-};
+  props: ["nota"],
+  filters: {
+    slice: function(text, start, length, suffix) {
+      if (text.length > length) return text.substring(start, length) + suffix;
+      else return text;
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
