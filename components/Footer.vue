@@ -3,10 +3,26 @@
     <div class="row">
       <div class="col-md-6 footer-icons">
         <ul class="social-networks square spin-icon">
-          <li><a href="" class="fab fa-facebook-f"></a></li>
-          <li><a href="" class="fab fa-twitter"></a></li>
-          <li><a href="" class="fab fa-youtube"></a></li>
-          <li><a href="" class="fab fa-instagram"></a></li>
+          <li>
+            <a href="https://www.facebook.com/LiiDUTPL"
+               target="_blank"
+               class="fab fa-facebook-f"></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/utpl"
+               target="_blank"
+               class="fab fa-twitter"></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCzRd2Y87-NJnVliV8B6e_Xg"
+               target="_blank"
+               class="fab fa-youtube"></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/liidutpl"
+               target="_blank"
+               class="fab fa-instagram"></a>
+          </li>
         </ul>
       </div>
       <div class="col-md-6 footer-info">
@@ -17,8 +33,11 @@
             <p>Loja – Ecuador.</p>
           </div>
           <div class="col-sm-6">
-            <p><strong>Teléfono:</strong> 370 1444 – Ext. 2316</p>
-            <p><strong>Correo electrónico:</strong></p>
+            <p>
+              <strong>Teléfono:</strong> 370 1444 – Ext. 2316</p>
+            <p>
+              <strong>Correo electrónico:</strong>
+            </p>
             <a href="mailto:vacademico@utpl.edu.ec">vacademico@utpl.edu.ec</a>
           </div>
         </div>
@@ -26,10 +45,15 @@
     </div>
     <div class="col-md-12 footer-outro">
       <ul class="mb">
-        <li class="mr">© 2018<a href="https://www.utpl.edu.ec/">UTPL</a></li>
+        <li class="mr">© 2018
+          <a href="https://www.utpl.edu.ec/">UTPL</a>
+        </li>
         <li>With
-          <a class="footer-heart" href="" title="With love by InDevelopmentCompany">
-          <i class="fas fa-heart" /></a>by InDevelopmentCompany
+          <a class="footer-heart"
+             href=""
+             title="With love by InDevelopmentCompany">
+            <i class="fas fa-heart" />
+          </a>by InDevelopmentCompany
         </li>
       </ul>
     </div>
@@ -45,7 +69,7 @@
   font-size: 0;
   text-align: center;
   margin: 0;
-  
+
   li {
     display: inline-block;
   }
@@ -132,7 +156,7 @@ footer {
 }
 
 .footer-info {
-  padding: 1rem;  
+  padding: 1rem;
   font-size: 80%;
   border-top: 1px #e1e4e8 solid;
   p {
@@ -147,16 +171,16 @@ footer {
   border-top: 1px #e1e4e8 solid;
   margin-bottom: 1.5rem;
   ul {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-top: 0.2rem;
-  margin-bottom: 0;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
     justify-content: space-between !important;
     a {
-      margin-left: .2rem;
-      margin-right: .3rem   
+      margin-left: 0.2rem;
+      margin-right: 0.3rem;
     }
     li {
       font-size: 80%;
@@ -171,12 +195,11 @@ footer {
     padding-top: 0;
     margin-bottom: 10px;
     p {
-      text-align: center; 
+      text-align: center;
     }
   }
   .footer-icons {
     height: 100px;
   }
 }
-
 </style>
