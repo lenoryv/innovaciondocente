@@ -1,164 +1,170 @@
 <template>
-    <div class="timeline">
-  <div class="container left">
-    <div class="content">
-      <nuxt-link class="link"
-                     :to="{name: 'observatorio-edutendencias'}">
-      <h2>¿Cómo elaborar mi Plan Docente?</h2>
-      </nuxt-link>
-      <li>a. ¿Qué es el Plan Docente?</li>
-      <li>b. ¿Qué elementos tiene el Plan?</li>
-      <li>c. ¿Cuáles son las funciones del Plan Docente?</li>
-      <li>d. ¿Cómo se evalúa a los estudiantes?</li>
-      <li>e. ¿El Plan docente evidencia nuestra calidad y compromiso?</li>
-      <li>f. ¿Cuál es el proceso de revisión y aprobación del Plan Docente?</li>
-      <li>g. ¿Qué es el repositorio de Planes Docentes?</li>
+  <section>
+    <div>
+      <h1>Diseño - Desarrollo de mi asiganatura</h1>
     </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <nuxt-link class="link"
+    <section class="timeline">
+      <div class="container left">
+        <div class="content">
+          <nuxt-link class="link"
                      :to="{name: 'observatorio-edutendencias'}">
-      <h2>¿Cómo se elabora un Plan por medio del Repositorio de Planes Docentes?</h2>
-      </nuxt-link>
-      <p>10 pasos sencillos para elaborar un plan</p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <nuxt-link class="link"
+            <h2>¿Cómo elaborar mi Plan Docente?</h2>
+          </nuxt-link>
+          <li>a. ¿Qué es el Plan Docente?</li>
+          <li>b. ¿Qué elementos tiene el Plan?</li>
+          <li>c. ¿Cuáles son las funciones del Plan Docente?</li>
+          <li>d. ¿Cómo se evalúa a los estudiantes?</li>
+          <li>e. ¿El Plan docente evidencia nuestra calidad y compromiso?</li>
+          <li>f. ¿Cuál es el proceso de revisión y aprobación del Plan Docente?</li>
+          <li>g. ¿Qué es el repositorio de Planes Docentes?</li>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <nuxt-link class="link"
                      :to="{name: 'observatorio-edutendencias'}">
-      <h2>¿Deseas conocer algunos recursos digitales aplicados a la docencia?</h2>
-      </nuxt-link>
-      <p>Ponemos a tu disposición algunos recursos digitales que pueden ser aplicados a la docencia.</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <nuxt-link class="link"
+            <h2>¿Cómo se elabora un Plan por medio del Repositorio de Planes Docentes?</h2>
+          </nuxt-link>
+          <p>10 pasos sencillos para elaborar un plan</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <nuxt-link class="link"
                      :to="{name: 'observatorio-edutendencias'}">
-      <h2>¿Conoces las Bases de Datos que te pueden ayudar para el aprendizaje de tus estudiantes?</h2>
-      </nuxt-link>
-      <p>Repositorios de recursos digitales de carácter científico que contiene información relevante, 
-        de instituciones de gran renombre, 100% confiable, verídica y de última generación en todos los 
-        campos del saber humano; disponible para docentes, administrativos y estudiantes de la UTPL.</p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <nuxt-link class="link"
+            <h2>¿Deseas conocer algunos recursos digitales aplicados a la docencia?</h2>
+          </nuxt-link>
+          <p>Ponemos a tu disposición algunos recursos digitales que pueden ser aplicados a la docencia.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <nuxt-link class="link"
                      :to="{name: 'observatorio-edutendencias'}">
-      <h2>¿Necesitas asesoramiento pedagógico para el desarrollo de tu asignatura?</h2>
-      </nuxt-link>
-      <p>Desde el Laboratorio de Innovación e Investigación Docente (LiiD) te ofrecemos varios servicios
-         personalizados que te servirán para mejorar tu práctica docente:</p>
-      <li>Filmación de tu clase</li>
-      <li>Observación de tu clase</li>
-      <li>Asesoramiento personalizado</li>
-      <li>Grabación de Vídeos</li>
-    </div>
-  </div>
-</div>
+            <h2>¿Conoces las Bases de Datos que te pueden ayudar para el aprendizaje de tus estudiantes?</h2>
+          </nuxt-link>
+          <p>Repositorios de recursos digitales de carácter científico que contiene información relevante,
+            de instituciones de gran renombre, 100% confiable, verídica y de última generación en todos
+            los campos del saber humano; disponible para docentes, administrativos y estudiantes de la
+            UTPL.
+          </p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <nuxt-link class="link"
+                     :to="{name: 'observatorio-edutendencias'}">
+            <h2>¿Necesitas asesoramiento pedagógico para el desarrollo de tu asignatura?</h2>
+          </nuxt-link>
+          <p>Desde el Laboratorio de Innovación e Investigación Docente (LiiD) te ofrecemos varios servicios
+            personalizados que te servirán para mejorar tu práctica docente:</p>
+          <li>Filmación de tu clase</li>
+          <li>Observación de tu clase</li>
+          <li>Asesoramiento personalizado</li>
+          <li>Grabación de Vídeos</li>
+        </div>
+      </div>
+    </section>
+  </section>
+
 </template>
 <style lang="scss" scoped>
 @import "assets/variables";
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color:  #002954;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #002954;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
 }
 
 /* Container around content */
 .container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-    margin: 0;
-    cursor: pointer;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  margin: 0;
+  cursor: pointer;
 }
 
 /* The circles on the timeline */
 .container::after {
-    content: '';
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    right: -17px;
-    background-color:white;
-    border: 4px solid rgba(245, 228, 0, 0.897);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid rgba(245, 228, 0, 0.897);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 /* Place the container to the left */
 .left {
-    left: 0;
+  left: 0;
 }
 
 /* Place the container to the right */
 .right {
-    left: 50%;
+  left: 50%;
 }
 
 /* Add arrows to the left container (pointing right) */
 .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid  white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent  #002954;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #002954;
 }
 
 /* Add arrows to the right container (pointing left) */
 .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid  white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent  #002954 transparent transparent;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #002954 transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
 .right::after {
-    left: -17px;
+  left: -17px;
 }
 
 /* The actual content */
 .content {
-    padding: 20px 30px;
-    background-color:  #d4d8dd5b;
-    position: relative;
-    border-radius: 6px;
+  padding: 20px 30px;
+  background-color: #d4d8dd5b;
+  position: relative;
+  border-radius: 6px;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -167,7 +173,7 @@
   .timeline::after {
     left: 31px;
   }
-  
+
   /* Full-width containers */
   .container {
     width: 100%;
@@ -175,25 +181,24 @@
     padding-right: 25px;
     margin: 0;
   }
-  
+
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
-    border: medium solid  white;
+    border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
+  .left::after,
+  .right::after {
     left: 15px;
   }
-  
+
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
   }
 }
 </style>
-
-
