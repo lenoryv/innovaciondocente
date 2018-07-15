@@ -9,7 +9,7 @@
       </div>
       <div class="alert alert-danger"
            v-else>
-        Este curso ha finalizado
+        Las postulaciones para este curso han finalizado
       </div>
       <h1>{{ data.nombre }}</h1>
       <hr>

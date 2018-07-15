@@ -3,7 +3,7 @@
     <h2>Ultimos Cursos</h2>
     <div class="row"
          v-if="cursos">
-      <nuxt-link class="col-md-4 col-sm-6"
+      <nuxt-link class="col-md-3 col-sm-6"
                  v-for="(curso, key) in cursos"
                  :key="key"
                  :to="{name: 'formacion-docente-programa-formacion-id', params: {id: key}}"
@@ -14,7 +14,7 @@
                  alt="imagen curso">
           </figure>
           <div class="card__desc">
-            <h4>{{curso.nombre}}</h4>
+            <h4>{{curso.nombre | slice(0,50)}}</h4>
             <small>
               <i class="fas fa-calendar-alt"></i> {{curso.fecha | date}}</small>
           </div>

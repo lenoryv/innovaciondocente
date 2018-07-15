@@ -33,7 +33,7 @@
                      alt="imagen curso">
               </figure>
               <div class="card__desc">
-                <h4>{{curso.nombre}}</h4>
+                <h4>{{curso.nombre | slice(0,50)}}</h4>
                 <small>
                   <i class="fas fa-calendar-alt"></i> {{curso.fecha | date}}</small>
               </div>

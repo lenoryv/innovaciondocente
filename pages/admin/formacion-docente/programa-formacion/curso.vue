@@ -1,8 +1,5 @@
 <template>
   <section class="container">
-    <pre>
-      {{forma}}
-    </pre>
     <h1>Nuevo Encuentro</h1>
     <!--nombre-->
     <div class="form-group">
@@ -57,6 +54,7 @@
       <div class="form-group col-md-6">
         <label>Nombre</label>
         <input v-model="forma.instructores[i].nombre"
+               :name="`instructor${i}nombre`"
                type="text"
                class="form-control"
                v-validate="'required'">
@@ -85,7 +83,7 @@
       <div class="col-md-6">
         <label for="postulacion">Fecha de Postulaciones</label>
         <input type="date"
-               v-model="forma.postulacion"
+               v-model="forma.postulacion.fecha"
                name="postulacion"
                class="form-control"
                v-validate="'required'">
@@ -93,39 +91,40 @@
               class="alert alert-danger">Fecha de Postulaciones es requerido</span>
       </div>
       <div class="col-md-6">
-        <label for="link_postulacion">Link para Postulaciones</label>
+        <label for="postulacion_link">Link para Postulaciones</label>
         <input type="text"
-               v-model="forma.link_postulacion"
-               name="postulacion"
+               v-model="forma.postulacion.link"
+               name="postulacion_link"
                class="form-control"
                v-validate="'required'">
-        <span v-show="errors.has('link_postulacion')"
+        <span v-show="errors.has('postulacion_link')"
               class="alert alert-danger">Link de Postulaciones es requerido</span>
 
       </div>
     </div>
     <!--duracion-->
+    <label>Duración: </label>
     <div class="form-group form-row">
-      <div class="col-md-6">
-        <label for="duracionSemanas">Duración en semanas</label>
+      <div class="col-md-4">
+        <label for="duracionDias">dias</label>
         <input type="text"
-               v-model="forma.duracionSemanas"
-               name="duracionSemanas"
-               class="form-control"
-               v-validate="'required|numeric'">
-        <span v-show="errors.has('duracionSemanas')"
-              class="alert alert-danger">Semanas tiene que ser valido</span>
+               v-model="forma.duracion.dias"
+               name="duracionDias"
+               class="form-control">
       </div>
-      <div class="col-md-6">
-        <label for="duracionHoras">Duración en horas</label>
+      <div class="col-md-4">
+        <label for="duracionSemanas">semanas</label>
         <input type="text"
-               v-model="forma.duracionHoras"
+               v-model="forma.duracion.semanas"
+               name="duracionSemanas"
+               class="form-control">
+      </div>
+      <div class="col-md-4">
+        <label for="duracionHoras">horas</label>
+        <input type="text"
+               v-model="forma.duracion.horas"
                name="duracionHoras"
-               class="form-control"
-               v-validate="'required|numeric'">
-        <span v-show="errors.has('duracionHoras')"
-              class="alert alert-danger">Horas tiene que ser valido</span>
-
+               class="form-control">
       </div>
     </div>
     <!--horario-->
@@ -138,6 +137,14 @@
              v-validate="'required'">
       <span v-show="errors.has('horario')"
             class="alert alert-danger">Horario es requerido</span>
+    </div>
+    <!--lugar-->
+    <div class="form-group">
+      <label for="lugar">Lugar</label>
+      <input v-model="forma.lugar"
+             type="text"
+             name="lugar"
+             class="form-control">
     </div>
     <!--modulo-->
     <div class="form-group">
@@ -156,7 +163,10 @@
       <input v-model="forma.dirigido"
              type="text"
              name="dirigido"
-             class="form-control">
+             class="form-control"
+             v-validate="'required'">
+      <span v-show="errors.has('dirigido')"
+            class="alert alert-danger">Dirigido es requerido</span>
     </div>
     <!--urlContenido-->
     <div class="form-group">
@@ -174,11 +184,11 @@
     <div v-for="(finalidad, i) in forma.finalidades"
          :key="`finalidad${i}`">
       <div class="form-group">
-        <input type="text"
-               v-model="forma.finalidades[i].nombre"
-               :name="`finalidad${i}nombre`"
-               class="form-control"
-               v-validate="'required'">
+        <textarea type="text"
+                  v-model="forma.finalidades[i].nombre"
+                  :name="`finalidad${i}nombre`"
+                  class="form-control"
+                  v-validate="'required'"></textarea>
         <span v-show="errors.has(`finalidad${i}nombre`)"
               class="alert alert-danger">Finalidad es requerido</span>
       </div>
@@ -223,11 +233,10 @@ export default {
       img: null,
       fecha: null,
       instructores: [{ nombre: null, small: null }],
-      postulacion: null,
-      link_postulacion: null,
-      duracionSemanas: null,
-      duracionHoras: null,
+      postulacion: { fecha: null, link: null },
+      duracion: { dias: null, semanas: null, horas: null },
       horario: null,
+      lugar: null,
       modulo: null,
       dirigido: null,
       urlContenido: null,
