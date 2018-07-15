@@ -4,9 +4,9 @@
     <div class="row"
          v-if="cursos">
       <nuxt-link class="col-md-3 col-sm-6"
-                 v-for="(curso, key) in cursos"
-                 :key="key"
-                 :to="{name: 'formacion-docente-programa-formacion-id', params: {id: key}}"
+                 v-for="curso in cursos"
+                 :key="curso.key"
+                 :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.key}}"
                  tag="div">
         <div class="card card__one link">
           <figure class="card__img">
@@ -38,12 +38,20 @@
 import axios from "axios";
 export default {
   data() {
-    let cursos;
+    let cursos = [];
     axios
       .get(
         `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json?orderBy=%22$key%22&limitToLast=4`
       )
-      .then(res => (this.cursos = res.data))
+      .then(res => {
+        for (const key in res.data) {
+          if (res.data.hasOwnProperty(key)) {
+            res.data[key].key = key;
+            cursos.push(res.data[key]);
+          }
+        }
+        cursos.sort((a, b) => ("" + b.key).localeCompare(a.key));
+      })
       .catch(e => console.log(e));
 
     return { cursos };

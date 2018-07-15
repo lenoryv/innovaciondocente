@@ -23,9 +23,9 @@
         <div class="row"
              v-else>
           <nuxt-link class="col-xl-2 col-lg-3 col-md-4 col-sm-6 curso"
-                     v-for="(curso,key) in cursos"
-                     :key="key"
-                     :to="{name: 'formacion-docente-programa-formacion-id', params: {id: key}}"
+                     v-for="curso in cursos"
+                     :key="curso.key"
+                     :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.key}}"
                      tag="div">
             <div class="card card__one link">
               <figure class="card__img">
@@ -54,26 +54,28 @@ import axios from "axios";
 
 export default {
   data() {
-    return {
-      cursos: null,
-      query: ""
-    };
+    let cursos = [];
+    axios
+      .get(
+        `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json`
+      )
+      .then(res => {
+        for (const key in res.data) {
+          if (res.data.hasOwnProperty(key)) {
+            res.data[key].key = key;
+            cursos.push(res.data[key]);
+          }
+        }
+        cursos.sort((a, b) => ("" + b.key).localeCompare(a.key));
+      })
+      .catch(e => console.log(e));
+
+    return { cursos };
   },
   head() {
     return {
       title: "Portafolio de Cursos | Innovación Docente"
     };
-  },
-  mounted() {
-    this.fetchData();
-  },
-  methods: {
-    async fetchData() {
-      let { data } = await axios.get(
-        `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json`
-      );
-      this.cursos = data;
-    }
   }
 };
 </script>
