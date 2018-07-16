@@ -4,13 +4,13 @@
       <h2>{{title}}</h2>
       <p>{{description}}</p>
       <div class="form-group">
-        <input v-model="email"
+        <input v-model="forma.email"
                type="mail"
                name="email"
                class="form-control"
                placeholder="Correo Electronico"
-               v-validate="'required'">
-        <span v-show="errors.has('email')">Email es requerido</span>
+               v-validate="'required|email'">
+        <span v-show="errors.has('email')">Tiene que ser un email valido</span>
       </div>
       <button @click="submit"
               v-bind:class="[{'btn-inverse':blue},{'btn-outline-primary':!blue}]"
@@ -28,18 +28,19 @@ export default {
   props: ["title", "description", "blue"],
   data() {
     return {
-      email: ""
+      forma: {
+        email: null
+      }
     };
   },
   methods: {
     submit(e) {
       this.$validator.validateAll().then(x => {
         if (x) {
-          // only if valid
           axios
             .post(
-              "https://innovaciondocente-utpl.firebaseio.com/suscripcion/suscripciones.json",
-              this.email
+              "https://innovaciondocente-utpl.firebaseio.com/meta/suscripciones.json",
+              this.forma
             )
             .then(function(response) {
               alert("Te has suscribido");
