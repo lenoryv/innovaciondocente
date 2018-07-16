@@ -122,7 +122,6 @@ export default {
         .validateAll()
         .then(x => {
           if (x) {
-            // only if valid
             axios
               .post(
                 "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json",
@@ -130,7 +129,6 @@ export default {
               )
               .then(function(response) {
                 alert("Completado");
-                // TODO: fix router
                 window.$nuxt.$router.go(-1);
               })
               .catch(function(error) {
