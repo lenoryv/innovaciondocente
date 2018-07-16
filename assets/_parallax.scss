@@ -6,3 +6,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@supports (background-attachment: fixed) {
+  .parallax {
+    background-attachment: fixed
+  }
+}
