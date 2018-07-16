@@ -60,7 +60,7 @@
             {{ data.fecha | date}}
           </p>
           <!---->
-          <p>
+          <p v-if="data.duracion">
             <b>Duración: </b>
             <ul>
               <li v-if="data.duracion.horas">{{ data.duracion.horas }} Horas</li>

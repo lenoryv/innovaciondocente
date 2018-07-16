@@ -1,27 +1,31 @@
 <template>
-  <section class="container">
-    <h2>Suscribete</h2>
-    <p>Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada.</p>
-    <div class="form-group">
-      <input v-model="email"
-             type="mail"
-             name="email"
-             class="form-control"
-             placeholder="Correo Electronico"
-             v-validate="'required'">
-      <span v-show="errors.has('email')">Email es requerido</span>
+  <section v-bind:class="[{'blue':blue}]">
+    <div class="container">
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+      <div class="form-group">
+        <input v-model="email"
+               type="mail"
+               name="email"
+               class="form-control"
+               placeholder="Correo Electronico"
+               v-validate="'required'">
+        <span v-show="errors.has('email')">Email es requerido</span>
+      </div>
+      <button @click="submit"
+              v-bind:class="[{'btn-inverse':blue},{'btn-outline-primary':!blue}]"
+              class="btn btn-large btn-small"
+              type="submit">
+        Suscribirse
+      </button>
     </div>
-    <button @click="submit"
-            class="btn btn-outline-primary btn-large"
-            type="submit">
-      Suscribirse
-    </button>
   </section>
 </template>
 
 <script>
 import axios from "axios";
 export default {
+  props: ["title", "description", "blue"],
   data() {
     return {
       email: ""
@@ -53,7 +57,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/form";
-.container {
-  background-color: white;
+.blue {
+  color: $color-font-primary;
+  background-color: $color-primary;
 }
 </style>
