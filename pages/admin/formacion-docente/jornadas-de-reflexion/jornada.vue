@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Nueva Noticia</h1>
+    <h1>Nueva Jornada</h1>
     <div class="form-group">
       <label for="nombre">Nombre</label>
       <input v-model="forma.nombre"
@@ -19,14 +19,14 @@
              class="form-control">
     </div>
     <div class="form-group">
-      <label for="img">Imagen</label>
-      <input v-model="forma.img"
+      <label for="periodo">Periodo</label>
+      <input v-model="forma.periodo"
              type="text"
-             name="img"
+             name="periodo"
              class="form-control"
              v-validate="'required'">
-      <span v-show="errors.has('img')"
-            class="alert alert-danger">Imagen es requerido</span>
+      <span v-show="errors.has('periodo')"
+            class="alert alert-danger">Periodo es requerido</span>
     </div>
     <div class="form-group">
       <label for="description">Descripcion</label>
@@ -86,7 +86,7 @@ export default {
   data() {
     let forma = {
       nombre: null,
-      img: null,
+      periodo: null,
       description: null,
       html: null,
       autor: null,
@@ -110,7 +110,7 @@ export default {
             // push to firebase
             axios
               .post(
-                "https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/noticias.json",
+                "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/jornadas-de-reflexion.json",
                 this.forma
               )
               .then(function(response) {

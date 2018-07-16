@@ -10,6 +10,9 @@
           <li>
             <nuxt-link :to="{name: 'admin-formacion-docente-cafe-cientifico'}">Cafe Cientifico</nuxt-link>
           </li>
+          <li>
+            <nuxt-link :to="{name: 'admin-formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexion</nuxt-link>
+          </li>
         </ul>
       </li>
       <li>
@@ -24,15 +27,16 @@
           <li>
             <nuxt-link :to="{name: 'admin-innovacion-docente-buenas-practicas'}">Buenas Prácticas</nuxt-link>
           </li>
-          </ul>
-          <li>
+        </ul>
+      </li>
+      <li>
         Observatorio EduTendencias
         <ul>
           <li>
-            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
+            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-tips-innovacion'}">Aula Divertida</nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-tips-innovacion'}">Aula Divertida</nuxt-link>
+            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
           </li>
         </ul>
       </li>

@@ -1,11 +1,16 @@
 import Vue from 'vue'
 
 Vue.filter('capitalize', val => val.toUpperCase());
-Vue.filter('slice', (val, start, end) => val.slice(start, end) + '...');
+Vue.filter('slice', (val, start, end) => {
+  if (val.length > end)
+    return val.slice(start, end) + '...';
+  return val;
+});
 Vue.filter('date', val => {
   let parts = val.split('-');
 
   let mes;
+  // 2018-01-11
 
   switch (parseInt(parts[1])) {
     case 1: { mes = "Enero"; break; }

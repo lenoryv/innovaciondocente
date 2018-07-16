@@ -1,13 +1,15 @@
 <template>
     <div>
-        <header class="parallax">
+        <section class="parallax">
             <div class="header-content">
-                <h1>
-                    Quienes somos
-                </h1>
+                <h1>Quienes somos</h1>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-md-6 outro-icon">
+                            <img src="~/static/sello.png"
+                                 alt="logo">
+                        </div>
+                        <div class="col-md-6 text">
                             <p>
                                 Enmarcado en el Plan Estratégico de Desarrollo Institucional 2011 - 2020, el Vicerrectorado Académico,
                                 a través de su Dirección de Innovación, Formación y Evaluación Docente,
@@ -16,14 +18,10 @@
                                 programa de innovación académica.
                             </p>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <img src="~/static/sello.png"
-                                 alt="logo">
-                        </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </section>
         <section class="container">
             <p>A través de iniciativas como Encuentro Café Científico, Jornadas de Reflexión Académica,
                 el Plan de Formación Docente, entre otras, busca instaurar un sello de calidad para todos
@@ -40,25 +38,27 @@
                     continua de los docentes a partir de su propia práctica educativa.</li>
                 <li>Documentar las experiencias de las buenas prácticas docentes innovadoras.</li>
             </ul>
-            <hr>
-            <h2>Saludo del Vicerrector</h2>
-            <div class="row">
-                <div class="col-lg-6"><img src="https://innovaciondocente.utpl.edu.ec/sites/default/files/images/1(1).jpg"
-                
-                         alt="vice"></div>
-                <div class="col-lg-6">
-                    <h5>Estimados docentes:</h5>
-                    <p>Les doy la bienvenida al portal de innovación docente del Vicerrectorado Académico,
-                        a la vez que al inicio del presente ciclo académico. Este sitio busca poner al
-                        alcance de todos las iniciativas que tenemos en marcha para estimular la reflexión,
-                        actualización y mejora de nuestras prácticas docentes. La colaboración de ustedes
-                        y las sugerencias que nazcan de la misma, serán de gran ayuda para hacer de este
-                        portal un medio vivo y dinámico de interacción entre el Vicerrectorado Académico
-                        y el cuerpo docente de la Universidad.</p>
-                    <h6>Santiago Acosta Aide</h6>
-                    <h6>Vicerrector Académico</h6>
+            <div class="container cont-vic">
+                <h2>Saludo del Vicerrector</h2>
+                <div class="row">
+                    <div class="col-md-6 "><img src="https://innovaciondocente.utpl.edu.ec/sites/default/files/images/1(1).jpg"
+                    
+                             alt="vice"></div>
+                    <div class="col-md-6">
+                        <h4>Estimados docentes:</h4>
+                        <p>Les doy la bienvenida al portal de innovación docente del Vicerrectorado Académico,
+                            a la vez que al inicio del presente ciclo académico. Este sitio busca poner
+                            al alcance de todos las iniciativas que tenemos en marcha para estimular
+                            la reflexión, actualización y mejora de nuestras prácticas docentes. La colaboración
+                            de ustedes y las sugerencias que nazcan de la misma, serán de gran ayuda
+                            para hacer de este portal un medio vivo y dinámico de interacción entre el
+                            Vicerrectorado Académico y el cuerpo docente de la Universidad.</p>
+                        <h6>Santiago Acosta Aide</h6>
+                        <h6>Vicerrector Académico</h6>
+                    </div>
                 </div>
             </div>
+
         </section>
     </div>
 </template>
@@ -67,42 +67,56 @@
 @import "assets/variables";
 .parallax {
   height: 100vh;
-  background-color: $color-primary;
   background-image: url("https://images.unsplash.com/photo-1510936111840-65e151ad71bb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bcd2bf5b6271090e70ea12980ddb02d7&auto=format&fit=crop&w=1067&q=80");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: table;
 }
-header {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-}
-
 .header-content {
+  width: 100vw;
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
+  margin: auto;
   h1 {
     font-weight: 400;
     color: $color-font-primary;
+    font-size: 400%;
+    margin: 0;
+    padding: 0;
   }
-  margin: auto;
-  .col-lg-6 p {
+  .text {
     text-align: justify;
-    padding-top: 100px;
     color: $color-font-primary;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
   }
 }
-@media screen and (min-width: 768px) {
+.cont-vic {
+  border-top: 2px #e1e4e8 solid;
+  margin-top: 25px;
+  padding-top: 20px;
+  .col-md-6 {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
   .header-content {
     text-align: center;
     h1 {
       font-size: 300%;
-      letter-spacing: 0.5em;
+    }
+    .outro-icon {
+      text-align: center;
+      img {
+        height: 250px;
+        width: 250px;
+      }
     }
   }
 }
-h2{
-    text-align: center;
+h2 {
+  text-align: center;
+  margin-bottom: 5px;
 }
 </style>

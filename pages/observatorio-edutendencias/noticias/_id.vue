@@ -43,5 +43,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "assets/noticias";
+@import "assets/html";
 </style>

@@ -10,27 +10,40 @@
           <div class="list-vertical-index">
             <h3>Acerca de Nosotros</h3>
             <ul>
-              <li><nuxt-link class="nav" :to="{name: 'acerca-nosotros'}">Quienes Somos</nuxt-link></li>
-              <li><nuxt-link class="nav" :to="{name: ''}">Nuestro Equipo</nuxt-link></li>
-              <li><nuxt-link class="nav" :to="{name: 'acerca-nosotros-nuestros-servicios'}">Servicios</nuxt-link></li>
+              <li>
+                <nuxt-link class="nav"
+                           :to="{name: 'acerca-nosotros'}">Quienes Somos</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link class="nav"
+                           :to="{name: 'acerca-nosotros-nuestro-equipo'}">Nuestro Equipo</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link class="nav"
+                           :to="{name: 'acerca-nosotros-nuestros-servicios'}">Servicios</nuxt-link>
+              </li>
             </ul>
           </div>
           <div class="col-md-12 footer-icons networks">
             <div class="social-networks-index square spin-icon">
               <li>
-                <a href=""
+                <a href="https://www.facebook.com/LiiDUTPL"
+                   target="_blank"
                    class="fab fa-facebook-f"></a>
               </li>
               <li>
-                <a href=""
+                <a href="https://twitter.com/utpl"
+                   target="_blank"
                    class="fab fa-twitter"></a>
               </li>
               <li>
-                <a href=""
+                <a href="https://www.youtube.com/channel/UCzRd2Y87-NJnVliV8B6e_Xg"
+                   target="_blank"
                    class="fab fa-youtube"></a>
               </li>
               <li>
-                <a href=""
+                <a href="https://www.instagram.com/liidutpl"
+                   target="_blank"
                    class="fab fa-instagram"></a>
               </li>
             </div>
@@ -231,6 +244,7 @@
   }
   .social-networks-index {
     text-align: center !important;
+    margin-right: 1rem;
   }
 }
 </style>
