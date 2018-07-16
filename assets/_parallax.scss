@@ -7,7 +7,7 @@
   background-size: cover;
 }
 
-@supports (background-attachment: fixed) {
+@media (pointer: fine) {
   .parallax {
     background-attachment: fixed
   }
