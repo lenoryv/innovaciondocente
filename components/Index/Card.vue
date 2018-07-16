@@ -3,7 +3,7 @@
         <div class="card_4"
              v-if="nota">
             <div class="card_4__thumb">
-                <a href="#"><img :src="nota.img"></a>
+                <img :src="nota.img">
             </div>
             <div class="card_4__date">
                 <span class="card_4__date__day">{{nota.date.dia}}</span>
@@ -11,11 +11,15 @@
             </div>
             <div class="card_4__body">
                 <div class="card_4__category">
-                    <a href="#">{{nota.type}}</a>
+                    <a>{{nota.type}}</a>
                 </div>
                 <div class="card_4__title"
                      v-if="nota.title">
-                    <a href="#">{{nota.title | slice(0,40,"...")}}</a>
+                     <nuxt-link class=""
+                               :to="{name: nota.key.name, params: {id: nota.key.id}}">
+                        {{nota.title | slice(0,40,"...")}}
+                    </nuxt-link>
+                    <a href="#"></a>
                 </div>
                 <div class="card_4__description">
                     <p>{{nota.description}}</p>

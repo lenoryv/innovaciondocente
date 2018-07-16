@@ -43,8 +43,7 @@
 <style lang="scss" scoped>
 @import "assets/variables";
 .liid-info {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding: 1rem;
   height: 105vh;
   display: table-cell;
   vertical-align: middle;
