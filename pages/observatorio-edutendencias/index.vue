@@ -39,7 +39,7 @@
         <nuxt-link tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-4 img-container"
-                   :to="{}">
+                   :to="{name: 'observatorio-edutendencias-tips-innovacion-videos'}">
           <div class="title">
             <h2>VIDEOS</h2>
           </div>
