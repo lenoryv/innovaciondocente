@@ -23,7 +23,7 @@
                 </p>
             </div>
             <section class="row">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <figure class="column-img">
                         <img src="https://images.unsplash.com/photo-1476983109555-18ebaf412d7c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c508869d7645131d98c453dd9ce0ae6&auto=format&fit=crop&w=620&q=80"
                     
@@ -35,7 +35,7 @@
                         <a href="#"></a>
                     </figure>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <figure class="column-img">
                         <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ad57f7ca5832f3f72ee2c1c243c72f5c&auto=format&fit=crop&w=750&q=80"
                     
@@ -47,7 +47,7 @@
                         <a href="#"></a>
                     </figure>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <figure class="column-img">
                         <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-0.3.5&s=091e1246b8fbf6ad4a6b7df9b98454c1&auto=format&fit=crop&w=334&q=80"
                     
@@ -59,7 +59,7 @@
                         <a href="#"></a>
                     </figure>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <figure class="column-img">
                         <img src="https://images.unsplash.com/photo-1490905461158-067f4895ea9d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec12d476aa884c9ff23d2169cc359a09&auto=format&fit=crop&w=752&q=80"
                     
@@ -124,6 +124,9 @@ section {
 }
 .section-text {
   padding: 1rem 8rem 1rem 8rem;
+  h2 {
+    text-align: center;
+  }
 }
 .we-team {
   text-align: center;

@@ -38,6 +38,9 @@
           <li>
             <nuxt-link :to="{name: 'admin-observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
           </li>
+          <li>
+            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-edutendencias'}">EduTendencias</nuxt-link>
+          </li>
         </ul>
       </li>
     </ul>
