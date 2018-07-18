@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-lg-2">
           <section class="sticky">
@@ -11,9 +11,9 @@
             <nuxt-link class="btn btn-outline-dark btn-large"
                        :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'1'}}">A. Técnica</nuxt-link>
             <nuxt-link class="btn btn-outline-dark btn-large"
-                       :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'2'}}">A. Socio Humanística</nuxt-link>
+                       :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'2'}}">A. Socio...</nuxt-link>
             <nuxt-link class="btn btn-outline-dark btn-large"
-                       :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'3'}}">A. Administrativa </nuxt-link>
+                       :to="{name: 'innovacion-docente-buenas-practicas-index-id',params:{id:'3'}}">A. Admin...</nuxt-link>
           </section>
         </div>
         <section class="col-lg-9">

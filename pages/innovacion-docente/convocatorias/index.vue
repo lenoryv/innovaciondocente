@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-3">
           <section class="sticky">
@@ -56,12 +56,15 @@ export default {
   color: $color-font-primary !important;
   background-color: $color-primary !important;
   border-color: $color-dark !important;
+  font-size: 15px !important;
   &:hover {
     opacity: 0.8;
     transition: 0.2s all ease;
   }
 }
-
+.btn{
+  font-size: 12px;
+}
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky {
     position: -webkit-sticky;
