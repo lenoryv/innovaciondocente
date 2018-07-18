@@ -1,6 +1,10 @@
 <template>
-  <section>
-    <h1>Manual de uso del repositorio de planes docentes</h1>
+  <div>
+    <header>
+      <h1>
+        ¿Cómo elaborar mi Plan Docente?
+      </h1>
+    </header>
     <div class="container">
       <ol class="list-group vertical-steps">
         <li class="list-group-item html"
@@ -10,7 +14,7 @@
         </li>
       </ol>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -39,6 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/header";
 @import "assets/html";
 /*Vertical Steps*/
 .list-group.vertical-steps {

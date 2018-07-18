@@ -1,8 +1,8 @@
 <template>
-  <section>
-    <div>
+  <div>
+    <header>
       <h1>Diseño - Desarrollo de mi asiganatura</h1>
-    </div>
+    </header>
     <section class="timeline">
       <div class="container left">
         <div class="content">
@@ -65,11 +65,11 @@
         </div>
       </div>
     </section>
-  </section>
-
+  </div>
 </template>
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/header";
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;

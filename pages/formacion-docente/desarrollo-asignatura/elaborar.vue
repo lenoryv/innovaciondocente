@@ -1,7 +1,9 @@
 <template>
   <div>
     <header>
-      ¿Cómo elaborar mi Plan Docente?
+      <h1>
+        ¿Cómo elaborar mi Plan Docente?
+      </h1>
     </header>
     <section class="container html">
       <!--section-->
@@ -212,21 +214,13 @@
 
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/header";
 @import "assets/html";
 
 h2 {
   color: $color-primary;
 }
 
-header {
-  background: $color-primary;
-  height: 200px;
-  color: $color-font-primary;
-  line-height: 200px;
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-}
 table {
   border-collapse: collapse;
   width: 100%;
