@@ -41,10 +41,9 @@
       </div>
       <div class="container right">
         <div class="content">
-          <nuxt-link class="link"
-                     :to="{name: ''}">
+          <a href="https://biblioteca.utpl.edu.ec/" target="_blank">
             <h2>¿Conoces las Bases de Datos que te pueden ayudar para el aprendizaje de tus estudiantes?</h2>
-          </nuxt-link>
+          </a>
           <p>Repositorios de recursos digitales de carácter científico que contiene información relevante,
             de instituciones de gran renombre, 100% confiable, verídica y de última generación en todos
             los campos del saber humano; disponible para docentes, administrativos y estudiantes de la
