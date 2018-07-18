@@ -22,7 +22,7 @@
       <div class="container right">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: ''}">
+                     :to="{name: 'formacion-docente-desarrollo-asignatura-repositorio'}">
             <h2>¿Cómo se elabora un Plan por medio del Repositorio de Planes Docentes?</h2>
           </nuxt-link>
           <p>10 pasos sencillos para elaborar un plan</p>
