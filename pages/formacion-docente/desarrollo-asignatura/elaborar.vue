@@ -208,6 +208,8 @@
         <a href="http://www.upct.es/~euitc/documentos/manual_guias_para_web.pdf">http://www.upct.es/~euitc/documentos/manual_guias_para_web.pdf</a>. Tomado el 15 de agosto del
         2014-06-02
       </p>
+      <button @click="$router.go(-1)"
+              class="btn btn-outline-primary btn-large btn-sm">Regresar</button>
     </section>
   </div>
 </template>

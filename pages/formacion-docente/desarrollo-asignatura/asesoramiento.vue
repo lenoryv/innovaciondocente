@@ -23,6 +23,8 @@
       <h2>Grabación de Vídeos.</h2>
       <p>Con ayuda de MediaLab te asesoramos en el diseño, elaboración y grabación de vídeos que serán de
         mucha utilidad para Modalidad Abierta y sin Distancia y para Modalidad Presencial.</p>
+      <button @click="$router.go(-1)"
+              class="btn btn-outline-primary btn-large btn-sm">Regresar</button>
     </section>
   </div>
 </template>

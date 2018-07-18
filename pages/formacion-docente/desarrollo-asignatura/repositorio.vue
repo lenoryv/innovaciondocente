@@ -5,15 +5,19 @@
         ¿Cómo elaborar mi Plan Docente?
       </h1>
     </header>
-    <div class="container">
+    <section class="container">
       <ol class="list-group vertical-steps">
         <li class="list-group-item html"
             v-for="(d, i) in data"
             :key="i"
             v-html="d.html">
         </li>
+        <li>
+          <button @click="$router.go(-1)"
+                  class="btn btn-outline-primary btn-large btn-sm">Regresar</button>
+        </li>
       </ol>
-    </div>
+    </section>
   </div>
 </template>
 
