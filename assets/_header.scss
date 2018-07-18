@@ -1,0 +1,17 @@
+@import "assets/variables";
+header {
+  background: $color-primary;
+  h1 {
+    font-weight: bold;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: $color-font-primary;
+    font-size: 28px;
+    margin: 0;
+  }
+}
+
+h2 {
+  color: $color-primary;
+}

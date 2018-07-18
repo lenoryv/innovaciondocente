@@ -1,22 +1,24 @@
 <template>
-  <section>
-    <div>
-      <h1>Diseño - Desarrollo de mi asiganatura</h1>
-    </div>
+  <div>
+    <header>
+      <h1>Diseño - Desarrollo de mi asignatura</h1>
+    </header>
     <section class="timeline">
       <div class="container left">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: ''}">
+                     :to="{name: 'formacion-docente-desarrollo-asignatura-elaborar'}">
             <h2>¿Cómo elaborar mi Plan Docente?</h2>
           </nuxt-link>
-          <li>a. ¿Qué es el Plan Docente?</li>
-          <li>b. ¿Qué elementos tiene el Plan?</li>
-          <li>c. ¿Cuáles son las funciones del Plan Docente?</li>
-          <li>d. ¿Cómo se evalúa a los estudiantes?</li>
-          <li>e. ¿El Plan docente evidencia nuestra calidad y compromiso?</li>
-          <li>f. ¿Cuál es el proceso de revisión y aprobación del Plan Docente?</li>
-          <li>g. ¿Qué es el repositorio de Planes Docentes?</li>
+          <ol>
+            <li>¿Qué es el Plan Docente?</li>
+            <li>¿Qué elementos tiene el Plan?</li>
+            <li>¿Cuáles son las funciones del Plan Docente?</li>
+            <li>¿Cómo se evalúa a los estudiantes?</li>
+            <li>¿El Plan docente evidencia nuestra calidad y compromiso?</li>
+            <li>¿Cuál es el proceso de revisión y aprobación del Plan Docente?</li>
+            <li>¿Qué es el repositorio de Planes Docentes?</li>
+          </ol>
         </div>
       </div>
       <div class="container right">
@@ -39,10 +41,9 @@
       </div>
       <div class="container right">
         <div class="content">
-          <nuxt-link class="link"
-                     :to="{name: ''}">
+          <a href="https://biblioteca.utpl.edu.ec/" target="_blank">
             <h2>¿Conoces las Bases de Datos que te pueden ayudar para el aprendizaje de tus estudiantes?</h2>
-          </nuxt-link>
+          </a>
           <p>Repositorios de recursos digitales de carácter científico que contiene información relevante,
             de instituciones de gran renombre, 100% confiable, verídica y de última generación en todos
             los campos del saber humano; disponible para docentes, administrativos y estudiantes de la
@@ -53,7 +54,7 @@
       <div class="container left">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: ''}">
+                     :to="{name: 'formacion-docente-desarrollo-asignatura-asesoramiento'}">
             <h2>¿Necesitas asesoramiento pedagógico para el desarrollo de tu asignatura?</h2>
           </nuxt-link>
           <p>Desde el Laboratorio de Innovación e Investigación Docente (LiiD) te ofrecemos varios servicios
@@ -65,11 +66,11 @@
         </div>
       </div>
     </section>
-  </section>
-
+  </div>
 </template>
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/header";
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
@@ -81,7 +82,7 @@
   content: "";
   position: absolute;
   width: 6px;
-  background-color: #002954;
+  background-color: $color-primary;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -105,8 +106,8 @@
   width: 35px;
   height: 35px;
   right: -17px;
-  background-color: white;
-  border: 4px solid rgba(245, 228, 0, 0.897);
+  background-color: $color-font-primary;
+  border: 4px solid $color-warning;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -131,9 +132,9 @@
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid white;
+  border: medium solid $color-font-primary;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #002954;
+  border-color: transparent transparent transparent $color-primary;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -145,9 +146,9 @@
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid white;
+  border: medium solid $color-font-primary;
   border-width: 10px 10px 10px 0;
-  border-color: transparent #002954 transparent transparent;
+  border-color: transparent $color-primary transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -181,9 +182,9 @@
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
-    border: medium solid white;
+    border: medium solid $color-font-primary;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent $color-font-primary transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
@@ -196,5 +197,8 @@
   .right {
     left: 0%;
   }
+}
+ol {
+  list-style-type: lower-alpha;
 }
 </style>

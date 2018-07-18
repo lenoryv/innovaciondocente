@@ -1,16 +1,24 @@
 <template>
-  <section>
-    <h1>Manual de uso del repositorio de planes docentes</h1>
-    <div class="container">
+  <div>
+    <header>
+      <h1>
+        ¿Cómo elaborar mi Plan Docente?
+      </h1>
+    </header>
+    <section class="container">
       <ol class="list-group vertical-steps">
         <li class="list-group-item html"
             v-for="(d, i) in data"
             :key="i"
             v-html="d.html">
         </li>
+        <li>
+          <button @click="$router.go(-1)"
+                  class="btn btn-outline-primary btn-large btn-sm">Regresar</button>
+        </li>
       </ol>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -39,6 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "assets/variables";
+@import "assets/header";
 @import "assets/html";
 /*Vertical Steps*/
 .list-group.vertical-steps {
