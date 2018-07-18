@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <h1>Diseño - Desarrollo de mi asiganatura</h1>
+      <h1>Diseño - Desarrollo de mi asignatura</h1>
     </header>
     <section class="timeline">
       <div class="container left">
@@ -53,7 +53,7 @@
       <div class="container left">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: ''}">
+                     :to="{name: 'formacion-docente-desarrollo-asignatura-asesoramiento'}">
             <h2>¿Necesitas asesoramiento pedagógico para el desarrollo de tu asignatura?</h2>
           </nuxt-link>
           <p>Desde el Laboratorio de Innovación e Investigación Docente (LiiD) te ofrecemos varios servicios

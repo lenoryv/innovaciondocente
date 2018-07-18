@@ -217,10 +217,6 @@
 @import "assets/header";
 @import "assets/html";
 
-h2 {
-  color: $color-primary;
-}
-
 table {
   border-collapse: collapse;
   width: 100%;
