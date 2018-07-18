@@ -7,7 +7,7 @@
       <div class="container left">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: ''}">
+                     :to="{name: 'formacion-docente-desarrollo-asignatura-elaborar'}">
             <h2>¿Cómo elaborar mi Plan Docente?</h2>
           </nuxt-link>
           <li>a. ¿Qué es el Plan Docente?</li>
