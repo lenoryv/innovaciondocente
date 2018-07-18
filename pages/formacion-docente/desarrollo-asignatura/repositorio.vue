@@ -3,58 +3,50 @@
     <h1>Manual de uso del repositorio de planes docentes</h1>
     <div class="container">
       <ol class="list-group vertical-steps">
-        <li class="list-group-item">
-          <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor
-            sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing
-            elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem
-            ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor
-            sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing
-            elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem
-            ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor
-            sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing
-            elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem
-            ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor
-            sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing
-            elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem
-            ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor
-            sit amet, consectetuer adipiscing elit.</span>
-        </li>
-        <li class="list-group-item">
-          <span>Aliquam tincidunt mauris eu risus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem
-            ipsum dolor sit amet, consectetuer adipiscing elit.</span>
-        </li>
-        <li class="list-group-item">
-          <span>Vestibulum auctor dapibus neque.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem
-            ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit.</span>
-        </li>
-        <li class="list-group-item">
-          <span>Vestibulum auctor dapibus neque.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem
-            ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit.</span>
+        <li class="list-group-item html"
+            v-for="(d, i) in data"
+            :key="i"
+            v-html="d.html">
         </li>
       </ol>
     </div>
   </section>
 </template>
 
+<script>
+import axios from "axios";
+export default {
+  async asyncData() {
+    let { data } = await axios.get(
+      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/desarrollo-asignatura/repositorio.json"
+    );
+    return { data };
+  },
+  head() {
+    return {
+      title: "Manual Repositorio | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Manual de uso del repositorio de planes docentes"
+        }
+      ]
+    };
+  }
+};
+</script>
+
 <style lang="scss" scoped>
+@import "assets/variables";
+@import "assets/html";
 /*Vertical Steps*/
 .list-group.vertical-steps {
   padding-left: 10px;
   list-style: none;
   .list-group-item {
     border: none;
-    border-left: 3px solid #0052c2;
+    border-left: 3px solid $color-primary;
     box-sizing: border-box;
     border-radius: 0;
     counter-increment: step-counter;
@@ -68,8 +60,8 @@
     }
     &::before {
       border-radius: 50%;
-      background-color: #0052c2;
-      color: #fff;
+      background-color: $color-primary;
+      color: $color-font-primary;
       content: counter(step-counter);
       display: inline-block;
       float: left;
