@@ -7,7 +7,7 @@
       <div class="container left">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: 'observatorio-edutendencias'}">
+                     :to="{name: ''}">
             <h2>¿Cómo elaborar mi Plan Docente?</h2>
           </nuxt-link>
           <li>a. ¿Qué es el Plan Docente?</li>
@@ -22,7 +22,7 @@
       <div class="container right">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: 'observatorio-edutendencias'}">
+                     :to="{name: ''}">
             <h2>¿Cómo se elabora un Plan por medio del Repositorio de Planes Docentes?</h2>
           </nuxt-link>
           <p>10 pasos sencillos para elaborar un plan</p>
@@ -31,7 +31,7 @@
       <div class="container left">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: 'observatorio-edutendencias'}">
+                     :to="{name: ''}">
             <h2>¿Deseas conocer algunos recursos digitales aplicados a la docencia?</h2>
           </nuxt-link>
           <p>Ponemos a tu disposición algunos recursos digitales que pueden ser aplicados a la docencia.</p>
@@ -40,7 +40,7 @@
       <div class="container right">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: 'observatorio-edutendencias'}">
+                     :to="{name: ''}">
             <h2>¿Conoces las Bases de Datos que te pueden ayudar para el aprendizaje de tus estudiantes?</h2>
           </nuxt-link>
           <p>Repositorios de recursos digitales de carácter científico que contiene información relevante,
@@ -53,7 +53,7 @@
       <div class="container left">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: 'observatorio-edutendencias'}">
+                     :to="{name: ''}">
             <h2>¿Necesitas asesoramiento pedagógico para el desarrollo de tu asignatura?</h2>
           </nuxt-link>
           <p>Desde el Laboratorio de Innovación e Investigación Docente (LiiD) te ofrecemos varios servicios
@@ -70,10 +70,6 @@
 </template>
 <style lang="scss" scoped>
 @import "assets/variables";
-* {
-  box-sizing: border-box;
-}
-
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;

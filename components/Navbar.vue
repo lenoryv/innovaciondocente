@@ -34,6 +34,7 @@
           <div class="dropdown-content">
             <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
             <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
+            <nuxt-link :to="{name: 'formacion-docente-desarrollo-asignatura'}">Diseño de mi Asigantura</nuxt-link>
             <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
           </div>
         </div>
@@ -45,7 +46,6 @@
             <i class="fa fa-caret-down"></i>
           </nuxt-link>
           <div class="dropdown-content">
-            <nuxt-link :to="{name: 'observatorio-edutendencias-disenio-desarrollo'}">Diseño y Desarollo de mi Asigantura</nuxt-link>
             <nuxt-link :to="{name: 'observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
           </div>
         </div>
