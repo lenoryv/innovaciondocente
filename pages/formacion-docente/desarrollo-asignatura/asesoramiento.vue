@@ -1,13 +1,10 @@
 <template>
   <div>
     <header>
-      <h1>
-        Asesoramiento pedagógico
-      </h1>
+      <h1>{{title}}</h1>
     </header>
     <section class="container">
-      <p>Desde el Laboratorio de Innovación e Investigación Docente (LiiD) te ofrecemos varios servicios
-        personalizados que te servirán para mejorar tu práctica docente:</p>
+      <p>{{description}}</p>
       <h2>Filmación de tu clase.</h2>
       <p>Poder analizar el desarrollo de tu propia docencia te permitirá diagnosticar las áreas que necesitas
         mejorar. Por medio de MediaLab nos encargamos de la filmación de tu clase y de enviarte el vídeo
@@ -28,6 +25,29 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  async asyncData() {
+    let title = "ASESORAMIENTO PEDAGÓGICO";
+    let description =
+      "Desde el Laboratorio de Innovación e Investigación Docente (LiiD) te ofrecemos varios servicios personalizados que te servirán para mejorar tu práctica docente";
+    return { title, description };
+  },
+  head() {
+    return {
+      title: this.title + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 @import "assets/header";

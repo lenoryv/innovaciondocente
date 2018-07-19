@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <h1>Diseño - Desarrollo de mi asignatura</h1>
+      <h1>{{title}}</h1>
     </header>
     <section class="timeline">
       <div class="container left">
@@ -41,7 +41,8 @@
       </div>
       <div class="container right">
         <div class="content">
-          <a href="https://biblioteca.utpl.edu.ec/" target="_blank">
+          <a href="https://biblioteca.utpl.edu.ec/"
+             target="_blank">
             <h2>¿Conoces las Bases de Datos que te pueden ayudar para el aprendizaje de tus estudiantes?</h2>
           </a>
           <p>Repositorios de recursos digitales de carácter científico que contiene información relevante,
@@ -68,6 +69,31 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  asyncData() {
+    let title = "Diseño y Desarrollo de mi asignatura";
+    let description =
+      "El Vicerrectorado Académico por medio de la Dirección de Formación, Evaluación e Innovación Docente y el Laboratorio de Innovación e Investigación Docente (LiiD) pone a tu disposición algunos recursos que te servirán para la planificación y el desarrollo  de tu asignatura";
+    return { title, description };
+  },
+  head() {
+    return {
+      title: this.title + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
+  }
+};
+</script>
+
+
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/header";
@@ -96,7 +122,6 @@
   background-color: inherit;
   width: 50%;
   margin: 0;
-  cursor: pointer;
 }
 
 /* The circles on the timeline */

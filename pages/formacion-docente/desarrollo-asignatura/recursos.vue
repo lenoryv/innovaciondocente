@@ -38,6 +38,18 @@ export default {
       "https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/recursos-digitales.json"
     );
     return { data };
+  },
+  head() {
+    return {
+      title: this.data.title + " | Innovación Docente",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.data.description
+        }
+      ]
+    };
   }
 };
 </script>

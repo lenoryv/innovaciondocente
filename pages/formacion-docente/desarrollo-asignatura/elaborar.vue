@@ -1,9 +1,7 @@
 <template>
   <div>
     <header>
-      <h1>
-        ¿Cómo elaborar mi Plan Docente?
-      </h1>
+      <h1>{{title}}</h1>
     </header>
     <section class="container html">
       <!--section-->
@@ -213,6 +211,21 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  asyncData() {
+    let title = "Cómo elaborar mi Plan Docente";
+    return { title };
+  },
+  head() {
+    return {
+      title: this.title + " | Innovación Docente"
+    };
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 @import "assets/variables";
