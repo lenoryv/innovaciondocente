@@ -2,7 +2,7 @@
   <div>
     <header>
       <h1>
-        ¿Cómo elaborar mi Plan Docente?
+        {{title}}
       </h1>
     </header>
     <section class="container">
@@ -28,11 +28,12 @@ export default {
     let { data } = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/desarrollo-asignatura/repositorio.json"
     );
-    return { data };
+    let title = "Manual de uso del repositorio de planes docentes";
+    return { data, title };
   },
   head() {
     return {
-      title: "Manual Repositorio | Innovación Docente",
+      title: this.title + " | Innovación Docente",
       meta: [
         {
           hid: "description",

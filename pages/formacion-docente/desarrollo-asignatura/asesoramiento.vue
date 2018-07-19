@@ -29,7 +29,7 @@
 <script>
 export default {
   async asyncData() {
-    let title = "ASESORAMIENTO PEDAGÓGICO";
+    let title = "Asesoramiento Pedagógico";
     let description =
       "Desde el Laboratorio de Innovación e Investigación Docente (LiiD) te ofrecemos varios servicios personalizados que te servirán para mejorar tu práctica docente";
     return { title, description };
