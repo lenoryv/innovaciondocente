@@ -218,29 +218,5 @@
 @import "assets/variables";
 @import "assets/header";
 @import "assets/html";
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  border: $color-primary;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 5px;
-}
-
-th,
-td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(odd) {
-  color: $color-primary;
-}
-
-th {
-  background-color: $color-primary;
-  color: $color-font-primary;
-}
 </style>
 
