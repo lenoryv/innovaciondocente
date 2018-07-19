@@ -1,118 +1,141 @@
-[
+{
+  "title": "Recursos digitales aplicados a la docencia",
+  "description": "Ponemos a tu disposición algunos recursos digitales que pueden ser aplicados a la docencia.",
+  "resources": [
     {
-        "titulo":"Presentaciones Multimedia",
-        "descripcion":"",
-        "cards":[
-            {
-                "descripcion": "Movenote: Es una aplicación que permite crear presentaciones integrando vídeo y documentos o imágenes.",
-                "img":"http://www3.gobiernodecanarias.org/medusa/ecoescuela/recursosdigitales/files/formidable/movenote1.jpg"
-            },
-            {
-                "descripcion": "Camtasia: Programa que permite grabar lo que sucede en la pantalla de un ordenador y crear presentaciones y tutoriales visuales.",
-                "img":"http://elearningtools.us/cam.jpg"
-            },
-            {
-                "descripcion": "Pechakucha: Permite realizar presentaciones cortas, que ayuda a transmitir el mensaje de forma breve, pero impactante.",
-                "img":"https://i.ytimg.com/vi/kIH2xAgAjdo/maxresdefault.jpg"
-            },
-            {
-                "descripcion": "Explee: Es una herramienta en línea para generar presentaciones en vídeo, permite usar imágenes de su galería, animarlas y agregarles texto, convertir texto a voz con el programa, insertar música y poco más para hacer una presentación en formato de video muy vistosa.",
-                "img":"https://d1w82f5xc78wju.cloudfront.net/uploads/targetware/image/file/14322/explee.master.jpg"
-            },
-            {
-                "descripcion": "Pow Toon: Es plataforma online para la creación de animaciones y todo tipo de presentaciones en video.",
-                "img":"https://www.mentesliberadas.com/wp-content/uploads/2013/03/powtoon-1-750x450.jpg"
-            },
-            {
-                "descripcion": "Canva: Permite diseñar diapositivas y publicaciones, infografías, posters muy originales en línea, es muy útil para desarrollar la creatividad de nuestros alumnos. ",
-                "img":"https://static.canva.com/static/images/fb_cover.png"
-            },
-            {
-                "descripcion": "Prezi: Ofrece la posibilidad de crear presentaciones animadas y dinámicas.",
-                "img":"http://tecnobitt.com/wp-content/uploads/2015/02/logopr.png"
-            },
-            {
-                "descripcion": "Emaze: Te ayuda a realizar presentaciones muy creativas y dinámicas, ofrece una amplia variedad de diseños que se adaptan a cualquier tipo de presentación",
-                "img":"https://userscontent2.emaze.com/images/612f8e5b-37fc-4d54-8b0e-62e4eb3e28fa/074b7ed58bb69d33eb256f999984e20d.png"
-            }
-        ]
+      "title": "Presentaciones Multimedia",
+      "cards": [
+        {
+          "title": "Movenote",
+          "description": "Es una aplicación que permite crear presentaciones integrando vídeo y documentos o imágenes.  Las presentaciones se crean en dos pasos sencillos y se comparten a través de un enlace. Las presentaciones se pueden visualizar sin la necesidad de instalar la aplicación. Está disponible también para dispositivos móviles. ",
+          "img": "http://www3.gobiernodecanarias.org/medusa/ecoescuela/recursosdigitales/files/formidable/movenote1.jpg"
+        },
+        {
+          "title": "Camtasia Studio",
+          "description": "Programa que permite grabar lo que sucede en la pantalla de un ordenador y crear presentaciones y tutoriales visuales. También ofrece la posibilidad de editar vídeo, resaltando elementos concretos o con efectos de transición.",
+          "img": "https://lh3.googleusercontent.com/UGEcO2Pgfs-0mUSLd6NFu4Iis-4Onfy8hIOMG_9xoBQcebsaohATXItwWBoT46t5wZI7PvG7gbUqxIEVHZLdFA=s0"
+        },
+        {
+          "title": "Pechakucha",
+          "description": "Permite realizar presentaciones cortas, que ayuda a transmitir el mensaje de forma breve, pero impactante. Se trata de comunicar tu proyecto o ideas a través de una secuencia de 20 imágenes que se proyectarán durante 20 segundos cada una de ellas.",
+          "img": "http://www.a3coaching.com/wp-content/uploads/2016/05/pechakucha2.jpg"
+        },
+        {
+          "title": "Explee",
+          "description": "Explee es una herramienta en línea para generar presentaciones en vídeo, permite usar imágenes de su galería y agregarles texto, el programa las anima de forma que parece una mano que las va dibujando, mientras uno puede convertir texto a voz con el programa, insertar música y poco más para hacer una presentación en formato de video muy vistosa.",
+          "img": "https://50wheel.com/wp-content/uploads/2018/05/explee-logo.png"
+        },
+        {
+          "title": "Pow Toon",
+          "description": "Es plataforma online para la creación de animaciones y todo tipo de presentaciones en video. El programa, con una interfaz en inglés fácil e intuitivo, cuenta con todas las herramientas necesarias para crear presentaciones y vídeos animados explicativos.",
+          "img": "https://www.mentesliberadas.com/wp-content/uploads/2013/03/powtoon-1-750x450.jpg"
+        },
+        {
+          "title": "Canva",
+          "description": "Permite diseñar diapositivas y publicaciones, infografías, posters muy originales en línea, es muy útil para desarrollar la creatividad de nuestros alumnos.  Las creaciones se pueden compartir en línea entre usuarios.",
+          "img": "https://i2.wp.com/www.fundacionctic.org/sat/sites/sat/files/canva-circle-logo.png?resize=260%2C260"
+        },
+        {
+          "title": "Prezi",
+          "description": "Ofrece la posibilidad de crear presentaciones animadas y dinámicas.",
+          "img": "http://www.stickpng.com/assets/images/5842a619a6515b1e0ad75af8.png"
+        },
+        {
+          "title": "Emaze",
+          "description": "te ayuda a realizar presentaciones muy creativas y dinámicas, ofrece una amplia variedad de diseños que se adaptan a cualquier tipo de presentación",
+          "img": "https://martechforum.com/wp-content/uploads/2015/07/emaze.jpeg"
+        }
+      ]
     },
     {
-        "titulo":"Guardar y Compartir Información",
-        "descripcion":"",
-        "cards":[
-            {
-                "descripcion": "Dropbox: Es una herramienta bastante útil e innovadora, el Dropbox es un servicio de alojamientos de archivos multiplataforma en la nube  que permite a los usuarios almacenar y sincronizar archivos en línea y compartir archivos y carpetas con otros.",
-                "img":"https://www.google.com.ec/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj2puvn997bAhVFXKwKHTkoD6kQjRx6BAgBEAU&url=https%3A%2F%2Fwww.dropbox.com%2Fes%2Fbranding&psig=AOvVaw02O8MqelfZDwJQtBBQawuK&ust=1529470482671013"
-            },
-            {
-                "descripcion": "Wetransafer: Es una plataforma en línea que permite enviar archivos de hasta 2GB de manera gratuita y sin la necesidad de registrarse, se introduce el e-mail del remitente y el del destinatario y se envía la información.",
-                "img":"https://i.ytimg.com/vi/0vwSPq63e4M/maxresdefault.jpg"
-            },
-            {
-                "descripcion": "Netvibes: Es un servicio web que actúa como un escritorio virtual personalizado, donde puedes guardar varios tipos de información en varios apartados o pestañas. Puede contener una gran variedad de archivos, desde webmails como Gmail hasta fotos y vídeos de Youtube, entre muchos otros.",
-                "img":"http://www.fotosdigitalesgratis.com/noticias/fotos/Netvibes-Logo.jpg"
-            },
-            {
-                "descripcion": "Delicious y Diigo: Servicios de gestión de enlaces a través de la web que permiten a los usuarios guardar y recuperar en la red las direcciones de interés, las cuales solían almacenarse de forma local en el ordenador, para que sean consultables en línea. También se pueden categorizar enlaces mediante etiquetas y compartirlo con otros usuarios.",
-                "img":"https://www.seoclerk.com/pics/535454-1prIIz1495715817.png"
-            }
-        ]
+      "title": "Guardar y Compartir Información",
+      "cards": [
+        {
+          "title": "Dropbox",
+          "description": "Es una herramienta bastante útil e innovadora, el Dropbox es un servicio de alojamientos de archivos multiplataforma en la nube  que permite a los usuarios almacenar y sincronizar archivos en línea y compartir archivos y carpetas con otros.",
+          "img": "https://aem.dropbox.com/cms/content/dam/dropbox/www/en-us/branding/app-dropbox-android@2x.png"
+        },
+        {
+          "title": "Wetransfer",
+          "description": "Es una plataforma en línea que permite enviar archivos de hasta 2GB de manera gratuita y sin la necesidad de registrarse, se introduce el e-mail del remitente y el del destinatario y se envía la información.",
+          "img": "http://www.stickpng.com/assets/images/5842fb84a6515b1e0ad75b34.png"
+        },
+        {
+          "title": "Netvibes",
+          "description": "Netvibes es un servicio web que actúa como un escritorio virtual personalizado, donde puedes guardar varios tipos de información en varios apartados o pestañas. Puede contener una gran variedad de archivos, desde webmails como Gmail hasta fotos y vídeos de Youtube, entre muchos otros.",
+          "img": "http://fcruzbello.es/wp-content/uploads/netvibes-logo.png"
+        },
+        {
+          "title": "Delicious y Diigo",
+          "description": "Servicios de gestión de enlaces a través de la web que permiten a los usuarios guardar y recuperar en la red las direcciones de interés, las cuales solían almacenarse de forma local en el ordenador, para que sean consultables en línea. También se pueden categorizar enlaces mediante etiquetas y compartirlo con otros usuarios.",
+          "img": "https://estherpmifes.files.wordpress.com/2015/01/diigo.png"
+        }
+      ]
     },
     {
-        "titulo":"Trabajar con Videos",
-        "descripcion":"",
-        "cards":[
-            {
-                "descripcion": "Hapyak: Permite insertar en cualquier punto de un vídeo enlaces, para ampliar la información del contenido que se está explicando, encuestas, para ir evaluando si se entienden las explicaciones del vídeo.",
-                "img":"https://www.brightcove.com/images/e425260f-558b-46d1-9074-47829c610efc?presets=partner-detail-logo&dpr=1"
-            },
-            {
-                "descripcion": "KineMaster: Es un editor de vídeo muy completo, con muchas posibilidades de personalización, filtros, retoque de brillo, contraste, saturación, transiciones, títulos, temas, y se puede manejar de una manera bastante sencilla y con excelentes resultados.",
-                "img":"http://rootear.com/files/2016/02/kinemaster-400x286.jpg"
-            },
-            {
-                "descripcion": "Memplai: Es  una aplicación que nos permite crear completos proyectos online individuales o colaborativos a partir de vídeos y otros archivos multimedia que se pueden ir añadiendo desde los equipos de los integrantes del proyecto o bien desde Facebook o Instagram.",
-                "img":"http://lh4.ggpht.com/-H8C5JAj3zxo/T7MNSMFwkpI/AAAAAAAAM6g/m-5bK4m_Tn8/Memplai.png?imgmax=720"
-            },
-            {
-                "descripcion": "Wevideo: Es otro completo editor de vídeo online que tiene la ventaja de permitir editar vídeos de forma colaborativa, lo que nos permite utilizarlo para varios proyectos y actividades educativas.",
-                "img":"https://educationaltechnology.rbe.sk.ca/sites/educationaltechnology.rbe.sk.ca/files/styles/large/public/assets/images/wevideo_lg.png?itok=8WxuveYW"
-            },
-            {
-                "descripcion": "Knovio: Permite agregar a las presentaciones vídeo. Se puede generar presentaciones donde el video es el elemento protagonista.",
-                "img":"https://i.pinimg.com/originals/d2/d7/69/d2d76955e80340a6a1242dfae0c52a4a.png"
-            }
-        ]
+      "title": "Trabajar con Vídeos",
+      "cards": [
+        {
+          "title": "Hapyak",
+          "description": "Permite insertar en cualquier punto de un vídeo enlaces, para ampliar la información del contenido que se está explicando, encuestas, para ir evaluando si se entienden las explicaciones del vídeo.",
+          "img": "https://d1qb2nb5cznatu.cloudfront.net/startups/i/237943-0af57293fb32af5ddec4eb674486c8ab-medium_jpg.jpg?buster=1403618352"
+        },
+        {
+          "title": "KineMaster",
+          "description": "Es un editor de vídeo muy completo, con muchas posibilidades de personalización, filtros, retoque de brillo, contraste, saturación, transiciones, títulos, temas, y se puede manejar de una manera bastante sencilla y con excelentes resultados.",
+          "img": "https://cdn6.aptoide.com/imgs/d/3/f/d3fea703c53527df3df2d3c1e94ff4d9_icon.png?w=240"
+        },
+        {
+          "title": "Memplai",
+          "description": "Es  una aplicación que nos permite crear completos proyectos online individuales o colaborativos a partir de vídeos y otros archivos multimedia que se pueden ir añadiendo desde los equipos de los integrantes del proyecto o bien desde Facebook o Instagram.",
+          "img": "http://sanjose-desanagustin.blueboard.com.ar/imagenes/logos_memplai.png"
+        },
+        {
+          "title": "Wevideo",
+          "description": "Es otro completo editor de vídeo online que tiene la ventaja de permitir editar vídeos de forma colaborativa, lo que nos permite utilizarlo para varios proyectos y actividades educativas.",
+          "img": "https://media.glassdoor.com/sqll/1103109/wevideo-squarelogo-1506190566114.png"
+        },
+        {
+          "title": "Knovio",
+          "description": "Permite agregar a las presentaciones vídeo. Se puede generar presentaciones donde el video es el elemento protagonista.",
+          "img": "http://www.knovio.com/wp-content/uploads/2015/04/KNOVIO-appStore-1024x1024-v3a.png"
+        }
+      ]
     },
     {
-        "titulo":"Generar evaluaciones, juegos, cuestionarios",
-        "descripcion":"",
-        "cards":[
-            {
-                "descripcion": "Socrative: Socrative es una herramienta que puede utilizarse para crear cuestionarios y conocer la respuesta de los alumnos en tiempo real a través de ordenadores y dispositivos móviles.",
-                "img":"https://lh3.googleusercontent.com/PIdEtzaqL0n-03jBUAv823LjpTY4Vs7E9GPcvr_hFmUrDHE7g3678di9iGu2jU3jdXI"
-            },
-            {
-                "descripcion": "Classmarker: Es una herramienta en línea para la creación, distribución y corrección de test, sin necesidad de instalar un programa en la computadora.",
-                "img":"https://cardenasperez.files.wordpress.com/2017/03/classmaker.jpg"
-            },
-            {
-                "descripcion": "Quizlet: Es una herramienta que permite crear y compartir pruebas en línea para evaluar a los estudiantes en la comprensión de diversos conceptos.",
-                "img":"https://image.slidesharecdn.com/getstartedwithquizlet-120113171346-phpapp01/95/teachers-guide-to-quizlet-1-728.jpg?cb=1328628516"
-            },
-            {
-                "descripcion": "SurveyAnyplace : Es un servicio web que nos ofrece todas las herramientas necesarias para  crear encuestas y test online, especialmente enfocadas para ser visualizadas desde dispositivos móviles.",
-                "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnpSIvqEoI9-BBBmt_d-CJ5E970cJv8puc6iq-9YpxrxK9C0cD"
-            },
-            {
-                "descripcion": "Kahoot: Es una aplicación que te ayudar a gamificar la clase. Una prueba lineal y aburrida, la puedes convertir en algo divertido, los estudiantes aprenderán por  medio de juegos animados.",
-                "img":"https://lavozeducativa.files.wordpress.com/2017/12/kahoot.jpg"
-            },
-            {
-                "descripcion": "Khanacademy: ofrece ejercicios prácticos, videos instructivos y un panel de aprendizaje personalizado que permite a los alumnos aprender a su propio ritmo, dentro y fuera del salón de clases.",
-                "img":"https://somosfamilia.byclaro.com.ec/wp-content/uploads/sites/3/2018/04/ASDADAS.jpeg"
-            }
-        ]
+      "title": "Generar Evaluaciones, Juegos, Cuestionarios",
+      "cards": [
+        {
+          "title": "Socrative",
+          "description": "Socrative es una herramienta que puede utilizarse para crear cuestionarios y conocer la respuesta de los alumnos en tiempo real a través de ordenadores y dispositivos móviles.",
+          "img": "https://lh6.googleusercontent.com/proxy/zT2vGlrKiXhHP6YNhfiDduj8e59adxLp1j4x__3jlElX3TCULYgN3LX3BcSX5qQg3lEwKuxRPuMr_ZUe=s0-d"
+        },
+        {
+          "title": "Class Marker",
+          "description": "Classmarker es una herramienta en línea para la creación, distribución y corrección de test, sin necesidad de instalar un programa en la computadora.",
+          "img": "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_1489711195/classmarker.png"
+        },
+        {
+          "title": "Quizlet",
+          "description": "Es una herramienta que permite crear y compartir pruebas en línea para evaluar a los estudiantes en la comprensión de diversos conceptos.",
+          "img": "https://quizlet.com/a/i/brandmark/1024.TGu7.png"
+        },
+        {
+          "title": "Survey Anyplace",
+          "description": "Es un servicio web que nos ofrece todas las herramientas necesarias para  crear encuestas y test online, especialmente enfocadas para ser visualizadas desde dispositivos móviles.",
+          "img": "https://files.startupranking.com/startup/thumb/11049_bfb6203eaedb2dd8a4cf6eebde1d7f31f6b5a9b4_survey-anyplace_m.png"
+        },
+        {
+          "title": "Kahoot",
+          "description": "Es una aplicación que te ayudar a gamificar la clase. Una prueba lineal y aburrida, la puedes convertir en algo divertido, los estudiantes aprenderán por  medio de juegos animados.",
+          "img": "https://kahoot.com/files/2017/08/kahoot_logo_570x320.jpg"
+        },
+        {
+          "title": "Khanacademy",
+          "description": "ofrece ejercicios prácticos, videos instructivos y un panel de aprendizaje personalizado que permite a los alumnos aprender a su propio ritmo, dentro y fuera del salón de clases.",
+          "img": "https://cdn.kastatic.org/images/khan-logo-dark-background.png"
+        }
+      ]
     }
-]
+  ]
+}

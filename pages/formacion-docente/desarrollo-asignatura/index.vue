@@ -33,7 +33,7 @@
       <div class="container left">
         <div class="content">
           <nuxt-link class="link"
-                     :to="{name: ''}">
+                     :to="{name: 'formacion-docente-desarrollo-asignatura-recursos'}">
             <h2>¿Deseas conocer algunos recursos digitales aplicados a la docencia?</h2>
           </nuxt-link>
           <p>Ponemos a tu disposición algunos recursos digitales que pueden ser aplicados a la docencia.</p>
