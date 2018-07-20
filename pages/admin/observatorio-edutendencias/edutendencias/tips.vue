@@ -2,13 +2,13 @@
   <section class="container">
     <h1>Nuevo Tip</h1>
     <div class="form-group">
-      <label for="nombre">Nombre</label>
-      <input v-model="forma.nombre"
+      <label for="title">Nombre</label>
+      <input v-model="forma.title"
              type="text"
-             name="nombre"
+             name="title"
              class="form-control"
              v-validate="'required'">
-      <span v-show="errors.has('nombre')"
+      <span v-show="errors.has('title')"
             class="alert alert-danger">Nombre es requerido</span>
     </div>
     <div class="form-group">
@@ -41,7 +41,7 @@
       <span v-show="errors.has('url')"
             class="alert alert-danger">Url es requerido</span>
     </div>
-<div class="form-group">
+    <div class="form-group">
       <label for="tag">Selecciona un tag</label>
       <select v-model="forma.tag"
               class="form-control"
@@ -80,7 +80,7 @@ import axios from "axios";
 export default {
   data() {
     let forma = {
-      nombre: null,
+      title: null,
       img: null,
       description: null,
       url: null,
@@ -97,14 +97,10 @@ export default {
             let d = new Date();
             this.forma.date = `${d.getFullYear()}-${d.getMonth() +
               1}-${d.getDate()}`;
-            // remove accent from string
-            this.forma.description = this.forma.description
-              .normalize("NFD")
-              .replace(/[\u0300-\u036f]/g, "");
             // push to firebase
             axios
               .post(
-                `https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/tips-innovacion/tips.json`,
+                `https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/tips-innovacion.json`,
                 this.forma
               )
               .then(function(response) {
@@ -130,8 +126,4 @@ export default {
 <style lang="scss" scoped>
 @import "assets/form";
 @import "assets/alert";
-@import "assets/html";
-.code {
-  font-family: monospace;
-}
 </style>
