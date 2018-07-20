@@ -7,7 +7,8 @@
             </div>
             <div class="card_4__date">
                 <span class="card_4__date__day">{{nota.date.dia}}</span>
-                <span class="card_4__date__month" v-if="nota.date.full">{{nota.date.full | date | slice(5,9,"")}}</span>
+                <span class="card_4__date__month"
+                      v-if="nota.date.full">{{nota.date.full | date | slice(5,9,"")}}</span>
             </div>
             <div class="card_4__body">
                 <div class="card_4__category">
@@ -15,7 +16,7 @@
                 </div>
                 <div class="card_4__title"
                      v-if="nota.title">
-                     <nuxt-link class=""
+                    <nuxt-link class=""
                                :to="{name: nota.key.name, params: {id: nota.key.id}}">
                         {{nota.title | slice(0,40,"...")}}
                     </nuxt-link>
@@ -24,11 +25,14 @@
                 <div class="card_4__description">
                     <p>{{nota.description}}</p>
                 </div>
-                <div class="card_4__footer" v-if="nota.key.id">
-                    <nuxt-link class=""
+                <div class="card_4__footer">
+                    <nuxt-link v-if="nota.key.id"
                                :to="{name: nota.key.name, params: {id: nota.key.id}}">
                         Leer más
                     </nuxt-link>
+                    <a v-else
+                       :href="nota.key.name"
+                       target="_blank">Leer más</a>
                 </div>
             </div>
         </div>
@@ -43,7 +47,7 @@ export default {
       else return text;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
