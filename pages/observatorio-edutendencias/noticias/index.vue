@@ -52,7 +52,7 @@ export default {
   },
   head() {
     return {
-      title: "Noticias | Innovación Docente"
+      title: "Noticias | Proyecto Ascendere"
     };
   }
 };
@@ -101,6 +101,7 @@ $size: 250px;
     }
   }
   .overlay {
+  transition: margin-left 4s ease-in-out 1s;
     position: relative;
     height: 100%;
     width: 100%;

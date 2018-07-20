@@ -27,7 +27,7 @@ export default {
   },
   head() {
     return {
-      title: this.data.nombre + " | Innovación Docente",
+      title: this.data.nombre + " | Proyecto Ascendere",
       meta: [
         {
           hid: "description",
