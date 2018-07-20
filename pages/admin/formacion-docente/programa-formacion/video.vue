@@ -76,7 +76,6 @@ export default {
               )
               .then(function(response) {
                 alert("Completado");
-                // TODO: fix router
                 window.$nuxt.$router.go(-1);
               })
               .catch(function(error) {
