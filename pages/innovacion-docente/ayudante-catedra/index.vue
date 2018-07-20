@@ -3,7 +3,7 @@
         <header class="parallax"></header>
         <section class="container">
 
-            <h1>Proyecto Ayudante de Catedra</h1>
+            <h1>Proyecto Ayudante de Cátedra</h1>
             <hr>
             <p>La necesidad de apoyo al profesorado en la UTPL conlleva a que los estudiantes de pregrado
                 puedan realizar tareas de soporte a la docencia en calidad de Ayudantes de Cátedra. Con
@@ -109,19 +109,18 @@
             <h4>¿Quieres fortalecer el vinculo docente - estudiante?</h4>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <a href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%201%20PLANIFICACIO%CC%81N%20DE%20ACTIVIDADES%20(1).docx">
-                        <i class="fas fa-file-word"> Planificación de actividades de Ayudante de Cátedra (Anexo I)</i> 
-                    </a>
+                    <a href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/innovacion-docente%2Fayudante%20de%20catedra%2FANEXO%201%20PLANIFICACIO%CC%81N%20DE%20ACTIVIDADES%20(1).docx?alt=media&token=f4af34c8-6de0-4caa-b92b-ce2c6dd74c43">
+                        <i class="fas fa-file-word"> </i> Planificación de actividades de Ayudante de Cátedra (Anexo I)</a>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <a href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/ANEXO%202%20EVALUACIO%CC%81N%20DE%20DESEMPEN%CC%83O%20DEL%20AYUDANTE%20DE%20CA%CC%81TEDRA(1).docx">
-                        <i class="fas fa-file-word"> Planificación de actividades de Ayudante de Cátedra (Anexo 2)</i> 
+                    <a href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/innovacion-docente%2Fayudante%20de%20catedra%2FANEXO%202%20EVALUACIO%CC%81N%20DE%20DESEMPEN%CC%83O%20DEL%20AYUDANTE%20DE%20CA%CC%81TEDRA(1).docx?alt=media&token=4463a43f-2a27-467b-9e91-5054a3354b21">
+                        <i class="fas fa-file-word"> </i> Planificación de actividades de Ayudante de Cátedra (Anexo 2)
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <a target="_blank"
-                       href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/Proyecto%20ayudante%20de%20ca%CC%81tedra%20abril-agosto%202018.pdf">
-                        <i class="fas fa-file-pdf"> Conoce el proyecto completo</i> 
+                       href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/innovacion-docente%2Fayudante%20de%20catedra%2FProyecto%20ayudante%20de%20ca%CC%81tedra%20abril-agosto%202018.pdf?alt=media&token=31049ddd-10c1-458a-979a-3ebedb8c9969">
+                        <i class="fas fa-file-pdf"> </i> Conoce el proyecto completo
                     </a>
                 </div>
             </div>
@@ -129,18 +128,41 @@
     </div>
 </template>
 
+<script>
+export default {
+  async asyncData() {
+    const description =
+      "El ayudante de cátedra es un estudiante que por sus méritos académicos será seleccionado para cumplir funciones concretas y específicas relacionadas con actividades de docencia, investigación y prácticum.";
+    return {description };
+  },
+  head() {
+    return {
+      title: "Ayudante de Cátedra | Proyecto Ascendere",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 @import "assets/variables";
 h4 {
   text-align: center !important;
 }
 .parallax {
-  background-image: url("~/static/img/banner-ayudante-catedra.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/innovacion-docente%2Fayudante%20de%20catedra%2Fbanner-ayudante-catedra.jpg?alt=media&token=1b4cf9f6-044c-4574-ab04-fe8735b68d4d");
 }
 i {
-  color: $color-primary;
+  color: $color-warning-dark;
   text-align: center;
 }
+
 </style>
 
 

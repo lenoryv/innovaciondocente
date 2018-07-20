@@ -24,6 +24,28 @@
   </div>
 </template>
 
+<script>
+export default {
+  async asyncData() {
+    const description =
+      "Semestralmente los profesores de Modalidad Presencial, Abierta y de Postgrados, presentan propuestas de Buenas Prácticas Docentes que potencian el uso creativo de diferentes herramientas dentro y fuera del aula.";
+    return {description };
+  },
+  head() {
+    return {
+      title: "Buenas Prácticas | Proyecto Ascendere",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
+  }
+};
+</script>
+
 <style lang="scss">
 @import "assets/variables";
 @import "assets/card";
