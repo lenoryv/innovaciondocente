@@ -66,12 +66,7 @@
             <div class="section-text">
                 <h2>InDevelomenpt Company</h2>
                 <p>
-                    La Universidad Técnica Particular de Loja fue fundada por la Asociación Marista Ecuatoriana (AME) el
-                    3 de mayo de 1971. Oficialmente reconocida por el Estado Ecuatoriano bajo el Decreto
-                    Ejecutivo 646, publicado en el Registro Oficial Nro. 217 del 5 de mayo de 1971, con
-                    el cual se constituye como persona jurídica autónoma al amparo del convenio de “Modus
-                    Vivendi” celebrado entre la Santa Sede y el Ecuador, teniendo en cuenta las normas
-                    de la Iglesia en su organización y gobierno.
+                    Compañia de desarrollo de software fundada en 2018, por un grupo de estudiantes de la titulación de Ingeniería en Sistemas Informáticos y Computacíon de la UTPL. Tras la intervención en el proyecto Ascendere, nacé el grupo con la visión de generar innovación mediante el uso de nuevas tecnologías, cuya misión es incentivar a otros jovenes a participar en los diferentes proyectos y actividades generados por las universidades.   
                 </p>
             </div>
             <div>
