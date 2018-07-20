@@ -1,14 +1,44 @@
 <template>
-    <section>
-        <div class="container we-team">
-            <div class="row">
-                <img src="~/static/sello.png"
-                     alt="logo">
-                <h1>PROYECTO ASCENDERE</h1>
-            </div>
+  <section>
+    <div class="container we-team">
+      <div class="row">
+        <img src="~/static/sello.png"
+             alt="logo">
+        <h1>PROYECTO ASCENDERE</h1>
+      </div>
+    </div>
+    <div class="parallax"
+         :style="'background-image: url('+data.banner+');'">
+    </div>
+    <section class="container">
+      <div class="section-text">
+        <h2>Innovando Cambios</h2>
+        <p>
+          {{data.innovando}}
+        </p>
+      </div>
+      <section class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <figure class="column-img">
+            <img :src="data.maria"
+                 alt="img-avatar" />
+            <figcaption>
+              <h5>Dirección de Innovación, Formación y Evaluación Docente</h5>
+              <h3>PhD. María Isabel Loaiza</h3>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
         </div>
-        <div class="parallax"
-             :style="'background-image: url('+data.banner+');'">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <figure class="column-img">
+            <img :src="data.nuve"
+                 alt="img-avatar" />
+            <figcaption>
+              <h5>Formación Docente</h5>
+              <h3>Ing. Nuve Briceño</h3>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
         </div>
         <section class="container">
             <div class="section-text">
@@ -86,6 +116,7 @@
             </div>
         </section>
     </section>
+  </section>
 </template>
 <script>
 import axios from "axios";
@@ -119,6 +150,9 @@ p {
   column-count: 2;
   column-gap: 2.25rem;
   line-height: 2.25;
+}
+section {
+  padding-bottom: 20px;
 }
 .parallax {
   height: 70vh !important;
