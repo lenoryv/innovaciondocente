@@ -61,7 +61,7 @@ module.exports = {
     orientation: "portrait",
     background_color: "#2a3e71",
     theme_color: "#2a3e71",
-    description: "Pagina web de Innovación Docente de UTPL.",
+    description: "Pagina web del Proyecto Ascendere de la UTPL.",
   },
   build: {
     extend(config, { isDev, isClient }) {
