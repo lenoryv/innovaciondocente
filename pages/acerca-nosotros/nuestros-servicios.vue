@@ -1,7 +1,14 @@
 <template>
-    <div>
-         <img src="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/acerca-nosotros%2Fservicios.jpg?alt=media&token=c18db257-471b-4ba5-a91a-f8a3a6ae1a1b" alt="">
+  <div>
+    <img src="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/acerca-nosotros%2Fservicios.jpg?alt=media&token=c18db257-471b-4ba5-a91a-f8a3a6ae1a1b"
+  
+         alt="servicios">
+    <div class="container">
+      <button @click="$router.go(-1)"
+              class="btn btn-outline-primary btn-large">Regresar</button>
     </div>
+
+  </div>
 </template>
 
 <script>

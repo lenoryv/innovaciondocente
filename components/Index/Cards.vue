@@ -3,11 +3,11 @@
     <div class="container">
       <div class="row">
         <card :nota="noticia"
-              class="col-lg-4 col-md-6"/>
+              class="col-lg-4 col-md-6" />
         <card :nota="curso"
-              class="col-lg-4 col-md-6"/>
+              class="col-lg-4 col-md-6" />
         <card :nota="tips"
-              class="col-lg-4 col-md-12"/>
+              class="col-lg-4 col-md-12" />
       </div>
     </div>
   </section>
@@ -29,7 +29,7 @@ export default {
       description: null,
       img: null,
       key: {
-        name: 'observatorio-edutendencias-noticias-id',
+        name: "observatorio-edutendencias-noticias-id",
         id: null
       }
     };
@@ -53,13 +53,13 @@ export default {
       title: null,
       date: {
         dia: "",
-        mes: ""   
+        mes: ""
       },
       description: null,
       img: null,
       key: {
-        name: "formacion-docente-programa-formacion-id",
-        id: null
+        name: "https://www.utpl.edu.ec",
+        key: null
       }
     };
     return {
@@ -99,6 +99,23 @@ export default {
           this.curso.description = res.data[key].description;
           this.curso.img = res.data[key].img;
           this.curso.key.id = key;
+          return;
+        }
+      });
+    axios
+      .get(
+        "https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/tips-innovacion.json?orderBy=%22$key%22&limitToLast=1"
+      )
+      .then(res => {
+        for (const key in res.data) {
+          this.tips.title = res.data[key].title;
+          this.tips.date.full = res.data[key].date;
+          let tempDate = res.data[key].date.split("-");
+          this.tips.date.dia = tempDate[2];
+          this.tips.date.mes = tempDate[1];
+          this.tips.description = res.data[key].description;
+          this.tips.key.name = res.data[key].url;
+          this.tips.img = res.data[key].img;
           return;
         }
       });
