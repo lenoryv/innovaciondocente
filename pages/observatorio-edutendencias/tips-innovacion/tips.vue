@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h1>Edutendencias</h1>
-    <div class="container">
+    <header>
+      <h1>{{title}}</h1>
+    </header>
+    <section class="container">
       <div class="row"
            v-if="cards.length > 0">
         <div v-for="card in cards"
@@ -20,9 +22,11 @@
         </div>
       </div>
       <div v-else>
-        <h2>No se encontraton tips para mostrar</h2>
+        <h3>No se encontraton tips para mostrar</h3>
       </div>
-    </div>
+      <button @click="$router.go(-1)"
+              class="btn btn-outline-primary btn-large">Regresar</button>
+    </section>
   </div>
 </template>
 
@@ -33,7 +37,8 @@ export default {
     let { data } = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/tips-innovacion.json"
     );
-    return { data, query };
+    let title = "Tips de Innovación";
+    return { data, title, query };
   },
   computed: {
     cards() {
@@ -51,10 +56,16 @@ export default {
       });
       return cards;
     }
+  },
+  head() {
+    return {
+      title: this.title + " | Proyecto Ascendere"
+    };
   }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "assets/card";
+@import "assets/header";
 </style>
