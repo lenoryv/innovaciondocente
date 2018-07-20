@@ -70,22 +70,16 @@
         </div>
       </div>
     </section>
-    <section id="suscripcion">
-      <div class="container">
-        <h2>
-          Suscribete a nuestro Café Científico
-        </h2>
-        <p>
-          {{description}}
-        </p>
-        <a class="btn btn-inverse btn-large">Suscribirse</a>
-      </div>
-    </section>
+    <!--Susciption section-->
+    <Suscripcion title="Suscribete a nuestro Café Científico"
+                 :description="description"
+                 blue="true" />
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import Suscripcion from "@/components/Suscripcion";
 export default {
   async asyncData() {
     const { data } = await axios.get(
@@ -124,9 +118,12 @@ export default {
       return cursos;
     }
   },
+  components: {
+    Suscripcion
+  },
   head() {
     return {
-      title: "Café Científico | Innovación Docente",
+      title: "Café Científico | Proyecto Ascendere",
       meta: [
         {
           hid: "description",
@@ -206,10 +203,6 @@ export default {
   }
 }
 
-#suscripcion {
-  background-color: $color-primary;
-  color: $color-font-primary;
-}
 #encuentros {
   background-color: $color-font-primary;
   .row {

@@ -33,13 +33,10 @@
         Observatorio EduTendencias
         <ul>
           <li>
-            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-tips-innovacion'}">Aula Divertida</nuxt-link>
+             <nuxt-link :to="{name: 'admin-observatorio-edutendencias-edutendencias'}">Tips</nuxt-link>
           </li>
           <li>
             <nuxt-link :to="{name: 'admin-observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-edutendencias'}">EduTendencias</nuxt-link>
           </li>
         </ul>
       </li>

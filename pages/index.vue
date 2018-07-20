@@ -4,7 +4,7 @@
       <div class="header-overlay"></div>
       <div class="fondo">
         <img class="img-move"
-             :src="require('@/static/index.jpg')"
+             :src="data.banner"
              alt="">
       </div>
       <div class="header-content">
@@ -33,7 +33,9 @@
     <CafeCientifico/>
     <LiiD/>
     <QuienesSomos/>
-    <Suscripcion/>
+    <Suscripcion title="Suscibete"
+                 description="Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada."
+    />
     <FooterIndex/>
   </div>
 </template>
@@ -45,9 +47,20 @@ import LiiD from "@/components/Index/Liid";
 import QuienesSomos from "@/components/Index/QuienesSomos";
 import FooterIndex from "@/components/Index/FooterIndex";
 import Suscripcion from "@/components/Suscripcion";
+import axios from "axios";
 
 export default {
   layout: "empty",
+  async asyncData() {
+    let { data } = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/index.json`
+    );
+    const title = "Proyecto Ascendere";
+    return {
+      data,
+      title
+    };
+  },
   methods: {
     pageScroll() {
       window.scrollBy({
@@ -64,6 +77,18 @@ export default {
     CafeCientifico,
     Suscripcion,
     FooterIndex
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Página web de Innovación Docente | UTPL"
+        }
+      ]
+    };
   }
 };
 </script>

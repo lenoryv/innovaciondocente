@@ -1,9 +1,14 @@
 @import 'assets/variables';
 .parallax {
-  min-height: 100vh;
+  height: 100vh;
   background-color: $color-primary;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (pointer: fine) {
+  .parallax {
+    background-attachment: fixed
+  }
 }

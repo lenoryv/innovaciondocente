@@ -4,34 +4,13 @@
       Edutendencias
     </h1>
     <section>
-      <nuxt-link :to="{name : 'admin-observatorio-edutendencias-edutendencias-video'}"
-                 class="btn btn-success btn-sm">
-        Agregar Nuevo Video
-      </nuxt-link>
-      <div style="overflow-x:auto;"
-           v-if="video">
-        <table>
-          <tr>
-            <th>Nombre</th>
-            <th>Opciones</th>
-          </tr>
-          <tr v-for="(vid, key) in video"
-              v-if="vid"
-              :key="key">
-            <td>
-              <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion-videos'}">
-                {{vid.title}}
-              </nuxt-link>
-            </td>
-            <td>
-              <button v-on:click="remove(key)"
-                      class="btn btn-large btn-danger btn-sm">
-                eliminar
-              </button>
-            </td>
-          </tr>
-        </table>
+      <h2>Subdivisión por Tips</h2>
+      <div class="row">
+              <nuxt-link class="btn btn-outline-dark btn-large"
+                       :to="{name: 'admin-observatorio-edutendencias-edutendencias-tips'}">Nuevo Tip</nuxt-link>
+
       </div>
+      <nuxt-child/>
     </section>
   </div>
 </template>
@@ -42,53 +21,21 @@ export default {
   layout: "admin",
   data() {
     return {
-      video: null
+      data: null
     };
   },
-  methods: {
-    loadData() {
-      axios
-        .get(
-          `https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/tips-innovacion/videos.json`
-        )
-        .then(res => (this.video = res.data));
-    },
-    remove(key) {
-      axios
-        .delete(
-          `https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/tips-innovacion/videos/${key}.json`
-        )
-        .catch(e => alert("No se pudo eliminar"));
-      this.video[key] = 0;
-    }
-  },
-  mounted() {
-    this.loadData();
-  }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "assets/variables";
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid $color-primary;
-}
-th {
-  background-color: $color-primary;
-  color: $color-font-primary;
-}
-
-th,
-td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #ddd;
+.nuxt-link-exact-active {
+  color: $color-font-primary !important;
+  background-color: $color-primary !important;
+  border-color: $color-dark !important;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.2s all ease;
+  }
 }
 </style>

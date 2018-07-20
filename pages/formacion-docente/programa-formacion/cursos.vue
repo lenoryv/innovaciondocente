@@ -74,7 +74,7 @@ export default {
   },
   head() {
     return {
-      title: "Portafolio de Cursos | Innovación Docente"
+      title: "Portafolio de Cursos | Proyecto Ascendere"
     };
   }
 };

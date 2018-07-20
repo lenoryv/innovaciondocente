@@ -2,7 +2,7 @@
     <div>
         <section class="parallax">
             <div class="header-content">
-                <h1>Quienes somos</h1>
+                <h1>{{title}}</h1>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 outro-icon">
@@ -11,11 +11,7 @@
                         </div>
                         <div class="col-md-6 text">
                             <p>
-                                Enmarcado en el Plan Estratégico de Desarrollo Institucional 2011 - 2020, el Vicerrectorado Académico,
-                                a través de su Dirección de Innovación, Formación y Evaluación Docente,
-                                trabaja e impulsa actividades innovadoras en la docencia y en la planificación
-                                docente; define un modelo integral para todas las titulaciones en el
-                                programa de innovación académica.
+                                {{description}}
                             </p>
                         </div>
                     </div>
@@ -62,6 +58,31 @@
         </section>
     </div>
 </template>
+<script>
+export default {
+  async asyncData() {
+    const title = "Quienes Somos";
+    const description =
+      "Enmarcado en el Plan Estratégico de Desarrollo Institucional 2011 - 2020, el Vicerrectorado Académico, a través de su Dirección de Innovación, Formación y Evaluación Docente, trabaja e impulsa actividades innovadoras en la docencia y en la planificación docente; define un modelo integral para todas las titulaciones en el programa de innovación académica";
+    return {
+      title,
+      description
+    };
+  },
+  head() {
+    return {
+      title: this.title + " | Proyecto Ascendere",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 @import "assets/variables";

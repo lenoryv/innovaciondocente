@@ -60,7 +60,7 @@
             {{ data.fecha | date}}
           </p>
           <!---->
-          <p>
+          <p v-if="data.duracion">
             <b>Duración: </b>
             <ul>
               <li v-if="data.duracion.horas">{{ data.duracion.horas }} Horas</li>
@@ -118,7 +118,7 @@ export default {
   },
   head() {
     return {
-      title: this.data.nombre + " | Innovación Docente",
+      title: this.data.nombre + " | Proyecto Ascendere",
       meta: [
         {
           hid: "description",
