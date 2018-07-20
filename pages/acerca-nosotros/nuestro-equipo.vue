@@ -4,29 +4,23 @@
             <div class="row">
                 <img src="~/static/sello.png"
                      alt="logo">
-                <h1>ASCENDERE PROJECT</h1>
+                <h1>PROYECTO ASCENDERE</h1>
             </div>
         </div>
-        <div class="background"
-             id="about-ascendere">
+        <div class="parallax"
+             :style="'background-image: url('+data.banner+');'">
         </div>
         <section class="container">
             <div class="section-text">
                 <h2>Innovando Cambios</h2>
                 <p>
-                    La Universidad Técnica Particular de Loja fue fundada por la Asociación Marista Ecuatoriana (AME) el
-                    3 de mayo de 1971. Oficialmente reconocida por el Estado Ecuatoriano bajo el Decreto
-                    Ejecutivo 646, publicado en el Registro Oficial Nro. 217 del 5 de mayo de 1971, con
-                    el cual se constituye como persona jurídica autónoma al amparo del convenio de “Modus
-                    Vivendi” celebrado entre la Santa Sede y el Ecuador, teniendo en cuenta las normas
-                    de la Iglesia en su organización y gobierno.
+                    {{data.innovando}}
                 </p>
             </div>
             <section class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <figure class="column-img">
-                        <img src="https://images.unsplash.com/photo-1476983109555-18ebaf412d7c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c508869d7645131d98c453dd9ce0ae6&auto=format&fit=crop&w=620&q=80"
-                    
+                        <img :src="data.maria"
                              alt="img-avatar" />
                         <figcaption>
                             <h5>Dirección de Innovación, Formación y Evaluación Docente</h5>
@@ -37,8 +31,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <figure class="column-img">
-                        <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ad57f7ca5832f3f72ee2c1c243c72f5c&auto=format&fit=crop&w=750&q=80"
-                    
+                        <img :src="data.nuve"
                              alt="img-avatar" />
                         <figcaption>
                             <h5>Formación Docente</h5>
@@ -49,8 +42,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <figure class="column-img">
-                        <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-0.3.5&s=091e1246b8fbf6ad4a6b7df9b98454c1&auto=format&fit=crop&w=334&q=80"
-                    
+                        <img :src="data.angela"
                              alt="img-avatar" />
                         <figcaption>
                             <h5>Innovación Docente</h5>
@@ -61,8 +53,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <figure class="column-img">
-                        <img src="https://images.unsplash.com/photo-1490905461158-067f4895ea9d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec12d476aa884c9ff23d2169cc359a09&auto=format&fit=crop&w=752&q=80"
-                    
+                        <img :src="data.lourdes"
                              alt="img-avatar" />
                         <figcaption>
                             <h5>Evaluación Docente</h5>
@@ -85,8 +76,7 @@
             </div>
             <div>
                 <figure class="column-img">
-                    <img src="https://images.unsplash.com/photo-1520127877998-122c33e8eb38?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7a45ca2052a4522614afac29c1d5ed5c&auto=format&fit=crop&w=749&q=80"
-                
+                    <img :src="data.indev"
                          alt="img-avatar" />
                     <figcaption>
                         <h3>With
@@ -102,6 +92,31 @@
         </section>
     </section>
 </template>
+<script>
+import axios from "axios";
+export default {
+  async asyncData() {
+    let { data } = await axios.get(
+      `https://innovaciondocente-utpl.firebaseio.com/quienes-somos.json`
+    );
+    return {
+      data
+    };
+  },
+  head() {
+    return {
+      title: "Nuestro Equipo | Proyecto Ascendere",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.data.innovando
+        }
+      ]
+    };
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 @import "assets/variables";
@@ -110,17 +125,8 @@ p {
   column-gap: 2.25rem;
   line-height: 2.25;
 }
-section {
-  padding-top: 25px;
-  padding-bottom: 0;
-}
-.background {
-  background: url("../../static/IMG_8386.jpg") center center / cover no-repeat;
-  z-index: 0;
-  padding: 0;
-  min-height: 60vh;
-  background-color: $color-primary;
-  background-attachment: fixed;
+.parallax {
+  height: 70vh !important;
 }
 .section-text {
   padding: 1rem 8rem 1rem 8rem;
@@ -130,11 +136,7 @@ section {
 }
 .we-team {
   text-align: center;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  height: 25vh;
   img {
     height: 150px;
     width: 150px;

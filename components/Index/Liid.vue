@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="liid-info">
-                        <img :src="require('~/static/iconLiiD.png')">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/icons%2Fthumbnail_sello_laboratorio_investigacion_innovacion_feb_2018.png?alt=media&token=81b8fb6b-5f9e-4338-a6cc-e20ae8783e9e">
                         <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio
                             orientado al desarrollo de la innovación e investigación educativa a nivel
                             local, nacional e internacional.</p>
@@ -22,7 +22,7 @@
                     <div class="liid-info">
                         <h2>Proyectos Actuales</h2>
                         <div class="embed-container">
-                            <iframe src="https://www.youtube.com/embed/r6uPLUhc1cA"
+                            <iframe src="https://www.youtube.com/embed/JGLLfevnHeM"
                                     frameborder="0"
                                     title="video"
                                     allow="autoplay; encrypted-media"
@@ -52,8 +52,8 @@
     color: $color-primary;
   }
   img {
-    height: 200px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
   }
   p {
     text-align: center;
