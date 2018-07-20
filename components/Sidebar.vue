@@ -27,25 +27,22 @@
           <li>
             <nuxt-link :to="{name: 'admin-innovacion-docente-buenas-practicas'}">Buenas Prácticas</nuxt-link>
           </li>
-          </ul>
-          <li>
+        </ul>
+      </li>
+      <li>
         Observatorio EduTendencias
         <ul>
+          <li>
+            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-tips-innovacion'}">Aula Divertida</nuxt-link>
+          </li>
           <li>
             <nuxt-link :to="{name: 'admin-observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-tips-innovacion'}">Aula Divertida</nuxt-link>
+            <nuxt-link :to="{name: 'admin-observatorio-edutendencias-edutendencias'}">EduTendencias</nuxt-link>
           </li>
         </ul>
-        <li>
-          Observatorio EduTendencias
-          <ul>
-            <li>
-              <nuxt-link :to="{name: 'admin-observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
-            </li>
-          </ul>
-        </li>
+      </li>
     </ul>
   </div>
 </template>

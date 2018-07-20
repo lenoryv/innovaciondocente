@@ -5,7 +5,7 @@
         <nuxt-link tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-1 img-container"
-                   :to="{}">
+                   :to="{name: 'observatorio-edutendencias-tips-innovacion-aula-divertida'}">
           <div class="title">
             <h2>AULA DIVERTIDA</h2>
           </div>
@@ -16,7 +16,7 @@
         <nuxt-link tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-2 img-container"
-                   :to="{}">
+                   :to="{name: 'observatorio-edutendencias-tips-innovacion-docentes-futuro'}">
           <div class="title">
             <h2>DOCENTES DEL FUTURO</h2>
           </div>
@@ -39,7 +39,7 @@
         <nuxt-link tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-4 img-container"
-                   :to="{}">
+                   :to="{name: 'observatorio-edutendencias-tips-innovacion-videos'}">
           <div class="title">
             <h2>VIDEOS</h2>
           </div>

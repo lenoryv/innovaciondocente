@@ -34,12 +34,10 @@
       <hr>
       <h4>¿Te atreves?</h4>
       <div class="row">
-        <div class="col-lg-12 col-md-6">
           <a class="enlace" target="_blank"
              href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/formulario_docentes_mentores.pdf">
-            <i class="fas fa-address-card"></i>Formato de postulación
+            <i class="fas fa-address-card"> Formato de postulación</i> 
           </a>
-        </div>
       </div>
     </section>
   </div>
@@ -50,21 +48,15 @@
 h4 {
   text-align: center !important;
 }
-.enlace{
-  text-align: center;
-}
 
 .parallax {
-  height: 100vh;
-  background-color: $color-primary;
   background-image: url("~/static/img/mentores.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+a{
+  margin: 0 auto !important;
 }
 
 i{
-  color: $color-warning-dark;
+  text-align: center;
 }
 </style>

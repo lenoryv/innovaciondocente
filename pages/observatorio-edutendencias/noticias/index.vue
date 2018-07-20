@@ -7,14 +7,14 @@
       <div class="content"
            v-for="(noticia, i) in noticias"
            :key="i"
-           :style="'background-image: url('+noticia.data.img+');'">
+           :style="'background-image: url('+noticia.img+');'">
         <div class="overlay">
           <div class="data">
             <nuxt-link :to="{name: 'observatorio-edutendencias-noticias-id', params: {id:noticia.key}}"
                        tag="h3">
-              {{noticia.data.nombre | capitalize}}
+              {{noticia.nombre | capitalize}}
             </nuxt-link>
-            <p>{{noticia.data.description}}
+            <p>{{noticia.description}}
               <br>
               <nuxt-link :to="{name: 'observatorio-edutendencias-noticias-id', params: {id:noticia.key}}">
                 Leer más...
@@ -39,11 +39,13 @@ export default {
   computed: {
     noticias() {
       let resp = [];
-      for (const key in this.data) {
-        resp.push({ key: key, data: this.data[key] });
+      for (const k in this.data) {
+        let obj = this.data[k];
+        obj.key = k;
+        resp.push(obj);
       }
       resp.sort(function(a, b) {
-        return ("" + b.key).localeCompare(a.key);
+        return ("" + a.key).localeCompare(b.key);
       });
       return resp;
     }
@@ -74,18 +76,24 @@ $size: 250px;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  &:nth-child(1) {
-    grid-column-end: span 2;
+  @media (min-width: 576px) {
+    &:nth-child(1) {
+      grid-column-end: span 2;
+    }
+    &:nth-child(5n + 0) {
+      grid-row-end: span 2;
+    }
   }
-  &:nth-child(8n + 0) {
-    grid-row-end: span 2;
-  }
-  &:nth-child(5n + 0) {
-    grid-column-end: span 2;
-  }
-  @media (min-width: 540px) {
+  @media (min-width: 768px) {
     &:nth-child(1) {
       grid-row-end: span 2;
+    }
+    &:nth-child(8n + 0) {
+      grid-column-end: span 2;
+    }
+  }
+  @media (min-width: 992px) {
+    &:nth-child(1) {
       grid-column-end: span 3;
     }
     &:nth-child(10n + 0) {

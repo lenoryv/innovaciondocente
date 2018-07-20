@@ -5,11 +5,11 @@
            v-if="canPostulate">
         <i class="fas fa-calendar-alt"></i>
         Postula hasta el
-        <b>{{data.postulacion | date}}</b>
+        <b>{{data.postulacion.fecha | date}}</b>
       </div>
       <div class="alert alert-danger"
            v-else>
-        Este curso ha finalizado
+        Las postulaciones para este curso han finalizado
       </div>
       <h1>{{ data.nombre }}</h1>
       <hr>
@@ -21,7 +21,7 @@
              rel="noopener"
              class="btn btn-outline-primary btn-large"
              v-if="canPostulate"
-             :href="data.link_postulacion">
+             :href="data.postulacion.link">
             Postular
           </a>
           <a target="_blank"
@@ -38,7 +38,12 @@
           <button @click="$router.go(-1)"
                   class="btn btn-primary btn-large">Regresar</button>
         </div>
+        <!--split-->
         <div class="col-lg-9 col-md-8">
+          <p>
+            {{ data.description}}
+          </p>
+          <!---->
           <span v-if="data.instructores">
             <b>Instructor:</b>
             <ul>
@@ -49,22 +54,36 @@
               </li>
             </ul>
           </span>
+          <!---->
           <p>
             <b>Fecha:</b>
             {{ data.fecha | date}}
           </p>
-          <p>
-            <b>Duración:</b>
-            {{ data.duracionSemanas }} Semanas - {{ data.duracionHoras }} Horas
+          <!---->
+          <p v-if="data.duracion">
+            <b>Duración: </b>
+            <ul>
+              <li v-if="data.duracion.horas">{{ data.duracion.horas }} Horas</li>
+              <li v-if="data.duracion.dias">{{ data.duracion.dias }} Dias</li>
+              <li v-if="data.duracion.semanas">{{ data.duracion.semanas }} Semanas</li>
+            </ul>
           </p>
+          <!---->
           <p>
             <b>Módulo:</b>
             {{data.modulo}}
           </p>
+          <!---->
+          <p>
+            <b>Lugar:</b>
+            {{data.lugar}}
+          </p>
+          <!---->
           <p>
             <b>Horario:</b>
             {{data.horario}}
           </p>
+          <!---->
           <p v-if="data.dirigido">
             <b>Dirigido:</b> {{data.dirigido}}</p>
           <span v-if="data.finalidades">
@@ -104,7 +123,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.data.finalidad
+          content: this.data.description
         }
       ]
     };
