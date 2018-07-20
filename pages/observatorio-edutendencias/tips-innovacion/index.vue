@@ -5,7 +5,7 @@
         <nuxt-link tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-1 img-container"
-                   :to="{name: 'observatorio-edutendencias-tips-innovacion-aula-divertida'}">
+                   :to="{name: 'observatorio-edutendencias-tips-innovacion-tips', query: {tag: 'aula-divertida'}}">
           <div class="title">
             <h2>AULA DIVERTIDA</h2>
           </div>
@@ -16,7 +16,7 @@
         <nuxt-link tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-2 img-container"
-                   :to="{name: 'observatorio-edutendencias-tips-innovacion-docentes-futuro'}">
+                   :to="{name: 'observatorio-edutendencias-tips-innovacion-tips', query: {tag: 'docentes-futuro'}}">
           <div class="title">
             <h2>DOCENTES DEL FUTURO</h2>
           </div>
@@ -25,10 +25,10 @@
           </div>
         </nuxt-link>
         <a tag="div"
-                   style="cursor:pointer"
-                   class="col-lg-3 col-md-6 obTec obTec-3 img-container"
-                   target="_blank"
-                   href="https://www.ivoox.com/podcast-academia-utpl_sq_f1507318_1.html">
+           style="cursor:pointer"
+           class="col-lg-3 col-md-6 obTec obTec-3 img-container"
+           target="_blank"
+           href="https://www.ivoox.com/podcast-academia-utpl_sq_f1507318_1.html">
           <div class="title">
             <h2>PODCAST</h2>
           </div>
@@ -39,7 +39,7 @@
         <nuxt-link tag="div"
                    style="cursor:pointer"
                    class="col-lg-3 col-md-6 obTec obTec-4 img-container"
-                   :to="{name: 'observatorio-edutendencias-tips-innovacion-videos'}">
+                   :to="{name: 'observatorio-edutendencias-tips-innovacion-tips', query: {tag: 'videos'}}">
           <div class="title">
             <h2>VIDEOS</h2>
           </div>
@@ -51,6 +51,18 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  head() {
+    return {
+      title: "EduTendencias | Proyecto Ascendere"
+    };
+  }
+};
+</script>
+
+
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/style";

@@ -40,7 +40,7 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <nuxt-link :to="{name: 'observatorio-edutendencias'}">EduTendencias</nuxt-link>
+            <nuxt-link :to="{name: 'observatorio-edutendencias-tips-innovacion'}">EduTendencias</nuxt-link>
             <nuxt-link :to="{name: 'observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
           </div>
         </div>

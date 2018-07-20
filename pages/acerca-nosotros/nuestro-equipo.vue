@@ -40,57 +40,81 @@
             <a href="#"></a>
           </figure>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <figure class="column-img">
-            <img :src="data.angela"
-                 alt="img-avatar" />
-            <figcaption>
-              <h5>Innovación Docente</h5>
-              <h3>Mgtr. Angela Salazar</h3>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <figure class="column-img">
-            <img :src="data.lourdes"
-                 alt="img-avatar" />
-            <figcaption>
-              <h5>Evaluación Docente</h5>
-              <h3>Mgtr. Lourdes Cueva</h3>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div>
-      </section>
-      <div class="section-text">
-        <h2>InDevelomenpt Company</h2>
-        <p>
-          La Universidad Técnica Particular de Loja fue fundada por la Asociación Marista Ecuatoriana (AME) el
-          3 de mayo de 1971. Oficialmente reconocida por el Estado Ecuatoriano bajo el Decreto Ejecutivo
-          646, publicado en el Registro Oficial Nro. 217 del 5 de mayo de 1971, con el cual se constituye
-          como persona jurídica autónoma al amparo del convenio de “Modus Vivendi” celebrado entre la
-          Santa Sede y el Ecuador, teniendo en cuenta las normas de la Iglesia en su organización y gobierno.
-        </p>
-      </div>
-      <div>
-        <figure class="column-img">
-          <img :src="data.indev"
-               alt="img-avatar" />
-          <figcaption>
-            <h3>With
-              <a class="footer-heart"
-                 href=""
-                 title="With love by InDevelopmentCompany">
-                <i class="fas fa-heart" />
-              </a> by InDevelopmentCompany</h3>
-          </figcaption>
-          <a href="#"></a>
-        </figure>
-
-      </div>
-      <button @click="$router.go(-1)"
-              class="btn btn-outline-primary btn-large">Regresar</button>
+        <section class="container">
+            <div class="section-text">
+                <h2>Innovando Cambios</h2>
+                <p>
+                    {{data.innovando}}
+                </p>
+            </div>
+            <section class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <figure class="column-img">
+                        <img :src="data.maria"
+                             alt="img-avatar" />
+                        <figcaption>
+                            <h5>Dirección de Innovación, Formación y Evaluación Docente</h5>
+                            <h3>PhD. María Isabel Loaiza</h3>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <figure class="column-img">
+                        <img :src="data.nuve"
+                             alt="img-avatar" />
+                        <figcaption>
+                            <h5>Formación Docente</h5>
+                            <h3>Ing. Nuve Briceño</h3>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <figure class="column-img">
+                        <img :src="data.angela"
+                             alt="img-avatar" />
+                        <figcaption>
+                            <h5>Innovación Docente</h5>
+                            <h3>Mgtr. Angela Salazar</h3>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <figure class="column-img">
+                        <img :src="data.lourdes"
+                             alt="img-avatar" />
+                        <figcaption>
+                            <h5>Evaluación Docente</h5>
+                            <h3>Mgtr. Lourdes Cueva</h3>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                </div>
+            </section>
+            <div class="section-text">
+                <h2>InDevelomenpt Company</h2>
+                <p>
+                    Compañia de desarrollo de software fundada en 2018, por un grupo de estudiantes de la titulación de Ingeniería en Sistemas Informáticos y Computacíon de la UTPL. Tras la intervención en el proyecto Ascendere, nacé el grupo con la visión de generar innovación mediante el uso de nuevas tecnologías, cuya misión es incentivar a otros jovenes a participar en los diferentes proyectos y actividades generados por las universidades.   
+                </p>
+            </div>
+            <div>
+                <figure class="column-img">
+                    <img :src="data.indev"
+                         alt="img-avatar" />
+                    <figcaption>
+                        <h3>With
+                            <a class="footer-heart"
+                               href=""
+                               title="With love by InDevelopmentCompany">
+                                <i class="fas fa-heart" />
+                            </a> by InDevelopmentCompany</h3>
+                    </figcaption>
+                    <a href="#"></a>
+                </figure>
+            </div>
+        </section>
     </section>
   </section>
 </template>
