@@ -7,12 +7,10 @@
       </nuxt-link>
       <div class="nav">
         <div class="dropdown">
-          <nuxt-link :to="{name: 'innovacion-docente'}"
-                     class="dropbtn"
-                     tag="button">
+          <button class="dropbtn">
             Innovación Docente
             <i class="fa fa-caret-down"></i>
-          </nuxt-link>
+          </button>
           <div class="dropdown-content">
             <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Prácticas</nuxt-link>
@@ -25,12 +23,10 @@
           </div>
         </div>
         <div class="dropdown">
-          <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}"
-                     class="dropbtn"
-                     tag="button">
+          <button class="dropbtn">
             Formación Docente
             <i class="fa fa-caret-down"></i>
-          </nuxt-link>
+          </button>
           <div class="dropdown-content">
             <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
             <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
@@ -39,12 +35,10 @@
           </div>
         </div>
         <div class="dropdown">
-          <nuxt-link :to="{name: 'observatorio-edutendencias'}"
-                     class="dropbtn"
-                     tag="button">
-            Observatorio 
+          <button class="dropbtn">
+            EduTendencias
             <i class="fa fa-caret-down"></i>
-          </nuxt-link>
+          </button>
           <div class="dropdown-content">
             <nuxt-link :to="{name: 'observatorio-edutendencias-noticias'}">Noticias</nuxt-link>
           </div>
@@ -136,10 +130,10 @@ nav {
     padding: $padding;
     background-color: inherit;
     margin: 0;
-    cursor: pointer;
     padding: 10px 20px 10px 0;
   }
   &-content {
+    cursor: pointer;
     display: none;
     position: absolute;
     background-color: $color-font-primary;
