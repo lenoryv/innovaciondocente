@@ -54,6 +54,11 @@ export default {
       });
       return practicas;
     }
+  },
+  head() {
+    return {
+      title: this.data.titulo + " | Proyecto Ascendere",
+    };
   }
 };
 </script>

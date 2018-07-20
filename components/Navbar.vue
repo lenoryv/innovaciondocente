@@ -42,7 +42,7 @@
           <nuxt-link :to="{name: 'observatorio-edutendencias'}"
                      class="dropbtn"
                      tag="button">
-            Observatorio EduTendencias
+            Observatorio 
             <i class="fa fa-caret-down"></i>
           </nuxt-link>
           <div class="dropdown-content">

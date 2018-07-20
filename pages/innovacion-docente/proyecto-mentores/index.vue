@@ -9,7 +9,7 @@
         de la UTPL propone el Proyecto Mentores como un aporte para la inserción saludable de los nuevos
         estudiantes a nuestra casa de estudios.</p>
       <h3>¿Cuál es el objetivo fundamental del Proyecto Mentores en la UTPL?</h3>
-      <p>El proyecto Mentores para estudiantes de primer ciclo, procura facilitar el proceso de integración
+      <p>El proyecto Mentores para estudiantes procura facilitar el proceso de integración
         de los estudiantes de nuevo ingreso de la Modalidad Presencial de la UTPL, a través de actividades
         de acompañamiento permanente, como guiar, orientar, asesorar y realizar seguimiento a los alumnos.</p>
       <h3>¿Cuál es el perfil del Docente Mentor UTPL?</h3>
@@ -35,13 +35,35 @@
       <h4>¿Te atreves?</h4>
       <div class="row">
           <a class="enlace" target="_blank"
-             href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/formulario_docentes_mentores.pdf">
-            <i class="fas fa-address-card"> Formato de postulación</i>
+             href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/innovacion-docente%2Fproyecto%20mentores%2Fformulario_docentes_mentores.pdf?alt=media&token=1f872d63-b10c-45cb-a99c-b58022202a84">
+            <i class="fas fa-address-card"> </i> Formato de postulación
           </a>
       </div>
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  async asyncData() {
+    const description =
+      "El proyecto Mentores para estudiantes procura facilitar el proceso de integración de los estudiantes de nuevo ingreso de la Modalidad Presencial de la UTPL, a través de actividades de acompañamiento permanente, como guiar, orientar, asesorar y realizar seguimiento a los alumnos.";
+    return {description };
+  },
+  head() {
+    return {
+      title: "Proyecto Mentores | Proyecto Ascendere",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 @import "assets/variables";
@@ -50,13 +72,12 @@ h4 {
 }
 
 .parallax {
-  background-image: url("~/static/img/mentores.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/innovacion-docente%2Fproyecto%20mentores%2Fmentores.jpg?alt=media&token=f0e6d69b-de13-4dcd-bb07-04beee5a5331");
 }
 a{
   margin: 0 auto !important;
 }
-
 i{
-  text-align: center;
+  color: $color-warning-dark;
 }
 </style>

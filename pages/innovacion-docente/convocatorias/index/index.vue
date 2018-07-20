@@ -20,6 +20,7 @@ export default {
     let { data } = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/convocatorias.json"
     );
+    
     return { data };
   },
   computed: {
@@ -34,6 +35,11 @@ export default {
       });
       return convocatorias[0];
     }
+  },
+  head() {
+    return {
+      title: this.convocatorias.data.fecha + " | Proyecto Ascendere",
+    };
   }
 };
 </script>
