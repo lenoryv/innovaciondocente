@@ -38,7 +38,6 @@ export default {
   },
   computed: {
     convocatorias() {
-      // TODO: sort by date
       let convocatorias = [];
       for (const key in this.data) {
         convocatorias.push({ key: key, data: this.data[key] });

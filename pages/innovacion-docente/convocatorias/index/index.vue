@@ -20,12 +20,11 @@ export default {
     let { data } = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/convocatorias.json"
     );
-    
+
     return { data };
   },
   computed: {
     convocatorias() {
-      // TODO: sort by date
       let convocatorias = [];
       for (const key in this.data) {
         convocatorias.push({ key: key, data: this.data[key] });

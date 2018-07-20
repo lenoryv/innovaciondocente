@@ -1,6 +1,7 @@
 <template>
   <section>
     <h1>Portafolio de Cursos</h1>
+    <!--
     <div class="container">
       <form v-on:submit.prevent="onSubmit">
         <div class="form-group">
@@ -13,8 +14,8 @@
         </div>
       </form>
     </div>
+    -->
     <div class="container-fluid">
-      <!--don't load courses on the server, fetch them from the client-->
       <div v-if="cursos">
         <div class="alert alert-danger"
              v-if="!cursos">

@@ -38,7 +38,6 @@ export default {
   },
   computed: {
     videos() {
-      // TODO: sort by date
       let videos = [];
       for (const key in this.data) {
         videos.push({ key: key, data: this.data[key] });
