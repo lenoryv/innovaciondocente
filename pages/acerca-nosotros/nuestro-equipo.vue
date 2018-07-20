@@ -41,80 +41,85 @@
           </figure>
         </div>
         <section class="container">
-            <div class="section-text">
-                <h2>Innovando Cambios</h2>
-                <p>
-                    {{data.innovando}}
-                </p>
+          <div class="section-text">
+            <h2>Innovando Cambios</h2>
+            <p>
+              {{data.innovando}}
+            </p>
+          </div>
+          <section class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <figure class="column-img">
+                <img :src="data.maria"
+                     alt="img-avatar" />
+                <figcaption>
+                  <h5>Dirección de Innovación, Formación y Evaluación Docente</h5>
+                  <h3>PhD. María Isabel Loaiza</h3>
+                </figcaption>
+                <a href="#"></a>
+              </figure>
             </div>
-            <section class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <figure class="column-img">
-                        <img :src="data.maria"
-                             alt="img-avatar" />
-                        <figcaption>
-                            <h5>Dirección de Innovación, Formación y Evaluación Docente</h5>
-                            <h3>PhD. María Isabel Loaiza</h3>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <figure class="column-img">
-                        <img :src="data.nuve"
-                             alt="img-avatar" />
-                        <figcaption>
-                            <h5>Formación Docente</h5>
-                            <h3>Ing. Nuve Briceño</h3>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <figure class="column-img">
-                        <img :src="data.angela"
-                             alt="img-avatar" />
-                        <figcaption>
-                            <h5>Innovación Docente</h5>
-                            <h3>Mgtr. Angela Salazar</h3>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <figure class="column-img">
-                        <img :src="data.lourdes"
-                             alt="img-avatar" />
-                        <figcaption>
-                            <h5>Evaluación Docente</h5>
-                            <h3>Mgtr. Lourdes Cueva</h3>
-                        </figcaption>
-                        <a href="#"></a>
-                    </figure>
-                </div>
-            </section>
-            <div class="section-text">
-                <h2>InDevelomenpt Company</h2>
-                <p>
-                    Compañia de desarrollo de software fundada en 2018, por un grupo de estudiantes de la titulación de Ingeniería en Sistemas Informáticos y Computacíon de la UTPL. Tras la intervención en el proyecto Ascendere, nacé el grupo con la visión de generar innovación mediante el uso de nuevas tecnologías, cuya misión es incentivar a otros jovenes a participar en los diferentes proyectos y actividades generados por las universidades.   
-                </p>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <figure class="column-img">
+                <img :src="data.nuve"
+                     alt="img-avatar" />
+                <figcaption>
+                  <h5>Formación Docente</h5>
+                  <h3>Ing. Nuve Briceño</h3>
+                </figcaption>
+                <a href="#"></a>
+              </figure>
             </div>
-            <div>
-                <figure class="column-img">
-                    <img :src="data.indev"
-                         alt="img-avatar" />
-                    <figcaption>
-                        <h3>With
-                            <a class="footer-heart"
-                               href=""
-                               title="With love by InDevelopmentCompany">
-                                <i class="fas fa-heart" />
-                            </a> by InDevelopmentCompany</h3>
-                    </figcaption>
-                    <a href="#"></a>
-                </figure>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <figure class="column-img">
+                <img :src="data.angela"
+                     alt="img-avatar" />
+                <figcaption>
+                  <h5>Innovación Docente</h5>
+                  <h3>Mgtr. Angela Salazar</h3>
+                </figcaption>
+                <a href="#"></a>
+              </figure>
             </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <figure class="column-img">
+                <img :src="data.lourdes"
+                     alt="img-avatar" />
+                <figcaption>
+                  <h5>Evaluación Docente</h5>
+                  <h3>Mgtr. Lourdes Cueva</h3>
+                </figcaption>
+                <a href="#"></a>
+              </figure>
+            </div>
+          </section>
+          <div class="section-text">
+            <h2>InDevelomenpt Company</h2>
+            <p>
+              Compañia de desarrollo de software fundada en 2018, por un grupo de estudiantes de la titulación de Ingeniería
+              en Sistemas Informáticos y Computacíon de la UTPL. Tras la intervención en el proyecto
+              Ascendere, nacé el grupo con la visión de generar innovación mediante el uso de nuevas
+              tecnologías, cuya misión es incentivar a otros jovenes a participar en los diferentes proyectos
+              y actividades generados por las universidades.
+            </p>
+          </div>
+          <div>
+            <figure class="column-img">
+              <img :src="data.indev"
+                   alt="img-avatar" />
+              <figcaption>
+                <h3>With
+                  <a class="footer-heart"
+                     href=""
+                     title="With love by InDevelopmentCompany">
+                    <i class="fas fa-heart" />
+                  </a> by InDevelopmentCompany</h3>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+          </div>
         </section>
+      </section>
     </section>
   </section>
 </template>
