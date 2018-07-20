@@ -103,10 +103,6 @@ export default {
             let d = new Date();
             this.forma.date = `${d.getFullYear()}-${d.getMonth() +
               1}-${d.getDate()}`;
-            // remove accent from string
-            this.forma.description = this.forma.description
-              .normalize("NFD")
-              .replace(/[\u0300-\u036f]/g, "");
             // push to firebase
             axios
               .post(

@@ -128,7 +128,7 @@ export default {
   },
   head() {
     return {
-      title: "Suscripción Café Científico | Innovación Docente"
+      title: "Suscripción Café Científico | Proyecto Ascendere"
     };
   },
   methods: {

@@ -80,7 +80,7 @@ export default {
   },
   head() {
     return {
-      title: this.title + " | Innovación Docente",
+      title: this.title + " | Proyecto Ascendere",
       meta: [
         {
           hid: "description",

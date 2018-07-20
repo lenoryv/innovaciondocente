@@ -25,7 +25,7 @@
 export default {
   head() {
     return {
-      title: "Jornadas de Reflexión | Innovación Docente",
+      title: "Jornadas de Reflexión | Proyecto Ascendere",
       meta: [
         {
           hid: "description",
