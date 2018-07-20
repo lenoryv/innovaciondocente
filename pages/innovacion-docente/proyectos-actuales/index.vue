@@ -37,7 +37,9 @@ export default {
     let { data } = await axios.get(
       "https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/proyectos-actuales.json"
     );
-    return { data };
+    const description =
+      "Estos proyectos tienen la duración de dos ciclos académicos, su implementación y elaboración de informes debe ser según el plazo establecido por la Dirección de Formación, Innovación y Evaluación Docente. ";
+    return { data, description };
   },
   computed:{
     proyectos() {
@@ -51,6 +53,18 @@ export default {
       });
       return proyecto;
     }
+  },
+  head() {
+    return {
+      title: "Proyectos Actuales | Proyecto Ascendere",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.description
+        }
+      ]
+    };
   }
 };
 </script>
@@ -58,6 +72,9 @@ export default {
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/card";
+section{
+  padding-bottom: 0;
+}
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;

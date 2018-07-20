@@ -19,11 +19,16 @@ module.exports = {
   */
   head: {
     title: 'Innovación Docente',
+    htmlAttrs: {
+      xmlns: "http://www.w3.org/1999/xhtml",
+      'xml:lang': "es",
+      lang: "es",
+      dir: "ltr"
+    },
     nativeUI: true,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Página web de Innovación Docente | UTPL' },
       { name: 'msapplication-TileImage', content: '/icon.png' },
       { name: 'msapplication-TileColor', content: '#2a3e71' },
       { name: 'theme-color', content: '#2a3e71' },
@@ -56,7 +61,6 @@ module.exports = {
     orientation: "portrait",
     background_color: "#2a3e71",
     theme_color: "#2a3e71",
-    description: "Pagina web de Innovación Docente de UTPL.",
   },
   build: {
     extend(config, { isDev, isClient }) {

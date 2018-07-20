@@ -50,7 +50,7 @@ export default {
   },
   head() {
     return {
-      title: this.encuentro.nombre + " | Innovación Docente",
+      title: this.encuentro.nombre + " | Proyecto Ascendere",
       meta: [
         {
           hid: "description",

@@ -19,6 +19,11 @@ export default {
       `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/convocatorias/${params.id}.json` 
     );
     return { data };
+  },
+  head() {
+    return {
+      title: this.data.fecha + " | Proyecto Ascendere",
+    };
   }
 };
 </script>
