@@ -51,6 +51,18 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  head() {
+    return {
+      title: "EduTendencias | Proyecto Ascendere"
+    };
+  }
+};
+</script>
+
+
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/style";
