@@ -13,35 +13,35 @@
         <div class="row">
           <div class="col-md-12 avatar">
             <img class="img-avatar"
-                 :src="require('@/static/avatar-icom.png')"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
                  alt="Avatar">
             <h3>Dr. Santiago Acosta Aide</h3>
             <h4>Vicerrector Académico</h4>
           </div>
           <div class="col-lg-3 col-md-6 avatar">
             <img class="img-avatar"
-                 :src="require('@/static/avatar-icom.png')"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
                  alt="Avatar">
             <h3>PhD. María Isabel Loaiza</h3>
             <h4>Dirección de Innovación, Formación y Evaluación Docente</h4>
           </div>
           <div class="col-lg-3 col-md-6 avatar">
             <img class="img-avatar"
-                 :src="require('@/static/avatar-icom.png')"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
                  alt="Avatar">
             <h3>Ing. Nuve Briceño</h3>
             <h4>Formación Docente</h4>
           </div>
           <div class="col-lg-3 col-md-6 avatar">
             <img class="img-avatar"
-                 :src="require('@/static/avatar-icom.png')"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
                  alt="Avatar">
             <h3>Mgtr. Angela Salazar</h3>
             <h4>Innovación Docente</h4>
           </div>
           <div class="col-lg-3 col-md-6 avatar">
             <img class="img-avatar"
-                 :src="require('@/static/avatar-icom.png')"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
                  alt="Avatar">
             <h3>Mgtr. Lourdes Cueva</h3>
             <h4>Evaluación Docente</h4>
@@ -136,7 +136,7 @@
   transition: 0.5s all;
   &__img {
     position: absolute;
-    background: #000 url("../../static/IMG_8386.jpg") no-repeat center center;
+    background: #000 url("https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2FIMG_8388.jpg?alt=media&token=814dfcf4-13ae-47da-8e2b-f1c1fc0cd228") no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 100%;
