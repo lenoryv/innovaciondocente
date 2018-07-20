@@ -36,7 +36,7 @@
       <div class="row">
           <a class="enlace" target="_blank"
              href="https://innovaciondocente.utpl.edu.ec/sites/default/files/files/formulario_docentes_mentores.pdf">
-            <i class="fas fa-address-card"> Formato de postulación</i> 
+            <i class="fas fa-address-card"> Formato de postulación</i>
           </a>
       </div>
     </section>

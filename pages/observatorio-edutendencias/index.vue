@@ -54,21 +54,20 @@
 <style lang="scss" scoped>
 @import "assets/variables";
 @import "assets/style";
-
 h2 {
   color: $col-mustard-light;
 }
 .obTec-1 {
-  background-image: url("/static/img/fun.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/observatorio-edutendencias%2Fobsevatorio%2Ffun.jpg?alt=media&token=36c1f88d-e4fa-4636-a562-a32a85e1c9c9");
 }
 .obTec-2 {
-  background-image: url("/static/img/docfut.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/observatorio-edutendencias%2Fobsevatorio%2Fdocfut.jpg?alt=media&token=5733d1a3-1249-40f5-a705-970c4d1df82f");
 }
 .obTec-3 {
-  background-image: url("/static/img/pod.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/observatorio-edutendencias%2Fobsevatorio%2Fpod.jpg?alt=media&token=d791889c-15cc-403c-9cf2-a5dc74f20505");
 }
 .obTec-4 {
-  background-image: url("/static/img/video.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/observatorio-edutendencias%2Fobsevatorio%2Fvideo.jpg?alt=media&token=00090cf4-7470-4c49-8fb9-99c95cae2ade");
 }
 .obTec {
   background-position: center center;
@@ -96,6 +95,3 @@ h2 {
   background-size: cover;
 }
 </style>
-
-
-
