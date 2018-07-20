@@ -128,7 +128,6 @@ export default {
       ]
     };
   }
-  // TODO: validate param
 };
 </script>
 

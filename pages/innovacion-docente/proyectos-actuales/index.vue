@@ -43,7 +43,6 @@ export default {
   },
   computed:{
     proyectos() {
-      // TODO: sort by date
       let proyecto = [];
       for (const key in this.data) {
         proyecto.push({key:key, data:this.data[key] });
