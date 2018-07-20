@@ -117,7 +117,7 @@
       padding: 0;
       border: 0;
       font-size: 92%;
-      margin: 0 0 0 10px;
+      margin: 0;
     }
     h3 {
       font-weight: bold;
