@@ -11,35 +11,7 @@
          :style="'background-image: url('+data.banner+');'">
     </div>
     <section class="container">
-      <div class="section-text">
-        <h2>Innovando Cambios</h2>
-        <p>
-          {{data.innovando}}
-        </p>
-      </div>
       <section class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <figure class="column-img">
-            <img :src="data.maria"
-                 alt="img-avatar" />
-            <figcaption>
-              <h5>Dirección de Innovación, Formación y Evaluación Docente</h5>
-              <h3>PhD. María Isabel Loaiza</h3>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <figure class="column-img">
-            <img :src="data.nuve"
-                 alt="img-avatar" />
-            <figcaption>
-              <h5>Formación Docente</h5>
-              <h3>Ing. Nuve Briceño</h3>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div>
         <section class="container">
           <div class="section-text">
             <h2>Innovando Cambios</h2>
