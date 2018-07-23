@@ -3,12 +3,14 @@
     <header>
       <h1>{{title}}</h1>
     </header>
-    <section class="container-fluid">
+    <section class="container">
       <div class="row"
            v-if="cards.length > 0">
-        <div v-for="card in cards"
-             :key="card.key"
-             class="col-md-4 col-ms-6">
+        <div v-for="(card, i) in cards"
+             :key="i"
+             class="col-lg-4 col-md-6">
+          <card :nota="card" />
+          <!--
           <figure class="card6">
             <img :src="card.img"
                  :alt="'img' + card.key" />
@@ -20,6 +22,7 @@
               </p>
             </figcaption>
           </figure>
+        -->
         </div>
       </div>
       <div v-else>
@@ -33,6 +36,8 @@
 
 <script>
 import axios from "axios";
+import Card from "@/components/Index/Card";
+
 export default {
   async asyncData({ query }) {
     let { data } = await axios.get(
@@ -48,8 +53,22 @@ export default {
       for (const k in this.data)
         if (this.data[k].tag == this.query.tag) {
           let d = this.data[k];
-          d.key = k;
-          cards.push(d);
+          let tempDate = d.date.split("-");
+          cards.push({
+            key: k,
+            type: this.query.tag,
+            title: d.title,
+            date: {
+              full: d.date,
+              dia: tempDate[2],
+              mes: tempDate[1]
+            },
+            description: d.description,
+            key: {
+              name: d.url
+            },
+            img: d.img
+          });
         }
       // sort cards
       cards.sort(function(a, b) {
@@ -57,6 +76,9 @@ export default {
       });
       return cards;
     }
+  },
+  components: {
+    card: Card
   },
   head() {
     return {
