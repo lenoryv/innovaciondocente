@@ -21,7 +21,6 @@
         <div class="row">
           <div class="col-md-6">
             <h3>
-              <i class="fas fa-file-pdf"></i>
               Valida tu formación Docente - Pedagógica
             </h3>
             <p>
@@ -32,17 +31,20 @@
                target="_blank"
                rel="noopener"
                href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/formacion-docente%2Fprograma-formacion%2Fprograma-formacion%2FInstructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf?alt=media&token=816f02a3-4f2d-4b54-9bca-6b8005614b68">
-              Intructivo para validar tus cursos</a>
+              <i class="fas fa-file-pdf"></i>
+              Descargar intructivo</a>
           </div>
           <div class="col-md-6">
             <h3>
-              <i class="fas fa-file-pdf"></i>
-              Como hacer un curso
+              Cursos Específicos
             </h3>
-            <a class="btn btn-outline-primary btn-large"
-               target="_blank"
-               rel="noopener">
-              TODO</a>
+            <p>
+              Pasos a seguir para presentar solicitudes en la realiación de Cursos Específicos y Emisión de certificados.
+            </p>
+            <nuxt-link :to="{name: 'formacion-docente-programa-formacion-cursos-especificos'}"
+                       class="btn btn-outline-primary btn-large">
+              Ver Mas...
+            </nuxt-link>
           </div>
         </div>
       </div>
