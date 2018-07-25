@@ -33,7 +33,7 @@
     <CafeCientifico/>
     <LiiD/>
     <QuienesSomos/>
-    <Suscripcion title="Suscibete"
+    <Suscripcion title="Suscribete"
                  description="Obtenga las últimas noticias de Innovación UTPL entregadas en su bandeja de entrada."
     />
     <FooterIndex/>
