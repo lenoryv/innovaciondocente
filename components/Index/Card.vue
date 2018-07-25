@@ -8,7 +8,7 @@
       <div class="card_4__date">
         <span class="card_4__date__day">{{nota.date.dia}}</span>
         <span class="card_4__date__month"
-              v-if="nota.date.full">{{nota.date.full | date | slice(5,9)}}</span>
+              v-if="nota.date.full">{{nota.date.full | date | slice(5,9,"")}}</span>
       </div>
       <div class="card_4__body">
         <div class="card_4__category">
