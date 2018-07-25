@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Inscribete al Curso</h1>
+    <h1>Inscríbete al Curso</h1>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="nombre">Nombre</label>
@@ -31,13 +31,13 @@
              type="text"
              name="titulacion"
              class="form-control"
-             placeholder="titulacion"
+             placeholder="Titulación"
              v-validate="'required'">
       <span v-show="errors.has('titulacion')"
             class="alert alert-danger">Titulación es requerido</span>
     </div>
     <div class="form-group">
-      <label for="email">Correo Electronico</label>
+      <label for="email">Correo Electrónico</label>
       <input v-model="forma.email"
              class="form-control"
              name="email"
@@ -45,7 +45,7 @@
              placeholder="Email"
              v-validate="'required|email'">
       <span v-show="errors.has('email')"
-            class="alert alert-danger">Tiene que ser un email valido</span>
+            class="alert alert-danger">Tiene que ser un email válido</span>
     </div>
     <div class="form-group">
       <label for="telefono">Teléfono Celular</label>
@@ -56,7 +56,7 @@
              placeholder="Número de telefono"
              v-validate="'required|numeric'">
       <span v-show="errors.has('telefono')"
-            class="alert alert-danger">Tiene que ser un número valido</span>
+            class="alert alert-danger">Tiene que ser un número válido</span>
     </div>
     <div class="form-group">
       <label for="universidad">Universidad</label>
@@ -118,7 +118,7 @@ export default {
       apellido: null,
       ciudad: "Loja",
       telefono: null,
-      whatsapp: null,
+      whatsapp: true,
       titulacion: null,
       universidad: "UTPL"
     };

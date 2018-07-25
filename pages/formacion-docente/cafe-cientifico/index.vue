@@ -1,33 +1,33 @@
 <template>
   <div>
     <header class="header"
-            v-if="ultimoEncuentro">
+            v-if="ÚltimosEncuentro">
       <div class="header-overlay"></div>
       <div class="background-banner">
-        <img :src="ultimoEncuentro.data.img"
+        <img :src="ÚltimosEncuentro.data.img"
              alt="img-background">
       </div>
       <div class="header-content">
-        <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.key}}"
+        <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ÚltimosEncuentro.key}}"
                    tag="div"
                    class="container"
                    style="cursor:pointer">
-          <h1>{{ultimoEncuentro.data.nombre}}</h1>
+          <h1>{{ÚltimosEncuentro.data.nombre}}</h1>
           <div class="row">
             <div class="col-lg-5 no-mobile">
-              <figure :style="'background-image: url('+ultimoEncuentro.data.img+');'"></figure>
-              <ul v-if="ultimoEncuentro.data.invitados">
+              <figure :style="'background-image: url('+ÚltimosEncuentro.data.img+');'"></figure>
+              <ul v-if="ÚltimosEncuentro.data.invitados">
                 <h3>
                   <i class="fas fa-users"></i> Invitados
                 </h3>
-                <li v-for="(invitado, index) in ultimoEncuentro.data.invitados"
+                <li v-for="(invitado, index) in ÚltimosEncuentro.data.invitados"
                     :key="index">{{ invitado.nombre }}</li>
               </ul>
             </div>
             <div class="col-lg-7">
-              <small>{{ultimoEncuentro.data.fecha | date}}</small>
-              <p class="no-mobile">{{ultimoEncuentro.data.contenido | slice(0,700)}}</p>
-              <p class="no-desktop">{{ultimoEncuentro.data.contenido | slice(0,300)}}</p>
+              <small>{{ÚltimosEncuentro.data.fecha | date}}</small>
+              <p class="no-mobile">{{ÚltimosEncuentro.data.contenido | slice(0,700)}}</p>
+              <p class="no-desktop">{{ÚltimosEncuentro.data.contenido | slice(0,300)}}</p>
             </div>
           </div>
         </nuxt-link>
@@ -61,17 +61,17 @@
         <div class="row">
           <div class="col-6">
             <button class="btn btn-large btn-sm btn-outline-primary"
-                    @click="scrollLeft">&#60;&#61;</button>
+                    @click="scrollLeft"><i class="fas fa-arrow-left"></i></button>
           </div>
           <div class="col-6">
             <button class="btn btn-large btn-sm btn-outline-primary"
-                    @click="scrollRight">&#61;&#62;</button>
+                    @click="scrollRight"><i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
       </div>
     </section>
     <!--Susciption section-->
-    <Suscripcion title="Suscribete a nuestro Café Científico"
+    <Suscripcion title="Suscríbete a nuestro Café Científico"
                  :description="description"
                  blue="true" />
   </div>
@@ -100,7 +100,7 @@ export default {
     }
   },
   computed: {
-    ultimoEncuentro() {
+    ÚltimosEncuentro() {
       let res = null;
       for (const key in this.data.encuentros) {
         res = { key: key, data: this.data.encuentros[key] };

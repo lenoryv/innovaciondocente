@@ -21,10 +21,10 @@
         <div class="row">
           <div class="col-md-6">
             <h3>
-              Valida tu formación Docente - Pedagógica
+              Válida tu formación Docente - Pedagógica
             </h3>
             <p>
-              Intructivo para validar tus cursos del Programa de Formación Docente Pedagógica en el Sistema de Información
+              Intructivo para validar tus cursos del Programa de Formación Docente - Pedagógica en el Sistema de Información
               Académica Científica (SIAC)
             </p>
             <a class="btn btn-outline-primary btn-large"
@@ -39,11 +39,11 @@
               Cursos Específicos
             </h3>
             <p>
-              Pasos a seguir para presentar solicitudes en la realiación de Cursos Específicos y Emisión de certificados.
+              Pasos a seguir para presentar solicitudes en la realización de Cursos Específicos y Emisión de certificados.
             </p>
             <nuxt-link :to="{name: 'formacion-docente-programa-formacion-cursos-especificos'}"
                        class="btn btn-outline-primary btn-large">
-              Ver Mas...
+              Ver Más...
             </nuxt-link>
           </div>
         </div>

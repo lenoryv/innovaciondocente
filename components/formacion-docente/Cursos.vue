@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h2>Ultimos Cursos</h2>
+    <h2>Últimos Cursos</h2>
     <div class="row"
          v-if="cursos">
       <nuxt-link class="col-md-3 col-sm-6"

@@ -8,9 +8,9 @@
                type="mail"
                name="email"
                class="form-control"
-               placeholder="Correo Electronico"
+               placeholder="Correo Electrónico"
                v-validate="'required|email'">
-        <span v-show="errors.has('email')">Tiene que ser un email valido</span>
+        <span v-show="errors.has('email')">Tiene que ser un email válido</span>
       </div>
       <button @click="submit"
               v-bind:class="[{'btn-inverse':blue},{'btn-outline-primary':!blue}]"

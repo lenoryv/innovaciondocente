@@ -71,7 +71,7 @@
     <div class="row">
       <div class=" col-md-6">
         <button class="btn btn-outline-danger btn-sm btn-large"
-                @click="delInstructor">Eliminar Ultimo</button>
+                @click="delInstructor">Eliminar Últimos</button>
       </div>
       <div class=" col-md-6">
         <button class="btn btn-outline-success btn-sm btn-large"
@@ -196,7 +196,7 @@
     <div class="form-row">
       <div class="col-6">
         <button class="btn btn-outline-danger btn-large btn-sm"
-                @click="delFinalidad">Eliminar Ultimo</button>
+                @click="delFinalidad">Eliminar Últimos</button>
       </div>
       <div class="col-6">
         <button class="btn btn-outline-success btn-large btn-sm"
