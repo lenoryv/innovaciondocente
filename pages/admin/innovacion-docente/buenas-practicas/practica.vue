@@ -70,7 +70,7 @@
     <div class="form-row">
       <div class="col-6">
         <button class="btn btn-outline-danger btn-large btn-sm"
-                @click="delDocente">Eliminar Ultimo</button>
+                @click="delDocente">Eliminar Últimos</button>
       </div>
       <div class="col-6">
         <button class="btn btn-outline-success btn-large btn-sm"

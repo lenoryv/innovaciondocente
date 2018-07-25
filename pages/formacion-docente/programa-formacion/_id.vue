@@ -64,7 +64,7 @@
             <b>Duración: </b>
             <ul>
               <li v-if="data.duracion.horas">{{ data.duracion.horas }} Horas</li>
-              <li v-if="data.duracion.dias">{{ data.duracion.dias }} Dias</li>
+              <li v-if="data.duracion.dias">{{ data.duracion.dias }} Días</li>
               <li v-if="data.duracion.semanas">{{ data.duracion.semanas }} Semanas</li>
             </ul>
           </p>

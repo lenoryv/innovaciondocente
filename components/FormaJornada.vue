@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Valora la jornada:</h3>
+    <h3>Valorá la jornada:</h3>
     <div class="form-group">
       <label for="preg_1">1. En relación a la jornada ¿Qué valoración le daría?</label>
       <br>
@@ -75,7 +75,7 @@
             class="alert alert-danger">Es requerido</span>
     </div>
     <div class="form-group">
-      <label for="preg_2_1">2.1 ¿En que aspectos te resulta aplicable el tema?</label>
+      <label for="preg_2_1">2.1 ¿En qué aspectos te resulta aplicable el tema?</label>
       <select v-model="forma.preg_2_1"
               class="form-control"
               id="preg_2_1"
@@ -272,7 +272,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="preg_4">4. ¿Que temáticas consideras importante que se traten en próximas jornadas?</label>
+      <label for="preg_4">4. ¿Qué temáticas consideras importante que se traten en próximas jornadas?</label>
       <textarea v-model="forma.preg_4"
                 type="text"
                 name="preg_4"

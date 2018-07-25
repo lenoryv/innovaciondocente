@@ -68,10 +68,10 @@
           <div class="section-text">
             <h2>InDevelomenpt Company</h2>
             <p>
-              Compañia de desarrollo de software fundada en 2018, por un grupo de estudiantes de la titulación de Ingeniería
-              en Sistemas Informáticos y Computacíon de la UTPL. Tras la intervención en el proyecto
-              Ascendere, nacé el grupo con la visión de generar innovación mediante el uso de nuevas
-              tecnologías, cuya misión es incentivar a otros jovenes a participar en los diferentes proyectos
+              Compañía de desarrollo de software fundada en 2018, por un grupo de estudiantes de la titulación de Ingeniería
+              en Sistemas Informáticos y Computación de la UTPL. Tras la intervención en el proyecto
+              Ascendere, nace el grupo con la visión de generar innovación mediante el uso de nuevas
+              tecnologías, cuya misión es incentivar a otros jóvenes a participar en los diferentes proyectos
               y actividades generados por las universidades.
             </p>
           </div>

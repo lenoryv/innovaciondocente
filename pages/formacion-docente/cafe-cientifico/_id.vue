@@ -27,7 +27,7 @@
         <div class="col-6"
              v-if="canIncribe">
           <nuxt-link class="btn btn-primary btn-large"
-                     :to="{name: 'formacion-docente-cafe-cientifico-inscripcion', query: {id: key}}">Incribete</nuxt-link>
+                     :to="{name: 'formacion-docente-cafe-cientifico-inscripcion', query: {id: key}}">Inscríbete</nuxt-link>
         </div>
       </div>
     </section>

@@ -43,7 +43,7 @@
             curso específico.
           </li>
           <li class="list-group-item">
-            Adjuntar un resumen del currículo del docente que dictará o que impartira la formación.
+            Adjuntar un resumen del currículo del docente que dictará o que impartirá la formación.
           </li>
         </ol>
       </article>

@@ -12,7 +12,7 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Catedra</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Cátedra</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Prácticas</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
@@ -30,7 +30,7 @@
           <div class="dropdown-content">
             <nuxt-link :to="{name: 'formacion-docente-programa-formacion'}">Programa de Formación</nuxt-link>
             <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico'}">Café Científico</nuxt-link>
-            <nuxt-link :to="{name: 'formacion-docente-desarrollo-asignatura'}">Diseño de mi Asigantura</nuxt-link>
+            <nuxt-link :to="{name: 'formacion-docente-desarrollo-asignatura'}">Diseño de mi Asignatura</nuxt-link>
             <nuxt-link :to="{name: 'formacion-docente-jornadas-de-reflexion'}">Jornadas de Reflexión</nuxt-link>
           </div>
         </div>
