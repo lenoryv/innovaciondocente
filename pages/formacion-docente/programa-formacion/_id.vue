@@ -29,7 +29,7 @@
              class="btn btn-large"
              v-bind:class="[
                 {'btn-outline-primary':data.urlContenido},
-                {'btn-danger disabled':!data.urlContenido}
+                {'btn-outline-danger disabled':!data.urlContenido}
               ]"
              :href="data.urlContenido">
             <i class="fas fa-file-pdf"></i>
@@ -60,21 +60,21 @@
             {{ data.fecha | date}}
           </p>
           <!---->
-          <p v-if="data.duracion">
-            <b>Duración: </b>
+          <span v-if="data.duracion">
+            <b>Duración:</b>
             <ul>
               <li v-if="data.duracion.horas">{{ data.duracion.horas }} Horas</li>
               <li v-if="data.duracion.dias">{{ data.duracion.dias }} Días</li>
               <li v-if="data.duracion.semanas">{{ data.duracion.semanas }} Semanas</li>
             </ul>
-          </p>
+          </span>
           <!---->
-          <p>
+          <p v-if="data.modulo">
             <b>Módulo:</b>
             {{data.modulo}}
           </p>
           <!---->
-          <p>
+          <p v-if="data.lugar">
             <b>Lugar:</b>
             {{data.lugar}}
           </p>
@@ -112,8 +112,8 @@ export default {
       }.json`
     );
     // validate date
-    let fecha_postulacion = new Date(data.postulacion);
-    let canPostulate = fecha_postulacion.getTime() > new Date().getTime();
+    let fecha_postulacion = new Date(data.postulacion.fecha);
+    let canPostulate = fecha_postulacion.getTime() >= new Date().getTime();
     return { data, canPostulate };
   },
   head() {
