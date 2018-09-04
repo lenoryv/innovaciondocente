@@ -113,7 +113,7 @@ export default {
     );
     // validate date
     let fecha_postulacion = new Date(data.postulacion);
-    let canPostulate = fecha_postulacion.getTime() >= new Date().getTime();
+    let canPostulate = fecha_postulacion.getTime() > new Date().getTime();
     return { data, canPostulate };
   },
   head() {
