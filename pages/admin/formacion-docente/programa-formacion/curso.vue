@@ -174,10 +174,7 @@
       <input v-model="forma.urlContenido"
              type="text"
              name="urlContenido"
-             class="form-control"
-             v-validate="'required'">
-      <span v-show="errors.has('urlContenido')"
-            class="alert alert-danger">El link es requerido</span>
+             class="form-control">
     </div>
     <!--Finalidades-->
     <label>Finalidades de la formación</label>
