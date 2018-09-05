@@ -19,4 +19,4 @@ script:
   - npm run generate
 
 after_success:
-  - firebase deploy — project projectId --token $FIREBASE_TOKEN.
+  - firebase deploy --token $FIREBASE_TOKEN.
