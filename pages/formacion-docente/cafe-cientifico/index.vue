@@ -52,7 +52,7 @@
                         :style="'background-image: url('+encuentro.data.img+');'">
                 </figure>
                 <div class="card__desc">
-                  <h4>{{encuentro.data.nombre}}</h4>
+                  <h4>{{encuentro.data.nombre | slice(0,50)}}</h4>
                 </div>
               </div>
             </nuxt-link>
@@ -61,11 +61,15 @@
         <div class="row">
           <div class="col-6">
             <button class="btn btn-large btn-sm btn-outline-primary"
-                    @click="scrollLeft"><i class="fas fa-arrow-left"></i></button>
+                    @click="scrollLeft">
+              <i class="fas fa-arrow-left"></i>
+            </button>
           </div>
           <div class="col-6">
             <button class="btn btn-large btn-sm btn-outline-primary"
-                    @click="scrollRight"><i class="fas fa-arrow-right"></i></button>
+                    @click="scrollRight">
+              <i class="fas fa-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
