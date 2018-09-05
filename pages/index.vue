@@ -200,6 +200,7 @@ p {
   transform: rotate(-45deg);
   -webkit-animation: sdb05 1.5s infinite;
   animation: sdb05 1.5s infinite;
+  color: transparent;
   @-webkit-keyframes sdb05 {
     0% {
       -webkit-transform: rotate(-45deg) translate(0, 0);
