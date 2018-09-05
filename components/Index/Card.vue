@@ -3,7 +3,8 @@
     <div class="card_4"
          v-if="nota">
       <div class="card_4__thumb">
-        <img :src="nota.img">
+        <img :src="nota.img"
+             :alt="nota.title">
       </div>
       <div class="card_4__date">
         <span class="card_4__date__day">{{nota.date.dia}}</span>

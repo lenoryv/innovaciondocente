@@ -18,7 +18,7 @@
         </div>
         <div class="col-md-6">
           <figure>
-            <img :src="cafecientifico.data.img">
+            <img :src="cafecientifico.data.img" alt="Imagen Cafe">
           </figure>
           <nuxt-link class="btn btn-large btn-inverse"
                      :to="{name: 'formacion-docente-cafe-cientifico-id',  params: {id: cafecientifico.key}}"
