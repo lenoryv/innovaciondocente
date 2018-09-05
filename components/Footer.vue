@@ -6,22 +6,30 @@
           <li>
             <a href="https://www.facebook.com/LiiDUTPL"
                target="_blank"
-               class="fab fa-facebook-f"></a>
+               rel="noopener"
+               title="facebook"
+               class="fab fa-facebook-f">facebook</a>
           </li>
           <li>
             <a href="https://twitter.com/utpl"
                target="_blank"
-               class="fab fa-twitter"></a>
+               rel="noopener"
+               title="twitter"
+               class="fab fa-twitter">twitter</a>
           </li>
           <li>
             <a href="https://www.youtube.com/channel/UCzRd2Y87-NJnVliV8B6e_Xg"
                target="_blank"
-               class="fab fa-youtube"></a>
+               rel="noopener"
+               title="youtube"
+               class="fab fa-youtube">youtube</a>
           </li>
           <li>
             <a href="https://www.instagram.com/liidutpl"
                target="_blank"
-               class="fab fa-instagram"></a>
+               rel="noopener"
+               title="instagram"
+               class="fab fa-instagram">instagram</a>
           </li>
         </ul>
       </div>
