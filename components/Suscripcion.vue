@@ -6,11 +6,11 @@
       <div class="form-group">
         <input v-model="forma.email"
                type="mail"
-               name="email"
+               name="mail"
                class="form-control"
                placeholder="Correo Electrónico"
                v-validate="'required|email'">
-        <span v-show="errors.has('email')">Tiene que ser un email válido</span>
+        <span v-show="errors.has('mail')">Tiene que ser un email válido</span>
       </div>
       <button @click="submit"
               v-bind:class="[{'btn-inverse':blue},{'btn-outline-primary':!blue}]"

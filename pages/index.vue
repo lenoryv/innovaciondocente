@@ -16,15 +16,15 @@
              id="arrow">
           <a href="#"
              class="arrow arrow-1">
-            <span></span>
+            <span>arrow</span>
           </a>
           <a href="#"
              class="arrow arrow-2">
-            <span></span>
+            <span>arrow</span>
           </a>
           <a href="#"
              class="arrow arrow-3">
-            <span></span>
+            <span>arrow</span>
           </a>
         </div>
       </div>

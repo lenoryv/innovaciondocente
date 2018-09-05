@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="liid-info">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/icons%2Fthumbnail_sello_laboratorio_investigacion_innovacion_feb_2018.png?alt=media&token=81b8fb6b-5f9e-4338-a6cc-e20ae8783e9e">
+                        <img  alt="Lab img" src="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/icons%2Fthumbnail_sello_laboratorio_investigacion_innovacion_feb_2018.png?alt=media&token=81b8fb6b-5f9e-4338-a6cc-e20ae8783e9e">
                         <p>El Laboratorio de Investigación e Innovación Docente Educativa es un espacio
                             orientado al desarrollo de la innovación e investigación educativa a nivel
                             local, nacional e internacional.</p>
