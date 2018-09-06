@@ -37,7 +37,7 @@ export default {
   },
   head() {
     return {
-      title: this.convocatorias.data.fecha + " | Proyecto Ascendere",
+      title: this.convocatorias.data.fecha  ,
     };
   }
 };

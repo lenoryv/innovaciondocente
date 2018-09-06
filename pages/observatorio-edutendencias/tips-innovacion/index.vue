@@ -56,7 +56,7 @@
 export default {
   head() {
     return {
-      title: "EduTendencias | Proyecto Ascendere"
+      title: "EduTendencias  "
     };
   }
 };

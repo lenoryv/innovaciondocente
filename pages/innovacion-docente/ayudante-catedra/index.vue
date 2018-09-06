@@ -137,7 +137,7 @@ export default {
   },
   head() {
     return {
-      title: "Ayudante de Cátedra | Proyecto Ascendere",
+      title: "Ayudante de Cátedra",
       meta: [
         {
           hid: "description",

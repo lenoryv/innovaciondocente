@@ -52,7 +52,7 @@ export default {
   },
   head() {
     return {
-      title: "Noticias | Proyecto Ascendere"
+      title: "Noticias"
     };
   }
 };

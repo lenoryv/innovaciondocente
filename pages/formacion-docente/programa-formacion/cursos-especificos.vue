@@ -73,7 +73,7 @@ export default {
   },
   head() {
     return {
-      title: this.title + " | Proyecto Ascendere"
+      title: this.title  
     };
   }
 };

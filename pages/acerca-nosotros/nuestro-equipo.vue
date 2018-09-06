@@ -108,7 +108,7 @@ export default {
   },
   head() {
     return {
-      title: "Nuestro Equipo | Proyecto Ascendere",
+      title: "Nuestro Equipo",
       meta: [
         {
           hid: "description",

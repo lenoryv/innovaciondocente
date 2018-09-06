@@ -27,7 +27,7 @@ export default {
   },
   head() {
     return {
-      title: this.data.nombre + " | Proyecto Ascendere",
+      title: this.data.nombre  ,
       meta: [
         {
           hid: "description",

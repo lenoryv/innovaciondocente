@@ -33,7 +33,7 @@ export default {
   },
   head() {
     return {
-      title: "Buenas Prácticas | Proyecto Ascendere",
+      title: "Buenas Prácticas",
       meta: [
         {
           hid: "description",

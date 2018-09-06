@@ -50,7 +50,7 @@ export default {
   },
   head() {
     return {
-      title: "Convocatorias | Proyecto Ascendere",
+      title: "Convocatorias  ",
       meta: [
         {
           hid: "description",

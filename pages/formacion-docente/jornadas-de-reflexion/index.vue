@@ -43,7 +43,7 @@ export default {
   },
   head() {
     return {
-      title: "Jornadas de Reflexión | Proyecto Ascendere",
+      title: "Jornadas de Reflexión",
       meta: [
         {
           hid: "description",
