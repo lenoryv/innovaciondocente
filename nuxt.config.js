@@ -10,15 +10,18 @@ module.exports = {
    */
   router: {
     scrollBehavior: function (to, from, savedPosition) {
-      return { x: 0, y: 0 }
+      return {
+        x: 0,
+        y: 0
+      }
     },
     ...routerBase
   },
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: 'Innovación Docente',
+    titleTemplate: '%s | Proyecto Ascendere',
     htmlAttrs: {
       xmlns: "http://www.w3.org/1999/xhtml",
       'xml:lang': "es",
@@ -26,20 +29,51 @@ module.exports = {
       dir: "ltr"
     },
     nativeUI: true,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'msapplication-TileImage', content: '/icon.png' },
-      { name: 'msapplication-TileColor', content: '#2a3e71' },
-      { name: 'theme-color', content: '#2a3e71' },
-      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
-      { name: 'mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+
+      {
+        name: 'msapplication-TileImage',
+        content: '/icon.png'
+      },
+      {
+        name: 'msapplication-TileColor',
+        content: '#2a3e71'
+      },
+      {
+        name: 'theme-color',
+        content: '#2a3e71'
+      },
+      {
+        'http-equiv': 'x-ua-compatible',
+        content: 'ie=edge'
+      },
+      {
+        name: 'mobile-web-app-capable',
+        content: 'yes'
+      },
+      {
+        name: 'apple-mobile-web-app-capable',
+        content: 'yes'
+      }
     ],
-    link: [
-      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/solid.css' },
-      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/brands.css' },
-      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css' }
+    link: [{
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.0.13/css/solid.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.0.13/css/brands.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css'
+      }
     ]
   },
   loading: {
@@ -51,7 +85,7 @@ module.exports = {
     color: 'white',
     background: "#0D47A1"
   },
-  mode: 'spa',
+  mode: 'universal',
   manifest: {
     name: 'Innovación Docente',
     lang: 'es',
@@ -63,7 +97,10 @@ module.exports = {
     theme_color: "#2a3e71",
   },
   build: {
-    extend(config, { isDev, isClient }) {
+    extend(config, {
+      isDev,
+      isClient
+    }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -93,11 +130,17 @@ module.exports = {
   modules: [
     '@nuxtjs/pwa'
   ],
-  plugins: [
-    { src: '~/plugins/vee-validate.js', ssr: true },
-    { src: '~/plugins/filters.js', ssr: true },
-    { src: '~/plugins/lazyload.js', ssr: true }
+  plugins: [{
+      src: '~/plugins/vee-validate.js',
+      ssr: true
+    },
+    {
+      src: '~/plugins/filters.js',
+      ssr: true
+    },
+    {
+      src: '~/plugins/lazyload.js',
+      ssr: true
+    }
   ]
 }
-
-

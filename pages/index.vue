@@ -55,10 +55,8 @@ export default {
     let { data } = await axios.get(
       `https://innovaciondocente-utpl.firebaseio.com/index.json`
     );
-    const title = "Proyecto Ascendere";
     return {
-      data,
-      title
+      data
     };
   },
   methods: {
@@ -80,12 +78,13 @@ export default {
   },
   head() {
     return {
-      title: this.title,
+      title: "Innovación Docente",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "Página web de Innovación Docente | UTPL"
+          content:
+            "El Laboratorio de Investigación e Innovación Docente Educativa es un espacio orientado al desarrollo de la innovación e investigación educativa a nivel local, nacional e internacional."
         }
       ]
     };

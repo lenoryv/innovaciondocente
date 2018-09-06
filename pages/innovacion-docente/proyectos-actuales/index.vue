@@ -55,7 +55,7 @@ export default {
   },
   head() {
     return {
-      title: "Proyectos Actuales | Proyecto Ascendere",
+      title: "Proyectos Actuales  ",
       meta: [
         {
           hid: "description",

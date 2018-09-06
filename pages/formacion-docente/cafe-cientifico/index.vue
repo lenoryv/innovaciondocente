@@ -127,7 +127,7 @@ export default {
   },
   head() {
     return {
-      title: "Café Científico | Proyecto Ascendere",
+      title: "Café Científico  ",
       meta: [
         {
           hid: "description",

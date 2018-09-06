@@ -16,13 +16,15 @@ import axios from "axios";
 export default {
   async asyncData({ params }) {
     let { data } = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/convocatorias/${params.id}.json` 
+      `https://innovaciondocente-utpl.firebaseio.com/innovacion-docente/convocatorias/${
+        params.id
+      }.json`
     );
     return { data };
   },
   head() {
     return {
-      title: this.data.fecha + " | Proyecto Ascendere",
+      title: this.data.fecha
     };
   }
 };

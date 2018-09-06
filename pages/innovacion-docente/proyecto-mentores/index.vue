@@ -52,7 +52,7 @@ export default {
   },
   head() {
     return {
-      title: "Proyecto Mentores | Proyecto Ascendere",
+      title: "Proyecto Mentores",
       meta: [
         {
           hid: "description",
