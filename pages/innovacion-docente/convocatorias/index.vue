@@ -9,6 +9,7 @@
 
           <!-- sidebar -->
           <section class="sticky">
+            <h3>Convocatorias Anteriores</h3>
             <div v-for="(convocatoria, key) in convocatorias"
                  v-if="convocatoria"
                  :key="key">
@@ -33,15 +34,24 @@
               <i class="fas fa-calendar-alt"></i>
               El plazo para presentar las propuestas es hasta el
               <b>
-                {{ultimaConvocatoria.postulaciones.fecha | date}}
+                {{ultimaConvocatoria.postulaciones.fecha | date}}.
               </b>
-            </p>
-            <p>La postulación deben realizarla a través del siguiente link:
+              La postulación debe realizarze a través del siguiente
               <a :href="ultimaConvocatoria.postulaciones.url"
                  class="alert-link">
-                <br> {{ultimaConvocatoria.postulaciones.url}}
+                link.
               </a>
             </p>
+            <p>
+              {{description}}
+            </p>
+            <!-- <div class="vid-container">
+            <iframe :src="ultimaConvocatoria.vidUrl"
+                    frameborder="0"
+                    title="video"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+          </div> -->
           </div>
           <div class="embed-container">
             <embed name="plugin"
@@ -114,6 +124,20 @@ export default {
     position: sticky;
     top: 0;
     z-index: 3;
+  }
+}
+
+.vid-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
