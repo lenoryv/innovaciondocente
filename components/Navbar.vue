@@ -14,7 +14,7 @@
           <div class="dropdown-content">
             <nuxt-link :to="{name: 'innovacion-docente-ayudante-catedra'}">Ayudante de Cátedra</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-buenas-practicas-index'}">Buenas Prácticas</nuxt-link>
-            <nuxt-link :to="{name: 'innovacion-docente-convocatorias-index'}">Convocatorias</nuxt-link>
+            <nuxt-link :to="{name: 'innovacion-docente-convocatorias'}">Convocatorias</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-proyectos-actuales'}">Proyectos Actuales</nuxt-link>
             <nuxt-link :to="{name: 'innovacion-docente-proyecto-mentores'}">Proyecto Mentores</nuxt-link>
             <a target="_blank"
