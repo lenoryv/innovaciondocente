@@ -1,25 +1,66 @@
 <template>
   <div>
+    <header>
+      <h1>Convocatoria de Proyectos de Innovación Docente</h1>
+    </header>
     <div class="container">
-      <section>
-        <h1>Convocatoria de Proyectos de Innovación Docente</h1>
-      </section>
       <div class="row">
         <div class="col-md-3">
-          <div class="sticky">
-            <nuxt-link class="btn btn-outline-dark btn-large"
-                       :to="{name: 'innovacion-docente-convocatorias-index'}">Actual</nuxt-link>
+
+          <!-- sidebar -->
+          <section class="sticky">
+            <h3>Convocatorias Anteriores</h3>
             <div v-for="(convocatoria, key) in convocatorias"
                  v-if="convocatoria"
                  :key="key">
-              <nuxt-link class="btn btn-outline-dark btn-large"
-                         :to="{name: 'innovacion-docente-convocatorias-index-id',params:{id:convocatoria.key}}">{{convocatoria.data.fecha}}</nuxt-link>
+              <a class="btn btn-outline-dark btn-large"
+                 :href="convocatoria.url"
+                 target="_blank">
+                <i class="fas fa-file-pdf"></i>
+                {{convocatoria.fecha}}
+              </a>
             </div>
+          </section>
+        </div>
+
+        <!-- Main Content -->
+        <section class="col-md-9">
+          <div class="alert alert-success"
+               v-if="canPostulate">
+            <h3 class="alert-heading">
+              Plazo para presentación de Propuestas
+            </h3>
+            <p>
+              <i class="fas fa-calendar-alt"></i>
+              El plazo para presentar las propuestas es hasta el
+              <b>
+                {{ultimaConvocatoria.postulaciones.fecha | date}}.
+              </b>
+              La postulación debe realizarze a través del siguiente
+              <a :href="ultimaConvocatoria.postulaciones.url"
+                 class="alert-link">
+                link.
+              </a>
+            </p>
+            <p>
+              {{description}}
+            </p>
+            <!-- <div class="vid-container">
+            <iframe :src="ultimaConvocatoria.vidUrl"
+                    frameborder="0"
+                    title="video"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+          </div> -->
           </div>
-        </div>
-        <div class="col-md-9">
-          <nuxt-child/>
-        </div>
+          <div class="embed-container">
+            <embed name="plugin"
+                   id="plugin"
+                   :src="ultimaConvocatoria.url"
+                   type="application/pdf"
+                   internalinstanceid="423">
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -34,23 +75,30 @@ export default {
     );
     const description =
       "Esta convocatoria es una invitación a todos los docentes de la Universidad para que participen e implementen nuevas estrategias de enseñanza aprendizaje, potenciando el uso creativo de diferentes herramientas dentro y fuera del aula, implicando a los estudiantes activamente en su proceso de aprendizaje, planificando, desarrollando y evaluando las competencias necesarias para contribuir con el perfil de egreso de la titulación.";
-    return { data, description };
-  },
-  computed: {
-    convocatorias() {
-      let convocatorias = [];
-      for (const key in this.data) {
-        convocatorias.push({ key: key, data: this.data[key] });
-      }
-      convocatorias.sort(function(a, b) {
-        return ("" + b.key).localeCompare(a.key);
-      });
-      return convocatorias;
+
+    let convocatorias = [];
+    for (const key in data) {
+      convocatorias.push({ key: key, ...data[key] });
     }
+    convocatorias.sort(function(a, b) {
+      return ("" + b.key).localeCompare(a.key);
+    });
+
+    // validate date
+    let ultimaConvocatoria = convocatorias[0];
+    let fecha_postulacion = new Date(ultimaConvocatoria.postulaciones.fecha);
+    let canPostulate = fecha_postulacion.getTime() >= new Date().getTime();
+    return {
+      data,
+      description,
+      convocatorias,
+      ultimaConvocatoria,
+      canPostulate
+    };
   },
   head() {
     return {
-      title: "Convocatorias  ",
+      title: "Convocatorias",
       meta: [
         {
           hid: "description",
@@ -65,18 +113,8 @@ export default {
 
 <style lang="scss">
 @import "assets/variables";
-section{
-  padding-bottom: 0;
-}
-.nuxt-link-exact-active {
-  color: $color-font-primary !important;
-  background-color: $color-primary !important;
-  border-color: $color-dark !important;
-  &:hover {
-    opacity: 0.8;
-    transition: 0.2s all ease;
-  }
-}
+@import "assets/header";
+@import "assets/alert";
 .btn {
   font-size: 12px;
 }
@@ -89,18 +127,31 @@ section{
   }
 }
 
+.vid-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .embed-container {
   position: relative;
   padding-bottom: 100%;
   height: 0;
   overflow: hidden;
-}
-
-.embed-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>
