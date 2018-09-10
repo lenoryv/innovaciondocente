@@ -1,4 +1,5 @@
 @import 'assets/variables';
+
 //////////how to use//////////
 ///
 ///  BASIC EXAMPLE FOR USING alert
@@ -19,11 +20,15 @@
   color: $color;
   background-color: lighten($color: $color, $amount: $light);
   border-color: lighten($color: $color, $amount: $light);
+
   hr {
     border-top-color: lighten($color: $color, $amount: $light);
   }
+
   .alert-link {
     color: darken($color: $color, $amount: $dark);
+    cursor: pointer;
+
   }
 }
 
@@ -39,10 +44,6 @@
 
 .alert-heading {
   color: inherit;
-}
-
-.alert-link {
-  font-weight: 700;
 }
 
 .alert-primary {

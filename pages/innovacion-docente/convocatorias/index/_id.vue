@@ -1,5 +1,14 @@
 <template>
   <div>
+    <div class="alert alert-success"
+         v-if="canPostulate">
+      <a :href="data.postulaciones.url"
+         class="alert-link">
+        <i class="fas fa-calendar-alt"></i>
+        Postula hasta el
+        <b>{{data.postulaciones.fecha | date}}</b>
+      </a>
+    </div>
     <div class="embed-container">
       <embed name="plugin"
              id="plugin"
@@ -7,9 +16,14 @@
              type="application/pdf"
              internalinstanceid="423">
     </div>
+    <div class="container">
+      <pre>
+        {{data}}
+      </pre>
+    </div>
   </div>
 </template>
- 
+
 <script>
 import axios from "axios";
 
@@ -20,7 +34,10 @@ export default {
         params.id
       }.json`
     );
-    return { data };
+    // validate date
+    let fecha_postulacion = new Date(data.postulaciones.fecha);
+    let canPostulate = fecha_postulacion.getTime() >= new Date().getTime();
+    return { data, canPostulate };
   },
   head() {
     return {
@@ -29,4 +46,8 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "assets/alert";
+</style>
 
