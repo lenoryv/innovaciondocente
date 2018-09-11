@@ -11,7 +11,7 @@
         <div class="overlay">
           <div class="data">
             <nuxt-link :to="{name: 'observatorio-edutendencias-noticias-id', params: {id:noticia.key}}"
-                       tag="h3">
+                       tag="h4">
               {{noticia.nombre | capitalize}}
             </nuxt-link>
             <p>{{noticia.description}}
@@ -39,15 +39,9 @@ export default {
   computed: {
     noticias() {
       let resp = [];
-      for (const k in this.data) {
-        let obj = this.data[k];
-        obj.key = k;
-        resp.push(obj);
-      }
-      resp.sort(function(a, b) {
-        return ("" + a.key).localeCompare(b.key);
-      });
-      return resp;
+      for (const k in this.data) resp.push({ key: k, ...this.data[k] });
+
+      return resp.sort((a, b) => ("" + b.key).localeCompare(a.key));
     }
   },
   head() {
@@ -101,7 +95,7 @@ $size: 250px;
     }
   }
   .overlay {
-  transition: margin-left 4s ease-in-out 1s;
+    transition: margin-left 4s ease-in-out 1s;
     position: relative;
     height: 100%;
     width: 100%;
@@ -110,6 +104,7 @@ $size: 250px;
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.664),
       $color-dark
     );
     .data {
@@ -120,9 +115,12 @@ $size: 250px;
       max-height: 100%;
       overflow: auto;
       text-align: justify;
-      h3:hover {
-        cursor: pointer;
-        text-decoration: underline;
+      text-align: left;
+      h4 {
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
       p,
       a {
