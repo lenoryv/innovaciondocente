@@ -13,35 +13,35 @@
         <div class="row">
           <div class="col-md-12 avatar">
             <img class="img-avatar"
-                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2FViceC.png?alt=media&token=328eb73d-ab6c-49e9-8bbf-372d56f74d01'"
                  alt="Avatar">
             <h3>Dr. Santiago Acosta Aide</h3>
             <h4>Vicerrector Académico</h4>
           </div>
           <div class="col-lg-3 col-md-6 avatar">
             <img class="img-avatar"
-                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2FMariaC.png?alt=media&token=cf6cffff-dbc4-4953-98ca-fc8eef1034c9'"
                  alt="Avatar">
             <h3>PhD. María Isabel Loaiza</h3>
             <h4>Dirección de Innovación, Formación y Evaluación Docente</h4>
           </div>
           <div class="col-lg-3 col-md-6 avatar">
             <img class="img-avatar"
-                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2FNuveC.png?alt=media&token=868fd4de-89ca-4de2-ae5f-17801736a096'"
                  alt="Avatar">
             <h3>Ing. Nuve Briceño</h3>
             <h4>Formación Docente</h4>
           </div>
           <div class="col-lg-3 col-md-6 avatar">
             <img class="img-avatar"
-                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2FAngelaC.png?alt=media&token=e6473e30-428a-4905-ae51-a4439d271579'"
                  alt="Avatar">
             <h3>Mgtr. Angela Salazar</h3>
             <h4>Innovación Docente</h4>
           </div>
           <div class="col-lg-3 col-md-6 avatar">
             <img class="img-avatar"
-                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2Favatar-icom.png?alt=media&token=af09eb1b-e285-4c17-bc45-9b01ed8c544b'"
+                 :src="'https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/index%2FLourdesC.png?alt=media&token=be30d4e1-c736-45f2-81c2-103741b20c2b'"
                  alt="Avatar">
             <h3>Mgtr. Lourdes Cueva</h3>
             <h4>Evaluación Docente</h4>
