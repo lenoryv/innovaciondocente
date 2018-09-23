@@ -42,39 +42,37 @@
 <script>
 import { db } from "~/plugins/firebase.js";
 export default {
-  data() {
-    return {
-      encuentro: null,
-      canIncribe: false,
-      docRef: db
-        .collection("/formacion-docente/cafe-cientifico/encuentros")
-        .doc(this.$route.params.id)
-    };
-  },
-  async mounted() {
+  async asyncData({ params }) {
+    let encuentro = null;
     try {
-      let doc = await this.docRef.get();
-      this.loaded = true;
+      let doc = await db
+        .collection("/formacion-docente/cafe-cientifico/encuentros")
+        .doc(params.id)
+        .get();
       if (doc.exists) {
-        this.encuentro = { ...doc.data(), id: doc.id };
+        encuentro = { ...doc.data(), id: doc.id };
         // validate date
         // let fecha = new Date(res.data.postulacion);
         // let canIncribe = fecha.getTime() >= new Date().getTime();
       }
     } catch (error) {}
+    return {
+      encuentro,
+      canIncribe: false
+    };
+  },
+  head() {
+    return {
+      title: this.encuentro.name,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.encuentro.description
+        }
+      ]
+    };
   }
-  // head() {
-  //   return {
-  //     title: this.encuentro.nombre,
-  //     meta: [
-  //       {
-  //         hid: "description",
-  //         name: "description",
-  //         content: this.encuentro.contenido
-  //       }
-  //     ]
-  //   };
-  // }
 };
 </script>
 
