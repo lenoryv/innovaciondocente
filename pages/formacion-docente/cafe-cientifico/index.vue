@@ -36,14 +36,15 @@
 
     <!-- encuentros portfolio -->
     <section v-if="encuentros"
-             id="encuentros">
+             id="encuentros"
+             ref="encuentros">
       <div class="container-fluid">
         <h2>
           Portafolio de Encuentros
         </h2>
         <div class="encuentros">
           <div class="row"
-               id="scroll">
+               ref="scroll">
             <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
                        v-for="encuentro in encuentros"
                        :key="encuentro.id"
@@ -112,12 +113,10 @@ export default {
   },
   methods: {
     scrollLeft() {
-      const el = document.getElementById("scroll");
-      el.scrollLeft -= document.getElementById("encuentros").offsetWidth * 0.5;
+      this.$refs.scroll.scrollLeft -= this.$refs.encuentros.offsetWidth * 0.5;
     },
     scrollRight() {
-      const el = document.getElementById("scroll");
-      el.scrollLeft += document.getElementById("encuentros").offsetWidth * 0.5;
+      this.$refs.scroll.scrollLeft += this.$refs.encuentros.offsetWidth * 0.5;
     }
   },
   computed: {
