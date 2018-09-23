@@ -36,8 +36,7 @@
 
     <!-- encuentros portfolio -->
     <section v-if="encuentros"
-             id="encuentros"
-             ref="encuentros">
+             id="encuentros">
       <div class="container-fluid">
         <h2>
           Portafolio de Encuentros
@@ -113,10 +112,13 @@ export default {
   },
   methods: {
     scrollLeft() {
-      this.$refs.scroll.scrollLeft -= this.$refs.encuentros.offsetWidth * 0.5;
+      console.log
+      const el = document.getElementById("scroll");
+      el.scrollLeft -= document.getElementById("encuentros").offsetWidth * 0.5;
     },
     scrollRight() {
-      this.$refs.scroll.scrollLeft += this.$refs.encuentros.offsetWidth * 0.5;
+      const el = document.getElementById("scroll");
+      el.scrollLeft += document.getElementById("encuentros").offsetWidth * 0.5;
     }
   },
   computed: {
