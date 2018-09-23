@@ -1,39 +1,41 @@
 <template>
   <div>
     <header class="header"
-            v-if="ÚltimosEncuentro">
+            v-if="ultimoEncuentro">
       <div class="header-overlay"></div>
       <div class="background-banner">
-        <img :src="ÚltimosEncuentro.data.img"
+        <img :src="ultimoEncuentro.img"
              alt="img-background">
       </div>
       <div class="header-content">
-        <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ÚltimosEncuentro.key}}"
+        <nuxt-link :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: ultimoEncuentro.id}}"
                    tag="div"
                    class="container"
                    style="cursor:pointer">
-          <h1>{{ÚltimosEncuentro.data.nombre}}</h1>
+          <h1>{{ultimoEncuentro.name}}</h1>
           <div class="row">
             <div class="col-lg-5 no-mobile">
-              <figure :style="'background-image: url('+ÚltimosEncuentro.data.img+');'"></figure>
-              <ul v-if="ÚltimosEncuentro.data.invitados">
+              <figure :style="'background-image: url('+ultimoEncuentro.img+');'"></figure>
+              <ul v-if="ultimoEncuentro.guests">
                 <h3>
                   <i class="fas fa-users"></i> Invitados
                 </h3>
-                <li v-for="(invitado, index) in ÚltimosEncuentro.data.invitados"
-                    :key="index">{{ invitado.nombre }}</li>
+                <li v-for="(guest, index) in ultimoEncuentro.guests"
+                    :key="index">{{ guest.name }}</li>
               </ul>
             </div>
             <div class="col-lg-7">
-              <small>{{ÚltimosEncuentro.data.fecha | date}}</small>
-              <p class="no-mobile">{{ÚltimosEncuentro.data.contenido | slice(0,700)}}</p>
-              <p class="no-desktop">{{ÚltimosEncuentro.data.contenido | slice(0,300)}}</p>
+              <small>{{ultimoEncuentro.date | date}}</small>
+              <p class="no-mobile">{{ultimoEncuentro.description | slice(0,700)}}</p>
+              <p class="no-desktop">{{ultimoEncuentro.description | slice(0,300)}}</p>
             </div>
           </div>
         </nuxt-link>
       </div>
     </header>
-    <section v-if="data.encuentros"
+
+    <!-- encuentros portfolio -->
+    <section v-if="encuentros"
              id="encuentros">
       <div class="container-fluid">
         <h2>
@@ -41,18 +43,18 @@
         </h2>
         <div class="encuentros">
           <div class="row"
-               id="scroll">
+               ref="scroll">
             <nuxt-link class="col-lg-3 col-md-5 col-sm-7"
                        v-for="encuentro in encuentros"
-                       :key="encuentro.key"
-                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.key}}"
+                       :key="encuentro.id"
+                       :to="{name: 'formacion-docente-cafe-cientifico-id', params: {id: encuentro.id}}"
                        tag="div">
               <div class="card card__two link">
                 <figure class="card__img"
-                        :style="'background-image: url('+encuentro.data.img+');'">
+                        :style="'background-image: url('+encuentro.img+');'">
                 </figure>
                 <div class="card__desc">
-                  <h4>{{encuentro.data.nombre | slice(0,50)}}</h4>
+                  <h4>{{encuentro.name | slice(0,45)}}</h4>
                 </div>
               </div>
             </nuxt-link>
@@ -82,19 +84,35 @@
 </template>
 
 <script>
-import axios from "axios";
 import Suscripcion from "@/components/Suscripcion";
+import { db } from "~/plugins/firebase.js";
+
 export default {
   async asyncData() {
-    const { data } = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico.json`
-    );
+    // todo Load data from db
     const description =
       "Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior y que ayuden a fomentar inquietudes que despiertan una entretenida discusión.";
-    return { data, description };
+    return { description };
+  },
+  data() {
+    return {
+      encuentros: null
+    };
+  },
+  mounted() {
+    db
+      .collection("/formacion-docente/cafe-cientifico/encuentros")
+      .orderBy("date", "desc")
+      .get()
+      .then(querySnapshot => {
+        this.encuentros = querySnapshot.docs.map(doc =>
+          Object.assign({ id: doc.id }, doc.data())
+        );
+      });
   },
   methods: {
     scrollLeft() {
+      console.log
       const el = document.getElementById("scroll");
       el.scrollLeft -= document.getElementById("encuentros").offsetWidth * 0.5;
     },
@@ -104,22 +122,9 @@ export default {
     }
   },
   computed: {
-    ÚltimosEncuentro() {
-      let res = null;
-      for (const key in this.data.encuentros) {
-        res = { key: key, data: this.data.encuentros[key] };
-      }
-      return res;
-    },
-    encuentros() {
-      let cursos = [];
-      for (const key in this.data.encuentros) {
-        cursos.push({ key: key, data: this.data.encuentros[key] });
-      }
-      cursos.sort(function(a, b) {
-        return ("" + b.key).localeCompare(a.key);
-      });
-      return cursos;
+    ultimoEncuentro() {
+      if (!this.encuentros) return null;
+      return this.encuentros[0];
     }
   },
   components: {
@@ -127,7 +132,7 @@ export default {
   },
   head() {
     return {
-      title: "Café Científico  ",
+      title: "Café Científico",
       meta: [
         {
           hid: "description",
