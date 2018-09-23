@@ -19,7 +19,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "npm": "^6.1.0",
+    "firebase": "^5.5.1",
+    "npm": "^6.4.1",
     "nuxt": "^1.0.0",
     "vue-parallaxy": "^1.1.1",
     "vue-strap": "^1.1.40"
@@ -34,7 +35,7 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.3",
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.0.1",

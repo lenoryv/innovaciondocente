@@ -119,7 +119,8 @@ module.exports = {
     vendor: [
       'vee-validate',
       'axios',
-      'vue-lazyload'
+      'vue-lazyload',
+      'firebase'
     ]
   },
   css: [
