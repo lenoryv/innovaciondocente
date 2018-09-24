@@ -143,6 +143,10 @@ module.exports = {
     {
       src: '~/plugins/lazyload.js',
       ssr: true
+    },
+    {
+      src: '~/plugins/firebase.js',
+      ssr: true
     }
   ]
 }
