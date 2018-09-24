@@ -30,7 +30,7 @@
           <div class="col-6"
                v-if="canIncribe">
             <nuxt-link class="btn btn-primary btn-large"
-                       :to="{name: 'formacion-docente-cafe-cientifico-inscripcion', query: {id: key}}">Inscríbete</nuxt-link>
+                       :to="{name: 'formacion-docente-cafe-cientifico-inscripcion', query: {id: encuentro.id}}">Inscríbete</nuxt-link>
           </div>
         </div>
       </section>
@@ -44,6 +44,7 @@ import { db } from "~/plugins/firebase.js";
 export default {
   async asyncData({ params }) {
     let encuentro = null;
+    let canIncribe = false;
     try {
       let doc = await db
         .collection("/formacion-docente/cafe-cientifico/encuentros")
@@ -52,14 +53,14 @@ export default {
       if (doc.exists) {
         encuentro = { ...doc.data(), id: doc.id };
         // validate date
-        // TODO: add date
-        // let fecha = new Date(res.data.postulacion);
-        // let canIncribe = fecha.getTime() >= new Date().getTime();
+        // TODO: fix time
+        let date = new Date(encuentro.postulations);
+        canIncribe = date.getTime() >= new Date().getTime();
       }
     } catch (error) {}
     return {
       encuentro,
-      canIncribe: false
+      canIncribe
     };
   },
   async validate({ params }) {
