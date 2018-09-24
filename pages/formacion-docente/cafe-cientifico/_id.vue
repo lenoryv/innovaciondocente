@@ -40,14 +40,13 @@
 </template>
 
 <script>
-import { db } from "~/plugins/firebase.js";
+import { CafeCientificoDocument } from "~/plugins/firebase.js";
 export default {
   async asyncData({ params }) {
     let encuentro = null;
     let canIncribe = false;
     try {
-      let doc = await db
-        .collection("/formacion-docente/cafe-cientifico/encuentros")
+      let doc = await CafeCientificoDocument.collection("encuentros")
         .doc(params.id)
         .get();
       if (doc.exists) {
@@ -65,8 +64,7 @@ export default {
   },
   async validate({ params }) {
     // TODO: validate perdormance
-    let doc = await db
-      .collection("/formacion-docente/cafe-cientifico/encuentros")
+    let doc = await CafeCientificoDocument.collection("encuentros")
       .doc(params.id)
       .get();
     return doc.exists;

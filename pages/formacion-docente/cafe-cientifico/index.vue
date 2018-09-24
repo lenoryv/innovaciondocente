@@ -86,28 +86,24 @@
 
 <script>
 import Suscripcion from "@/components/Suscripcion";
-import { db } from "~/plugins/firebase.js";
+import {
+  CafeCientificoDocument,
+  EncuentrosCollection
+} from "~/plugins/firebase.js";
 
 export default {
   async asyncData() {
     let description;
     let encuentros;
 
-    let cafeCientificoDocument = db
-      .collection("/formacion-docente")
-      .doc("cafe-cientifico");
-
     // load description
-    let descriptionSnap = await cafeCientificoDocument.get();
+    let descriptionSnap = await CafeCientificoDocument.get();
     if (descriptionSnap.exists) {
       description = descriptionSnap.data();
     }
 
     // load encuentros
-    let querySnapshot = await cafeCientificoDocument
-      .collection("encuentros")
-      .orderBy("date", "desc")
-      .get();
+    let querySnapshot = await EncuentrosCollection.get();
     encuentros = querySnapshot.docs.map(doc =>
       Object.assign({ id: doc.id }, doc.data())
     );

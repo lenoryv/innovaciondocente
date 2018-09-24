@@ -16,8 +16,16 @@ firebase.firestore().settings({
   timestampsInSnapshots: true
 })
 
-const db = firebase.firestore()
+const AFirestore = firebase.firestore();
 
+// cafe cientifico
+const CafeCientificoDocument = AFirestore
+  .collection("formacion-docente")
+  .doc("cafe-cientifico");
+const EncuentrosCollection = CafeCientificoDocument
+  .collection("encuentros").orderBy("date", "desc");
 export {
-  db
+  AFirestore,
+  CafeCientificoDocument,
+  EncuentrosCollection
 }

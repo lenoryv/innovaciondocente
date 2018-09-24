@@ -32,30 +32,26 @@
 </template>
 
 <script>
-import { db } from "~/plugins/firebase.js";
+import {
+  CafeCientificoDocument,
+  EncuentrosCollection
+} from "~/plugins/firebase.js";
 
 export default {
   data() {
     return {
       description: null,
-      encuentro: null,
-      cafeCientificoDocument: db
-        .collection("/formacion-docente")
-        .doc("cafe-cientifico")
+      encuentro: null
     };
   },
   async mounted() {
-    let cafeCientificoSnap = await this.cafeCientificoDocument.get();
+    let cafeCientificoSnap = await CafeCientificoDocument.get();
     if (cafeCientificoSnap.exists) {
       this.description = cafeCientificoSnap.data()["description"];
     }
 
     // load encuentros
-    let querySnapshot = await this.cafeCientificoDocument
-      .collection("encuentros")
-      .orderBy("date", "desc")
-      .limit(1)
-      .get();
+    let querySnapshot = await EncuentrosCollection.limit(1).get();
     querySnapshot.docs.map(
       doc => (this.encuentro = { id: doc.id, ...doc.data() })
     );
