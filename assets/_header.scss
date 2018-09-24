@@ -1,10 +1,15 @@
 @import "assets/variables";
+
 header {
   background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  min-height: 200px;
+
   h1 {
     font-weight: bold;
-    height: 200px;
-    line-height: 200px;
     text-align: center;
     color: $color-font-primary;
     font-size: 28px;

@@ -3,10 +3,13 @@
     <div class="container">
       <div class="row">
         <card :nota="noticia"
+              v-if="noticia"
               class="col-lg-4 col-md-6" />
         <card :nota="curso"
+              v-if="curso"
               class="col-lg-4 col-md-6" />
         <card :nota="tips"
+              v-if="tips"
               class="col-lg-4 col-md-12" />
       </div>
     </div>
@@ -16,6 +19,7 @@
 <script>
 import Card from "@/components/Index/Card";
 import axios from "axios";
+import { CursosCollection } from "~/plugins/firebase.js";
 
 export default {
   data() {
@@ -85,23 +89,19 @@ export default {
           return;
         }
       });
-    axios
-      .get(
-        "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json?orderBy=%22$key%22&limitToLast=1"
-      )
-      .then(res => {
-        for (const key in res.data) {
-          this.curso.title = res.data[key].nombre;
-          this.curso.date.full = res.data[key].fecha;
-          let tempDate = res.data[key].fecha.split("-");
-          this.curso.date.dia = tempDate[2];
-          this.curso.date.mes = tempDate[1];
-          this.curso.description = res.data[key].description;
-          this.curso.img = res.data[key].img;
-          this.curso.key.id = key;
-          return;
-        }
-      });
+    let cursosSnap = await CursosCollection.limit(1).get();
+    cursosSnap.docs.map(doc => {
+      let curso = { id: doc.id, ...doc.data() };
+      let tempDate = curso.date.split("-");
+      this.curso.title = curso.name;
+      this.curso.date.full = curso.date;
+      this.curso.date.dia = tempDate[2];
+      this.curso.date.mes = tempDate[1];
+      this.curso.description = curso.description;
+      this.curso.img = curso.img;
+      this.curso.key.id = curso.id;
+      return;
+    });
     axios
       .get(
         "https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/tips-innovacion.json?orderBy=%22$key%22&limitToLast=1"

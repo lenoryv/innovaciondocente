@@ -1,37 +1,39 @@
 <template>
   <section>
-    <div class="container">
+    <div class="container"
+         v-if="curso">
+      <!-- notification -->
       <div class="alert alert-success"
            v-if="canPostulate">
         <i class="fas fa-calendar-alt"></i>
         Postula hasta el
-        <b>{{data.postulacion.fecha | date}}</b>
+        <b>{{curso.postulation.date | date}}</b>
       </div>
       <div class="alert alert-danger"
            v-else>
         Las postulaciones para este curso han finalizado
       </div>
-      <h1>{{ data.nombre }}</h1>
+
+      <!-- main content -->
+      <h1>{{ curso.name }}</h1>
       <hr>
       <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <img v-lazy="data.img"
+        <div class="col-md-3">
+          <img v-lazy="curso.img"
                alt="Imagen Curso">
           <a target="_blank"
              rel="noopener"
              class="btn btn-outline-primary btn-large"
              v-if="canPostulate"
-             :href="data.postulacion.link">
+             :href="curso.postulation.link">
             Postular
           </a>
           <a target="_blank"
              rel="noopener"
-             class="btn btn-large"
-             v-bind:class="[
-                {'btn-outline-primary':data.urlContenido},
-                {'btn-outline-danger disabled':!data.urlContenido}
-              ]"
-             :href="data.urlContenido">
+             class="btn btn-large btn-outline-primary"
+             v-for="(content, i) in curso.downloadableContent"
+             :key="i"
+             :href="content.url">
             <i class="fas fa-file-pdf"></i>
             Contenido
           </a>
@@ -39,91 +41,95 @@
                   class="btn btn-primary btn-large">Regresar</button>
         </div>
         <!--split-->
-        <div class="col-lg-9 col-md-8">
+        <div class="col-md-9">
           <p>
-            {{ data.description}}
+            {{ curso.description}}
           </p>
           <!---->
-          <span v-if="data.instructores">
+          <span v-if="curso.instructors">
             <b>Instructor:</b>
             <ul>
-              <li v-for="(instructor, i) in data.instructores"
+              <li v-for="(instructor, i) in curso.instructors"
                   :key="i">
-                {{instructor.nombre}}
-                <small v-if="instructor.small">({{instructor.small}})</small>
+                {{instructor.name}}
+                <small v-if="instructor.small">({{instructor.about}})</small>
               </li>
             </ul>
           </span>
           <!---->
           <p>
             <b>Fecha:</b>
-            {{ data.fecha | date}}
+            {{ curso.date | date}}
           </p>
           <!---->
-          <span v-if="data.duracion">
+          <span v-if="curso.duration">
             <b>Duración:</b>
             <ul>
-              <li v-if="data.duracion.horas">{{ data.duracion.horas }} Horas</li>
-              <li v-if="data.duracion.dias">{{ data.duracion.dias }} Días</li>
-              <li v-if="data.duracion.semanas">{{ data.duracion.semanas }} Semanas</li>
+              <li v-if="curso.duration.hours">{{ curso.duration.hours }} Horas</li>
+              <li v-if="curso.duration.days">{{ curso.duration.days }} Días</li>
+              <li v-if="curso.duration.weeks">{{ curso.duration.weeks }} Semanas</li>
             </ul>
           </span>
           <!---->
-          <p v-if="data.modulo">
+          <p v-if="curso.module">
             <b>Módulo:</b>
-            {{data.modulo}}
+            {{curso.module}}
           </p>
           <!---->
-          <p v-if="data.lugar">
+          <p v-if="curso.place">
             <b>Lugar:</b>
-            {{data.lugar}}
+            {{curso.place}}
           </p>
           <!---->
-          <p>
+          <p v-if="curso.schedule">
             <b>Horario:</b>
-            {{data.horario}}
+            {{curso.schedule}}
           </p>
           <!---->
-          <p v-if="data.dirigido">
-            <b>Dirigido:</b> {{data.dirigido}}</p>
-          <span v-if="data.finalidades">
-            <b>Finalidades:</b>
-            <ul>
-              <li v-for="(finalidad, i) in data.finalidades"
-                  :key="i">
-                {{finalidad.nombre}}
-              </li>
-            </ul>
-          </span>
+          <p v-if="curso.addressedTo">
+            <b>Dirigido:</b> {{curso.addressedTo}}
+          </p>
         </div>
       </div>
+    </div>
+    <div v-else
+         class="container">
+      <p>
+        No se encontro el curso
+      </p>
     </div>
   </section>
 </template>
 
 <script>
-import axios from "axios";
+import { ProgramaFormacionDocument } from "~/plugins/firebase.js";
 
 export default {
   async asyncData({ params }) {
-    let { data } = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos/${
-        params.id
-      }.json`
-    );
-    // validate date
-    let fecha_postulacion = new Date(data.postulacion.fecha);
-    let canPostulate = fecha_postulacion.getTime() >= new Date().getTime();
-    return { data, canPostulate };
+    let curso;
+    let canPostulate;
+    let doc = await ProgramaFormacionDocument.collection("cursos")
+      .doc(params.id)
+      .get();
+    if (doc.exists) {
+      curso = { ...doc.data(), id: doc.id };
+      // validate date
+      // TODO: fix time
+      let date = new Date(curso.postulation.date);
+      canPostulate = date.getTime() >= new Date().getTime();
+    }
+    return { curso, canPostulate };
   },
   head() {
     return {
-      title: this.data.nombre  ,
+      title: this.curso ? this.curso.name : "No se encontro el encuentro",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.data.description
+          content: this.curso
+            ? this.curso.description
+            : "No se encontro el encuentro"
         }
       ]
     };
