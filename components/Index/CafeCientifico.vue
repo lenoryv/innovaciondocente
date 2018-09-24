@@ -1,27 +1,27 @@
 <template>
-  <section class="cafe-cientifico"
-           v-if="cafecientifico">
+  <section class="cafe-cientifico">
     <div class="container">
-      <div class="row">
-        <div>
-          <h2>Café Científico</h2>
-          <p>Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos,
-            dialogan y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad
-            de escuchar opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior
-            y que ayuden a fomentar inquietudes que despierten una entretenida discusión.</p>
-        </div>
+      <!-- head -->
+      <div v-if="description">
+        <h2>Café Científico</h2>
+        <p>{{description}}</p>
+      </div>
+
+      <!-- last encuentro -->
+      <div class="row"
+           v-if="encuentro">
         <div class="col-md-6 section-text">
           <hr>
-          <h3>{{cafecientifico.data.nombre}}</h3>
-          <p>{{cafecientifico.data.contenido | slice(0,500) }}</p>
-
+          <h3>{{encuentro.name}}</h3>
+          <p>{{encuentro.description | slice(0,500) }}</p>
         </div>
         <div class="col-md-6">
           <figure>
-            <img :src="cafecientifico.data.img" alt="Imagen Cafe">
+            <img :src="encuentro.img"
+                 alt="Imagen Cafe">
           </figure>
           <nuxt-link class="btn btn-large btn-inverse"
-                     :to="{name: 'formacion-docente-cafe-cientifico-id',  params: {id: cafecientifico.key}}"
+                     :to="{name: 'formacion-docente-cafe-cientifico-id',  params: {id: encuentro.id}}"
                      tag="div">
             Leer más
           </nuxt-link>
@@ -30,27 +30,35 @@
     </div>
   </section>
 </template>
+
 <script>
-import axios from "axios";
+import { db } from "~/plugins/firebase.js";
 
 export default {
   data() {
-    return { data: {} };
+    return {
+      description: null,
+      encuentro: null,
+      cafeCientificoDocument: db
+        .collection("/formacion-docente")
+        .doc("cafe-cientifico")
+    };
   },
-  computed: {
-    cafecientifico() {
-      for (const key in this.data) {
-        return { key: key, data: this.data[key] };
-      }
+  async mounted() {
+    let cafeCientificoSnap = await this.cafeCientificoDocument.get();
+    if (cafeCientificoSnap.exists) {
+      this.description = cafeCientificoSnap.data()["description"];
     }
-  },
-  mounted() {
-    axios
-      .get(
-        `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/cafe-cientifico/encuentros.json?orderBy=%22$key%22&limitToLast=1`
-      )
-      .then(res => (this.data = res.data))
-      .catch(err => console.error(err));
+
+    // load encuentros
+    let querySnapshot = await this.cafeCientificoDocument
+      .collection("encuentros")
+      .orderBy("date", "desc")
+      .limit(1)
+      .get();
+    querySnapshot.docs.map(
+      doc => (this.encuentro = { id: doc.id, ...doc.data() })
+    );
   }
 };
 </script>
