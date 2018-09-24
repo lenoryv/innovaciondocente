@@ -52,6 +52,7 @@ export default {
       if (doc.exists) {
         encuentro = { ...doc.data(), id: doc.id };
         // validate date
+        // TODO: add date
         // let fecha = new Date(res.data.postulacion);
         // let canIncribe = fecha.getTime() >= new Date().getTime();
       }
@@ -61,14 +62,26 @@ export default {
       canIncribe: false
     };
   },
+  async validate({ params }) {
+    // TODO: validate perdormance
+    let doc = await db
+      .collection("/formacion-docente/cafe-cientifico/encuentros")
+      .doc(params.id)
+      .get();
+    return doc.exists;
+  },
   head() {
     return {
-      title: this.encuentro.name,
+      title: this.encuentro
+        ? this.encuentro.name
+        : "No se encontro el encuentro",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: this.encuentro.description
+          content: this.encuentro
+            ? this.encuentro.description
+            : "No se encontro el encuentro"
         }
       ]
     };
