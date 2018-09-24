@@ -22,7 +22,9 @@ const AFirestore = firebase.firestore();
 const ProgramaFormacionDocument = AFirestore
   .collection("formacion-docente")
   .doc("programa-formacion");
-const CursosCollection = ProgramaFormacionDocument.collection('cursos').orderBy("date", "desc");
+const CursosCollection = ProgramaFormacionDocument.collection('cursos')
+  .orderBy('date', 'desc')
+  .orderBy('postulation.date', 'desc');
 // cafe-cientifico
 const CafeCientificoDocument = AFirestore
   .collection("formacion-docente")

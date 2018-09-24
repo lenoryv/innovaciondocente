@@ -1,6 +1,8 @@
 <template>
-  <section>
-    <h1>Portafolio de Cursos</h1>
+  <div>
+    <header>
+      <h1>Portafolio de Cursos</h1>
+    </header>
     <!--
     <div class="container">
       <form v-on:submit.prevent="onSubmit">
@@ -16,17 +18,16 @@
     </div>
     -->
     <div class="container-fluid">
+      <div class="alert alert-danger"
+           v-if="cursos && cursos.length == 0">
+        No se encontraton cursos
+      </div>
       <div v-if="cursos">
-        <div class="alert alert-danger"
-             v-if="!cursos">
-          No se encontraton cursos
-        </div>
-        <div class="row"
-             v-else>
+        <div class="row">
           <nuxt-link class="col-xl-2 col-lg-3 col-md-4 col-sm-6 curso"
                      v-for="curso in cursos"
-                     :key="curso.key"
-                     :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.key}}"
+                     :key="curso.id"
+                     :to="{name: 'formacion-docente-programa-formacion-id', params: {id: curso.id}}"
                      tag="div">
             <div class="card card__one link">
               <figure class="card__img">
@@ -34,9 +35,9 @@
                      alt="imagen curso">
               </figure>
               <div class="card__desc">
-                <h4>{{curso.nombre | slice(0,50)}}</h4>
+                <h4>{{curso.name | slice(0,50)}}</h4>
                 <small>
-                  <i class="fas fa-calendar-alt"></i> {{curso.fecha | date}}</small>
+                  <i class="fas fa-calendar-alt"></i> {{curso.date | date}}</small>
               </div>
             </div>
           </nuxt-link>
@@ -47,41 +48,32 @@
         Regresar
       </button>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-import axios from "axios";
+import { CursosCollection } from "~/plugins/firebase.js";
 
 export default {
   data() {
-    let cursos = [];
-    axios
-      .get(
-        `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/cursos.json`
-      )
-      .then(res => {
-        for (const key in res.data) {
-          if (res.data.hasOwnProperty(key)) {
-            res.data[key].key = key;
-            cursos.push(res.data[key]);
-          }
-        }
-        cursos.sort((a, b) => ("" + b.key).localeCompare(a.key));
-      })
-      .catch(e => console.log(e));
-
-    return { cursos };
+    return { cursos: null };
+  },
+  async mounted() {
+    let cursosSnap = await CursosCollection.get();
+    this.cursos = cursosSnap.docs.map(doc =>
+      Object.assign({ id: doc.id }, doc.data())
+    );
   },
   head() {
     return {
-      title: "Portafolio de Cursos  "
+      title: "Portafolio de Cursos"
     };
   }
 };
 </script>
 
 <style lang="scss" scoped>
+@import "assets/header";
 @import "assets/form";
 @import "assets/card";
 @import "assets/alert";
