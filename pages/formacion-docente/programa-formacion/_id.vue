@@ -33,7 +33,7 @@
              class="btn btn-large btn-outline-primary"
              v-for="(content, i) in curso.downloadableContent"
              :key="i"
-             :href="content">
+             :href="content.url">
             <i class="fas fa-file-pdf"></i>
             Contenido
           </a>
