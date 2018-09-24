@@ -18,7 +18,12 @@ firebase.firestore().settings({
 
 const AFirestore = firebase.firestore();
 
-// cafe cientifico
+// programa-formacion
+const ProgramaFormacionDocument = AFirestore
+  .collection("formacion-docente")
+  .doc("programa-formacion");
+const CursosCollection = ProgramaFormacionDocument.collection('cursos').orderBy("date", "desc");
+// cafe-cientifico
 const CafeCientificoDocument = AFirestore
   .collection("formacion-docente")
   .doc("cafe-cientifico");
@@ -26,6 +31,8 @@ const EncuentrosCollection = CafeCientificoDocument
   .collection("encuentros").orderBy("date", "desc");
 export {
   AFirestore,
+  ProgramaFormacionDocument,
+  CursosCollection,
   CafeCientificoDocument,
   EncuentrosCollection
 }

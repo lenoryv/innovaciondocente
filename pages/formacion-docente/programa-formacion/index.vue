@@ -12,14 +12,15 @@
       </div>
     </header>
     <!--Cursos section-->
-    <Cursos></Cursos>
+    <Cursos :programFormacionDocente="programFormacionDocente"></Cursos>
     <!--Videos section-->
     <Videos></Videos>
     <!--PDF sections-->
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6"
+               v-if="validateFormacion">
             <h3>
               Válida tu formación Docente - Pedagógica
             </h3>
@@ -30,7 +31,7 @@
             <a class="btn btn-outline-primary btn-large"
                target="_blank"
                rel="noopener"
-               href="https://firebasestorage.googleapis.com/v0/b/innovaciondocente-utpl.appspot.com/o/formacion-docente%2Fprograma-formacion%2Fprograma-formacion%2FInstructivo_validacio%CC%81n_formacio%CC%81n_SIAC(1).pdf?alt=media&token=816f02a3-4f2d-4b54-9bca-6b8005614b68">
+               :href="validateFormacion">
               <i class="fas fa-file-pdf"></i>
               Descargar intructivo</a>
           </div>
@@ -53,22 +54,17 @@
 </template>
 
 <script>
-import axios from "axios";
+import { ProgramaFormacionDocument } from "~/plugins/firebase.js";
 import Cursos from "@/components/formacion-docente/Cursos";
 import Videos from "@/components/formacion-docente/Videos";
 export default {
   async asyncData() {
-    let { data } = await axios.get(
-      `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/banner.json`
-    );
-    const title = "Programa de Formación Docente";
-    const description =
-      "El Programa de Formación Docente de la universidad está orientado de forma prioritaria a facilitar y apoyar a nuestros docentes al desarrollo de sus necesidades de tipo formativo, dotándoles de las estrategias y recursos necesarios para desarrollar una serie de nuevas competencias profesionales. Por este motivo es preciso reflexionar sobre las nuevas exigencias profesionales y apoyar el desarrollo de dichas competencias desde la formación del profesorado y desde el enfoque de nuestra universidad.";
-    return {
-      banner: data,
-      title,
-      description
-    };
+    let programaFormacionData;
+    let programaFormacionSnap = await ProgramaFormacionDocument.get();
+    if (programaFormacionSnap.exists) {
+      programaFormacionData = programaFormacionSnap.data();
+    }
+    return { ...programaFormacionData };
   },
   components: {
     Cursos,
@@ -76,7 +72,7 @@ export default {
   },
   head() {
     return {
-      title: this.title  ,
+      title: this.title,
       meta: [
         {
           hid: "description",
