@@ -120,7 +120,8 @@ module.exports = {
       'vee-validate',
       'axios',
       'vue-lazyload',
-      'firebase'
+      'firebase/app',
+      'firebase/firestore',
     ]
   },
   css: [

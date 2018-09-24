@@ -36,7 +36,8 @@
 
     <!-- encuentros portfolio -->
     <section v-if="encuentros"
-             id="encuentros">
+             id="encuentros"
+             ref="encuentros">
       <div class="container-fluid">
         <h2>
           Portafolio de Encuentros
@@ -89,36 +90,35 @@ import { db } from "~/plugins/firebase.js";
 
 export default {
   async asyncData() {
-    // todo Load data from db
-    const description =
-      "Encuentro Café Científico es un evento en el que expertos y profesionales en diferentes campos, dialogan y problematizan sobre un tema actual de una forma diferente e informal. Su finalidad de escuchar opiniones diversas y realizar algunos postulados que contribuyan al trabajo posterior y que ayuden a fomentar inquietudes que despiertan una entretenida discusión.";
-    return { description };
-  },
-  data() {
-    return {
-      encuentros: null
-    };
-  },
-  mounted() {
-    db
-      .collection("/formacion-docente/cafe-cientifico/encuentros")
+    let description;
+    let encuentros;
+
+    let cafeCientificoDocument = db
+      .collection("/formacion-docente")
+      .doc("cafe-cientifico");
+
+    // load description
+    let descriptionSnap = await cafeCientificoDocument.get();
+    if (descriptionSnap.exists) {
+      description = descriptionSnap.data();
+    }
+
+    // load encuentros
+    let querySnapshot = await cafeCientificoDocument
+      .collection("encuentros")
       .orderBy("date", "desc")
-      .get()
-      .then(querySnapshot => {
-        this.encuentros = querySnapshot.docs.map(doc =>
-          Object.assign({ id: doc.id }, doc.data())
-        );
-      });
+      .get();
+    encuentros = querySnapshot.docs.map(doc =>
+      Object.assign({ id: doc.id }, doc.data())
+    );
+    return { ...description, encuentros };
   },
   methods: {
     scrollLeft() {
-      console.log
-      const el = document.getElementById("scroll");
-      el.scrollLeft -= document.getElementById("encuentros").offsetWidth * 0.5;
+      this.$refs.scroll.scrollLeft -= this.$refs.encuentros.offsetWidth * 0.5;
     },
     scrollRight() {
-      const el = document.getElementById("scroll");
-      el.scrollLeft += document.getElementById("encuentros").offsetWidth * 0.5;
+      this.$refs.scroll.scrollLeft += this.$refs.encuentros.offsetWidth * 0.5;
     }
   },
   computed: {
