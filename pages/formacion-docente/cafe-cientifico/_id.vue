@@ -35,7 +35,12 @@
         </div>
       </section>
     </div>
-
+    <section v-else
+             class="container">
+      <p>
+        No se encontro el encuentro
+      </p>
+    </section>
   </div>
 </template>
 
@@ -61,13 +66,6 @@ export default {
       encuentro,
       canIncribe
     };
-  },
-  async validate({ params }) {
-    // TODO: validate perdormance
-    let doc = await CafeCientificoDocument.collection("encuentros")
-      .doc(params.id)
-      .get();
-    return doc.exists;
   },
   head() {
     return {

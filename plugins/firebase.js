@@ -25,6 +25,7 @@ const ProgramaFormacionDocument = AFirestore
 const CursosCollection = ProgramaFormacionDocument.collection('cursos')
   .orderBy('date', 'desc')
   .orderBy('postulation.date', 'desc');
+  
 // cafe-cientifico
 const CafeCientificoDocument = AFirestore
   .collection("formacion-docente")
