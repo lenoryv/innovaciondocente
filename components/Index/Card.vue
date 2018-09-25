@@ -6,7 +6,7 @@
         <img :src="nota.img"
              :alt="nota.title">
       </div>
-      <div class="card_4__date">
+      <div class="card_4__date" v-if="nota.date">
         <span class="card_4__date__day">{{nota.date.dia}}</span>
         <span class="card_4__date__month"
               v-if="nota.date.full">{{nota.date.full | date | slice(5,9,"")}}</span>
