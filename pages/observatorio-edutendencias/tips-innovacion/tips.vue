@@ -35,7 +35,7 @@ export default {
       cards = tipsSnap.docs.map(doc => {
         let tip = doc.data();
         return {
-          key: doc.id,
+          // key: doc.id,
           type: tip.tag,
           title: tip.name,
           description: tip.description,
