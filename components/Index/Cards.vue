@@ -19,7 +19,7 @@
 <script>
 import Card from "@/components/Index/Card";
 import axios from "axios";
-import { CursosCollection } from "~/plugins/firebase.js";
+import { CursosCollection, TipsCollection } from "~/plugins/firebase.js";
 
 export default {
   data() {
@@ -55,10 +55,6 @@ export default {
     let tips = {
       type: "Tips",
       title: null,
-      date: {
-        dia: "",
-        mes: ""
-      },
       description: null,
       img: null,
       key: {
@@ -102,23 +98,19 @@ export default {
       this.curso.key.id = curso.id;
       return;
     });
-    axios
-      .get(
-        "https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/tips-innovacion.json?orderBy=%22$key%22&limitToLast=1"
-      )
-      .then(res => {
-        for (const key in res.data) {
-          this.tips.title = res.data[key].title;
-          this.tips.date.full = res.data[key].date;
-          let tempDate = res.data[key].date.split("-");
-          this.tips.date.dia = tempDate[2];
-          this.tips.date.mes = tempDate[1];
-          this.tips.description = res.data[key].description;
-          this.tips.key.name = res.data[key].url;
-          this.tips.img = res.data[key].img;
-          return;
-        }
-      });
+    let tipsSnap = await TipsCollection.orderBy("edited", "desc").get();
+    tipsSnap.docs.map(doc => {
+      let tip = doc.data();
+
+      // key: doc.id,
+      this.tips.type = tip.tag;
+      this.tips.title = tip.name;
+      this.tips.description = tip.description;
+      this.tips.key = {
+        name: tip.link
+      };
+      this.tips.img = tip.img;
+    });
   },
   components: {
     card: Card

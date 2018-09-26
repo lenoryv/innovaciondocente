@@ -10,19 +10,6 @@
              :key="i"
              class="col-lg-4 col-md-6">
           <card :nota="card" />
-          <!--
-          <figure class="card6">
-            <img :src="card.img"
-                 :alt="'img' + card.key" />
-            <figcaption>
-              <h3>{{card.title}}</h3>
-              <p>
-                <a :href="card.url"
-                   target="_blank"></a>
-              </p>
-            </figcaption>
-          </figure>
-        -->
         </div>
       </div>
       <div v-else>
@@ -35,54 +22,39 @@
 </template>
 
 <script>
-import axios from "axios";
+import { TipsCollection } from "~/plugins/firebase.js";
 import Card from "@/components/Index/Card";
 
 export default {
   async asyncData({ query }) {
-    let { data } = await axios.get(
-      "https://innovaciondocente-utpl.firebaseio.com/observatorio-edutendencias/tips-innovacion.json"
-    );
-    let title = "Tips de Innovación";
-    return { data, title, query };
-  },
-  computed: {
-    cards() {
-      let cards = [];
-      // push just cards
-      for (const k in this.data)
-        if (this.data[k].tag == this.query.tag) {
-          let d = this.data[k];
-          let tempDate = d.date.split("-");
-          cards.push({
-            key: k,
-            type: this.query.tag,
-            title: d.title,
-            date: {
-              full: d.date,
-              dia: tempDate[2],
-              mes: tempDate[1]
-            },
-            description: d.description,
-            key: {
-              name: d.url
-            },
-            img: d.img
-          });
-        }
-      // sort cards
-      cards.sort(function(a, b) {
-        return ("" + b.key).localeCompare(a.key);
+    let cards = [];
+    try {
+      let tipsSnap = await TipsCollection.where("tag", "==", query.tag)
+        .orderBy("edited", "desc")
+        .get();
+      cards = tipsSnap.docs.map(doc => {
+        let tip = doc.data();
+        return {
+          // key: doc.id,
+          type: tip.tag,
+          title: tip.name,
+          description: tip.description,
+          key: {
+            name: tip.link
+          },
+          img: tip.img
+        };
       });
-      return cards;
-    }
+    } catch (error) {}
+    let title = "Tips de Innovación";
+    return { cards, title };
   },
   components: {
     card: Card
   },
   head() {
     return {
-      title: this.title 
+      title: this.title
     };
   }
 };
