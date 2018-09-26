@@ -98,7 +98,9 @@ export default {
       this.curso.key.id = curso.id;
       return;
     });
-    let tipsSnap = await TipsCollection.orderBy("edited", "desc").get();
+    let tipsSnap = await TipsCollection.orderBy("edited", "desc")
+      .limit(1)
+      .get();
     tipsSnap.docs.map(doc => {
       let tip = doc.data();
 
