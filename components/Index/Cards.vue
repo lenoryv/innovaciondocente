@@ -111,13 +111,6 @@ export default {
       };
       this.tips.img = `https://i.ytimg.com/vi/${doc.id}/mqdefault.jpg`;
     });
-    // let tipsSnap = await TipsCollection.orderBy("edited", "desc")
-    //   .limit(1)
-    //   .get();
-    // tipsSnap.docs.map(doc => {
-
-    //   // key: doc.id,
-    // });
   },
   components: {
     card: Card
