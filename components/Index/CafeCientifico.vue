@@ -4,7 +4,7 @@
       <!-- head -->
       <div v-if="description">
         <h2>Café Científico</h2>
-        <p>{{description}}</p>
+        <p class="auto-break">{{description}}</p>
       </div>
 
       <!-- last encuentro -->
@@ -13,7 +13,7 @@
         <div class="col-md-6 section-text">
           <hr>
           <h3>{{encuentro.name}}</h3>
-          <p>{{encuentro.description | slice(0,500) }}</p>
+          <p class="auto-break">{{encuentro.description | slice(0,500) }}</p>
         </div>
         <div class="col-md-6">
           <figure>

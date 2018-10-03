@@ -42,9 +42,7 @@
         </div>
         <!--split-->
         <div class="col-md-9">
-          <p>
-            {{ curso.description}}
-          </p>
+          <p class="auto-break">{{ curso.description}}</p>
           <!---->
           <span v-if="curso.instructors">
             <b>Instructor:</b>

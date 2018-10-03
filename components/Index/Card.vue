@@ -26,7 +26,7 @@
           </nuxt-link>
         </div>
         <div class="card_4__description">
-          <p>{{nota.description}}</p>
+          <p class="auto-break">{{nota.description}}</p>
         </div>
         <div class="card_4__footer">
           <a v-if="!nota.key.id"

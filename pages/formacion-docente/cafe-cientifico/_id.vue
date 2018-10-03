@@ -8,7 +8,7 @@
         <small>
           <i class="fas fa-calendar-alt"></i> {{encuentro.date | date}}</small>
         <hr>
-        <p>{{encuentro.description}}</p>
+        <p class="auto-break">{{encuentro.description}}</p>
         <div v-if="encuentro.guests">
           <h2>
             <i class="fas fa-users"></i> Invitados
@@ -18,7 +18,7 @@
                  v-for="(guest, index) in encuentro.guests"
                  :key="index">
               <strong>{{guest.name}}: </strong>
-              <p>{{guest.description}}</p>
+              <p class="auto-break">{{guest.description}}</p>
             </div>
           </div>
         </div>

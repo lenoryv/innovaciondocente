@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <h2>Tips de Expertos</h2>
-      <p>{{tips.description}}</p>
+      <p class="auto-break">{{tips.description}}</p>
       <br>
       <div class="row">
         <div class="col-xl-7 col-lg-8">
@@ -31,7 +31,7 @@
                     title="video"
                     allowfullscreen></iframe>
           </div>
-          <p>{{tip.description|slice(0,250)}}</p>
+          <p class="auto-break">{{tip.description|slice(0,250)}}</p>
           <router-link class="btn btn-inverse btn-large"
                        :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">
             Tips de expertos
