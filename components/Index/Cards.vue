@@ -19,7 +19,10 @@
 <script>
 import Card from "@/components/Index/Card";
 import axios from "axios";
-import { CursosCollection, TipsCollection } from "~/plugins/firebase.js";
+import {
+  CursosCollection,
+  TipsExpertosCollection
+} from "~/plugins/firebase.js";
 
 export default {
   data() {
@@ -53,7 +56,7 @@ export default {
       }
     };
     let tips = {
-      type: "Tips",
+      type: "Tips de Expertos",
       title: null,
       description: null,
       img: null,
@@ -98,21 +101,23 @@ export default {
       this.curso.key.id = curso.id;
       return;
     });
-    let tipsSnap = await TipsCollection.orderBy("edited", "desc")
-      .limit(1)
-      .get();
+    const tipsSnap = await TipsExpertosCollection.limit(1).get();
     tipsSnap.docs.map(doc => {
       let tip = doc.data();
-
-      // key: doc.id,
-      this.tips.type = tip.tag;
       this.tips.title = tip.name;
       this.tips.description = tip.description;
       this.tips.key = {
-        name: tip.link
+        name: `https://youtu.be/${doc.id}`
       };
-      this.tips.img = tip.img;
+      this.tips.img = `https://i.ytimg.com/vi/${doc.id}/mqdefault.jpg`;
     });
+    // let tipsSnap = await TipsCollection.orderBy("edited", "desc")
+    //   .limit(1)
+    //   .get();
+    // tipsSnap.docs.map(doc => {
+
+    //   // key: doc.id,
+    // });
   },
   components: {
     card: Card
