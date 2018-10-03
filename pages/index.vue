@@ -14,16 +14,13 @@
           <span>|</span> Evaluación</p>
         <div @click="pageScroll()"
              id="arrow">
-          <a href="#"
-             class="arrow arrow-1">
+          <a class="arrow arrow-1">
             <span>arrow</span>
           </a>
-          <a href="#"
-             class="arrow arrow-2">
+          <a class="arrow arrow-2">
             <span>arrow</span>
           </a>
-          <a href="#"
-             class="arrow arrow-3">
+          <a class="arrow arrow-3">
             <span>arrow</span>
           </a>
         </div>
@@ -193,6 +190,7 @@ p {
   width: 24px;
   height: 24px;
   margin-left: -12px;
+  cursor: pointer;
   border-left: 1px solid $color-warning;
   border-bottom: 1px solid $color-secondary;
   -webkit-transform: rotate(-45deg);
