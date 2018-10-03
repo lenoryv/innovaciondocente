@@ -2,14 +2,15 @@
   <section>
     <div class="container">
       <h2>Tips de Expertos</h2>
+      <p>{{tips.description}}</p>
       <div class="row">
         <div class="col-xl-7 col-lg-8">
           <h3>#InnovaciónenlaUTPL</h3>
           <div class="embed-container">
-            <iframe src="https://www.youtube.com/embed/Fo6uuUi86F4"
+            <iframe :src="'https://www.youtube.com/embed/'+tips.youtube"
                     frameborder="0"
                     allow="encrypted-media"
-                    title="video"
+                    :title="tips.youtube"
                     allowfullscreen></iframe>
           </div>
           <a target="_blank"
@@ -20,16 +21,16 @@
           </a>
         </div>
         <div class="col-xl-5 col-lg-4"
-             v-if="video">
-          <h3>{{video.nombre}}</h3>
+             v-if="tip">
+          <h3>{{tip.name}}</h3>
           <div class="embed-container">
-            <iframe :src="video.link"
+            <iframe :src="'https://www.youtube.com/embed/'+tip.id"
                     frameborder="0"
                     allow="encrypted-media"
                     title="video"
                     allowfullscreen></iframe>
           </div>
-          <p>{{video.descripcion|slice(0,250)}}</p>
+          <p>{{tip.description|slice(0,250)}}</p>
           <router-link class="btn btn-inverse btn-large"
                        :to="{name: 'formacion-docente-programa-formacion-potencia-informacion'}">
             Tips de expertos
@@ -42,24 +43,15 @@
 
 
 <script>
-import axios from "axios";
+import { TipsExpertosCollection } from "~/plugins/firebase.js";
 export default {
+  props: ["tips"],
   data() {
-    let video = null;
-    axios
-      .get(
-        `https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json?orderBy=%22$key%22&limitToLast=1`
-      )
-      .then(res => {
-        for (const key in res.data) {
-          if (res.data.hasOwnProperty(key)) {
-            this.video = res.data[key];
-            return;
-          }
-        }
-      })
-      .catch(e => console.log(e));
-    return { video };
+    return { tip: null };
+  },
+  async mounted() {
+    const tipsSnap = await TipsExpertosCollection.limit(1).get();
+    tipsSnap.docs.map(doc => (this.tip = { id: doc.id, ...doc.data() }));
   }
 };
 </script>

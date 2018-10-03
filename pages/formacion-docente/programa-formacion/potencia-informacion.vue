@@ -6,7 +6,6 @@
       </h1>
     </header>
     <section class="container">
-      <h3>¡Potencia tu formación docente!</h3>
       <p>
         {{description}}
       </p>
@@ -40,9 +39,7 @@ import { TipsExpertosCollection } from "~/plugins/firebase.js";
 export default {
   async asyncData({ params }) {
     let title = "Tips de Expertos";
-    let description =
-      "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
-    return { title, description };
+    return { title };
   },
   data() {
     return { tips: null };
@@ -55,14 +52,7 @@ export default {
   },
   head() {
     return {
-      title: this.title,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.description
-        }
-      ]
+      title: this.title
     };
   }
 };
