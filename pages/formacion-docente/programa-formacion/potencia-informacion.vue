@@ -1,28 +1,30 @@
 <template>
   <div>
-    <section class="container">
+    <header>
       <h1>
         {{title}}
       </h1>
-      <h3>¡Potencia tu formación docente!</h3>
+    </header>
+    <section class="container">
       <p>
         {{description}}
       </p>
     </section>
     <div class="container-fluid">
       <div class="row">
-        <div v-for="video in videos"
-             :key="video.key"
+        <div v-for="tip in tips"
+             :key="tip.id"
              class="col-xl-4 col-md-6">
           <div class="embed-container">
-            <iframe :src="video.data.link"
+            <iframe :src="'https://www.youtube.com/embed/'+tip.id"
                     frameborder="0"
-                    title="video"
+                    title="tip"
                     allow="autoplay; encrypted-media"
                     allowfullscreen></iframe>
           </div>
-          <h3>{{video.data.nombre}}</h3>
-          <p>{{video.data.descripcion}}</p>
+          <h3>{{tip.name}}</h3>
+          <p>{{tip.description}}</p>
+
         </div>
       </div>
       <button @click="$router.go(-1)"
@@ -32,41 +34,32 @@
 </template>
 
 <script>
-import axios from "axios";
+import { TipsExpertosCollection } from "~/plugins/firebase.js";
 
 export default {
   async asyncData({ params }) {
     let title = "Tips de Expertos";
-    let description =
-      "Mes a mes, el Plan de Formación Docente Pedagógica ofrece cursos al profesorado de la UTPL para la mejora de su formación académica. Te presentamos los testimonios de los expertos que han visitado el Campus UTPL para trabajar en temáticas que benefician la preparación de los docentes.";
-    // get all vids
-    let videos = [];
-    let { data } = await axios.get(
-      "https://innovaciondocente-utpl.firebaseio.com/formacion-docente/programa-formacion/videos.json"
+    return { title };
+  },
+  data() {
+    return { tips: null };
+  },
+  async mounted() {
+    const tipsSnap = await TipsExpertosCollection.get();
+    this.tips = tipsSnap.docs.map(doc =>
+      Object.assign({ id: doc.id }, doc.data())
     );
-    for (const key in data) {
-      videos.push({ key: key, data: data[key] });
-    }
-    videos.sort((a, b) => ("" + b.key).localeCompare(a.key));
-
-    return { title, description, videos };
   },
   head() {
     return {
-      title: this.title,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.description
-        }
-      ]
+      title: this.title
     };
   }
 };
 </script>
 
 <style lang="scss" scoped>
+@import "assets/header";
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;

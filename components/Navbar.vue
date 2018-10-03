@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <div class="header">
     <nav id="responsive">
       <nuxt-link :to="{name: 'index'}"
                  class="logo">
@@ -50,7 +50,7 @@
          class="icon"
          @click="toggleMenu">&#9776;</a>
     </nav>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -80,7 +80,7 @@ export default {
 $padding: 12px;
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
-  header {
+  .header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;

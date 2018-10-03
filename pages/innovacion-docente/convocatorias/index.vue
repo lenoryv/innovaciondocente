@@ -112,8 +112,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "assets/variables";
 @import "assets/header";
+@import "assets/variables";
 @import "assets/alert";
 .btn {
   font-size: 12px;
