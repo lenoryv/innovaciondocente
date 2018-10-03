@@ -2,8 +2,9 @@
   <section v-bind:class="[{'blue':blue}]">
     <div class="container">
       <h2>{{title}}</h2>
-      <p>{{description}}</p>
+      <p class="auto-break">{{description}}</p>
       <div class="form-group">
+        <label for="mail" hidden>Suscribete</label>
         <input v-model="forma.email"
                type="mail"
                name="mail"
